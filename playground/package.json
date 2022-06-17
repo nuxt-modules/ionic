@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "nuxt-ionic-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi generate",
+    "ionic:build": "pnpm build"
+  },
+  "devDependencies": {
+    "nuxt-ionic": "latest",
+    "nuxt": "^3.0.0-rc.4",
+    "@capacitor/core": "3.6.0",
+    "@capacitor/cli": "3.6.0"
+  }
+}

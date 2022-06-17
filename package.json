@@ -1,0 +1,82 @@
+{
+  "name": "nuxt-ionic",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "danielroe/nuxt-ionic",
+  "description": "Ionic integration for Nuxt",
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module",
+    "ionic",
+    "ionic-framework",
+    "web-components",
+    "native",
+    "android",
+    "ios"
+  ],
+  "author": {
+    "name": "Daniel Roe <daniel@roe.dev>",
+    "url": "https://github.com/danielroe"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "pnpm build --stub && nuxi prepare playground",
+    "lint": "pnpm lint:all:eslint && pnpm lint:all:prettier",
+    "lint:all:eslint": "pnpm lint:eslint --ext .ts,.js,.mjs,.cjs .",
+    "lint:all:prettier": "pnpm lint:prettier \"{src,test}/**/*.{js,json,ts}\"",
+    "lint:eslint": "eslint --fix",
+    "lint:prettier": "prettier --write --loglevel warn",
+    "prepare": "husky install && pnpm build",
+    "prepublishOnly": "pnpm lint && pnpm test && pinst --disable",
+    "release": "release-it",
+    "test": "vitest run",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable"
+  },
+  "dependencies": {
+    "@ionic/vue": "^6.1.10",
+    "@ionic/vue-router": "^6.1.10",
+    "@nuxt/kit": "^3.0.0-rc.4",
+    "pathe": "^0.3.0",
+    "unimport": "^0.2.9"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@release-it/conventional-changelog": "latest",
+    "@types/node": "latest",
+    "c8": "latest",
+    "conventional-changelog-conventionalcommits": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "expect-type": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "nuxt": "^3.0.0-rc.4",
+    "pinst": "latest",
+    "prettier": "latest",
+    "release-it": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  },
+  "resolutions": {
+    "nuxt-ionic": "link:."
+  },
+  "packageManager": "pnpm@7.2.1"
+}
