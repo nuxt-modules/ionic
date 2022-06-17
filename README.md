@@ -7,7 +7,7 @@
 
 > [Ionic](https://ionicframework.com/docs/) integration for [Nuxt](https://nuxtjs.org)
 
-**⚠️ `nuxt-ionic` is currently a work in progress. Expect breaking changes.**
+**⚠️ `nuxt-ionic` is currently a work in progress. Expect breaking changes. ⚠️**
 
 ## Features
 
@@ -22,7 +22,9 @@
 1. Add `nuxt-ionic` dependency to your project
 
 ```bash
-yarn add --dev nuxt-ionic # or npm install -D nuxt-ionic or pnpm i -D nuxt-ionic
+yarn add --dev nuxt-ionic
+# npm install -D nuxt-ionic
+# pnpm i -D nuxt-ionic
 ```
 
 1. Add `nuxt-ionic` to the `modules` section of `nuxt.config.ts`
@@ -35,7 +37,7 @@ export default defineNuxtConfig({
   ionic: {
     // default options - no configuration is required
     integrations: {
-      router,
+      router: true,
     },
     css: {
       core: true,
