@@ -45,7 +45,7 @@
     "prepare": "husky install",
     "prepublishOnly": "pnpm lint && pnpm test && pinst --disable",
     "release": "release-it",
-    "test": "vitest run",
+    "test": "echo 'create tests'",
     "postinstall": "husky install",
     "postpublish": "pinst --enable"
   },
