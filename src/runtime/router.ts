@@ -4,6 +4,7 @@ import {
   createMemoryHistory,
 } from '@ionic/vue-router'
 
+import { defineNuxtPlugin } from '#imports'
 import routes from '#build/routes'
 
 export default defineNuxtPlugin(nuxtApp => {
