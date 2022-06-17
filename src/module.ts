@@ -38,12 +38,12 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin(resolve(runtimeDir, 'ionic'))
 
     // Add Ionic Core CSS
-    if (options.css.core) {
+    if (options.css?.core) {
       // Core CSS required for Ionic components to work properly
       nuxt.options.css.push('@ionic/vue/css/core.css')
     }
 
-    if (options.css.basic) {
+    if (options.css?.basic) {
       // Basic CSS for apps built with Ionic
       nuxt.options.css.push(
         '@ionic/vue/css/normalize.css',
@@ -52,7 +52,7 @@ export default defineNuxtModule<ModuleOptions>({
       )
     }
 
-    if (options.css.utilities) {
+    if (options.css?.utilities) {
       // Optional CSS utils that can be commented out
       nuxt.options.css.push(
         '@ionic/vue/css/padding.css',
@@ -84,8 +84,12 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     // Set up Ionic Router integration
-    if (options.integrations.router) {
+    if (options.integrations?.router) {
       addPlugin(resolve(runtimeDir, 'router'))
+      nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
+      nuxt.options.vite.optimizeDeps.include =
+        nuxt.options.vite.optimizeDeps.include || []
+      nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
 
       nuxt.hook('modules:done', () => {
         nuxt.options.plugins = nuxt.options.plugins.filter(
