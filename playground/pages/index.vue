@@ -3,7 +3,7 @@
     <ion-header translucent>
       <ion-toolbar class="toolbar">
         <ion-thumbnail slot="start">
-          <ion-img src="https://nuxtjs.org/design-kit/colored-logo.svg" />
+          <ion-img src="/icon.png" />
         </ion-thumbnail>
         <ion-title> Nuxt Ionic </ion-title>
       </ion-toolbar>
