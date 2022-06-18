@@ -1,5 +1,12 @@
 
 
+## [0.1.2](https://github.com/danielroe/nuxt-ionic/compare/0.1.1...0.1.2) (2022-06-18)
+
+
+### Bug Fixes
+
+* generate full paths for nested routes ([d8b3f68](https://github.com/danielroe/nuxt-ionic/commit/d8b3f6806a37acf11ac7ba6cced7782ebd68a22e))
+
 ## [0.1.1](https://github.com/danielroe/nuxt-ionic/compare/0.1.0...0.1.1) (2022-06-18)
 
 
