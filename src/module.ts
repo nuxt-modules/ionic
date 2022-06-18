@@ -8,6 +8,7 @@ import {
   installModule,
 } from '@nuxt/kit'
 import type { NuxtPage } from '@nuxt/schema'
+import { provider } from 'std-env'
 
 export interface ModuleOptions {
   integrations?: {
@@ -93,7 +94,8 @@ export default defineNuxtModule<ModuleOptions>({
       )
     })
 
-    if (options.integrations.meta) {
+    if (options.integrations?.meta) {
+      nuxt.options.app.head.meta = nuxt.options.app.head.meta || []
       for (const meta of metaDefaults) {
         if (!nuxt.options.app.head.meta.some(i => i.name === meta.name)) {
           nuxt.options.app.head.meta.unshift(meta)
@@ -103,7 +105,14 @@ export default defineNuxtModule<ModuleOptions>({
         'viewport-fit: cover, width: device-width, initial-scale: 1.0, minimum-scale: 1.0, maximum-scale: 1.0, user-scalable: no'
     }
 
-    if (options.integrations.pwa) {
+    if (options.integrations?.pwa) {
+      if (provider === 'stackblitz') {
+        ;(nuxt.options.pwa as any) = (nuxt.options.pwa as any) || {}
+        ;(nuxt.options.pwa as any).icon = false
+        console.warn(
+          'Disabling PWA icon generation as `sharp` is not currently supported on StackBlitz.'
+        )
+      }
       await installModule('@kevinmarrec/nuxt-pwa')
     }
 
