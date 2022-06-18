@@ -1,0 +1,32 @@
+title: nuxt/ionic
+
+layout: docs
+
+url: "https://ionic.roe.dev/"
+
+description: Batteries-included Ionic integration for Nuxt.
+
+socials:
+  twitter: "danielcroe"
+  github: "danielroe/nuxt-ionic"
+
+debug: false
+
+github:
+  root: docs/content
+  edit: true
+  releases: true
+
+header:
+  title: false
+  logo: true
+
+footer:
+  credits:
+    icon: IconDocus
+    text: Powered by Docus
+    href: https://docus.com
+  icons:
+    - label: Nuxt
+      href: https://nuxtjs.org
+      component: IconNuxt
