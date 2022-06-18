@@ -13,13 +13,13 @@
 
 **⚠️ `nuxt-ionic` is currently a work in progress. ⚠️**
 
-- [x] Zero-config required
-- [x] Auto-import Ionic components and composables throughout your app
-- [x] Ionic Router integration
-- [x] Pre-rendering auto-configuration
-- [x] Mobile meta tags
-- [x] PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
-- [x] Works out-of-the-box with Capacitor to build mobile apps
+- Zero-config required
+- Auto-import Ionic components and composables
+- Ionic Router integration
+- Pre-render routes
+- Mobile meta tags
+- PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
+- Works out-of-the-box with [Capacitor](https://capacitorjs.com/) to build mobile apps
 
 ## Quick setup
 
