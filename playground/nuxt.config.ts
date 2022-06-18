@@ -3,11 +3,11 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['nuxt-ionic'],
   ionic: {
-    // integrations: {
+    integrations: {
     //   meta: true,
-    //   pwa: true,
+       pwa: false,
     //   router: true,
-    // },
+    },
     // css: {
     //   core: true,
     //   basic: true,
