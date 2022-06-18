@@ -2,6 +2,7 @@ import { fileURLToPath } from 'url'
 import { join, resolve } from 'pathe'
 import { defineUnimportPreset } from 'unimport'
 import { defineNuxtModule, addComponent, addPlugin } from '@nuxt/kit'
+import type { NuxtPage } from '@nuxt/schema'
 
 export interface ModuleOptions {
   integrations?: {
@@ -101,6 +102,28 @@ export default defineNuxtModule<ModuleOptions>({
               'nuxt/dist/app/plugins/router'
             )
         )
+
+        // Add all pages to be prerendered
+        const routes: string[] = []
+
+        nuxt.hook('pages:extend', pages => {
+          routes.length = 0
+          function processPages(pages: NuxtPage[]) {
+            for (const page of pages) {
+              if (!page.path.includes(':')) {
+                routes.push(page.path)
+              }
+              if (page.children) {
+                processPages(page.children)
+              }
+            }
+          }
+          processPages(pages)
+        })
+
+        nuxt.hook('nitro:build:before', nitro => {
+          nitro.options.prerender.routes = routes
+        })
       })
 
       // Remove vue-router types

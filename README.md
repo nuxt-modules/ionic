@@ -16,8 +16,8 @@
 - [x] Zero-config required
 - [x] Auto-import Ionic components and composables throughout your app
 - [x] Ionic Router integration
+- [x] Pre-rendering auto-configuration
 - [ ] Capacitor implementation confirmed working
-- [ ] Pre-rendering auto-configuration
 
 ## Quick setup
 
