@@ -21,6 +21,10 @@
 - PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
 - Works out-of-the-box with [Capacitor](https://capacitorjs.com/) to build mobile apps
 
+**In progress**
+
+- [ ] PWA Elements
+
 ## Quick setup
 
 1. Add `nuxt-ionic` dependency to your project
