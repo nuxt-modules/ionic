@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   theme: {},
   modules: ['@nuxthq/admin', '@docus/github', 'vue-plausible'],
   plausible: {
-    url: 'ionic.roe.dev',
+    domain: 'ionic.roe.dev',
   },
   tailwindcss: {
     config: {
