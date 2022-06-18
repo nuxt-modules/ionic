@@ -7,7 +7,7 @@
 
 > [Ionic](https://ionicframework.com/docs/) integration for [Nuxt](https://nuxtjs.org)
 
-- [▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
+[▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
 
 ## Features
 
@@ -19,7 +19,7 @@
 - [x] Pre-rendering auto-configuration
 - [x] Mobile meta tags
 - [x] PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
-- [ ] Capacitor implementation confirmed working
+- [x] Works out-of-the-box with Capacitor to build mobile apps
 
 ## Quick setup
 

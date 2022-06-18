@@ -8,7 +8,15 @@
     "ionic:build": "pnpm build"
   },
   "devDependencies": {
-    "nuxt-ionic": "latest",
-    "nuxt": "^3.0.0-rc.4"
+    "@capacitor/android": "^3.6.0",
+    "@capacitor/app": "1.1.1",
+    "@capacitor/cli": "3.6.0",
+    "@capacitor/core": "3.6.0",
+    "@capacitor/haptics": "1.1.4",
+    "@capacitor/ios": "^3.6.0",
+    "@capacitor/keyboard": "1.2.3",
+    "@capacitor/status-bar": "1.0.8",
+    "nuxt": "^3.0.0-rc.4",
+    "nuxt-ionic": "latest"
   }
 }
