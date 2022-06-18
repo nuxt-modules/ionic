@@ -69,7 +69,7 @@ Published under the [MIT License](./LICENCE).
 [npm-version-href]: https://npmjs.com/package/nuxt-ionic
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-ionic?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/nuxt-ionic
-[github-actions-src]: https://img.shields.io/github/workflow/status/unjs/nuxt-ionic/ci/main?style=flat-square
-[github-actions-href]: https://github.com/unjs/nuxt-ionic/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/nuxt-ionic/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/unjs/nuxt-ionic
+[github-actions-src]: https://img.shields.io/github/workflow/status/danielroe/nuxt-ionic/ci/main?style=flat-square
+[github-actions-href]: https://github.com/danielroe/nuxt-ionic/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/gh/danielroe/nuxt-ionic/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/danielroe/nuxt-ionic
