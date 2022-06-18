@@ -28,7 +28,7 @@
       </ion-list>
 
       <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button @click="() => router.push('/new')">
+        <ion-fab-button router-link="/new">
           <ion-icon :icon="add"></ion-icon>
         </ion-fab-button>
       </ion-fab>
@@ -38,7 +38,6 @@
 
 <script setup>
 import { add } from 'ionicons/icons'
-const router = useIonRouter()
 useHead({
   title: 'Nuxt Ionic',
 })

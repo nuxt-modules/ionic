@@ -17,6 +17,8 @@
 - [x] Auto-import Ionic components and composables throughout your app
 - [x] Ionic Router integration
 - [x] Pre-rendering auto-configuration
+- [x] Mobile meta tags
+- [x] PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
 - [ ] Capacitor implementation confirmed working
 
 ## Quick setup
@@ -39,6 +41,8 @@ export default defineNuxtConfig({
   ionic: {
     // default options - no configuration is required
     integrations: {
+      meta: true,
+      pwa: true,
       router: true,
     },
     css: {

@@ -1,12 +1,19 @@
 import { fileURLToPath } from 'url'
 import { join, resolve } from 'pathe'
 import { defineUnimportPreset } from 'unimport'
-import { defineNuxtModule, addComponent, addPlugin } from '@nuxt/kit'
+import {
+  defineNuxtModule,
+  addComponent,
+  addPlugin,
+  installModule,
+} from '@nuxt/kit'
 import type { NuxtPage } from '@nuxt/schema'
 
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
+    pwa?: boolean
+    meta?: boolean
   }
   css?: {
     core?: boolean
@@ -22,6 +29,8 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: {
     integrations: {
+      meta: true,
+      pwa: true,
       router: true,
     },
     css: {
@@ -30,7 +39,7 @@ export default defineNuxtModule<ModuleOptions>({
       utilities: false,
     },
   },
-  setup(options, nuxt) {
+  async setup(options, nuxt) {
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/)
@@ -83,6 +92,20 @@ export default defineNuxtModule<ModuleOptions>({
         })
       )
     })
+
+    if (options.integrations.meta) {
+      for (const meta of metaDefaults) {
+        if (!nuxt.options.app.head.meta.some(i => i.name === meta.name)) {
+          nuxt.options.app.head.meta.unshift(meta)
+        }
+      }
+      nuxt.options.app.head.viewport =
+        'viewport-fit: cover, width: device-width, initial-scale: 1.0, minimum-scale: 1.0, maximum-scale: 1.0, user-scalable: no'
+    }
+
+    if (options.integrations.pwa) {
+      await installModule('@kevinmarrec/nuxt-pwa')
+    }
 
     // Set up Ionic Router integration
     if (options.integrations?.router) {
@@ -247,4 +270,14 @@ const IonicBuiltInComponents = [
   'IonToast',
   'IonModal',
   'IonPopover',
+]
+
+const metaDefaults = [
+  { name: 'color-scheme', content: 'light dark' },
+  { name: 'format-detection', content: 'telephone: no' },
+  { name: 'msapplication-tap-highlight', content: 'no' },
+  // add to homescreen for ios
+  { name: 'apple-mobile-web-app-capable', content: 'yes' },
+  { name: 'apple-mobile-web-app-title', content: 'Ionic App' },
+  { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
 ]
