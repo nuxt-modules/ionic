@@ -7,6 +7,7 @@ import {
   addPlugin,
   installModule,
 } from '@nuxt/kit'
+import { joinURL } from 'ufo'
 import type { NuxtPage } from '@nuxt/schema'
 import { provider } from 'std-env'
 
@@ -140,14 +141,13 @@ export default defineNuxtModule<ModuleOptions>({
 
         nuxt.hook('pages:extend', pages => {
           routes.length = 0
-          function processPages(pages: NuxtPage[]) {
+          function processPages(pages: NuxtPage[], currentPath = '') {
             for (const page of pages) {
-              if (!page.path.includes(':')) {
-                routes.push(page.path)
-              }
-              if (page.children) {
-                processPages(page.children)
-              }
+              if (page.path.includes(':')) continue
+
+              const path = joinURL(currentPath, page.path)
+              routes.push(path)
+              if (page.children) processPages(page.children, path)
             }
           }
           processPages(pages)
