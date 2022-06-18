@@ -1,5 +1,14 @@
 
 
+## [0.1.0](https://github.com/danielroe/nuxt-ionic/compare/0.0.3...0.1.0) (2022-06-18)
+
+
+### Features
+
+* add more ionic hooks ([1147ffe](https://github.com/danielroe/nuxt-ionic/commit/1147ffe4f62035a6bf0ffaf313151c4c49221bbe))
+* add pwa and meta tag configuration ([c5fad7e](https://github.com/danielroe/nuxt-ionic/commit/c5fad7ea06092d82e27f38f33bce3c54c52fc15b))
+* pre-render all non-dynamic pages ([21e765f](https://github.com/danielroe/nuxt-ionic/commit/21e765f17fcba8fd0129efe1f80cadf51bfbd214))
+
 ## [0.0.3](https://github.com/danielroe/nuxt-ionic/compare/0.0.2...0.0.3) (2022-06-17)
 
 
