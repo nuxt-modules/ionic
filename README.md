@@ -7,9 +7,11 @@
 
 > [Ionic](https://ionicframework.com/docs/) integration for [Nuxt](https://nuxtjs.org)
 
-**⚠️ `nuxt-ionic` is currently a work in progress. Expect breaking changes. ⚠️**
+- [▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
 
 ## Features
+
+**⚠️ `nuxt-ionic` is currently a work in progress. Expect breaking changes. ⚠️**
 
 - [x] Zero-config required
 - [x] Auto-import Ionic components and composables throughout your app
