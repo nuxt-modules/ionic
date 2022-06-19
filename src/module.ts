@@ -141,6 +141,10 @@ export default defineNuxtModule<ModuleOptions>({
 
         nuxt.hook('pages:extend', pages => {
           routes.length = 0
+          routes.push(
+            '/',
+            ...((nuxt.options.nitro.prerender?.routes || []) as string[])
+          )
           function processPages(pages: NuxtPage[], currentPath = '') {
             for (const page of pages) {
               if (page.path.includes(':')) continue
