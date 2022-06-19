@@ -1,5 +1,12 @@
 
 
+## [0.1.3](https://github.com/danielroe/nuxt-ionic/compare/0.1.2...0.1.3) (2022-06-19)
+
+
+### Bug Fixes
+
+* always generate `/` route ([cfe155f](https://github.com/danielroe/nuxt-ionic/commit/cfe155f7dc63e06aa792fbe17088981ce21969a4))
+
 ## [0.1.2](https://github.com/danielroe/nuxt-ionic/compare/0.1.1...0.1.2) (2022-06-18)
 
 
