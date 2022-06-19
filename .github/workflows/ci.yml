@@ -46,8 +46,8 @@ jobs:
       - name: 🛠 Build project
         run: pnpm build
 
-      # - name: 🧪 Test project
-      #   run: pnpm test --coverage
+      - name: 🧪 Test project
+        run: pnpm test -- --coverage
 
-      # - name: 🟩 Coverage
-      #   uses: codecov/codecov-action@v3
+      - name: 🟩 Coverage
+        uses: codecov/codecov-action@v3

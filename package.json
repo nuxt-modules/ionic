@@ -47,7 +47,7 @@
     "prepare": "husky install",
     "prepublishOnly": "pnpm lint && pnpm test && pinst --disable",
     "release": "release-it",
-    "test": "echo 'create tests'",
+    "test": "vitest run",
     "postinstall": "husky install",
     "postpublish": "pinst --enable"
   },
@@ -64,6 +64,7 @@
   "devDependencies": {
     "@nuxt/module-builder": "^0.1.7",
     "@nuxt/schema": "3.0.0-rc.4",
+    "@nuxt/test-utils": "3.0.0-rc.4",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/node": "^18.0.0",
