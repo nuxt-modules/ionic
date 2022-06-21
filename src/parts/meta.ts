@@ -7,10 +7,6 @@ export const setupMeta = () => {
     { name: 'color-scheme', content: 'light dark' },
     { name: 'format-detection', content: 'telephone: no' },
     { name: 'msapplication-tap-highlight', content: 'no' },
-    // add to homescreen for ios
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },
-    { name: 'apple-mobile-web-app-title', content: 'Ionic App' },
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
   ]
 
   nuxt.options.app.head.meta = nuxt.options.app.head.meta || []
