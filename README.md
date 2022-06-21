@@ -26,6 +26,7 @@
 **In progress**
 
 - [ ] PWA Elements
+- [ ] middleware support
 
 ## Usage
 
