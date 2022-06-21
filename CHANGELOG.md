@@ -1,5 +1,18 @@
 
 
+## [0.2.0](https://github.com/danielroe/nuxt-ionic/compare/0.1.3...0.2.0) (2022-06-21)
+
+
+### Features
+
+* create `ionic.config.json` if it doesn't already exist ([3d8e84a](https://github.com/danielroe/nuxt-ionic/commit/3d8e84a0b0ff9e46cd9e970b012dfc14228b47d1))
+* install capacitor packages by default ([3f3e247](https://github.com/danielroe/nuxt-ionic/commit/3f3e2473aabe4af96f325e4e3ae39b50535fa81e))
+
+
+### Bug Fixes
+
+* disable router integration if `pages/` is missing ([d3e3eb6](https://github.com/danielroe/nuxt-ionic/commit/d3e3eb6674fbadf9e1b34deb4279b1aabf936f79)), closes [#10](https://github.com/danielroe/nuxt-ionic/issues/10)
+
 ## [0.1.3](https://github.com/danielroe/nuxt-ionic/compare/0.1.2...0.1.3) (2022-06-19)
 
 
