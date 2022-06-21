@@ -1,17 +1,16 @@
 import { existsSync, promises as fsp } from 'node:fs'
-import { fileURLToPath } from 'node:url'
+
+import { defineNuxtModule, addComponent, addPlugin } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
-import {
-  defineNuxtModule,
-  addComponent,
-  addPlugin,
-  installModule,
-} from '@nuxt/kit'
-import { joinURL } from 'ufo'
-import type { NuxtPage } from '@nuxt/schema'
-import { provider } from 'std-env'
+
+import { runtimeDir } from './utils'
+
+import { useCSSSetup } from './parts/css'
+import { setupMeta } from './parts/meta'
+import { setupPWA } from './parts/pwa'
+import { setupRouter } from './parts/router'
 
 export interface ModuleOptions {
   integrations?: {
@@ -44,7 +43,6 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   async setup(options, nuxt) {
-    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/)
 
@@ -70,33 +68,6 @@ export default defineNuxtModule<ModuleOptions>({
     // Set up Ionic Core
     addPlugin(resolve(runtimeDir, 'ionic'))
 
-    // Add Ionic Core CSS
-    if (options.css?.core) {
-      // Core CSS required for Ionic components to work properly
-      nuxt.options.css.push('@ionic/vue/css/core.css')
-    }
-
-    if (options.css?.basic) {
-      // Basic CSS for apps built with Ionic
-      nuxt.options.css.push(
-        '@ionic/vue/css/normalize.css',
-        '@ionic/vue/css/structure.css',
-        '@ionic/vue/css/typography.css'
-      )
-    }
-
-    if (options.css?.utilities) {
-      // Optional CSS utils that can be commented out
-      nuxt.options.css.push(
-        '@ionic/vue/css/padding.css',
-        '@ionic/vue/css/float-elements.css',
-        '@ionic/vue/css/text-alignment.css',
-        '@ionic/vue/css/text-transformation.css',
-        '@ionic/vue/css/flex-utils.css',
-        '@ionic/vue/css/display.css'
-      )
-    }
-
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
       addComponent({
@@ -116,108 +87,32 @@ export default defineNuxtModule<ModuleOptions>({
       )
     })
 
+    const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
+
+    // Add Ionic Core CSS
+    if (options.css?.core) {
+      await setupCore()
+    }
+
+    if (options.css?.basic) {
+      await setupBasic()
+    }
+
+    if (options.css?.utilities) {
+      await setupUtilities()
+    }
+
     if (options.integrations?.meta) {
-      nuxt.options.app.head.meta = nuxt.options.app.head.meta || []
-      for (const meta of metaDefaults) {
-        if (!nuxt.options.app.head.meta.some(i => i.name === meta.name)) {
-          nuxt.options.app.head.meta.unshift(meta)
-        }
-      }
-      nuxt.options.app.head.viewport =
-        'viewport-fit: cover, width: device-width, initial-scale: 1.0, minimum-scale: 1.0, maximum-scale: 1.0, user-scalable: no'
+      await setupMeta()
     }
 
     if (options.integrations?.pwa) {
-      if (provider === 'stackblitz') {
-        ;(nuxt.options.pwa as any) = (nuxt.options.pwa as any) || {}
-        ;(nuxt.options.pwa as any).icon = false
-        console.warn(
-          'Disabling PWA icon generation as `sharp` is not currently supported on StackBlitz.'
-        )
-      }
-      await installModule('@kevinmarrec/nuxt-pwa')
+      await setupPWA()
     }
 
     // Set up Ionic Router integration
     if (options.integrations?.router) {
-      const pagesDirs = nuxt.options._layers.map(layer =>
-        resolve(layer.config.srcDir, layer.config.dir?.pages || 'pages')
-      )
-
-      // Disable module (and use universal router) if pages dir do not exists or user has disabled it
-      if (
-        nuxt.options.pages === false ||
-        (nuxt.options.pages !== true && !pagesDirs.some(dir => existsSync(dir)))
-      ) {
-        console.warn(
-          'Disabling Ionic Router integration as pages dir does not exist.'
-        )
-        return
-      }
-
-      addPlugin(resolve(runtimeDir, 'router'))
-      nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
-      nuxt.options.vite.optimizeDeps.include =
-        nuxt.options.vite.optimizeDeps.include || []
-      nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
-
-      nuxt.hook('modules:done', () => {
-        nuxt.options.plugins = nuxt.options.plugins.filter(
-          p =>
-            !(typeof p === 'string' ? p : p.src).endsWith(
-              'nuxt/dist/pages/runtime/router'
-            ) &&
-            !(typeof p === 'string' ? p : p.src).endsWith(
-              'nuxt/dist/app/plugins/router'
-            )
-        )
-
-        // Add all pages to be prerendered
-        const routes: string[] = []
-
-        nuxt.hook('pages:extend', pages => {
-          routes.length = 0
-          routes.push(
-            '/',
-            ...((nuxt.options.nitro.prerender?.routes || []) as string[])
-          )
-          function processPages(pages: NuxtPage[], currentPath = '') {
-            for (const page of pages) {
-              if (page.path.includes(':')) continue
-
-              const path = joinURL(currentPath, page.path)
-              routes.push(path)
-              if (page.children) processPages(page.children, path)
-            }
-          }
-          processPages(pages)
-        })
-
-        nuxt.hook('nitro:build:before', nitro => {
-          nitro.options.prerender.routes = routes
-        })
-      })
-
-      // Remove vue-router types
-      nuxt.hook('prepare:types', ({ references }) => {
-        const index = references.findIndex(
-          i => 'types' in i && i.types === 'vue-router'
-        )
-        if (index !== -1) {
-          references.splice(index, 1)
-        }
-      })
-
-      // Add default ionic root layout
-      nuxt.hook('app:resolve', app => {
-        if (
-          !app.mainComponent ||
-          app.mainComponent.includes('@nuxt/ui-templates') ||
-          app.mainComponent.match(/nuxt3?\/dist/)
-        ) {
-          app.mainComponent = join(runtimeDir, 'app.vue')
-        }
-      })
+      await setupRouter()
     }
   },
 })
@@ -327,14 +222,4 @@ const IonicBuiltInComponents = [
   'IonToast',
   'IonModal',
   'IonPopover',
-]
-
-const metaDefaults = [
-  { name: 'color-scheme', content: 'light dark' },
-  { name: 'format-detection', content: 'telephone: no' },
-  { name: 'msapplication-tap-highlight', content: 'no' },
-  // add to homescreen for ios
-  { name: 'apple-mobile-web-app-capable', content: 'yes' },
-  { name: 'apple-mobile-web-app-title', content: 'Ionic App' },
-  { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
 ]
