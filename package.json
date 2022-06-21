@@ -53,11 +53,13 @@
     "postpublish": "pinst --enable"
   },
   "dependencies": {
+    "@ionic/cli": "^6.20.0",
     "@ionic/vue": "^6.1.10",
     "@ionic/vue-router": "^6.1.10",
     "@kevinmarrec/nuxt-pwa": "^0.3.0",
     "@nuxt/kit": "^3.0.0-rc.4",
     "pathe": "^0.3.0",
+    "pkg-types": "^0.3.3",
     "std-env": "^3.1.1",
     "ufo": "^0.8.4",
     "unimport": "^0.2.9"

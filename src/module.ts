@@ -1,5 +1,7 @@
-import { fileURLToPath } from 'url'
+import { existsSync, promises as fsp } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import { join, resolve } from 'pathe'
+import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 import {
   defineNuxtModule,
@@ -45,6 +47,25 @@ export default defineNuxtModule<ModuleOptions>({
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/)
+
+    // Set up Ionic config
+    const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
+    if (!existsSync(ionicConfigPath)) {
+      await fsp.writeFile(
+        ionicConfigPath,
+        JSON.stringify(
+          {
+            name: await readPackageJSON(nuxt.options.rootDir).then(
+              ({ name }) => name || 'nuxt-ionic-project'
+            ),
+            integrations: {},
+            type: 'vue',
+          },
+          null,
+          2
+        )
+      )
+    }
 
     // Set up Ionic Core
     addPlugin(resolve(runtimeDir, 'ionic'))

@@ -7,7 +7,9 @@
 
 > [Ionic](https://ionicframework.com/docs/) integration for [Nuxt](https://nuxtjs.org)
 
-[▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
+- [✨ &nbsp;Changelog](https://github.com/danielroe/nuxt-ionic/blob/main/CHANGELOG.md)
+- [📖 &nbsp;Read the documentation](https://ionic.roe.dev)
+- [▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
 
 ## Features
 
@@ -25,38 +27,9 @@
 
 - [ ] PWA Elements
 
-## Quick setup
+## Usage
 
-1. Add `nuxt-ionic` dependency to your project
-
-```bash
-yarn add --dev nuxt-ionic
-# npm install -D nuxt-ionic
-# pnpm i -D nuxt-ionic
-```
-
-1. Add `nuxt-ionic` to the `modules` section of `nuxt.config.ts`
-
-```js
-import { defineNuxtConfig } from 'nuxt'
-
-export default defineNuxtConfig({
-  modules: ['nuxt-ionic'],
-  ionic: {
-    // default options - no configuration is required
-    integrations: {
-      meta: true,
-      pwa: true,
-      router: true,
-    },
-    css: {
-      core: true,
-      basic: true,
-      utilities: false,
-    },
-  },
-})
-```
+👉 Check out https://ionic.roe.dev.
 
 ## 💻 Development
 
