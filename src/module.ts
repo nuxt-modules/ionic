@@ -140,6 +140,21 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Set up Ionic Router integration
     if (options.integrations?.router) {
+      const pagesDirs = nuxt.options._layers.map(layer =>
+        resolve(layer.config.srcDir, layer.config.dir?.pages || 'pages')
+      )
+
+      // Disable module (and use universal router) if pages dir do not exists or user has disabled it
+      if (
+        nuxt.options.pages === false ||
+        (nuxt.options.pages !== true && !pagesDirs.some(dir => existsSync(dir)))
+      ) {
+        console.warn(
+          'Disabling Ionic Router integration as pages dir does not exist.'
+        )
+        return
+      }
+
       addPlugin(resolve(runtimeDir, 'router'))
       nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
       nuxt.options.vite.optimizeDeps.include =
