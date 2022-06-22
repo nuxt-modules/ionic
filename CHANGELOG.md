@@ -1,5 +1,12 @@
 
 
+## [0.2.1](https://github.com/danielroe/nuxt-ionic/compare/0.2.0...0.2.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* use pwa module for ios splash screen ([686ba68](https://github.com/danielroe/nuxt-ionic/commit/686ba687650b35a47b1997537d2508a113578f29))
+
 ## [0.2.0](https://github.com/danielroe/nuxt-ionic/compare/0.1.3...0.2.0) (2022-06-21)
 
 
