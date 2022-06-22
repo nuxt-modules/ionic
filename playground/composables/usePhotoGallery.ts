@@ -1,10 +1,5 @@
 import { Capacitor } from '@capacitor/core'
-import {
-  Camera,
-  CameraSource,
-  CameraResultType,
-  Photo,
-} from '@capacitor/camera'
+import { Camera, CameraSource, CameraResultType, Photo } from '@capacitor/camera'
 import { Filesystem, Directory } from '@capacitor/filesystem'
 import { Storage } from '@capacitor/storage'
 
@@ -41,10 +36,7 @@ export function usePhotoGallery() {
       reader.readAsDataURL(blob)
     })
 
-  const savePicture = async (
-    photo: Photo,
-    fileName: string
-  ): Promise<UserPhoto> => {
+  const savePicture = async (photo: Photo, fileName: string): Promise<UserPhoto> => {
     let base64Data: string
     // "hybrid" will detect Cordova or Capacitor;
     if (isPlatform('hybrid')) {
