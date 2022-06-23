@@ -1,5 +1,5 @@
 <template>
-  <div class="md">
+  <div>
     <ion-app>
       <ion-router-outlet />
     </ion-app>
