@@ -1,5 +1,16 @@
 
 
+## [0.2.2](https://github.com/danielroe/nuxt-ionic/compare/0.2.1...0.2.2) (2022-06-23)
+
+
+### Bug Fixes
+
+* correct viewport meta tag ([cfd2d90](https://github.com/danielroe/nuxt-ionic/commit/cfd2d906686f4eddcc3481e83d4e8e35fd80c6d4)), closes [#15](https://github.com/danielroe/nuxt-ionic/issues/15)
+* remove extraneous div wrapper ([9cdf360](https://github.com/danielroe/nuxt-ionic/commit/9cdf3608226b9969add5fd3866530f5af82a844b))
+* remove hard-coded `md` class ([a7f8ab4](https://github.com/danielroe/nuxt-ionic/commit/a7f8ab48aaf4e5de11f73fe0f920ceb6aa2aa0ec)), closes [#12](https://github.com/danielroe/nuxt-ionic/issues/12)
+* type error ([020fff2](https://github.com/danielroe/nuxt-ionic/commit/020fff23d6b36f37d9c14cbd5e850e925b3472f2))
+* use `app:resolve` for latest possible exclusion of vue router ([064cf49](https://github.com/danielroe/nuxt-ionic/commit/064cf49df2c22c53d33a0d736e447acbbed43af7))
+
 ## [0.2.1](https://github.com/danielroe/nuxt-ionic/compare/0.2.0...0.2.1) (2022-06-22)
 
 
