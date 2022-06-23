@@ -5,7 +5,7 @@ import { provider } from 'std-env'
 export const setupPWA = async () => {
   const nuxt = useNuxt()
 
-  nuxt.options.pwa ||= {} as NuxtOptions['pwa']
+  nuxt.options.pwa = nuxt.options.pwa || ({} as NuxtOptions['pwa'])
 
   const pwaOptions: NuxtConfig['pwa'] = nuxt.options.pwa
 
@@ -17,8 +17,8 @@ export const setupPWA = async () => {
   }
 
   // Generate splash screens for iOS
-  pwaOptions.meta ||= {}
-  pwaOptions.meta.mobileAppIOS ??= true
+  pwaOptions.meta = pwaOptions.meta || {}
+  pwaOptions.meta.mobileAppIOS = pwaOptions.meta.mobileAppIOS ?? true
 
   await installModule('@kevinmarrec/nuxt-pwa')
 }
