@@ -25,34 +25,32 @@ export const setupRouter = () => {
   nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
   nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
 
-  nuxt.hook('modules:done', () => {
-    nuxt.options.plugins = nuxt.options.plugins.filter(
-      p =>
-        !(typeof p === 'string' ? p : p.src).endsWith('nuxt/dist/pages/runtime/router') &&
-        !(typeof p === 'string' ? p : p.src).endsWith('nuxt/dist/app/plugins/router')
+  nuxt.hook('app:resolve', app => {
+    app.plugins = app.plugins.filter(
+      p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/router/)
     )
+  })
 
-    // Add all pages to be prerendered
-    const routes: string[] = []
+  // Add all pages to be prerendered
+  const routes: string[] = []
 
-    nuxt.hook('pages:extend', pages => {
-      routes.length = 0
-      routes.push('/', ...((nuxt.options.nitro.prerender?.routes || []) as string[]))
-      function processPages(pages: NuxtPage[], currentPath = '') {
-        for (const page of pages) {
-          if (page.path.includes(':')) continue
+  nuxt.hook('pages:extend', pages => {
+    routes.length = 0
+    routes.push('/', ...((nuxt.options.nitro.prerender?.routes || []) as string[]))
+    function processPages(pages: NuxtPage[], currentPath = '') {
+      for (const page of pages) {
+        if (page.path.includes(':')) continue
 
-          const path = joinURL(currentPath, page.path)
-          routes.push(path)
-          if (page.children) processPages(page.children, path)
-        }
+        const path = joinURL(currentPath, page.path)
+        routes.push(path)
+        if (page.children) processPages(page.children, path)
       }
-      processPages(pages)
-    })
+    }
+    processPages(pages)
+  })
 
-    nuxt.hook('nitro:build:before', nitro => {
-      nitro.options.prerender.routes = routes
-    })
+  nuxt.hook('nitro:build:before', nitro => {
+    nitro.options.prerender.routes = routes
   })
 
   // Remove vue-router types
