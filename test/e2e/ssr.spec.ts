@@ -19,7 +19,7 @@ describe('nuxt ionic', async () => {
   it('renders correct viewport tags', async () => {
     const html = await $fetch('/')
     expect(html).toContain(
-      '<meta name="viewport" content="viewport-fit: cover, width: device-width, initial-scale: 1.0, minimum-scale: 1.0, maximum-scale: 1.0, user-scalable: no">'
+      '<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">'
     )
   })
 })
