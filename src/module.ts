@@ -12,10 +12,14 @@ import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
 
+interface PwaOptions {
+  enableElements?: boolean
+}
+
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
-    pwa?: boolean
+    pwa?: boolean | PwaOptions
     meta?: boolean
   }
   css?: {
@@ -33,7 +37,9 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     integrations: {
       meta: true,
-      pwa: true,
+      pwa: {
+        enableElements: false,
+      },
       router: true,
     },
     css: {
@@ -108,6 +114,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (options.integrations?.pwa) {
       await setupPWA()
+
+      // If it isn't true, it must be a PWA options object
+      if (options.integrations.pwa != true && options.integrations.pwa?.enableElements) {
+        addPlugin(resolve(runtimeDir, 'customElements.client'))
+      }
     }
 
     // Set up Ionic Router integration

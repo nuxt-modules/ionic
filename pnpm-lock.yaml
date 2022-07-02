@@ -10,6 +10,7 @@ importers:
       '@capacitor/cli': ^3.6.0
       '@capacitor/core': ^3.6.0
       '@ionic/cli': ^6.20.1
+      '@ionic/pwa-elements': ^3.1.1
       '@ionic/vue': ^6.1.11
       '@ionic/vue-router': ^6.1.11
       '@kevinmarrec/nuxt-pwa': ^0.3.0
@@ -43,6 +44,7 @@ importers:
       '@capacitor/cli': 3.6.0
       '@capacitor/core': 3.6.0
       '@ionic/cli': 6.20.1
+      '@ionic/pwa-elements': 3.1.1
       '@ionic/vue': 6.1.11
       '@ionic/vue-router': 6.1.11
       '@kevinmarrec/nuxt-pwa': 0.3.0
@@ -659,6 +661,10 @@ packages:
       '@stencil/core': 2.17.0
       ionicons: 6.0.2
       tslib: 2.4.0
+    dev: false
+
+  /@ionic/pwa-elements/3.1.1:
+    resolution: {integrity: sha512-BoEX1pSrKn5dP4VQwaf8DweAmT4ynmpW+9f6oj/W1xLe54bmuXcUY07ziuZX1DLu50xHSYcO5qJ/dbYC/w6wgA==}
     dev: false
 
   /@ionic/utils-array/2.1.5:
