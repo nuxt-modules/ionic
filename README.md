@@ -1,3 +1,5 @@
+[![nuxt-ionicstrapi](./docs/public/cover.jpg)](https://ionic.roe.dev)
+
 # Nuxt Ionic
 
 [![npm version][npm-version-src]][npm-version-href]
