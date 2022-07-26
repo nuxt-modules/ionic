@@ -1,4 +1,9 @@
 {
   "extends": ["github>nuxt/renovate-config-nuxt"],
-  "ignoreDeps": ["@​docus/docs-theme", "@​docus/github"]
+  "ignoreDeps": [
+    "@​docus/docs-theme",
+    "@​docus/github",
+    "@​docus/docs-theme-edge",
+    "@​docus/github-edge"
+  ]
 }
