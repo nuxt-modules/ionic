@@ -5,9 +5,10 @@ import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
-import { runtimeDir, partsDir } from './utils'
+import { runtimeDir } from './utils'
 
 import { useCSSSetup } from './parts/css'
+import { iconList } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
@@ -90,13 +91,16 @@ export default defineNuxtModule<ModuleOptions>({
       )
 
       // Icons
-      if (options.integrations?.icons)
+      if (options.integrations?.icons) {
         presets.push(
           defineUnimportPreset({
-            from: resolve(partsDir, 'icons'),
-            imports: ['Ionicons'],
+            from: 'ionicons/icons',
+            imports: iconList.map(obj => {
+              return [obj.name, obj.as] as [string, string]
+            }),
           })
         )
+      }
     })
 
     const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
