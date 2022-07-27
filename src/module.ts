@@ -5,7 +5,7 @@ import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
-import { runtimeDir } from './utils'
+import { runtimeDir, partsDir } from './utils'
 
 import { useCSSSetup } from './parts/css'
 import { setupMeta } from './parts/meta'
@@ -17,6 +17,7 @@ export interface ModuleOptions {
     router?: boolean
     pwa?: boolean
     meta?: boolean
+    icons?: boolean
   }
   css?: {
     core?: boolean
@@ -35,6 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
       meta: true,
       pwa: true,
       router: true,
+      icons: true,
     },
     css: {
       core: true,
@@ -79,12 +81,22 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Add auto-imported composables
     nuxt.hook('autoImports:sources', presets => {
+      // Ionic hooks
       presets.push(
         defineUnimportPreset({
           from: '@ionic/vue',
           imports: [...IonicHooks],
         })
       )
+
+      // Icons
+      if (options.integrations?.icons)
+        presets.push(
+          defineUnimportPreset({
+            from: resolve(partsDir, 'icons'),
+            imports: ['Ionicons'],
+          })
+        )
     })
 
     const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
