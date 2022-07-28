@@ -1,11 +1,11 @@
 import { useNuxt } from '@nuxt/kit'
 import { defineUnimportPreset } from 'unimport'
-import * as icons from 'ionicons/icons'
+import * as icons from 'ionicons/icons/index.mjs'
 
 const iconsPreset = defineUnimportPreset({
   from: 'ionicons/icons',
   // @ts-ignore-next-line
-  imports: Object.keys(icons.default || icons).map(name => ({
+  imports: Object.keys(icons).map(name => ({
     name,
     as: 'ionicons' + name[0].toUpperCase() + name.slice(1),
   })),
