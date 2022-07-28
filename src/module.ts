@@ -8,7 +8,7 @@ import { defineUnimportPreset } from 'unimport'
 import { runtimeDir } from './utils'
 
 import { useCSSSetup } from './parts/css'
-import { iconList } from './parts/icons'
+import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
@@ -89,18 +89,6 @@ export default defineNuxtModule<ModuleOptions>({
           imports: [...IonicHooks],
         })
       )
-
-      // Icons
-      if (options.integrations?.icons) {
-        presets.push(
-          defineUnimportPreset({
-            from: 'ionicons/icons',
-            imports: iconList.map(obj => {
-              return [obj.name, obj.as] as [string, string]
-            }),
-          })
-        )
-      }
     })
 
     const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
@@ -116,6 +104,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (options.css?.utilities) {
       await setupUtilities()
+    }
+
+    // Add auto-imported icons
+    if (options.integrations?.icons) {
+      await setupIcons()
     }
 
     if (options.integrations?.meta) {
