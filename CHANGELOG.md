@@ -1,5 +1,18 @@
 
 
+## [0.3.0](https://github.com/danielroe/nuxt-ionic/compare/0.2.2...0.3.0) (2022-07-28)
+
+
+### Features
+
+* :sparkles: add interface for accessing ionic icons ([#27](https://github.com/danielroe/nuxt-ionic/issues/27)) ([9cd2417](https://github.com/danielroe/nuxt-ionic/commit/9cd2417596ea6f2a3409aefae2feb86c31188f28))
+* upgrade to new version of `nuxt-pwa-module` ([#25](https://github.com/danielroe/nuxt-ionic/issues/25)) ([04fae3e](https://github.com/danielroe/nuxt-ionic/commit/04fae3e25fe8d7d6ba51bfe0f13ed44d74aa8bd0))
+
+
+### Bug Fixes
+
+* add `ionicons` dependency ([8a1a6bd](https://github.com/danielroe/nuxt-ionic/commit/8a1a6bd726c59cd5922cf8cf921b14edc74f45d2))
+
 ## [0.2.2](https://github.com/danielroe/nuxt-ionic/compare/0.2.1...0.2.2) (2022-06-23)
 
 
