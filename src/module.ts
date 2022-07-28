@@ -82,7 +82,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Add auto-imported composables
     nuxt.hook('autoImports:sources', presets => {
-      // Ionic hooks
       presets.push(
         defineUnimportPreset({
           from: '@ionic/vue',
