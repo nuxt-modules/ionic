@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: ['nuxt-ionic'],
   ionic: {
     // integrations: {
+    //   icons: true,
     //   meta: true,
     //   pwa: true,
     //   router: true,

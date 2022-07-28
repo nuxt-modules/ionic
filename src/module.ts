@@ -8,6 +8,7 @@ import { defineUnimportPreset } from 'unimport'
 import { runtimeDir } from './utils'
 
 import { useCSSSetup } from './parts/css'
+import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
@@ -17,6 +18,7 @@ export interface ModuleOptions {
     router?: boolean
     pwa?: boolean
     meta?: boolean
+    icons?: boolean
   }
   css?: {
     core?: boolean
@@ -35,6 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
       meta: true,
       pwa: true,
       router: true,
+      icons: true,
     },
     css: {
       core: true,
@@ -100,6 +103,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (options.css?.utilities) {
       await setupUtilities()
+    }
+
+    // Add auto-imported icons
+    if (options.integrations?.icons) {
+      await setupIcons()
     }
 
     if (options.integrations?.meta) {
