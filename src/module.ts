@@ -163,6 +163,7 @@ const IonicBuiltInComponents = [
   'IonCol',
   'IonContent',
   'IonDatetime',
+  'IonDatetimeButton',
   'IonFab',
   'IonFabButton',
   'IonFabList',
