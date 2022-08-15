@@ -75,13 +75,13 @@
     "@types/node": "^18.7.2",
     "c8": "^7.12.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.21.0",
+    "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "expect-type": "^0.13.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "nuxt": "^3.0.0-rc.6",
+    "nuxt": "^3.0.0-rc.8",
     "pinst": "^3.0.0",
     "prettier": "^2.7.1",
     "release-it": "^15.3.0",
@@ -92,8 +92,8 @@
   "resolutions": {
     "nuxt-ionic": "link:."
   },
-  "packageManager": "pnpm@7.5.0",
+  "packageManager": "pnpm@7.9.0",
   "volta": {
-    "node": "16.15.1"
+    "node": "16.16.0"
   }
 }
