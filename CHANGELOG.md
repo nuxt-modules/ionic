@@ -1,5 +1,12 @@
 
 
+## [0.3.1](https://github.com/danielroe/nuxt-ionic/compare/0.3.0...0.3.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* transpile `[@stencil](https://github.com/stencil)` deps ([f02ef6a](https://github.com/danielroe/nuxt-ionic/commit/f02ef6af00e77ef7e38308375bb16be4da35035b)), closes [#33](https://github.com/danielroe/nuxt-ionic/issues/33)
+
 ## [0.3.0](https://github.com/danielroe/nuxt-ionic/compare/0.2.2...0.3.0) (2022-07-28)
 
 
