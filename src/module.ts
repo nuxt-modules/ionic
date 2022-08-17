@@ -1,6 +1,6 @@
 import { existsSync, promises as fsp } from 'node:fs'
 
-import { defineNuxtModule, addComponent, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule, addComponent, addPlugin, addTemplate } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
@@ -91,7 +91,12 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(options, nuxt) {
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
-    nuxt.options.runtimeConfig.public.ionic = options.config
+
+    // Inject options for the Ionic Vue plugin as a virtual module
+    addTemplate({
+      filename: 'ionic/vue-config.mjs',
+      getContents: () => `export default ${JSON.stringify(options.config)}`,
+    })
 
     // Set up Ionic config file
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
