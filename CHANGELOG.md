@@ -1,5 +1,12 @@
 
 
+## [0.4.0](https://github.com/danielroe/nuxt-ionic/compare/0.3.1...0.4.0) (2022-08-17)
+
+
+### Features
+
+* add option and interface for `@ionic/vue` global config ([#38](https://github.com/danielroe/nuxt-ionic/issues/38)) ([7df1aae](https://github.com/danielroe/nuxt-ionic/commit/7df1aaef29229c358772f79a1c4366c7f687b4e9))
+
 ## [0.3.1](https://github.com/danielroe/nuxt-ionic/compare/0.3.0...0.3.1) (2022-08-15)
 
 
