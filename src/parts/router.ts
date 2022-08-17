@@ -1,14 +1,12 @@
 import { existsSync } from 'node:fs'
 import { addPlugin, useNuxt } from '@nuxt/kit'
-import type { NuxtPage } from '@nuxt/schema'
 import { join, resolve } from 'pathe'
-import { joinURL } from 'ufo'
 import { runtimeDir } from '../utils'
 
 export const setupRouter = () => {
   const nuxt = useNuxt()
   const pagesDirs = nuxt.options._layers.map(layer =>
-    resolve(layer.config.srcDir || layer.cwd!, layer.config.dir?.pages || 'pages')
+    resolve(layer.config?.srcDir || layer.cwd!, layer.config?.dir?.pages || 'pages')
   )
 
   // Disable module (and use universal router) if pages dir do not exists or user has disabled it
