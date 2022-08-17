@@ -14,7 +14,7 @@ const iconsPreset = defineUnimportPreset({
 export const setupIcons = () => {
   const nuxt = useNuxt()
 
-  nuxt.options.build.transpile.push('ionicons/icons')
+  nuxt.options.build.transpile.push(/ionicons/)
 
   nuxt.hook('autoImports:sources', presets => {
     presets.push(iconsPreset)
