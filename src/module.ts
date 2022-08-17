@@ -12,6 +12,8 @@ import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
+import { AnimationBuilder, SpinnerTypes } from '@ionic/vue'
+import { Mode, PlatformConfig, TabButtonLayout } from '@ionic/core'
 
 export interface ModuleOptions {
   integrations?: {
@@ -24,6 +26,40 @@ export interface ModuleOptions {
     core?: boolean
     basic?: boolean
     utilities?: boolean
+  }
+  config?: {
+    actionSheetEnter?: AnimationBuilder
+    actionSheetLeave?: AnimationBuilder
+    alertEnter?: AnimationBuilder
+    alertLeave?: AnimationBuilder
+    animated?: boolean
+    backButtonIcon?: string
+    backButtonText?: string
+    hardwareBackButton?: boolean
+    infiniteLoadingSpinner?: SpinnerTypes
+    loadingEnter?: AnimationBuilder
+    loadingLeave?: AnimationBuilder
+    loadingSpinner?: SpinnerTypes
+    menuIcon?: string
+    menuType?: string
+    modalEnter?: AnimationBuilder
+    modalLeave?: AnimationBuilder
+    mode?: Mode
+    navAnimation?: AnimationBuilder
+    pickerEnter?: AnimationBuilder
+    pickerLeave?: AnimationBuilder
+    platform?: PlatformConfig
+    popoverEnter?: AnimationBuilder
+    popoverLeave?: AnimationBuilder
+    refreshingIcon?: string
+    refreshingSpinner?: SpinnerTypes
+    sanitizerEnabled?: boolean
+    spinner?: SpinnerTypes
+    statusTap?: boolean
+    swipeBackEnabled?: boolean
+    tabButtonLayout?: TabButtonLayout
+    toastEnter?: AnimationBuilder
+    toastLeave?: AnimationBuilder
   }
 }
 
@@ -44,12 +80,14 @@ export default defineNuxtModule<ModuleOptions>({
       basic: true,
       utilities: false,
     },
+    config: {},
   },
   async setup(options, nuxt) {
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
+    nuxt.options.runtimeConfig.ionic = options.config
 
-    // Set up Ionic config
+    // Set up Ionic config file
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
     if (!existsSync(ionicConfigPath)) {
       await fsp.writeFile(
