@@ -20,6 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^10.0.0
       '@release-it/conventional-changelog': ^5.0.0
       '@types/node': ^18.7.2
+      '@vitest/coverage-c8': ^0.22.0
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
       eslint: ^8.22.0
@@ -60,6 +61,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 10.0.0_4rv7y5c6xz3vfxwhbrcxxi73bq
       '@release-it/conventional-changelog': 5.0.0_release-it@15.3.0
       '@types/node': 18.7.2
+      '@vitest/coverage-c8': 0.22.0
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.22.0
@@ -2089,6 +2091,24 @@ packages:
     dependencies:
       vite: 3.0.7
       vue: 3.2.37
+    dev: true
+
+  /@vitest/coverage-c8/0.22.0:
+    resolution: {integrity: sha512-jwW6b8U+h9nbzQfKoRmpf2xjDg+mcAjLIdVUrZGhjTnIdekGfvoqFoeiXzsLv2HwYBeFi4943lYUftuj8qD1FQ==}
+    dependencies:
+      c8: 7.12.0
+      vitest: 0.22.0
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - happy-dom
+      - jsdom
+      - less
+      - sass
+      - stylus
+      - supports-color
+      - terser
     dev: true
 
   /@vue/babel-helper-vue-transform-on/1.0.2:
