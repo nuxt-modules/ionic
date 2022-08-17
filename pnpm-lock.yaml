@@ -20,6 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^10.0.0
       '@release-it/conventional-changelog': ^5.0.0
       '@types/node': ^18.7.2
+      '@vitest/coverage-c8': ^0.22.0
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
       eslint: ^8.22.0
@@ -38,7 +39,7 @@ importers:
       typescript: ^4.7.4
       ufo: ^0.8.5
       unimport: ^0.6.7
-      vitest: ^0.21.1
+      vitest: ^0.22.0
       vue: ^3.2.37
     dependencies:
       '@capacitor/cli': 4.0.1
@@ -60,6 +61,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 10.0.0_4rv7y5c6xz3vfxwhbrcxxi73bq
       '@release-it/conventional-changelog': 5.0.0_release-it@15.3.0
       '@types/node': 18.7.2
+      '@vitest/coverage-c8': 0.22.0
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.22.0
@@ -73,7 +75,7 @@ importers:
       prettier: 2.7.1
       release-it: 15.3.0
       typescript: 4.7.4
-      vitest: 0.21.1_c8@7.12.0
+      vitest: 0.22.0
       vue: 3.2.37
 
   docs:
@@ -461,7 +463,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.0-27672325.19fae5d
+      '@nuxt/content': /@nuxt/content-edge/2.1.0-27679066.bf35a81
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -917,8 +919,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.0-27672325.19fae5d:
-    resolution: {integrity: sha512-Qmj2V2QiN9KZ6BJb6QQfMZS9I+722ktciI4XnOquQ0KwhCLfre4eNKcxOB2qi46eynA4uKsuW+lQzr7iu/9mZg==}
+  /@nuxt/content-edge/2.1.0-27679066.bf35a81:
+    resolution: {integrity: sha512-8f05YCqGfj2P/ykcW822J1DrVjG21uDO5pP02TgxoyjgPJqOf6sXS5DjoBrz5fzmt3/+jyNeWBp4Fnp3CevOTw==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.8
       consola: 2.15.3
@@ -2091,6 +2093,24 @@ packages:
       vue: 3.2.37
     dev: true
 
+  /@vitest/coverage-c8/0.22.0:
+    resolution: {integrity: sha512-jwW6b8U+h9nbzQfKoRmpf2xjDg+mcAjLIdVUrZGhjTnIdekGfvoqFoeiXzsLv2HwYBeFi4943lYUftuj8qD1FQ==}
+    dependencies:
+      c8: 7.12.0
+      vitest: 0.22.0
+    transitivePeerDependencies:
+      - '@edge-runtime/vm'
+      - '@vitest/browser'
+      - '@vitest/ui'
+      - happy-dom
+      - jsdom
+      - less
+      - sass
+      - stylus
+      - supports-color
+      - terser
+    dev: true
+
   /@vue/babel-helper-vue-transform-on/1.0.2:
     resolution: {integrity: sha512-hz4R8tS5jMn8lDq6iD+yWL6XNB699pGIVLk7WSJnn1dbpjaazsjZQkieJoRX6gW5zpYSCFqQ7jUquPNY65tQYA==}
     dev: true
@@ -3130,7 +3150,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /concat-stream/2.0.0:
     resolution: {integrity: sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==}
@@ -10958,33 +10978,6 @@ packages:
       vscode-uri: 3.0.3
     dev: true
 
-  /vite/3.0.5:
-    resolution: {integrity: sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.14.54
-      postcss: 8.4.16
-      resolve: 1.22.1
-      rollup: 2.77.3
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/3.0.7:
     resolution: {integrity: sha512-dILhvKba1mbP1wCezVQx/qhEK7/+jVn9ciadEcyKMMhZpsuAi/eWZfJRMkmYlkSFG7Qq9NvJbgFq4XOBxugJsA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -11012,15 +11005,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.21.1_c8@7.12.0:
-    resolution: {integrity: sha512-WBIxuFmIDPuK47GO6Lu9eNeRMqHj/FWL3dk73OHH3eyPPWPiu+UB3QHLkLK2PEggCqJW4FaWoWg8R68S7p9+9Q==}
+  /vitest/0.22.0:
+    resolution: {integrity: sha512-BSIro/QOHLaQY08FHwT6THWhqLQ+VPU+N4Rdo4pcP+16XB6oLmNNAXGcSh/MOLUhfUy+mqCwx7AyKmU7Ms5R+g==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@vitest/browser': '*'
       '@vitest/ui': '*'
-      c8: '*'
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -11030,8 +11022,6 @@ packages:
         optional: true
       '@vitest/ui':
         optional: true
-      c8:
-        optional: true
       happy-dom:
         optional: true
       jsdom:
@@ -11040,13 +11030,12 @@ packages:
       '@types/chai': 4.3.3
       '@types/chai-subset': 1.3.3
       '@types/node': 18.7.2
-      c8: 7.12.0
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
       tinypool: 0.2.4
       tinyspy: 1.0.0
-      vite: 3.0.5
+      vite: 3.0.7
     transitivePeerDependencies:
       - less
       - sass
