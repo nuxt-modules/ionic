@@ -1,6 +1,6 @@
 /* @vitest-environment node */
 import { fileURLToPath } from 'node:url'
-import { setup } from '@nuxt/test-utils'
+import { setup, $fetch } from '@nuxt/test-utils'
 import { describe, expect, it } from 'vitest'
 
 describe('nuxt ionic', async () => {
