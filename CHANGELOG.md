@@ -1,5 +1,20 @@
 
 
+## [0.5.0](https://github.com/danielroe/nuxt-ionic/compare/0.4.0...0.5.0) (2022-08-17)
+
+
+### Features
+
+* **router:** add support for custom router options ([acfe7f1](https://github.com/danielroe/nuxt-ionic/commit/acfe7f127caba7560f4e5c69d00ef1b4fd5b0c9a))
+
+
+### Bug Fixes
+
+* remove prerendering workaround ([3b18f8f](https://github.com/danielroe/nuxt-ionic/commit/3b18f8f609cf159ee77f927fc26efc1e6bbd87ef))
+* transpile `ionicons` ([a9ef0d7](https://github.com/danielroe/nuxt-ionic/commit/a9ef0d73c116dd1b33a7f80716e8c5edce36c87e))
+* update transpile ([619518f](https://github.com/danielroe/nuxt-ionic/commit/619518f68129eda830483d18e22dd10d27935a16))
+* use `useRoute` and `useRouter` from `vue-router ` ([1aec323](https://github.com/danielroe/nuxt-ionic/commit/1aec323da99c89bea447125592a3eb2ec5723d2e))
+
 ## [0.4.0](https://github.com/danielroe/nuxt-ionic/compare/0.3.1...0.4.0) (2022-08-17)
 
 
