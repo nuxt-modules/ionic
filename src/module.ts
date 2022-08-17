@@ -91,7 +91,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(options, nuxt) {
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
-    nuxt.options.runtimeConfig.ionic = options.config
+    nuxt.options.runtimeConfig.public.ionic = options.config
 
     // Set up Ionic config file
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
