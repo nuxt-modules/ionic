@@ -31,28 +31,6 @@ export const setupRouter = () => {
     )
   })
 
-  // Add all pages to be prerendered
-  const routes: string[] = []
-
-  nuxt.hook('pages:extend', pages => {
-    routes.length = 0
-    routes.push('/', ...((nuxt.options.nitro.prerender?.routes || []) as string[]))
-    function processPages(pages: NuxtPage[], currentPath = '') {
-      for (const page of pages) {
-        if (page.path.includes(':')) continue
-
-        const path = joinURL(currentPath, page.path)
-        routes.push(path)
-        if (page.children) processPages(page.children, path)
-      }
-    }
-    processPages(pages)
-  })
-
-  nuxt.hook('nitro:build:before', nitro => {
-    nitro.options.prerender.routes = routes
-  })
-
   // Remove vue-router types
   nuxt.hook('prepare:types', ({ references }) => {
     const index = references.findIndex(i => 'types' in i && i.types === 'vue-router')
