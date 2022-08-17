@@ -1,6 +1,6 @@
 import { existsSync, promises as fsp } from 'node:fs'
 
-import { defineNuxtModule, addComponent, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule, addComponent, addPlugin, addTemplate } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
@@ -13,6 +13,8 @@ import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
 
+import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
+
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
@@ -24,6 +26,46 @@ export interface ModuleOptions {
     core?: boolean
     basic?: boolean
     utilities?: boolean
+  }
+  config?: {
+    actionSheetEnter?: AnimationBuilder
+    actionSheetLeave?: AnimationBuilder
+    alertEnter?: AnimationBuilder
+    alertLeave?: AnimationBuilder
+    animated?: boolean
+    backButtonIcon?: string
+    backButtonText?: string
+    hardwareBackButton?: boolean
+    infiniteLoadingSpinner?: SpinnerTypes
+    loadingEnter?: AnimationBuilder
+    loadingLeave?: AnimationBuilder
+    loadingSpinner?: SpinnerTypes
+    menuIcon?: string
+    menuType?: string
+    modalEnter?: AnimationBuilder
+    modalLeave?: AnimationBuilder
+    mode?: 'ios' | 'md'
+    navAnimation?: AnimationBuilder
+    pickerEnter?: AnimationBuilder
+    pickerLeave?: AnimationBuilder
+    platform?: PlatformConfig
+    popoverEnter?: AnimationBuilder
+    popoverLeave?: AnimationBuilder
+    refreshingIcon?: string
+    refreshingSpinner?: SpinnerTypes
+    sanitizerEnabled?: boolean
+    spinner?: SpinnerTypes
+    statusTap?: boolean
+    swipeBackEnabled?: boolean
+    tabButtonLayout?:
+      | 'icon-top'
+      | 'icon-start'
+      | 'icon-end'
+      | 'icon-bottom'
+      | 'icon-hide'
+      | 'label-hide'
+    toastEnter?: AnimationBuilder
+    toastLeave?: AnimationBuilder
   }
 }
 
@@ -44,12 +86,19 @@ export default defineNuxtModule<ModuleOptions>({
       basic: true,
       utilities: false,
     },
+    config: {},
   },
   async setup(options, nuxt) {
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
-    // Set up Ionic config
+    // Inject options for the Ionic Vue plugin as a virtual module
+    addTemplate({
+      filename: 'ionic/vue-config.mjs',
+      getContents: () => `export default ${JSON.stringify(options.config)}`,
+    })
+
+    // Set up Ionic config file
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
     if (!existsSync(ionicConfigPath)) {
       await fsp.writeFile(
