@@ -4,7 +4,7 @@ import * as icons from 'ionicons/icons/index.mjs'
 
 const iconsPreset = defineUnimportPreset({
   from: 'ionicons/icons',
-  // @ts-ignore-next-line
+  // @ts-expect-error upstream typing issue
   imports: Object.keys(icons).map(name => ({
     name,
     as: 'ionicons' + name[0].toUpperCase() + name.slice(1),
@@ -13,6 +13,8 @@ const iconsPreset = defineUnimportPreset({
 
 export const setupIcons = () => {
   const nuxt = useNuxt()
+
+  nuxt.options.build.transpile.push('ionicons/icons')
 
   nuxt.hook('autoImports:sources', presets => {
     presets.push(iconsPreset)
