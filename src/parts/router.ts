@@ -25,10 +25,28 @@ export const setupRouter = () => {
   nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
   nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
 
-  nuxt.hook('app:resolve', app => {
-    app.plugins = app.plugins.filter(
-      p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/router/)
-    )
+  nuxt.hook('modules:done', () => {
+    nuxt.hook('app:resolve', app => {
+      app.plugins = app.plugins.filter(
+        p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/router/)
+      )
+    })
+  })
+
+  // Remove Nuxt useRoute & useRouter composables
+
+  nuxt.hook('autoImports:sources', sources => {
+    for (const source of sources) {
+      if (source.from === '#app') {
+        source.imports = source.imports.filter(
+          i => typeof i !== 'string' || !['useRoute', 'useRouter'].includes(i)
+        )
+      }
+    }
+    sources.push({
+      from: 'vue-router',
+      imports: ['useRouter', 'useRoute'],
+    })
   })
 
   // Remove vue-router types
