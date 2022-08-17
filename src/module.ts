@@ -12,8 +12,8 @@ import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
-import { AnimationBuilder, SpinnerTypes } from '@ionic/vue'
-import { Mode, PlatformConfig, TabButtonLayout } from '@ionic/core'
+
+import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 
 export interface ModuleOptions {
   integrations?: {
@@ -44,7 +44,7 @@ export interface ModuleOptions {
     menuType?: string
     modalEnter?: AnimationBuilder
     modalLeave?: AnimationBuilder
-    mode?: Mode
+    mode?: 'ios' | 'md'
     navAnimation?: AnimationBuilder
     pickerEnter?: AnimationBuilder
     pickerLeave?: AnimationBuilder
@@ -57,7 +57,13 @@ export interface ModuleOptions {
     spinner?: SpinnerTypes
     statusTap?: boolean
     swipeBackEnabled?: boolean
-    tabButtonLayout?: TabButtonLayout
+    tabButtonLayout?:
+      | 'icon-top'
+      | 'icon-start'
+      | 'icon-end'
+      | 'icon-bottom'
+      | 'icon-hide'
+      | 'label-hide'
     toastEnter?: AnimationBuilder
     toastLeave?: AnimationBuilder
   }
