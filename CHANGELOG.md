@@ -1,5 +1,12 @@
 
 
+## [0.5.1](https://github.com/danielroe/nuxt-ionic/compare/0.5.0...0.5.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* optimize `@ionic/vue` ([664d5ad](https://github.com/danielroe/nuxt-ionic/commit/664d5ad7d2ebb211c68cd88aff18375aa2445237))
+
 ## [0.5.0](https://github.com/danielroe/nuxt-ionic/compare/0.4.0...0.5.0) (2022-08-17)
 
 
