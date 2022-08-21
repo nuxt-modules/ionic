@@ -40,7 +40,7 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
 
 const element = ref<HTMLDivElement>(null)
 
-let animation = ref<Animation>(null)
+const animation = ref<Animation>(null)
 
 onMounted(() => {
   animation.value = createAnimation(props.id)
