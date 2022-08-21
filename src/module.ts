@@ -58,12 +58,12 @@ export interface ModuleOptions {
     statusTap?: boolean
     swipeBackEnabled?: boolean
     tabButtonLayout?:
-    | 'icon-top'
-    | 'icon-start'
-    | 'icon-end'
-    | 'icon-bottom'
-    | 'icon-hide'
-    | 'label-hide'
+      | 'icon-top'
+      | 'icon-start'
+      | 'icon-end'
+      | 'icon-bottom'
+      | 'icon-hide'
+      | 'label-hide'
     toastEnter?: AnimationBuilder
     toastLeave?: AnimationBuilder
   }
@@ -122,6 +122,9 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
     nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
     nuxt.options.vite.optimizeDeps.include.push('@ionic/vue')
+
+    // Add Nuxt Vue custom utility components
+    addPlugin(resolve(runtimeDir, 'components'))
 
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
