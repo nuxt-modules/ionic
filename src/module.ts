@@ -7,6 +7,7 @@ import { defineUnimportPreset } from 'unimport'
 
 import { runtimeDir } from './utils'
 
+import { setupUtilityComponents } from './parts/components'
 import { useCSSSetup } from './parts/css'
 import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
@@ -124,7 +125,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.vite.optimizeDeps.include.push('@ionic/vue')
 
     // Add Nuxt Vue custom utility components
-    addPlugin(resolve(runtimeDir, 'components'))
+    setupUtilityComponents()
 
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
