@@ -6,6 +6,7 @@ import { runtimeDir } from '../utils'
 export const setupRouter = () => {
   const nuxt = useNuxt()
   const pagesDirs = nuxt.options._layers.map(layer =>
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     resolve(layer.config?.srcDir || layer.cwd!, layer.config?.dir?.pages || 'pages')
   )
 
