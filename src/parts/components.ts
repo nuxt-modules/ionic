@@ -6,7 +6,7 @@ export const setupUtilityComponents = () => {
   //   const nuxt = useNuxt()
 
   addComponent({
-    name: 'CreateAnimation',
-    filePath: resolve(runtimeDir, 'components', 'CreateAnimation.vue'),
+    name: 'IonAnimation',
+    filePath: resolve(runtimeDir, 'components', 'IonAnimation.vue'),
   })
 }
