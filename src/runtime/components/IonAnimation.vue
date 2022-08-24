@@ -19,10 +19,9 @@ interface AnimationFromToObject {
   toValue: string
 }
 
-// interface KeyframeObject {
-//   offset: number
-//   [key: string]: string
-// }
+type AnimationStyles = {
+  [key: string]: any
+}
 
 interface AnimationOptions {
   id?: string
@@ -36,6 +35,12 @@ interface AnimationOptions {
   keyframes?: AnimationKeyFrames
   playOnMount?: boolean
   playOnVisible?: boolean
+  beforeStyles?: AnimationStyles
+  beforeAddClass?: string | string[]
+  beforeClearStyles?: string[]
+  afterStyles?: AnimationStyles
+  afterAddClass?: string | string[]
+  afterClearStyles?: string[]
 }
 
 const props = withDefaults(defineProps<AnimationOptions>(), {
@@ -50,6 +55,12 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   keyframes: null,
   playOnMount: false,
   playOnVisible: false,
+  beforeStyles: null,
+  beforeAddClass: null,
+  beforeClearStyles: null,
+  afterStyles: null,
+  afterAddClass: null,
+  afterClearStyles: null,
 })
 
 const element = ref<HTMLDivElement>(null)
@@ -64,6 +75,13 @@ onMounted(() => {
     .easing(props.easing)
     .fill(props.fill)
     .direction(props.direction)
+    // Animation Hooks
+    .beforeStyles(props.beforeStyles ?? {})
+    .beforeAddClass(props.beforeAddClass ?? [])
+    .beforeClearStyles(props.beforeClearStyles ?? [])
+    .afterStyles(props.afterStyles ?? {})
+    .afterAddClass(props.afterAddClass ?? [])
+    .afterClearStyles(props.afterClearStyles ?? [])
 
   let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
 
