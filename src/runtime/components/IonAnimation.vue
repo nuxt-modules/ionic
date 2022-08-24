@@ -13,6 +13,11 @@ interface AnimationFromToObject {
   toValue: string
 }
 
+// interface KeyframeObject {
+//   offset: number
+//   [key: string]: string
+// }
+
 interface AnimationOptions {
   id?: string
   duration?: number
@@ -22,8 +27,10 @@ interface AnimationOptions {
   direction?: AnimationDirection
   from?: AnimationFromObject | AnimationFromObject[]
   fromTo?: AnimationFromToObject | AnimationFromToObject[]
+  keyframes?: any[]
   playOnMount?: boolean
-  // playOnVisible?: boolean
+  playOnVisible?: boolean
+  // keyframes
 }
 
 const props = withDefaults(defineProps<AnimationOptions>(), {
@@ -36,6 +43,7 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   from: null,
   fromTo: null,
   playOnMount: false,
+  playOnVisible: false,
 })
 
 const element = ref<HTMLDivElement>(null)
@@ -73,7 +81,27 @@ onMounted(() => {
     }
   }
 
-  props.playOnMount && animation.value.play()
+  if (props.playOnVisible && !props.playOnMount) {
+    const observer = new IntersectionObserver(
+      () => {
+        // Play animation
+        animation.value.play()
+        // Disconnect observer - making animation always trigger ONLY ONCE
+        observer.disconnect()
+      },
+      {
+        // Use viewport as root element
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5,
+      }
+    )
+    // Start observing for animation element
+    observer.observe(element.value)
+
+    // Disconnect observer when component is about to be unmounted
+    onBeforeUnmount(() => observer.disconnect())
+  } else if (props.playOnMount) animation.value.play()
 })
 onBeforeUnmount(() => {
   animation.value.destroy()
