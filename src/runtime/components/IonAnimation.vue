@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount } from 'vue'
-import { createAnimation, Animation, AnimationDirection, AnimationFill } from '@ionic/vue'
+import {
+  createAnimation,
+  Animation,
+  AnimationDirection,
+  AnimationFill,
+  AnimationKeyFrames,
+} from '@ionic/vue'
 
 interface AnimationFromObject {
   property: string
@@ -27,10 +33,9 @@ interface AnimationOptions {
   direction?: AnimationDirection
   from?: AnimationFromObject | AnimationFromObject[]
   fromTo?: AnimationFromToObject | AnimationFromToObject[]
-  keyframes?: any[]
+  keyframes?: AnimationKeyFrames
   playOnMount?: boolean
   playOnVisible?: boolean
-  // keyframes
 }
 
 const props = withDefaults(defineProps<AnimationOptions>(), {
@@ -42,6 +47,7 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   direction: 'normal',
   from: null,
   fromTo: null,
+  keyframes: null,
   playOnMount: false,
   playOnVisible: false,
 })
@@ -59,8 +65,14 @@ onMounted(() => {
     .fill(props.fill)
     .direction(props.direction)
 
+  let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
+
+  if (hasKeyframes) {
+    animation.value.keyframes(props.keyframes)
+  }
+
   // From
-  if (props.from !== null) {
+  if (props.from !== null && !hasKeyframes) {
     if (Array.isArray(props.from)) {
       props.from.forEach(({ property, fromValue }) => {
         animation.value.from(property, fromValue)
@@ -71,7 +83,7 @@ onMounted(() => {
   }
 
   // From-to
-  if (props.fromTo !== null) {
+  if (props.fromTo !== null && !hasKeyframes) {
     if (Array.isArray(props.fromTo)) {
       props.fromTo.forEach(({ property, fromValue, toValue }) => {
         animation.value.fromTo(property, fromValue, toValue)
