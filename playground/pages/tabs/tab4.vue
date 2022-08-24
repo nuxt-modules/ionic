@@ -28,6 +28,42 @@
           <button @click="animation.pause()">Pause</button>
           <button @click="animation.stop()">Stop</button>
         </IonAnimation>
+
+        <IonAnimation
+          v-slot="{ animation }"
+          :duration="3000"
+          :keyframes="[
+            { offset: 0, transform: 'scale(1) translateX(0)' },
+            { offset: 0.4, transform: 'scale(1.1) translateX(15px)' },
+            { offset: 0.6, transform: 'scale(1.1) translateX(-15px)' },
+            { offset: 1, transform: 'scale(1) translateX(0)' },
+          ]"
+          fill="forwards"
+        >
+          <div class="blue-square"></div>
+
+          <button @click="animation.play()">Play</button>
+          <button @click="animation.pause()">Pause</button>
+          <button @click="animation.stop()">Stop</button>
+        </IonAnimation>
+
+        <IonAnimation
+          v-slot="{ animation }"
+          :duration="1000"
+          :keyframes="[
+            { offset: 0, transform: 'scale(1)' },
+            { offset: 0.8, transform: 'scale(1.15)' },
+            { offset: 1, transform: 'scale(1)' },
+          ]"
+          fill="forwards"
+          :iterations="Infinity"
+        >
+          <div class="green-square"></div>
+
+          <button @click="animation.play()">Play</button>
+          <button @click="animation.pause()">Pause</button>
+          <button @click="animation.stop()">Stop</button>
+        </IonAnimation>
       </div>
     </ion-content>
   </ion-page>
