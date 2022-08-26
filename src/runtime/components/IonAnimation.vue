@@ -139,7 +139,5 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="element">
-    <slot :animation="animation" />
-  </div>
+  <slot ref="element" :animation="animation" />
 </template>
