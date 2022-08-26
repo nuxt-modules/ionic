@@ -13,68 +13,201 @@
       </ion-header>
 
       <div class="animations-grid">
-        <IonAnimation
-          v-slot="{ animation }"
-          :duration="2000"
-          :fromTo="[
-            { property: 'opacity', fromValue: '1', toValue: '0.2' },
-            { property: 'transform', fromValue: 'translateY(0px)', toValue: 'translateY(-50px)' },
-          ]"
-          fill="forwards"
-        >
-          <div class="red-square"></div>
+        <section>
+          <IonLabel color="primary">
+            <strong>Basic animation</strong>
+          </IonLabel>
+          <IonAnimation
+            ref="animation1"
+            v-slot="{ animation }"
+            :duration="2000"
+            :fromTo="[
+              { property: 'opacity', fromValue: '1', toValue: '0.2' },
+              { property: 'transform', fromValue: 'translateX(0px)', toValue: 'translateX(-50px)' },
+            ]"
+            fill="forwards"
+          >
+            <div class="red-square"></div>
 
-          <button @click="animation.play()">Play</button>
-          <button @click="animation.pause()">Pause</button>
-          <button @click="animation.stop()">Stop</button>
-        </IonAnimation>
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
 
-        <IonAnimation
-          v-slot="{ animation }"
-          :duration="3000"
-          :keyframes="[
-            { offset: 0, transform: 'scale(1) translateX(0)' },
-            { offset: 0.4, transform: 'scale(1.1) translateX(15px)' },
-            { offset: 0.6, transform: 'scale(1.1) translateX(-15px)' },
-            { offset: 1, transform: 'scale(1) translateX(0)' },
-          ]"
-          fill="forwards"
-        >
-          <div class="blue-square"></div>
+        <section>
+          <IonLabel color="primary">
+            <strong>Keyframes animation</strong>
+          </IonLabel>
+          <IonAnimation
+            v-slot="{ animation }"
+            :duration="3000"
+            :keyframes="[
+              { offset: 0, transform: 'scale(1) translate(0, 0)' },
+              { offset: 0.4, transform: 'scale(1.05) translate(15px, 15px)' },
+              { offset: 0.6, transform: 'scale(1.05) translate(-30px, 15px)' },
+              { offset: 1, transform: 'scale(1) translate(0, 0)' },
+            ]"
+            fill="none"
+          >
+            <div class="blue-square"></div>
 
-          <button @click="animation.play()">Play</button>
-          <button @click="animation.pause()">Pause</button>
-          <button @click="animation.stop()">Stop</button>
-        </IonAnimation>
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
 
-        <IonAnimation
-          v-slot="{ animation }"
-          :duration="1000"
-          :keyframes="[
-            { offset: 0, transform: 'scale(1)' },
-            { offset: 0.8, transform: 'scale(1.15)' },
-            { offset: 1, transform: 'scale(1)' },
-          ]"
-          fill="forwards"
-          :iterations="Infinity"
-        >
-          <div class="green-square"></div>
+        <section>
+          <IonLabel color="primary">
+            <strong>Animation that repeats forever</strong>
+          </IonLabel>
+          <IonAnimation
+            v-slot="{ animation }"
+            :duration="1000"
+            :keyframes="[
+              { offset: 0, transform: 'scale(1)' },
+              { offset: 0.75, transform: 'scale(1.05)' },
+              { offset: 1, transform: 'scale(1)' },
+            ]"
+            :iterations="Infinity"
+          >
+            <div class="green-square"></div>
 
-          <button @click="animation.play()">Play</button>
-          <button @click="animation.pause()">Pause</button>
-          <button @click="animation.stop()">Stop</button>
-        </IonAnimation>
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
+
+        <section>
+          <IonLabel color="primary">
+            <strong>Animation with style hooks</strong>
+          </IonLabel>
+          <IonAnimation
+            v-slot="{ animation }"
+            :duration="2000"
+            :keyframes="[
+              { offset: 0, transform: 'scale(1)' },
+              { offset: 0.75, transform: 'scale(1.1)' },
+              { offset: 1, transform: 'scale(1)' },
+            ]"
+            :beforeStyles="{
+              opacity: 0.5,
+            }"
+            :afterClearStyles="['opacity']"
+            :afterStyles="{
+              transform: 'scale(0.9)',
+            }"
+            :beforeClearStyles="['transform']"
+            fill="none"
+          >
+            <div class="red-square"></div>
+
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
+
+        <section>
+          <IonLabel color="primary">
+            <strong>Animation with specific easing</strong>
+          </IonLabel>
+          <IonAnimation
+            v-slot="{ animation }"
+            :duration="2000"
+            :keyframes="[
+              {
+                offset: 0,
+                transform: 'rotate(0)',
+              },
+              {
+                offset: 0.5,
+                transform: 'rotate(60deg)',
+              },
+              {
+                offset: 1,
+                transform: 'rotate(0)',
+              },
+            ]"
+            easing="cubic-bezier(.7,.55,0,1.15)"
+          >
+            <div class="blue-square"></div>
+
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
+
+        <section>
+          <IonLabel color="primary">
+            <strong>Reversed animation direction</strong>
+          </IonLabel>
+          <IonAnimation
+            v-slot="{ animation }"
+            :duration="3000"
+            :keyframes="[
+              { offset: 0, transform: 'scale(1)' },
+              { offset: 0.3, transform: 'scale(1.2)' },
+              { offset: 0.6, transform: 'scale(1.05)' },
+              { offset: 0.9, transform: 'scale(0.8)' },
+              { offset: 1, transform: 'scale(1)' },
+            ]"
+            direction="reverse"
+            easing="ease-in"
+          >
+            <div class="green-square"></div>
+
+            <div class="buttons">
+              <IonButton @click="animation.play()">Play</IonButton>
+              <IonButton @click="animation.pause()">Pause</IonButton>
+              <IonButton @click="animation.stop()">Stop</IonButton>
+            </div>
+          </IonAnimation>
+        </section>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <style scoped>
+:root {
+  --animation-color: purple;
+}
+
 .animations-grid {
   padding: 3em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  grid-auto-flow: row;
+  row-gap: 4em;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.animations-grid > *:nth-child(2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .red-square {
