@@ -1,10 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>nuxt/renovate-config-nuxt"],
-  "ignoreDeps": [
-    "@​docus/docs-theme",
-    "@​docus/github",
-    "@​docus/docs-theme-edge",
-    "@​docus/github-edge"
+  "extends": [
+    "github>nuxt/renovate-config-nuxt",
+    "packages:linters",
+    ":labels(dependencies,devops)",
+    ":maintainLockFilesWeekly",
+    ":enableVulnerabilityAlerts",
+    ":automergeLinters",
+    ":automergeTypes",
+    ":automergePatch"
+  ],
+  "rebaseStalePrs": true,
+  "prCreation": "not-pending",
+  "assignees": ["danielroe"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["lint"],
+      "groupName": "all lint dependencies",
+      "groupSlug": "all-lint"
+    },
+    {
+      "groupName": "nuxt core",
+      "groupSlug": "nuxt",
+      "matchPackageNames": ["nuxt", "nuxt3"],
+      "matchPackagePatterns": ["^@nuxt/"]
+    },
+    {
+      "groupName": "docus",
+      "matchPackagePatterns": ["^@docus/"],
+      "enabled": false
+    }
   ]
 }
