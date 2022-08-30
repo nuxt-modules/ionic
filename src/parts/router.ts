@@ -1,10 +1,12 @@
 import { existsSync } from 'node:fs'
-import { addPlugin, useNuxt } from '@nuxt/kit'
+import { useNuxt, useLogger, addPlugin } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { runtimeDir } from '../utils'
 
 export const setupRouter = () => {
   const nuxt = useNuxt()
+  const logger = useLogger()
+
   const pagesDirs = nuxt.options._layers.map(layer =>
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     resolve(layer.config?.srcDir || layer.cwd!, layer.config?.dir?.pages || 'pages')
@@ -15,7 +17,7 @@ export const setupRouter = () => {
     nuxt.options.pages === false ||
     (nuxt.options.pages !== true && !pagesDirs.some(dir => existsSync(dir)))
   ) {
-    console.warn('Disabling Ionic Router integration as pages dir does not exist.')
+    logger.info('Disabling Ionic Router integration as pages dir does not exist.')
     return
   }
 
@@ -33,7 +35,6 @@ export const setupRouter = () => {
   })
 
   // Remove Nuxt useRoute & useRouter composables
-
   nuxt.hook('autoImports:sources', sources => {
     for (const source of sources) {
       if (source.from === '#app') {
