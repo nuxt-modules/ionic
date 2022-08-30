@@ -1,5 +1,12 @@
 
 
+## [0.6.0](https://github.com/danielroe/nuxt-ionic/compare/0.5.1...0.6.0) (2022-08-30)
+
+
+### Features
+
+* add IonAnimation component ([#40](https://github.com/danielroe/nuxt-ionic/issues/40)) ([24b1869](https://github.com/danielroe/nuxt-ionic/commit/24b186922e96731fd1ecef33fec956f548cf1a14))
+
 ## [0.5.1](https://github.com/danielroe/nuxt-ionic/compare/0.5.0...0.5.1) (2022-08-17)
 
 
