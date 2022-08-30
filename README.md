@@ -18,7 +18,7 @@
 **⚠️ `nuxt-ionic` is currently a work in progress. ⚠️**
 
 - Zero-config required
-- Auto-import Ionic components and composables
+- Auto-import Ionic components, composables and icons
 - Ionic Router integration
 - Pre-render routes
 - Mobile meta tags
@@ -27,8 +27,8 @@
 
 **In progress**
 
-- [ ] PWA Elements
-- [ ] middleware support
+- [ ] PWA Elements [#14](https://github.com/danielroe/nuxt-ionic/issues/14)
+- [ ] Middleware support [#19](https://github.com/danielroe/nuxt-ionic/issues/19)
 
 ## Usage
 
