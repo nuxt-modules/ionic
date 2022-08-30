@@ -24,6 +24,11 @@ useHead({
             <ion-icon :icon="ioniconsBulbOutline" />
             <ion-label>Tab 3</ion-label>
           </ion-tab-button>
+
+          <ion-tab-button tab="tab4" href="/tabs/tab4">
+            <ion-icon :icon="ioniconsAccessibilityOutline" />
+            <ion-label>Animation examples</ion-label>
+          </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
     </ion-content>
