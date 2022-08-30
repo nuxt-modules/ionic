@@ -29,6 +29,10 @@
       "groupName": "docus",
       "matchPackagePatterns": ["^@docus/"],
       "enabled": false
+    },
+    {
+      "groupName": "docs",
+      "includePaths": ["docs/**"]
     }
   ]
 }
