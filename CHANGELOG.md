@@ -1,5 +1,12 @@
 
 
+## [0.6.1](https://github.com/danielroe/nuxt-ionic/compare/0.6.0...0.6.1) (2022-08-31)
+
+
+### Bug Fixes
+
+* add missing import to `<IonAnimation>` ([ea23ac6](https://github.com/danielroe/nuxt-ionic/commit/ea23ac647b84bcfc0c59234b68504631e0fb1bc5))
+
 ## [0.6.0](https://github.com/danielroe/nuxt-ionic/compare/0.5.1...0.6.0) (2022-08-30)
 
 
