@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.1.0
       '@capacitor/core': ^4.1.0
       '@ionic/cli': ^6.20.1
-      '@ionic/vue': ^6.2.4
-      '@ionic/vue-router': ^6.2.4
+      '@ionic/vue': ^6.2.5
+      '@ionic/vue-router': ^6.2.5
       '@kevinmarrec/nuxt-pwa': ^0.4.2
       '@nuxt/kit': ^3.0.0-rc.8
       '@nuxt/module-builder': ^0.1.7
@@ -35,7 +35,7 @@ importers:
       pinst: ^3.0.0
       pkg-types: ^0.3.4
       prettier: ^2.7.1
-      release-it: ^15.4.0
+      release-it: ^15.4.1
       typescript: ^4.8.2
       ufo: ^0.8.5
       unimport: ^0.6.7
@@ -45,8 +45,8 @@ importers:
       '@capacitor/cli': 4.1.0
       '@capacitor/core': 4.1.0
       '@ionic/cli': 6.20.1
-      '@ionic/vue': 6.2.4
-      '@ionic/vue-router': 6.2.4
+      '@ionic/vue': 6.2.5
+      '@ionic/vue-router': 6.2.5
       '@kevinmarrec/nuxt-pwa': 0.4.2
       '@nuxt/kit': 3.0.0-rc.8
       ionicons: 6.0.3
@@ -59,7 +59,7 @@ importers:
       '@nuxt/schema': 3.0.0-rc.8
       '@nuxt/test-utils': 3.0.0-rc.8_vue@3.2.38
       '@nuxtjs/eslint-config-typescript': 10.0.0_yqf6kl63nyoq5megxukfnom5rm
-      '@release-it/conventional-changelog': 5.1.0_release-it@15.4.0
+      '@release-it/conventional-changelog': 5.1.0_release-it@15.4.1
       '@types/node': 18.7.14
       '@vitest/coverage-c8': 0.22.1
       c8: 7.12.0
@@ -73,7 +73,7 @@ importers:
       nuxt: 3.0.0-rc.8
       pinst: 3.0.0
       prettier: 2.7.1
-      release-it: 15.4.0
+      release-it: 15.4.1
       typescript: 4.8.2
       vitest: 0.22.1
       vue: 3.2.38
@@ -463,7 +463,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.0-27690951.ce5397d
+      '@nuxt/content': /@nuxt/content-edge/2.1.0-27698975.ec3c61f
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -692,8 +692,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.2.4:
-    resolution: {integrity: sha512-LDRIwG5plwTHELxQ/j3uEfLJ7YkzJzR1V4QGE+X59aE/l7XoXZyLb1NWFjY7glBbFHGQgSuPFWNhXFkyRBxRFQ==}
+  /@ionic/core/6.2.5:
+    resolution: {integrity: sha512-PLnG182RYydXB71cjkMk2TLxFVKabvEc9wjeK5SsvxI1/QE9+wPfxDnvKWag8UeXgaGUhby1bitWkV5pniDaXA==}
     dependencies:
       '@stencil/core': 2.17.4
       ionicons: 6.0.3
@@ -799,16 +799,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.2.4:
-    resolution: {integrity: sha512-7gwX1o8V2pCm6sCk7fD/Ws2X6iRCobCDZyJc7jzHynqANhQfr0OsUjqhthedR4NNkC3ZmZBsENDu9/6CZzoVjw==}
+  /@ionic/vue-router/6.2.5:
+    resolution: {integrity: sha512-bitEsfgh7cUslc1ZLEY7BGu05bV4t2L18iSlFNdMDrWN5TCURzh1q1qkLgKw5TRXaJUa/szAXgJrkfMHlNmN3A==}
     dependencies:
-      '@ionic/vue': 6.2.4
+      '@ionic/vue': 6.2.5
     dev: false
 
-  /@ionic/vue/6.2.4:
-    resolution: {integrity: sha512-SbLew1VJiUnBBkOvDrbgOwdxkVpmF+3pzp1wUwqxNVVBTn4QKTbL/agfgx7IbLY+i+jz36pntKvzGB/Keljh9g==}
+  /@ionic/vue/6.2.5:
+    resolution: {integrity: sha512-8mfUVb6jogmw0NLTIzcrcCQztsTLCk3MEPFOGH6UqeynHUMqP0XT/RBzNTG/dYc1XcKDgO3LFod4sEY4aKuceg==}
     dependencies:
-      '@ionic/core': 6.2.4
+      '@ionic/core': 6.2.5
       ionicons: 6.0.3
     dev: false
 
@@ -924,8 +924,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.0-27690951.ce5397d:
-    resolution: {integrity: sha512-w+qQOwvIgg5sJp/n2LrnwGk1Lo/CKsOxCs9HlYDy6OwUVe63PyYA+otYlrQPy/QT+bjsh8I+ogKA67HaYjSSAQ==}
+  /@nuxt/content-edge/2.1.0-27698975.ec3c61f:
+    resolution: {integrity: sha512-JaQ8eXNtMQhO9YhDyZdiW51qJtgazyQqFWxTgYI5CfcBPrRq47hHISPIvnTTaDOrkuK0hgcQd0h1ExIf1HzXjQ==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.8
       consola: 2.15.3
@@ -1420,6 +1420,10 @@ packages:
     resolution: {integrity: sha512-VsXyi8peyRq9PqIz/tpqiL2w3w80OgVMwBHltTml3LmVvXiphgeqmY9mvBw9Wu7e0QWk/fqD37ux8yP5uVekyQ==}
     dev: true
 
+  /@octokit/openapi-types/13.6.0:
+    resolution: {integrity: sha512-bxftLwoZ2J6zsU1rzRvk0O32j7lVB0NWWn+P5CDHn9zPzytasR3hdAeXlTngRDkqv1LyEeuy5psVnDkmOSwrcQ==}
+    dev: true
+
   /@octokit/plugin-paginate-rest/2.21.3_@octokit+core@3.6.0:
     resolution: {integrity: sha512-aCZTEf0y2h3OLbrgKkrfFdjRL6eSOo8komneVQJnYecAxIej7Bafor2xhuDJOIFau4pk0i/P28/XgtbyPF0ZHw==}
     peerDependencies:
@@ -1429,14 +1433,14 @@ packages:
       '@octokit/types': 6.41.0
     dev: true
 
-  /@octokit/plugin-paginate-rest/3.1.0_@octokit+core@4.0.4:
-    resolution: {integrity: sha512-+cfc40pMzWcLkoDcLb1KXqjX0jTGYXjKuQdFQDc6UAknISJHnZTiBqld6HDwRJvD4DsouDKrWXNbNV0lE/3AXA==}
+  /@octokit/plugin-paginate-rest/4.2.0_@octokit+core@4.0.4:
+    resolution: {integrity: sha512-8otLCIK9esfmOCY14CBnG/xPqv0paf14rc+s9tHpbOpeFwrv5CnECKW1qdqMAT60ngAa9eB1bKQ+l2YCpi0HPQ==}
     engines: {node: '>= 14'}
     peerDependencies:
       '@octokit/core': '>=4'
     dependencies:
       '@octokit/core': 4.0.4
-      '@octokit/types': 6.41.0
+      '@octokit/types': 7.2.0
     dev: true
 
   /@octokit/plugin-request-log/1.0.4_@octokit+core@3.6.0:
@@ -1531,12 +1535,12 @@ packages:
       - encoding
     dev: true
 
-  /@octokit/rest/19.0.3:
-    resolution: {integrity: sha512-5arkTsnnRT7/sbI4fqgSJ35KiFaN7zQm0uQiQtivNQLI8RQx8EHwJCajcTUwmaCMNDg7tdCvqAnc7uvHHPxrtQ==}
+  /@octokit/rest/19.0.4:
+    resolution: {integrity: sha512-LwG668+6lE8zlSYOfwPj4FxWdv/qFXYBpv79TWIQEpBLKA9D/IMcWsF/U9RGpA3YqMVDiTxpgVpEW3zTFfPFTA==}
     engines: {node: '>= 14'}
     dependencies:
       '@octokit/core': 4.0.4
-      '@octokit/plugin-paginate-rest': 3.1.0_@octokit+core@4.0.4
+      '@octokit/plugin-paginate-rest': 4.2.0_@octokit+core@4.0.4
       '@octokit/plugin-request-log': 1.0.4_@octokit+core@4.0.4
       '@octokit/plugin-rest-endpoint-methods': 6.2.0_@octokit+core@4.0.4
     transitivePeerDependencies:
@@ -1547,6 +1551,12 @@ packages:
     resolution: {integrity: sha512-eJ2jbzjdijiL3B4PrSQaSjuF2sPEQPVCPzBvTHJD9Nz+9dw2SGH4K4xeQJ77YfTq5bRQ+bD8wT11JbeDPmxmGg==}
     dependencies:
       '@octokit/openapi-types': 12.11.0
+    dev: true
+
+  /@octokit/types/7.2.0:
+    resolution: {integrity: sha512-pYQ/a1U6mHptwhGyp6SvsiM4bWP2s3V95olUeTxas85D/2kN78yN5C8cGN+P4LwJSWUqIEyvq0Qn2WUn6NQRjw==}
+    dependencies:
+      '@octokit/openapi-types': 13.6.0
     dev: true
 
   /@pnpm/network.ca-file/1.0.1:
@@ -1564,7 +1574,7 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@release-it/conventional-changelog/5.1.0_release-it@15.4.0:
+  /@release-it/conventional-changelog/5.1.0_release-it@15.4.1:
     resolution: {integrity: sha512-o55D822tVIoldUDj1Fp1KvenVREcEEjYOyuVNwRVnTcExFN6nWUPrH05q7Y8opT23N5snuCwPJ5bzLPEcpBvRg==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1573,7 +1583,7 @@ packages:
       concat-stream: 2.0.0
       conventional-changelog: 3.1.25
       conventional-recommended-bump: 6.1.0
-      release-it: 15.4.0
+      release-it: 15.4.1
       semver: 7.3.7
     dev: true
 
@@ -1831,7 +1841,7 @@ packages:
   /@types/jsdom/20.0.0:
     resolution: {integrity: sha512-YfAchFs0yM1QPDrLm2VHe+WHGtqms3NXnXAMolrgrVP6fgBHHXy1ozAbo/dFtPNtZC/m66bPiCTWYmqp1F14gA==}
     dependencies:
-      '@types/node': 18.7.2
+      '@types/node': 18.7.14
       '@types/tough-cookie': 4.0.2
       parse5: 7.0.0
     dev: true
@@ -1875,10 +1885,6 @@ packages:
   /@types/node/18.7.14:
     resolution: {integrity: sha512-6bbDaETVi8oyIARulOE9qF1/Qdi/23z6emrUh0fNJRUmjznqrixD4MpGDdgOFk5Xb0m2H6Xu42JGdvAxaJR/wA==}
 
-  /@types/node/18.7.2:
-    resolution: {integrity: sha512-ce7MIiaYWCFv6A83oEultwhBXb22fxwNOQf5DIxWA4WXvDQ7K+L0fbWl/YOfCzlR5B/uFkSnVBhPcOfOECcWvA==}
-    dev: true
-
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -1894,7 +1900,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 18.7.2
+      '@types/node': 18.7.14
     dev: true
 
   /@types/responselike/1.0.0:
@@ -5382,10 +5388,23 @@ packages:
       parse-url: 7.0.2
     dev: true
 
+  /git-up/7.0.0:
+    resolution: {integrity: sha512-ONdIrbBCFusq1Oy0sC71F5azx8bVkvtZtMJAsv+a6lz5YAmbNnLD6HAB4gptHZVLPR8S2/kVN6Gab7lryq5+lQ==}
+    dependencies:
+      is-ssh: 1.4.0
+      parse-url: 8.1.0
+    dev: true
+
   /git-url-parse/12.0.0:
     resolution: {integrity: sha512-I6LMWsxV87vysX1WfsoglXsXg6GjQRKq7+Dgiseo+h0skmp5Hp2rzmcEIRQot9CPA+uzU7x1x7jZdqvTFGnB+Q==}
     dependencies:
       git-up: 6.0.0
+    dev: true
+
+  /git-url-parse/13.0.0:
+    resolution: {integrity: sha512-X1kozCqKL82dMrCLi4vie9SHDC+QugKskAMs4VUbIkhURKg5yDwxDmf6Ixg73J+/xVgK5TXKhzn8a94nHJHpnA==}
+    dependencies:
+      git-up: 7.0.0
     dev: true
 
   /gitconfiglocal/1.0.0:
@@ -6314,7 +6333,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.7.2
+      '@types/node': 18.7.14
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -8157,6 +8176,12 @@ packages:
       protocols: 2.0.1
     dev: true
 
+  /parse-path/7.0.0:
+    resolution: {integrity: sha512-Euf9GG8WT9CdqwuWJGdf3RkUcTBArppHABkO7Lm8IzRQp0e2r/kkFnmhu4TSK30Wcu5rVAZLmfPKSBBi9tWFog==}
+    dependencies:
+      protocols: 2.0.1
+    dev: true
+
   /parse-url/7.0.2:
     resolution: {integrity: sha512-PqO4Z0eCiQ08Wj6QQmrmp5YTTxpYfONdOEamrtvK63AmzXpcavIVQubGHxOEwiIoDZFb8uDOoQFS0NCcjqIYQg==}
     dependencies:
@@ -8164,6 +8189,12 @@ packages:
       normalize-url: 6.1.0
       parse-path: 5.0.0
       protocols: 2.0.1
+    dev: true
+
+  /parse-url/8.1.0:
+    resolution: {integrity: sha512-xDvOoLU5XRrcOZvnI6b8zA6n9O9ejNk/GExuz1yBuWUGn9KA97GI6HTs6u02wKara1CeVmZhH+0TZFdWScR89w==}
+    dependencies:
+      parse-path: 7.0.0
     dev: true
 
   /parse5/6.0.1:
@@ -9164,19 +9195,19 @@ packages:
       unist-util-visit: 4.1.1
     dev: true
 
-  /release-it/15.4.0:
-    resolution: {integrity: sha512-l7ZHfg5SHXWaAQy5gUS1dowryqjLevpXKvyNt8V7QCqqGQO/IvQEfLnc5xx4unBgJvxjt/X2f9KZ8FOzRnaT9w==}
+  /release-it/15.4.1:
+    resolution: {integrity: sha512-w6adXfE+bN/fdcG1KehgS7gYcTfZLYIPml4jPOUEtYQ6NJyaiCtCF/ks032w1jf6EUgvGgWruRP+2TyyyDDBgA==}
     engines: {node: '>=14.9'}
     hasBin: true
     dependencies:
       '@iarna/toml': 2.2.5
-      '@octokit/rest': 19.0.3
+      '@octokit/rest': 19.0.4
       async-retry: 1.3.3
       chalk: 5.0.1
       cosmiconfig: 7.0.1
       execa: 6.1.0
       form-data: 4.0.0
-      git-url-parse: 12.0.0
+      git-url-parse: 13.0.0
       globby: 13.1.2
       got: 12.3.1
       inquirer: 9.1.0
@@ -11355,7 +11386,7 @@ packages:
     dev: true
 
   /xregexp/2.0.0:
-    resolution: {integrity: sha1-UqY+VsoLhKfzpfPWGHLxJq16WUM=}
+    resolution: {integrity: sha512-xl/50/Cf32VsGq/1R8jJE5ajH1yMCQkpmoS10QbFZWl2Oor4H0Me64Pu2yxvsRWK3m6soJbmGfzSR7BYmDcWAA==}
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
