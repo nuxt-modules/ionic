@@ -183,10 +183,6 @@
 </template>
 
 <style scoped>
-:root {
-  --animation-color: purple;
-}
-
 .animations-grid {
   padding: 3em;
   display: grid;
