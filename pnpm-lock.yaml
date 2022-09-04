@@ -20,7 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^11.0.0
       '@release-it/conventional-changelog': ^5.1.0
       '@types/node': ^18.7.14
-      '@vitest/coverage-c8': ^0.22.1
+      '@vitest/coverage-c8': ^0.23.0
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
       eslint: ^8.23.0
@@ -39,7 +39,7 @@ importers:
       typescript: ^4.8.2
       ufo: ^0.8.5
       unimport: ^0.6.7
-      vitest: ^0.22.1
+      vitest: ^0.23.0
       vue: ^3.2.38
     dependencies:
       '@capacitor/cli': 4.1.0
@@ -61,7 +61,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 11.0.0_yqf6kl63nyoq5megxukfnom5rm
       '@release-it/conventional-changelog': 5.1.0_release-it@15.4.1
       '@types/node': 18.7.14
-      '@vitest/coverage-c8': 0.22.1
+      '@vitest/coverage-c8': 0.23.0
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.23.0
@@ -75,7 +75,7 @@ importers:
       prettier: 2.7.1
       release-it: 15.4.1
       typescript: 4.8.2
-      vitest: 0.22.1
+      vitest: 0.23.0
       vue: 3.2.38
 
   docs:
@@ -2121,11 +2121,11 @@ packages:
       vue: 3.2.38
     dev: true
 
-  /@vitest/coverage-c8/0.22.1:
-    resolution: {integrity: sha512-KOOYpO7EGpaF+nD8GD+Y05D0JtZp12NUu6DdLXvBPqSOPo2HkZ7KNBtfR0rb6gOy3NLtGiWTYTzCwhajgb2HlA==}
+  /@vitest/coverage-c8/0.23.0:
+    resolution: {integrity: sha512-8vhn1xViCNI1rx8dzncuzePZsN2eiQN8xFtsXy4sW2nZjH4UcIQlD1nwIY6Yei/RwFalay9F1sq588a/OPMjwg==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.22.1
+      vitest: 0.23.0
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -7477,7 +7477,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      defu: 6.0.0
+      defu: 6.1.0
       esbuild: 0.14.54
       fs-extra: 10.1.0
       globby: 11.1.0
@@ -10265,6 +10265,11 @@ packages:
     resolution: {integrity: sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==}
     dev: true
 
+  /tinybench/2.1.4:
+    resolution: {integrity: sha512-NFWIw2Gg7EUPdeE8nL1Dc7AMVlk7sOr2PmSNKVuQrZ0YwTOFoshPQ+hcLrgnhK8dTP3FWMCJaf4N+/hXp6lKPw==}
+    engines: {node: '>=16.0.0'}
+    dev: true
+
   /tinypool/0.2.4:
     resolution: {integrity: sha512-Vs3rhkUH6Qq1t5bqtb816oT+HeJTXfwt2cbPH17sWHIYKTotQIFPk3tf2fgqRrVyMDVOc1EnPgzIxfIulXVzwQ==}
     engines: {node: '>=14.0.0'}
@@ -11090,8 +11095,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.22.1:
-    resolution: {integrity: sha512-+x28YTnSLth4KbXg7MCzoDAzPJlJex7YgiZbUh6YLp0/4PqVZ7q7/zyfdL0OaPtKTpNiQFPpMC8Y2MSzk8F7dw==}
+  /vitest/0.23.0:
+    resolution: {integrity: sha512-I3ctlfiXYprA2tID1qP+m6pmgmKx3HYfRe66MetGOHKCHLY7hz74ihiwIEtN7LReJgF3U5cM735iYPkn/Go1iQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -11118,6 +11123,8 @@ packages:
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
+      strip-literal: 0.4.0
+      tinybench: 2.1.4
       tinypool: 0.2.4
       tinyspy: 1.0.2
       vite: 3.0.7
