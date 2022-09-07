@@ -1,5 +1,5 @@
 import { existsSync } from 'node:fs'
-import { useNuxt, useLogger, addPlugin } from '@nuxt/kit'
+import { useNuxt, useLogger } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { runtimeDir } from '../utils'
 
@@ -21,7 +21,6 @@ export const setupRouter = () => {
     return
   }
 
-  addPlugin(resolve(runtimeDir, 'router'))
   nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
   nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
   nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
@@ -31,30 +30,11 @@ export const setupRouter = () => {
       app.plugins = app.plugins.filter(
         p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/router/)
       )
+      app.plugins.unshift({
+        src: resolve(runtimeDir, 'router'),
+        mode: 'all',
+      })
     })
-  })
-
-  // Remove Nuxt useRoute & useRouter composables
-  nuxt.hook('autoImports:sources', sources => {
-    for (const source of sources) {
-      if (source.from === '#app') {
-        source.imports = source.imports.filter(
-          i => typeof i !== 'string' || !['useRoute', 'useRouter'].includes(i)
-        )
-      }
-    }
-    sources.push({
-      from: 'vue-router',
-      imports: ['useRouter', 'useRoute'],
-    })
-  })
-
-  // Remove vue-router types
-  nuxt.hook('prepare:types', ({ references }) => {
-    const index = references.findIndex(i => 'types' in i && i.types === 'vue-router')
-    if (index !== -1) {
-      references.splice(index, 1)
-    }
   })
 
   // Add default ionic root layout
