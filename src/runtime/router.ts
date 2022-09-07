@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, createMemoryHistory } from '@ionic/vue-router'
 
-import { computed, reactive, shallowRef } from 'vue'
+import { computed, ComputedRef, reactive, shallowRef } from 'vue'
 import { createWebHashHistory, NavigationGuard, RouteLocation } from 'vue-router'
 import { createError } from 'h3'
 import { withoutBase, isEqual } from 'ufo'
@@ -72,9 +72,9 @@ export default defineNuxtPlugin(async nuxtApp => {
   })
 
   // https://github.com/vuejs/router/blob/main/packages/router/src/router.ts#L1225-L1233
-  const route = {} as { [K in RouteLocation]: ComputedRef<RouteLocation[K]> }
+  const route = {} as { [K in keyof RouteLocation]: ComputedRef<RouteLocation[K]> }
   for (const key in _route.value) {
-    route[key as keyof RouteLocation] = computed(() => _route.value[key as keyof RouteLocation])
+    route[key as 'path'] = computed(() => _route.value[key as 'path'])
   }
 
   nuxtApp._route = reactive(route)
@@ -86,7 +86,7 @@ export default defineNuxtPlugin(async nuxtApp => {
 
   const error = useError()
 
-  const initialLayout = useState('_layout')
+  const initialLayout = useState<string>('_layout')
   router.beforeEach(async (to, from) => {
     to.meta = reactive(to.meta)
     if (nuxtApp.isHydrating) {
@@ -117,7 +117,7 @@ export default defineNuxtPlugin(async nuxtApp => {
       const middleware =
         typeof entry === 'string'
           ? nuxtApp._middleware.named[entry] ||
-          (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
+            (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
           : entry
 
       if (!middleware) {
