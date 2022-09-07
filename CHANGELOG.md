@@ -1,5 +1,12 @@
 
 
+## [0.7.0](https://github.com/danielroe/nuxt-ionic/compare/0.6.1...0.7.0) (2022-09-07)
+
+
+### Features
+
+* middleware support ([#59](https://github.com/danielroe/nuxt-ionic/issues/59)) ([1f9ea29](https://github.com/danielroe/nuxt-ionic/commit/1f9ea2941456db4b9dde0b587ea40d76e7a1d4e1))
+
 ## [0.6.1](https://github.com/danielroe/nuxt-ionic/compare/0.6.0...0.6.1) (2022-08-31)
 
 
