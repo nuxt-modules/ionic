@@ -1046,7 +1046,7 @@ packages:
       semver: 7.3.7
       unctx: 2.0.1
       unimport: 0.6.7
-      untyped: 0.4.5
+      untyped: 0.4.7
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -1075,7 +1075,7 @@ packages:
       semver: 7.3.7
       unctx: 2.0.1_tzs5vvksbi2kwcdgocbsowtl2q
       unimport: 0.6.7_tzs5vvksbi2kwcdgocbsowtl2q
-      untyped: 0.4.5
+      untyped: 0.4.7
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -7999,7 +7999,7 @@ packages:
       unenv: 0.5.4
       unimport: 0.6.7
       unplugin: 0.9.0
-      untyped: 0.4.5
+      untyped: 0.4.7
       vue: 3.2.39
       vue-bundle-renderer: 0.4.1
       vue-router: 4.1.3_vue@3.2.39
@@ -11126,16 +11126,6 @@ packages:
     resolution: {integrity: sha512-n4M5/T1wWlHFmohk0EhS+yM7W/h5dOtQldOV3MVEbZY1fTy5A47UL8+d8GLW1iwmaAwNrM5ERy3qe1k0T/Yc7A==}
     dev: true
 
-  /untyped/0.4.5:
-    resolution: {integrity: sha512-buq9URfOj4xAnVfu6BYNKzHZLHAzsCbHsDc/kHy66ESMqRpj00oD9qWf2M2qm0pC0DigsVxRF3uhOa5HJtrwGA==}
-    dependencies:
-      '@babel/core': 7.19.0
-      '@babel/standalone': 7.19.0
-      '@babel/types': 7.19.0
-      scule: 0.3.2
-    transitivePeerDependencies:
-      - supports-color
-
   /untyped/0.4.7:
     resolution: {integrity: sha512-hBgCv7fnqIRzAagn2cUZxxVmhTE7NcMAgI8CfQelFVacG4O55VrurigpK0G504ph4sQSqVsGEo52O5EKFCnJ9g==}
     dependencies:
@@ -11145,7 +11135,6 @@ packages:
       scule: 0.3.2
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /update-browserslist-db/1.0.5_browserslist@4.21.3:
     resolution: {integrity: sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q==}
