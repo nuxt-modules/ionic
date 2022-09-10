@@ -28,7 +28,6 @@
 **In progress**
 
 - [ ] PWA Elements [#14](https://github.com/danielroe/nuxt-ionic/issues/14)
-- [ ] Middleware support [#19](https://github.com/danielroe/nuxt-ionic/issues/19)
 
 ## Usage
 
