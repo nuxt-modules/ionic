@@ -7,8 +7,8 @@ importers:
 
   .:
     specifiers:
-      '@capacitor/cli': ^4.1.0
-      '@capacitor/core': ^4.1.0
+      '@capacitor/cli': ^4.2.0
+      '@capacitor/core': ^4.2.0
       '@ionic/cli': ^6.20.1
       '@ionic/vue': ^6.2.6
       '@ionic/vue-router': ^6.2.6
@@ -43,8 +43,8 @@ importers:
       vitest: ^0.23.2
       vue: ^3.2.39
     dependencies:
-      '@capacitor/cli': 4.1.0
-      '@capacitor/core': 4.1.0
+      '@capacitor/cli': 4.2.0
+      '@capacitor/core': 4.2.0
       '@ionic/cli': 6.20.1
       '@ionic/vue': 6.2.6
       '@ionic/vue-router': 6.2.6
@@ -418,8 +418,8 @@ packages:
       '@capacitor/core': ^4.0.0
     dev: true
 
-  /@capacitor/cli/4.1.0:
-    resolution: {integrity: sha512-SkMtohfjZS0tJdCtoqugHQIYJ4DowjXk4yQzDFXN3MnhjAKEQmB7QcZY5R8o9NoPMx0ngw2Bzm00e7RdyERvzg==}
+  /@capacitor/cli/4.2.0:
+    resolution: {integrity: sha512-34L/BoDe3BmWBdrXRoF7lszT27ho6ikMdCeMePohU+cEn4ceqiURN7tnPZRyUlpc/1TO+d8d+qb1QQQSTq2oPA==}
     engines: {node: '>=12.4.0'}
     hasBin: true
     dependencies:
@@ -444,8 +444,8 @@ packages:
       - supports-color
     dev: false
 
-  /@capacitor/core/4.1.0:
-    resolution: {integrity: sha512-bMYFnC5l5n11D/kLTz9TOOJfUH+nQqYRwzG7h5h4AXIm8aFxH5ZY3iFlDZd7R4xcyrlnfxzfoooSH9trPjRBLA==}
+  /@capacitor/core/4.2.0:
+    resolution: {integrity: sha512-kHKn6693Yt9TWfuJ0Q+fyxYCpYAvVMKdu3t500seMEfdgNlF6BGaX5GbOnXkU4cnM9p+sIhRiwXv8Iqwm0E+NA==}
     dependencies:
       tslib: 2.4.0
     dev: false
@@ -543,7 +543,7 @@ packages:
   /@docus/github-edge/1.2.6-1138f93:
     resolution: {integrity: sha512-Q5BbEm/FMhhFyhBsBO4fxqG5DtPlt34IRf6HtulOG3jUqOlARh0OTPZSJRyrCCvhsfCwc5qzwXA3xD4kDGROlg==}
     dependencies:
-      '@nuxt/kit': 3.0.0-rc.8
+      '@nuxt/kit': 3.0.0-rc.9
       '@octokit/graphql': 4.8.0
       '@octokit/rest': 18.12.0
       remark-github: 11.2.4
@@ -1095,7 +1095,7 @@ packages:
       globby: 13.1.2
       hash-sum: 2.0.0
       ignore: 5.2.0
-      jiti: 1.14.0
+      jiti: 1.15.0
       knitwork: 0.1.2
       lodash.template: 4.5.0
       mlly: 0.5.14
@@ -1190,7 +1190,7 @@ packages:
       c12: 0.2.11
       create-require: 1.1.1
       defu: 6.1.0
-      jiti: 1.14.0
+      jiti: 1.15.0
       pathe: 0.3.7
       postcss-import-resolver: 2.0.0
       scule: 0.3.2
@@ -1332,7 +1332,7 @@ packages:
   /@nuxtjs/color-mode/3.1.4:
     resolution: {integrity: sha512-3pxZNbZCFCzBgkyJLU/YvC2L2l1yRvITuD91zfJoIGm52PTx66y/Q1/UW8i9YFDVhJvvRd67s6eWvgaKQtTPlw==}
     dependencies:
-      '@nuxt/kit': 3.0.0-rc.8
+      '@nuxt/kit': 3.0.0-rc.9
       lodash.template: 4.5.0
       pathe: 0.3.7
     transitivePeerDependencies:
@@ -1383,7 +1383,7 @@ packages:
   /@nuxtjs/tailwindcss/5.3.1:
     resolution: {integrity: sha512-NrnYUA65DWG9cB6wLdK7NMhaDIIAbqxmMueGIvqy8xuTfHGNvtjFZQY2ywu60N70cjIYqYnbyJURj+PQoNN9Ew==}
     dependencies:
-      '@nuxt/kit': 3.0.0-rc.8
+      '@nuxt/kit': 3.0.0-rc.9
       '@nuxt/postcss8': 1.1.3
       '@types/tailwindcss': 3.1.0
       autoprefixer: 10.4.8_postcss@8.4.16
