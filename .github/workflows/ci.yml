@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
@@ -38,13 +38,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "pnpm"
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: 🚧 Set up project
         run: pnpm dev:prepare
+
+      - name: Set up playwright
+        run: pnpm playwright install
 
       - name: 🧪 Test project
         run: pnpm test -- --coverage
