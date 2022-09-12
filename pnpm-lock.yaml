@@ -94,14 +94,14 @@ importers:
 
   playground:
     specifiers:
-      '@capacitor/camera': ^4.1.0
-      '@capacitor/filesystem': ^4.1.0
+      '@capacitor/camera': ^4.1.1
+      '@capacitor/filesystem': ^4.1.1
       '@capacitor/storage': ^1.2.5
       nuxt: ^3.0.0-rc.8
       nuxt-ionic: link:..
     devDependencies:
-      '@capacitor/camera': 4.1.0
-      '@capacitor/filesystem': 4.1.0
+      '@capacitor/camera': 4.1.1
+      '@capacitor/filesystem': 4.1.1
       '@capacitor/storage': 1.2.5
       nuxt: 3.0.0-rc.8
       nuxt-ionic: link:..
@@ -395,8 +395,8 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@capacitor/camera/4.1.0:
-    resolution: {integrity: sha512-MgsE4O/J/3dzLeTQw6PnVYXQzyfVMSLknyG/2Lk+H8Hix5i+vLmHtr2YHQoM04IwC0xtdw0rAMJCl9NH6SpseQ==}
+  /@capacitor/camera/4.1.1:
+    resolution: {integrity: sha512-L/1KLg4IRCAUmwhmu5jIic4U2OLAHFSW5GoExFU9yR8iCJo1SBGSiay2TpU3PpgmJHRtazO6pxKUCyAmDExkhw==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dev: true
@@ -433,8 +433,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@capacitor/filesystem/4.1.0:
-    resolution: {integrity: sha512-isUL8kyH+GzcWToNu1uGyn83pwrnOC6wevefN6kGsq0jluBfryJme6WG1VTq0gi3cw604t8j8XtVoTKz8V7gfQ==}
+  /@capacitor/filesystem/4.1.1:
+    resolution: {integrity: sha512-qpXIR4kxW2age91EiDFOh5KpZ5SUFs1rgWmNrO60wo+AT3Ok0Dzfol2aLSqvNAenDGUilA44ThJPeE+ArRPVzg==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dev: true
