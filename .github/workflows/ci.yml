@@ -46,7 +46,7 @@ jobs:
       - name: 🚧 Set up project
         run: pnpm dev:prepare
 
-      - name: Set up playwright
+      - name: 🎭 Set up playwright
         run: pnpm playwright install
 
       - name: 🧪 Test project
