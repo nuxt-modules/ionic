@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.2.0
       '@capacitor/core': ^4.2.0
       '@ionic/cli': ^6.20.1
-      '@ionic/vue': ^6.2.6
-      '@ionic/vue-router': ^6.2.6
+      '@ionic/vue': ^6.2.7
+      '@ionic/vue-router': ^6.2.7
       '@kevinmarrec/nuxt-pwa': ^0.4.2
       '@nuxt/kit': ^3.0.0-rc.8
       '@nuxt/module-builder': ^0.1.7
@@ -46,8 +46,8 @@ importers:
       '@capacitor/cli': 4.2.0
       '@capacitor/core': 4.2.0
       '@ionic/cli': 6.20.1
-      '@ionic/vue': 6.2.6
-      '@ionic/vue-router': 6.2.6
+      '@ionic/vue': 6.2.7
+      '@ionic/vue-router': 6.2.7
       '@kevinmarrec/nuxt-pwa': 0.4.2
       '@nuxt/kit': 3.0.0-rc.8
       ionicons: 6.0.3
@@ -702,8 +702,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.2.6:
-    resolution: {integrity: sha512-79VGvJ33YlCX/rhepfamL2YUQnqu3cruKMo0yFbrhyJWzoF3GTT/p371FHu1e+SdIZsMu/xcn+dkcTxQjEEcdA==}
+  /@ionic/core/6.2.7:
+    resolution: {integrity: sha512-pQWcIqr5zfCX5De/MQ9kFs+nhaPCr8HIh5QjmydxvmlLv6WU4vlny/Mg0y1+JwLE0qxPD0T9sMykawWH9e3y5Q==}
     dependencies:
       '@stencil/core': 2.17.4
       ionicons: 6.0.3
@@ -809,16 +809,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.2.6:
-    resolution: {integrity: sha512-uqB8rK6bDLXyfQaWCg3b2rAvJ3s5HJum2knedoRWREyswZYglDrFT27uFDEGMtsMbG8FqgXQigk/E+ZxHxo/rA==}
+  /@ionic/vue-router/6.2.7:
+    resolution: {integrity: sha512-TVtTO1LWPwdokXoxOBNTndKl0k4JnUs9Bkl94es+u/s5DWHgpVV9nvvAZ+yJ2a8XWsIGG0MNUVYCH2bbzNL31g==}
     dependencies:
-      '@ionic/vue': 6.2.6
+      '@ionic/vue': 6.2.7
     dev: false
 
-  /@ionic/vue/6.2.6:
-    resolution: {integrity: sha512-IsSeoCixH29SajNOQDMk9V3mUeVvZPsiL3wbLWGj4eHg5NZJ2cmwP7BHlkzcGCRQa8Uvh6RTIfXzMUuRh6fP5A==}
+  /@ionic/vue/6.2.7:
+    resolution: {integrity: sha512-gyAV8gG5F/7/2cMASLd/MGw1ijhCq+bTMIzvTejEp8QKr5khS0DLioWAA13WGC7M2k+S4NrRUiz8lWxibGcjSw==}
     dependencies:
-      '@ionic/core': 6.2.6
+      '@ionic/core': 6.2.7
       ionicons: 6.0.3
     dev: false
 
