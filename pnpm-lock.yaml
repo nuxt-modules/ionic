@@ -20,7 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^11.0.0
       '@release-it/conventional-changelog': ^5.1.0
       '@types/node': ^18.7.16
-      '@vitest/coverage-c8': ^0.23.2
+      '@vitest/coverage-c8': ^0.23.4
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
       eslint: ^8.23.1
@@ -40,7 +40,7 @@ importers:
       typescript: ^4.8.3
       ufo: ^0.8.5
       unimport: ^0.6.7
-      vitest: ^0.23.2
+      vitest: ^0.23.4
       vue: ^3.2.39
     dependencies:
       '@capacitor/cli': 4.2.0
@@ -62,7 +62,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 11.0.0_irgkl5vooow2ydyo6aokmferha
       '@release-it/conventional-changelog': 5.1.0_release-it@15.4.2
       '@types/node': 18.7.16
-      '@vitest/coverage-c8': 0.23.2
+      '@vitest/coverage-c8': 0.23.4
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.23.1
@@ -77,7 +77,7 @@ importers:
       prettier: 2.7.1
       release-it: 15.4.2
       typescript: 4.8.3
-      vitest: 0.23.2
+      vitest: 0.23.4
       vue: 3.2.39
 
   docs:
@@ -465,7 +465,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.0-27720636.1ec96bc
+      '@nuxt/content': /@nuxt/content-edge/2.1.1-27722217.af8c7b8
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -934,8 +934,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.0-27720636.1ec96bc:
-    resolution: {integrity: sha512-GqqCAhSztXpsYuilk7K3byWvSYFfp/+9oV0DWDrv1XB4U2EVMj7tZykyPxXZh0PJOJ+t+nToWaP9O3xX8WiSEQ==}
+  /@nuxt/content-edge/2.1.1-27722217.af8c7b8:
+    resolution: {integrity: sha512-gLnxB3a1VBLpQQ/K7vudep8rORpLWPB1u6fFK1vuNwIfHjT/3P/PI4gc5qsodjeR8tHQfpR+DpvYyq/9q5toGA==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.10
       consola: 2.15.3
@@ -2387,11 +2387,11 @@ packages:
       vue: 3.2.39
     dev: true
 
-  /@vitest/coverage-c8/0.23.2:
-    resolution: {integrity: sha512-VWT6zGj9iXEZCimnRLAUhf3siYVGIG9VryyMoo7B8zMOd+bnAbH8/7PhqvmjedVwa9wh61nkxqgG7/3Y/mzofQ==}
+  /@vitest/coverage-c8/0.23.4:
+    resolution: {integrity: sha512-jmD00a5DQH9gu9K+YdvVhcMuv2CzHvU4gCnySS40Ec5hKlXtlCzRfNHl00VnhfuBeaQUmaQYe60BLT413HyDdg==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.23.2
+      vitest: 0.23.4
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -11866,8 +11866,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.23.2:
-    resolution: {integrity: sha512-kTBKp3ROPDkYC+x2zWt4znkDtnT08W1FQ6ngRFuqxpBGNuNVS+eWZKfffr8y2JGvEzZ9EzMAOcNaiqMj/FZqMw==}
+  /vitest/0.23.4:
+    resolution: {integrity: sha512-iukBNWqQAv8EKDBUNntspLp9SfpaVFbmzmM0sNcnTxASQZMzRw3PsM6DMlsHiI+I6GeO5/sYDg3ecpC+SNFLrQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -11894,7 +11894,7 @@ packages:
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
-      strip-literal: 0.4.0
+      strip-literal: 0.4.1
       tinybench: 2.1.5
       tinypool: 0.3.0
       tinyspy: 1.0.2
