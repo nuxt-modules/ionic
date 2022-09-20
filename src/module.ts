@@ -1,6 +1,12 @@
 import { existsSync, promises as fsp } from 'node:fs'
 
-import { defineNuxtModule, addComponent, addPlugin, addTemplate } from '@nuxt/kit'
+import {
+  defineNuxtModule,
+  addComponent,
+  addPlugin,
+  addTemplate,
+  addImportsSources,
+} from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
@@ -137,14 +143,12 @@ export default defineNuxtModule<ModuleOptions>({
     )
 
     // Add auto-imported composables
-    nuxt.hook('autoImports:sources', presets => {
-      presets.push(
-        defineUnimportPreset({
-          from: '@ionic/vue',
-          imports: [...IonicHooks],
-        })
-      )
-    })
+    addImportsSources(
+      defineUnimportPreset({
+        from: '@ionic/vue',
+        imports: [...IonicHooks],
+      })
+    )
 
     const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
 

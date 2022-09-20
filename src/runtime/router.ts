@@ -177,7 +177,7 @@ export default defineNuxtPlugin(async nuxtApp => {
 })
 
 // https://github.com/vuejs/router/blob/4a0cc8b9c1e642cdf47cc007fa5bbebde70afc66/packages/router/src/history/html5.ts#L37
-function createCurrentLocation (base: string, location: Location): string {
+function createCurrentLocation(base: string, location: Location): string {
   const { pathname, search, hash } = location
   // allows hash bases like #, /#, #/, #!, #!/, /#!/, or even /folder#end
   const hashPos = base.indexOf('#')

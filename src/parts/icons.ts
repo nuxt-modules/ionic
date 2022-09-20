@@ -1,4 +1,4 @@
-import { useNuxt } from '@nuxt/kit'
+import { useNuxt, addImportsSources } from '@nuxt/kit'
 import { defineUnimportPreset } from 'unimport'
 import * as icons from 'ionicons/icons/index.mjs'
 
@@ -16,7 +16,5 @@ export const setupIcons = () => {
 
   nuxt.options.build.transpile.push(/ionicons/)
 
-  nuxt.hook('autoImports:sources', presets => {
-    presets.push(iconsPreset)
-  })
+  addImportsSources(iconsPreset)
 }
