@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.2.0
       '@capacitor/core': ^4.2.0
       '@ionic/cli': ^6.20.1
-      '@ionic/vue': ^6.2.7
-      '@ionic/vue-router': ^6.2.7
+      '@ionic/vue': ^6.2.8
+      '@ionic/vue-router': ^6.2.8
       '@kevinmarrec/nuxt-pwa': ^0.4.2
       '@nuxt/kit': ^3.0.0-rc.10
       '@nuxt/module-builder': ^0.1.7
@@ -46,8 +46,8 @@ importers:
       '@capacitor/cli': 4.2.0
       '@capacitor/core': 4.2.0
       '@ionic/cli': 6.20.1
-      '@ionic/vue': 6.2.7
-      '@ionic/vue-router': 6.2.7
+      '@ionic/vue': 6.2.8
+      '@ionic/vue-router': 6.2.8
       '@kevinmarrec/nuxt-pwa': 0.4.2
       '@nuxt/kit': 3.0.0-rc.10
       ionicons: 6.0.3
@@ -465,7 +465,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.1-27727951.e610874
+      '@nuxt/content': /@nuxt/content-edge/2.1.1-27729314.5fc042b
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -534,7 +534,7 @@ packages:
   /@docus/github-edge/1.2.6-1138f93:
     resolution: {integrity: sha512-Q5BbEm/FMhhFyhBsBO4fxqG5DtPlt34IRf6HtulOG3jUqOlARh0OTPZSJRyrCCvhsfCwc5qzwXA3xD4kDGROlg==}
     dependencies:
-      '@nuxt/kit': 3.0.0-rc.10
+      '@nuxt/kit': 3.0.0-rc.11
       '@octokit/graphql': 4.8.0
       '@octokit/rest': 18.12.0
       remark-github: 11.2.4
@@ -713,8 +713,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.2.7:
-    resolution: {integrity: sha512-pQWcIqr5zfCX5De/MQ9kFs+nhaPCr8HIh5QjmydxvmlLv6WU4vlny/Mg0y1+JwLE0qxPD0T9sMykawWH9e3y5Q==}
+  /@ionic/core/6.2.8:
+    resolution: {integrity: sha512-tUUdvCPo9Z4RQXjvxNXBXQsVTFDAH2ju/HAhzZiAvdfwpHfpA39DWkXwAQeoV9gfFFblaOmCmeSq/8JP/FRn4A==}
     dependencies:
       '@stencil/core': 2.17.4
       ionicons: 6.0.3
@@ -820,16 +820,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.2.7:
-    resolution: {integrity: sha512-TVtTO1LWPwdokXoxOBNTndKl0k4JnUs9Bkl94es+u/s5DWHgpVV9nvvAZ+yJ2a8XWsIGG0MNUVYCH2bbzNL31g==}
+  /@ionic/vue-router/6.2.8:
+    resolution: {integrity: sha512-rPhYiRG5vS0vVbLRj4djwTQQhznYQrCwo7JMYon1EHP+ielkpcxe0SCG1AUBbIqGVmz7oZLZ08mv6xPmpoGbkw==}
     dependencies:
-      '@ionic/vue': 6.2.7
+      '@ionic/vue': 6.2.8
     dev: false
 
-  /@ionic/vue/6.2.7:
-    resolution: {integrity: sha512-gyAV8gG5F/7/2cMASLd/MGw1ijhCq+bTMIzvTejEp8QKr5khS0DLioWAA13WGC7M2k+S4NrRUiz8lWxibGcjSw==}
+  /@ionic/vue/6.2.8:
+    resolution: {integrity: sha512-Ey+uA01nVmfWeTIJA38BMcKPRFBOn3iV17fzvpEnI9z7HdvGjtDmOdeK2N9ubXpWvlOMAGFfTN6lkAH3hvKvCA==}
     dependencies:
-      '@ionic/core': 6.2.7
+      '@ionic/core': 6.2.8
       ionicons: 6.0.3
     dev: false
 
@@ -945,8 +945,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.1-27727951.e610874:
-    resolution: {integrity: sha512-gV/iLcLybNWbWYUtjM7bYMmKOn2x+mbQmU/ZJwggMFASO/xgV9z52Q6hU/EiOCaD6pevXqU2VGUM6OWtdPrIgg==}
+  /@nuxt/content-edge/2.1.1-27729314.5fc042b:
+    resolution: {integrity: sha512-PifcggNWKQpcGKlNsWu6uuV39V9GF1tygEoetx31pGigKolz9ddxPE4Cc8W595xoB2hhEoConhE8PUNElZF5YA==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
       consola: 2.15.3
@@ -1583,7 +1583,7 @@ packages:
       '@nuxt/kit': 3.0.0-rc.11
       '@nuxt/postcss8': 1.1.3
       '@types/tailwindcss': 3.1.0
-      autoprefixer: 10.4.10_postcss@8.4.16
+      autoprefixer: 10.4.12_postcss@8.4.16
       chalk: 5.0.1
       clear-module: 4.1.2
       consola: 2.15.3
@@ -2986,22 +2986,6 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
 
-  /autoprefixer/10.4.10_postcss@8.4.16:
-    resolution: {integrity: sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
-    dependencies:
-      browserslist: 4.21.3
-      caniuse-lite: 1.0.30001399
-      fraction.js: 4.2.0
-      normalize-range: 0.1.2
-      picocolors: 1.0.0
-      postcss: 8.4.16
-      postcss-value-parser: 4.2.0
-    dev: true
-
   /autoprefixer/10.4.12_postcss@8.4.16:
     resolution: {integrity: sha512-WrCGV9/b97Pa+jtwf5UGaRjgQIg7OK3D06GnoYoZNcG1Xb8Gt3EfuKjlhh9i/VtT16g6PYjZ69jdJ2g8FxSC4Q==}
     engines: {node: ^10 || ^12 || >=14}
@@ -3109,17 +3093,6 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /browserslist/4.21.3:
-    resolution: {integrity: sha512-898rgRXLAyRkM1GryrrBHGkqA5hlpkV5MhtZwg9QXeiyLUYs2k00Un05aX5l2/yJIOObYKOpS2JNo8nJDE7fWQ==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-    dependencies:
-      caniuse-lite: 1.0.30001407
-      electron-to-chromium: 1.4.215
-      node-releases: 2.0.6
-      update-browserslist-db: 1.0.5_browserslist@4.21.3
-    dev: true
-
   /browserslist/4.21.4:
     resolution: {integrity: sha512-CBHJJdDmgjl3daYjN5Cp5kbTf1mUhZoS+beLklHIvkOWscs83YAhLlF3Wsh/lciQYAcbBJgTOD44VtG31ZM4Hw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -3171,8 +3144,8 @@ packages:
       defu: 6.1.0
       dotenv: 16.0.2
       gittar: 0.1.1
-      jiti: 1.15.0
-      mlly: 0.5.14
+      jiti: 1.16.0
+      mlly: 0.5.16
       pathe: 0.3.8
       pkg-types: 0.3.5
       rc9: 1.2.2
@@ -3282,10 +3255,6 @@ packages:
       caniuse-lite: 1.0.30001407
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
-    dev: true
-
-  /caniuse-lite/1.0.30001399:
-    resolution: {integrity: sha512-4vQ90tMKS+FkvuVWS5/QY1+d805ODxZiKFzsU8o/RsVJz49ZSRR8EjykLJbqhzdPgadbX6wB538wOzle3JniRA==}
     dev: true
 
   /caniuse-lite/1.0.30001407:
@@ -4323,10 +4292,6 @@ packages:
 
   /ee-first/1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
-    dev: true
-
-  /electron-to-chromium/1.4.215:
-    resolution: {integrity: sha512-vqZxT8C5mlDZ//hQFhneHmOLnj1LhbzxV0+I1yqHV8SB1Oo4Y5Ne9+qQhwHl7O1s9s9cRuo2l5CoLEHdhMTwZg==}
     dev: true
 
   /electron-to-chromium/1.4.256:
@@ -6808,7 +6773,6 @@ packages:
   /jiti/1.16.0:
     resolution: {integrity: sha512-L3BJStEf5NAqNuzrpfbN71dp43mYIcBUlCRea/vdyv5dW/AYa1d4bpelko4SHdY3I6eN9Wzyasxirj1/vv5kmg==}
     hasBin: true
-    dev: true
 
   /joycon/3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
@@ -7999,7 +7963,6 @@ packages:
       pathe: 0.3.8
       pkg-types: 0.3.5
       ufo: 0.8.5
-    dev: true
 
   /modify-values/1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
@@ -11762,17 +11725,6 @@ packages:
       scule: 0.3.2
     transitivePeerDependencies:
       - supports-color
-
-  /update-browserslist-db/1.0.5_browserslist@4.21.3:
-    resolution: {integrity: sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
-    dependencies:
-      browserslist: 4.21.3
-      escalade: 3.1.1
-      picocolors: 1.0.0
-    dev: true
 
   /update-browserslist-db/1.0.9_browserslist@4.21.4:
     resolution: {integrity: sha512-/xsqn21EGVdXI3EXSum1Yckj3ZVZugqyOZQ/CxYPBD/R+ko9NSUScf8tFF4dOKY+2pvSSJA/S+5B8s4Zr4kyvg==}
