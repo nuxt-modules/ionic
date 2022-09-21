@@ -7,8 +7,8 @@ importers:
 
   .:
     specifiers:
-      '@capacitor/cli': ^4.2.0
-      '@capacitor/core': ^4.2.0
+      '@capacitor/cli': ^4.3.0
+      '@capacitor/core': ^4.3.0
       '@ionic/cli': ^6.20.1
       '@ionic/vue': ^6.2.8
       '@ionic/vue-router': ^6.2.8
@@ -34,7 +34,7 @@ importers:
       pathe: ^0.3.8
       pinst: ^3.0.0
       pkg-types: ^0.3.5
-      playwright: ^1.25.2
+      playwright: ^1.26.0
       prettier: ^2.7.1
       release-it: ^15.4.2
       typescript: ^4.8.3
@@ -43,8 +43,8 @@ importers:
       vitest: ^0.23.4
       vue: ^3.2.39
     dependencies:
-      '@capacitor/cli': 4.2.0
-      '@capacitor/core': 4.2.0
+      '@capacitor/cli': 4.3.0
+      '@capacitor/core': 4.3.0
       '@ionic/cli': 6.20.1
       '@ionic/vue': 6.2.8
       '@ionic/vue-router': 6.2.8
@@ -73,7 +73,7 @@ importers:
       lint-staged: 13.0.3
       nuxt: 3.0.0-rc.8
       pinst: 3.0.0
-      playwright: 1.25.2
+      playwright: 1.26.0
       prettier: 2.7.1
       release-it: 15.4.2
       typescript: 4.8.3
@@ -401,8 +401,8 @@ packages:
       '@capacitor/core': ^4.0.0
     dev: true
 
-  /@capacitor/cli/4.2.0:
-    resolution: {integrity: sha512-34L/BoDe3BmWBdrXRoF7lszT27ho6ikMdCeMePohU+cEn4ceqiURN7tnPZRyUlpc/1TO+d8d+qb1QQQSTq2oPA==}
+  /@capacitor/cli/4.3.0:
+    resolution: {integrity: sha512-+IBIJvxpHWSrtfb6XxPSh5m5h5ijLBqh0aGPxvj0nm7mXUwkT/fuQbeEUVCwIoImmYZCuUAFIkQFB0nWd74bEg==}
     engines: {node: '>=12.4.0'}
     hasBin: true
     dependencies:
@@ -427,8 +427,8 @@ packages:
       - supports-color
     dev: false
 
-  /@capacitor/core/4.2.0:
-    resolution: {integrity: sha512-kHKn6693Yt9TWfuJ0Q+fyxYCpYAvVMKdu3t500seMEfdgNlF6BGaX5GbOnXkU4cnM9p+sIhRiwXv8Iqwm0E+NA==}
+  /@capacitor/core/4.3.0:
+    resolution: {integrity: sha512-zb225feaiHYcttHqw7SnKVj9gjOh3yoM2ol0Efky4kd80qZvqPHt7nRI1XZmGUKid5j3AVggULd5rRke5OEOXQ==}
     dependencies:
       tslib: 2.4.0
     dev: false
@@ -8934,19 +8934,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.25.2:
-    resolution: {integrity: sha512-0yTbUE9lIddkEpLHL3u8PoCL+pWiZtj5A/j3U7YoNjcmKKDGBnCrgHJMzwd2J5vy6l28q4ki3JIuz7McLHhl1A==}
+  /playwright-core/1.26.0:
+    resolution: {integrity: sha512-p8huU8eU4gD3VkJd3DA1nA7R3XA6rFvFL+1RYS96cSljCF2yJE9CWEHTPF4LqX8KN9MoWCrAfVKP5381X3CZqg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.25.2:
-    resolution: {integrity: sha512-RwMB5SFRV/8wSfK+tK8ycpqdzORvoqUNz9DUeRfSgZFrZej5uuBl9wFjWcc+OkXFEtaPmx1acAVGG7hA4IJ1kg==}
+  /playwright/1.26.0:
+    resolution: {integrity: sha512-XxTVlvFEYHdatxUkh1KiPq9BclNtFKMi3BgQnl/aactmhN4G9AkZUXwt0ck6NDAOrDFlfibhbM7A1kZwQJKSBw==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.25.2
+      playwright-core: 1.26.0
     dev: true
 
   /plist/3.0.6:
