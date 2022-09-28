@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.3.0
       '@capacitor/core': ^4.3.0
       '@ionic/cli': ^6.20.1
-      '@ionic/vue': ^6.2.8
-      '@ionic/vue-router': ^6.2.8
+      '@ionic/vue': ^6.2.9
+      '@ionic/vue-router': ^6.2.9
       '@kevinmarrec/nuxt-pwa': ^0.4.2
       '@nuxt/kit': ^3.0.0-rc.10
       '@nuxt/module-builder': ^0.1.7
@@ -46,8 +46,8 @@ importers:
       '@capacitor/cli': 4.3.0
       '@capacitor/core': 4.3.0
       '@ionic/cli': 6.20.1
-      '@ionic/vue': 6.2.8
-      '@ionic/vue-router': 6.2.8
+      '@ionic/vue': 6.2.9
+      '@ionic/vue-router': 6.2.9
       '@kevinmarrec/nuxt-pwa': 0.4.2
       '@nuxt/kit': 3.0.0-rc.10
       ionicons: 6.0.3
@@ -713,10 +713,10 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.2.8:
-    resolution: {integrity: sha512-tUUdvCPo9Z4RQXjvxNXBXQsVTFDAH2ju/HAhzZiAvdfwpHfpA39DWkXwAQeoV9gfFFblaOmCmeSq/8JP/FRn4A==}
+  /@ionic/core/6.2.9:
+    resolution: {integrity: sha512-d2KBXYUKBND2AD8aMgash3O/t04IDc/DHHMshcOydfNJ5qqAxwJYzZR7hs96UknCcIlhHk1pb5C29epkv7gOcQ==}
     dependencies:
-      '@stencil/core': 2.17.4
+      '@stencil/core': 2.18.0
       ionicons: 6.0.3
       tslib: 2.4.0
     dev: false
@@ -820,16 +820,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.2.8:
-    resolution: {integrity: sha512-rPhYiRG5vS0vVbLRj4djwTQQhznYQrCwo7JMYon1EHP+ielkpcxe0SCG1AUBbIqGVmz7oZLZ08mv6xPmpoGbkw==}
+  /@ionic/vue-router/6.2.9:
+    resolution: {integrity: sha512-u9y8fJ9kHQrGVvDoit6tDbKJLa4jpvvYBZIgULmx9d3pN8D5TH3oPDOU0OGJR8noXbh/9WR0O34Tl68TGSqsRQ==}
     dependencies:
-      '@ionic/vue': 6.2.8
+      '@ionic/vue': 6.2.9
     dev: false
 
-  /@ionic/vue/6.2.8:
-    resolution: {integrity: sha512-Ey+uA01nVmfWeTIJA38BMcKPRFBOn3iV17fzvpEnI9z7HdvGjtDmOdeK2N9ubXpWvlOMAGFfTN6lkAH3hvKvCA==}
+  /@ionic/vue/6.2.9:
+    resolution: {integrity: sha512-B0/T5MvVVQU+j+N4AoY/TLpOgPH9Fx/lWLK+BnOpkWHawmTNrw//iWgl1ypg7gOeRHAQIbKgmcyDpPhY7neo/w==}
     dependencies:
-      '@ionic/core': 6.2.8
+      '@ionic/core': 6.2.9
       ionicons: 6.0.3
     dev: false
 
@@ -2021,8 +2021,8 @@ packages:
     hasBin: true
     dev: false
 
-  /@stencil/core/2.17.4:
-    resolution: {integrity: sha512-SGRlHpjV1RyFvzw6jFMVKpLNox9Eds3VvpbpD2SW9CuxdLonHDSFtQks5zmT4zs1Rse9I6kFc2mFK/dHNTalkg==}
+  /@stencil/core/2.18.0:
+    resolution: {integrity: sha512-NLEY8Jq59smyiivBAxHKipsp9YkkW/K/Vm90zAyXQqukb12i2SFucWHJ1Ik7ropVlhmMVvigyxXgRfQ9quIqtg==}
     engines: {node: '>=12.10.0', npm: '>=6.0.0'}
     hasBin: true
     dev: false
