@@ -12,7 +12,7 @@ importers:
       '@ionic/cli': ^6.20.2
       '@ionic/vue': ^6.2.9
       '@ionic/vue-router': ^6.2.9
-      '@kevinmarrec/nuxt-pwa': ^0.4.2
+      '@kevinmarrec/nuxt-pwa': ^0.5.0
       '@nuxt/kit': ^3.0.0-rc.10
       '@nuxt/module-builder': ^0.1.7
       '@nuxt/schema': 3.0.0-rc.10
@@ -48,7 +48,7 @@ importers:
       '@ionic/cli': 6.20.2
       '@ionic/vue': 6.2.9
       '@ionic/vue-router': 6.2.9
-      '@kevinmarrec/nuxt-pwa': 0.4.2
+      '@kevinmarrec/nuxt-pwa': 0.5.0
       '@nuxt/kit': 3.0.0-rc.10
       ionicons: 6.0.3
       pathe: 0.3.8
@@ -881,12 +881,12 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kevinmarrec/nuxt-pwa/0.4.2:
-    resolution: {integrity: sha512-GVLv4knKAFMX0YB0soYEsaTmJrFmm6/QpAPHXf1ZkAF5iHqyvWKW2ymMID0g5YUZjpxJxkAEPlBWSZ1DB7z24A==}
+  /@kevinmarrec/nuxt-pwa/0.5.0:
+    resolution: {integrity: sha512-MJ6XxtPMjfC68nQPisgiBX56HyqHODtAUl86RB8+capDndaRsFwLJ2tvdCtzYvc4cy+YU4zkzFS/Fsd9SUZbUA==}
     dependencies:
       hasha: 5.2.2
-      sharp: 0.30.7
-      std-env: 3.1.1
+      sharp: 0.31.1
+      std-env: 3.2.1
     dev: false
 
   /@koa/router/9.4.0:
@@ -5827,7 +5827,7 @@ packages:
     dev: true
 
   /github-from-package/0.0.0:
-    resolution: {integrity: sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=}
+    resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
     dev: false
 
   /github-slugger/1.4.0:
@@ -10304,9 +10304,9 @@ packages:
   /setprototypeof/1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  /sharp/0.30.7:
-    resolution: {integrity: sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==}
-    engines: {node: '>=12.13.0'}
+  /sharp/0.31.1:
+    resolution: {integrity: sha512-GR8M1wBwOiFKLkm9JPun27OQnNRZdHfSf9VwcdZX6UrRmM1/XnOrLFTF0GAil+y/YK4E6qcM/ugxs80QirsHxg==}
+    engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
       color: 4.2.3
@@ -10541,10 +10541,6 @@ packages:
   /statuses/2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
-
-  /std-env/3.1.1:
-    resolution: {integrity: sha512-/c645XdExBypL01TpFKiG/3RAa/Qmu+zRi0MwAmrdEkwHNuN0ebo8ccAXBBDa5Z0QOJgBskUIbuCK91x0sCVEw==}
-    dev: false
 
   /std-env/3.2.1:
     resolution: {integrity: sha512-D/uYFWkI/31OrnKmXZqGAGK5GbQRPp/BWA1nuITcc6ICblhhuQUPHS5E2GSCVS7Hwhf4ciq8qsATwBUxv+lI6w==}
