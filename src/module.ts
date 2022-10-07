@@ -185,6 +185,11 @@ export default defineNuxtModule<ModuleOptions>({
   },
 })
 
+/* Ionic Hooks and components */
+
+// If you are about to add a hook or component to one of the array below, please do so
+// in alphabetical order. This makes it easier to find and check if certain hooks & components are there
+
 const IonicHooks = [
   'useBackButton',
   'useKeyboard',
