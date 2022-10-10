@@ -20,7 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^11.0.0
       '@release-it/conventional-changelog': ^5.1.1
       '@types/node': ^18.7.16
-      '@vitest/coverage-c8': ^0.24.0
+      '@vitest/coverage-c8': ^0.24.1
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
       eslint: ^8.25.0
@@ -40,7 +40,7 @@ importers:
       typescript: ^4.8.4
       ufo: ^0.8.5
       unimport: ^0.6.8
-      vitest: ^0.24.0
+      vitest: ^0.24.1
       vue: ^3.2.40
     dependencies:
       '@capacitor/cli': 4.3.0
@@ -62,7 +62,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 11.0.0_z4bbprzjrhnsfa24uvmcbu7f5q
       '@release-it/conventional-changelog': 5.1.1_release-it@15.5.0
       '@types/node': 18.7.16
-      '@vitest/coverage-c8': 0.24.0
+      '@vitest/coverage-c8': 0.24.1
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.25.0
@@ -77,7 +77,7 @@ importers:
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.8.4
-      vitest: 0.24.0
+      vitest: 0.24.1
       vue: 3.2.40
 
   docs:
@@ -98,13 +98,13 @@ importers:
       '@capacitor/filesystem': ^4.1.2
       '@capacitor/storage': ^1.2.5
       nuxt: ^3.0.0-rc.11
-      nuxt-ionic: link:.
+      nuxt-ionic: link:..
     devDependencies:
       '@capacitor/camera': 4.1.2
       '@capacitor/filesystem': 4.1.2
       '@capacitor/storage': 1.2.5
       nuxt: 3.0.0-rc.11
-      nuxt-ionic: 'link:'
+      nuxt-ionic: link:..
 
 packages:
 
@@ -465,7 +465,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.1-27753697.a3376ef
+      '@nuxt/content': /@nuxt/content-edge/2.1.1-27757026.5d29a37
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -930,8 +930,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.1-27753697.a3376ef:
-    resolution: {integrity: sha512-2NTqD6tAm67LWiIRzPHIVXFZw36fAnVKhGLnOgoAIBeO3NROSG6pqv41dssDyJgfBniJV/MV4lIS5Ko+a1KqCQ==}
+  /@nuxt/content-edge/2.1.1-27757026.5d29a37:
+    resolution: {integrity: sha512-wqt6uT2p244uoHpY//wApmZIpIUx4VErSyi1lvbhTEjYkldpSVz4zV088Bg9gWGYWtSS+scmbem4AD52aFEWSA==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
       consola: 2.15.3
@@ -961,6 +961,7 @@ packages:
       scule: 0.3.2
       shiki-es: 0.1.2
       slugify: 1.6.5
+      socket.io-client: 4.5.2
       ufo: 0.8.5
       unified: 10.1.2
       unist-builder: 3.0.0
@@ -2045,11 +2046,11 @@ packages:
       vue: 3.2.40
     dev: true
 
-  /@vitest/coverage-c8/0.24.0:
-    resolution: {integrity: sha512-Ho5256BOrLnsJgEgE368ED17cr8rOAXrxvwpZ+XZUA4yAcMBxGAX08cCeG4dibmNVD2NE9Hcpd2foMZsTge3wA==}
+  /@vitest/coverage-c8/0.24.1:
+    resolution: {integrity: sha512-cOFHXRHB9WHtGgsHE4FX4Ef1c9Hon668RNJQOJvqSy1/1Y7zIYIBhFWmuFKLZRCMV4jGT5CRiuB9KtdNsOc3og==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.24.0
+      vitest: 0.24.1
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -9776,6 +9777,20 @@ packages:
       - utf-8-validate
     dev: true
 
+  /socket.io-client/4.5.2:
+    resolution: {integrity: sha512-naqYfFu7CLDiQ1B7AlLhRXKX3gdeaIMfgigwavDzgJoIUYulc1qHH5+2XflTsXTPY7BlPH5rppJyUjhjrKQKLg==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      '@socket.io/component-emitter': 3.1.0
+      debug: 4.3.4
+      engine.io-client: 6.2.2
+      socket.io-parser: 4.2.1
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: true
+
   /socket.io-parser/4.2.1:
     resolution: {integrity: sha512-V4GrkLy+HeF1F/en3SpUaM+7XxYXpuMUWLGde1kSSh5nQMN4hLrbPIkD+otwh6q9R6NOQBN4AMaOZ2zVjui82g==}
     engines: {node: '>=10.0.0'}
@@ -10884,8 +10899,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.24.0:
-    resolution: {integrity: sha512-k5j3FPTor+MJx2x0pDW2gtVk+s9VC6nSHT3SoqOIk9Je5fFpPgict+Xy2eAVXUogvSixs45Ya1oZk+oK93BO0w==}
+  /vitest/0.24.1:
+    resolution: {integrity: sha512-NKkK1xnDIOOr42pKBfGQQl6b6IWdFVBpG6ZS1T+nUlJuqcOiZ7lxjVwHy9wrtTYpJ0BWww9y6bSGYXubD29Nag==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
