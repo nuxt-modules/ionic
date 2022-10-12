@@ -34,7 +34,7 @@ importers:
       pathe: ^0.3.9
       pinst: ^3.0.0
       pkg-types: ^0.3.5
-      playwright: ^1.27.0
+      playwright: ^1.27.1
       prettier: ^2.7.1
       release-it: ^15.5.0
       typescript: ^4.8.4
@@ -73,7 +73,7 @@ importers:
       lint-staged: 13.0.3
       nuxt: 3.0.0-rc.11_z4bbprzjrhnsfa24uvmcbu7f5q
       pinst: 3.0.0
-      playwright: 1.27.0
+      playwright: 1.27.1
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.8.4
@@ -1209,7 +1209,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
       nuxt-component-meta: 0.1.9
-      socket.io-client: 4.5.1
+      socket.io-client: 4.5.2
       unstorage: 0.4.2
     transitivePeerDependencies:
       - bufferutil
@@ -8295,19 +8295,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.27.0:
-    resolution: {integrity: sha512-VBKaaFUVKDo3akW+o4DwbK1ZyXh46tcSwQKPK3lruh8IJd5feu55XVZx4vOkbb2uqrNdIF51sgsadYT533SdpA==}
+  /playwright-core/1.27.1:
+    resolution: {integrity: sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.27.0:
-    resolution: {integrity: sha512-F+0+0RD03LS+KdNAMMp63OBzu+NwYYLd52pKLczuSlTsV5b/SLkUoNhSfzDFngEFOuRL2gk0LlfGW3mKiUBk6w==}
+  /playwright/1.27.1:
+    resolution: {integrity: sha512-xXYZ7m36yTtC+oFgqH0eTgullGztKSRMb4yuwLPl8IYSmgBM88QiB+3IWb1mRIC9/NNwcgbG0RwtFlg+EAFQHQ==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.27.0
+      playwright-core: 1.27.1
     dev: true
 
   /plist/3.0.6:
@@ -9762,20 +9762,6 @@ packages:
   /smart-buffer/4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
-
-  /socket.io-client/4.5.1:
-    resolution: {integrity: sha512-e6nLVgiRYatS+AHXnOnGi4ocOpubvOUCGhyWw8v+/FxW8saHkinG6Dfhi9TU0Kt/8mwJIAASxvw6eujQmjdZVA==}
-    engines: {node: '>=10.0.0'}
-    dependencies:
-      '@socket.io/component-emitter': 3.1.0
-      debug: 4.3.4
-      engine.io-client: 6.2.2
-      socket.io-parser: 4.2.1
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-    dev: true
 
   /socket.io-client/4.5.2:
     resolution: {integrity: sha512-naqYfFu7CLDiQ1B7AlLhRXKX3gdeaIMfgigwavDzgJoIUYulc1qHH5+2XflTsXTPY7BlPH5rppJyUjhjrKQKLg==}
