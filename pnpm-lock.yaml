@@ -38,7 +38,7 @@ importers:
       prettier: ^2.7.1
       release-it: ^15.5.0
       typescript: ^4.8.4
-      ufo: ^0.8.5
+      ufo: ^0.8.6
       unimport: ^0.6.8
       vitest: ^0.24.3
       vue: ^3.2.41
@@ -53,7 +53,7 @@ importers:
       ionicons: 6.0.3
       pathe: 0.3.9
       pkg-types: 0.3.5
-      ufo: 0.8.5
+      ufo: 0.8.6
       unimport: 0.6.8
     devDependencies:
       '@nuxt/module-builder': 0.1.7
@@ -465,7 +465,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.1-27761248.4a2937c
+      '@nuxt/content': /@nuxt/content-edge/2.1.1-27762558.2f410e8
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -930,8 +930,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.1-27761248.4a2937c:
-    resolution: {integrity: sha512-D2UNp8qwCnncZ7y5EWUb3T2bbmFyV5pdnQOnZepoAMpuZ9SCDOOrMethgzBo7gcpr0xbbM9hPbd6DNumJwp73A==}
+  /@nuxt/content-edge/2.1.1-27762558.2f410e8:
+    resolution: {integrity: sha512-MYtdqmsLi83CeyeGlFqBhOgg3nQ2UtYAFSz+ElqPGrK99RUxW+QICVr6oVIqOGQ6OjMv0lQl2aIKPiVr8APyBg==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
       consola: 2.15.3
@@ -962,7 +962,7 @@ packages:
       shiki-es: 0.1.2
       slugify: 1.6.5
       socket.io-client: 4.5.2
-      ufo: 0.8.5
+      ufo: 0.8.6
       unified: 10.1.2
       unist-builder: 3.0.0
       unist-util-position: 4.0.3
@@ -1045,7 +1045,7 @@ packages:
       postcss-import-resolver: 2.0.0
       scule: 0.3.2
       std-env: 3.2.1
-      ufo: 0.8.5
+      ufo: 0.8.6
       unimport: 0.6.8
 
   /@nuxt/telemetry/2.1.5:
@@ -1132,7 +1132,7 @@ packages:
       postcss-url: 10.1.3_postcss@8.4.16
       rollup: 2.79.0
       rollup-plugin-visualizer: 5.8.1_rollup@2.79.0
-      ufo: 0.8.5
+      ufo: 0.8.6
       unplugin: 0.9.6
       vite: 3.1.3
       vite-node: 0.23.4
@@ -1184,7 +1184,7 @@ packages:
       postcss-url: 10.1.3_postcss@8.4.16
       rollup: 2.79.0
       rollup-plugin-visualizer: 5.8.1_rollup@2.79.0
-      ufo: 0.8.5
+      ufo: 0.8.6
       unplugin: 0.9.6
       vite: 3.1.3
       vite-node: 0.23.4
@@ -1280,7 +1280,7 @@ packages:
       postcss-nesting: 10.1.10_postcss@8.4.16
       tailwind-config-viewer: 1.7.1_tailwindcss@3.1.8
       tailwindcss: 3.1.8
-      ufo: 0.8.5
+      ufo: 0.8.6
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -4932,7 +4932,7 @@ packages:
       enhanced-resolve: 5.10.0
       mlly: 0.5.16
       pathe: 0.3.9
-      ufo: 0.8.5
+      ufo: 0.8.6
     dev: true
 
   /fast-deep-equal/3.1.3:
@@ -5473,7 +5473,7 @@ packages:
       cookie-es: 0.5.0
       destr: 1.1.1
       radix3: 0.1.2
-      ufo: 0.8.5
+      ufo: 0.8.6
     dev: true
 
   /handlebars/4.7.7:
@@ -6554,7 +6554,7 @@ packages:
       get-port-please: 2.6.1
       http-shutdown: 1.2.2
       selfsigned: 2.0.1
-      ufo: 0.8.5
+      ufo: 0.8.6
     dev: true
 
   /listhen/0.3.4:
@@ -6567,7 +6567,7 @@ packages:
       http-shutdown: 1.2.2
       ip-regex: 5.0.0
       node-forge: 1.3.1
-      ufo: 0.8.5
+      ufo: 0.8.6
     dev: true
 
   /listr2/4.0.5:
@@ -7439,7 +7439,7 @@ packages:
       acorn: 8.8.0
       pathe: 0.3.9
       pkg-types: 0.3.5
-      ufo: 0.8.5
+      ufo: 0.8.6
 
   /mlly/0.5.16:
     resolution: {integrity: sha512-LaJ8yuh4v0zEmge/g3c7jjFlhoCPfQn6RCjXgm9A0Qiuochq4BcuOxVfWmdnCoLTlg2MV+hqhOek+W2OhG0Lwg==}
@@ -7447,7 +7447,7 @@ packages:
       acorn: 8.8.0
       pathe: 0.3.9
       pkg-types: 0.3.5
-      ufo: 0.8.5
+      ufo: 0.8.6
 
   /modify-values/1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
@@ -7591,7 +7591,7 @@ packages:
       serve-static: 1.15.0
       source-map-support: 0.5.21
       std-env: 3.2.1
-      ufo: 0.8.5
+      ufo: 0.8.6
       unenv: 0.6.2
       unimport: 0.6.8
       unstorage: 0.5.6
@@ -7790,7 +7790,7 @@ packages:
       perfect-debounce: 0.1.3
       scule: 0.3.2
       strip-literal: 0.4.2
-      ufo: 0.8.5
+      ufo: 0.8.6
       unctx: 2.0.2
       unenv: 0.6.2
       unimport: 0.6.8
@@ -7852,7 +7852,7 @@ packages:
       perfect-debounce: 0.1.3
       scule: 0.3.2
       strip-literal: 0.4.2
-      ufo: 0.8.5
+      ufo: 0.8.6
       unctx: 2.0.2
       unenv: 0.6.2
       unimport: 0.6.8
@@ -7925,7 +7925,7 @@ packages:
     dependencies:
       destr: 1.1.1
       node-fetch-native: 0.1.7
-      ufo: 0.8.5
+      ufo: 0.8.6
       undici: 5.10.0
     dev: true
 
@@ -10436,8 +10436,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ufo/0.8.5:
-    resolution: {integrity: sha512-e4+UtA5IRO+ha6hYklwj6r7BjiGMxS0O+UaSg9HbaTefg4kMkzj4tXzEBajRR+wkxf+golgAWKzLbytCUDMJAA==}
+  /ufo/0.8.6:
+    resolution: {integrity: sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==}
 
   /uglify-js/3.17.0:
     resolution: {integrity: sha512-aTeNPVmgIMPpm1cxXr2Q/nEbvkmV8yq66F3om7X3P/cvOXQ0TMQ64Wk63iyT1gPlmdmGzjGpyLh1f3y8MZWXGg==}
@@ -10630,7 +10630,7 @@ packages:
       listhen: 0.2.15
       mri: 1.2.0
       ohmyfetch: 0.4.19
-      ufo: 0.8.5
+      ufo: 0.8.6
       ws: 8.9.0
     transitivePeerDependencies:
       - bufferutil
@@ -10649,7 +10649,7 @@ packages:
       listhen: 0.2.15
       mri: 1.2.0
       ohmyfetch: 0.4.19
-      ufo: 0.8.5
+      ufo: 0.8.6
       ws: 8.9.0
     transitivePeerDependencies:
       - bufferutil
@@ -10987,7 +10987,7 @@ packages:
   /vue-bundle-renderer/0.4.3:
     resolution: {integrity: sha512-l4mqMiMSF3wO7h4y9hrdVA97XftD457C+sbbECpZhqjzXf0MzYhdxXJc9JbMjO7fIez1M5s5wFd1YN/d1Em7sg==}
     dependencies:
-      ufo: 0.8.5
+      ufo: 0.8.6
     dev: true
 
   /vue-demi/0.13.7:
