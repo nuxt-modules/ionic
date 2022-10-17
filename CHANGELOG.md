@@ -1,5 +1,18 @@
 
 
+## [0.8.0](https://github.com/nuxt-modules/ionic/compare/0.7.0...0.8.0) (2022-10-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update dependency @kevinmarrec/nuxt-pwa to ^0.6.1 (#85)
+* **deps:** update dependency @kevinmarrec/nuxt-pwa to ^0.5.0 (#83)
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @kevinmarrec/nuxt-pwa to ^0.5.0 ([#83](https://github.com/nuxt-modules/ionic/issues/83)) ([7429327](https://github.com/nuxt-modules/ionic/commit/74293277aeb0f74297745ae0733525c928558541))
+* **deps:** update dependency @kevinmarrec/nuxt-pwa to ^0.6.1 ([#85](https://github.com/nuxt-modules/ionic/issues/85)) ([0696d1b](https://github.com/nuxt-modules/ionic/commit/0696d1bfe319012bfb175cb5050697af82b57ca0))
+
 ## [0.7.0](https://github.com/nuxt-modules/ionic/compare/0.6.1...0.7.0) (2022-09-07)
 
 
