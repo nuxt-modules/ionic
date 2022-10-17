@@ -1,4 +1,4 @@
-[![nuxt-ionicstrapi](./docs/public/cover.jpg)](https://ionic.roe.dev)
+[![@nuxtjs/ionic](./docs/public/cover.jpg)](https://ionic.nuxtjs.org)
 
 # Nuxt Ionic
 
@@ -9,13 +9,13 @@
 
 > [Ionic](https://ionicframework.com/docs/) integration for [Nuxt](https://nuxtjs.org)
 
-- [✨ &nbsp;Changelog](https://github.com/danielroe/nuxt-ionic/blob/main/CHANGELOG.md)
-- [📖 &nbsp;Read the documentation](https://ionic.roe.dev)
-- [▶️ &nbsp;Online playground](https://stackblitz.com/github/danielroe/nuxt-ionic/tree/main/playground)
+- [✨ &nbsp;Changelog](https://github.com/nuxt-modules/ionic/blob/main/CHANGELOG.md)
+- [📖 &nbsp;Read the documentation](https://ionic.nuxtjs.org)
+- [▶️ &nbsp;Online playground](https://stackblitz.com/github/nuxt-modules/ionic/tree/main/playground)
 
 ## Features
 
-**⚠️ `nuxt-ionic` is currently a work in progress. ⚠️**
+**⚠️ `@nuxtjs/ionic` is currently a work in progress. ⚠️**
 
 - Zero-config required
 - Auto-import Ionic components, composables and icons
@@ -27,11 +27,11 @@
 
 **In progress**
 
-- [ ] PWA Elements [#14](https://github.com/danielroe/nuxt-ionic/issues/14)
+- [ ] PWA Elements [#14](https://github.com/nuxt-modules/ionic/issues/14)
 
 ## Usage
 
-👉 Check out https://ionic.roe.dev.
+👉 Check out https://ionic.nuxtjs.org.
 
 ## 💻 Development
 
@@ -49,11 +49,11 @@ Published under the [MIT License](./LICENCE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-ionic?style=flat-square
-[npm-version-href]: https://npmjs.com/package/nuxt-ionic
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-ionic?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/nuxt-ionic
-[github-actions-src]: https://img.shields.io/github/workflow/status/danielroe/nuxt-ionic/ci/main?style=flat-square
-[github-actions-href]: https://github.com/danielroe/nuxt-ionic/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/gh/danielroe/nuxt-ionic/main?style=flat-square
-[codecov-href]: https://codecov.io/gh/danielroe/nuxt-ionic
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/ionic?style=flat-square
+[npm-version-href]: https://npmjs.com/package/@nuxtjs/ionic
+[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/ionic?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/ionic
+[github-actions-src]: https://img.shields.io/github/workflow/status/nuxt-modules/ionic/ci/main?style=flat-square
+[github-actions-href]: https://github.com/nuxt-modules/ionic/actions?query=workflow%3Aci
+[codecov-src]: https://img.shields.io/codecov/c/gh/nuxt-modules/ionic/main?style=flat-square
+[codecov-href]: https://codecov.io/gh/nuxt-modules/ionic

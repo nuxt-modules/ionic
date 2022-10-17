@@ -1,17 +1,16 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   extends: ['./node_modules/@docus/docs-theme'],
   build: { transpile: [/dist\/runtime/] },
   github: {
     owner: 'danielroe',
-    repo: 'nuxt-ionic',
+    repo: '@nuxtjs/ionic',
     branch: 'main',
   },
-  theme: {},
   modules: ['@nuxthq/admin', '@docus/github', 'vue-plausible'],
   plausible: {
-    domain: 'ionic.roe.dev',
+    domain: 'ionic.nuxtjs.org',
   },
   tailwindcss: {
     config: {

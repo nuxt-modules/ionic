@@ -65,12 +65,12 @@ export interface ModuleOptions {
     statusTap?: boolean
     swipeBackEnabled?: boolean
     tabButtonLayout?:
-      | 'icon-top'
-      | 'icon-start'
-      | 'icon-end'
-      | 'icon-bottom'
-      | 'icon-hide'
-      | 'label-hide'
+    | 'icon-top'
+    | 'icon-start'
+    | 'icon-end'
+    | 'icon-bottom'
+    | 'icon-hide'
+    | 'label-hide'
     toastEnter?: AnimationBuilder
     toastLeave?: AnimationBuilder
   }
@@ -78,7 +78,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxt-ionic',
+    name: '@nuxtjs/ionic',
     configKey: 'ionic',
   },
   defaults: {
@@ -95,7 +95,7 @@ export default defineNuxtModule<ModuleOptions>({
     },
     config: {},
   },
-  async setup(options, nuxt) {
+  async setup (options, nuxt) {
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
@@ -113,7 +113,7 @@ export default defineNuxtModule<ModuleOptions>({
         JSON.stringify(
           {
             name: await readPackageJSON(nuxt.options.rootDir).then(
-              ({ name }) => name || 'nuxt-ionic-project'
+              ({ name }) => name || '@nuxtjs/ionic-project'
             ),
             integrations: {},
             type: 'vue',

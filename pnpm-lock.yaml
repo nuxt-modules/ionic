@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 overrides:
-  nuxt-ionic: link:.
+  '@nuxtjs/ionic': link:.
 
 importers:
 
@@ -97,14 +97,14 @@ importers:
       '@capacitor/camera': ^4.1.2
       '@capacitor/filesystem': ^4.1.2
       '@capacitor/storage': ^1.2.5
+      '@nuxtjs/ionic': link:..
       nuxt: ^3.0.0-rc.11
-      nuxt-ionic: link:..
     devDependencies:
       '@capacitor/camera': 4.1.2
       '@capacitor/filesystem': 4.1.2
       '@capacitor/storage': 1.2.5
+      '@nuxtjs/ionic': link:..
       nuxt: 3.0.0-rc.11
-      nuxt-ionic: link:..
 
 packages:
 
@@ -3916,7 +3916,7 @@ packages:
     dev: true
 
   /ee-first/1.1.1:
-    resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
+    resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: true
 
   /electron-to-chromium/1.4.256:
@@ -7275,7 +7275,7 @@ packages:
     dev: true
 
   /media-typer/0.3.0:
-    resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
+    resolution: {integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=}
     engines: {node: '>= 0.6'}
     dev: true
 
