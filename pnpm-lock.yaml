@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.3.0
       '@capacitor/core': ^4.3.0
       '@ionic/cli': ^6.20.3
-      '@ionic/vue': ^6.3.1
-      '@ionic/vue-router': ^6.3.1
+      '@ionic/vue': ^6.3.2
+      '@ionic/vue-router': ^6.3.2
       '@kevinmarrec/nuxt-pwa': ^0.8.0
       '@nuxt/kit': ^3.0.0-rc.11
       '@nuxt/module-builder': ^0.2.0
@@ -46,8 +46,8 @@ importers:
       '@capacitor/cli': 4.3.0
       '@capacitor/core': 4.3.0
       '@ionic/cli': 6.20.3
-      '@ionic/vue': 6.3.1
-      '@ionic/vue-router': 6.3.1
+      '@ionic/vue': 6.3.2
+      '@ionic/vue-router': 6.3.2
       '@kevinmarrec/nuxt-pwa': 0.8.0
       '@nuxt/kit': 3.0.0-rc.11
       ionicons: 6.0.3
@@ -465,7 +465,7 @@ packages:
   /@docus/base-edge/3.0.0-1138f93:
     resolution: {integrity: sha512-4x9/ump1+5Ig5S0xm7zjSPZJUr9BTI4DvhNtLZCJwLFqn2rdK1kz/x8w9QX44Q+ns6GT7Is9FCwij55hywOPbw==}
     dependencies:
-      '@nuxt/content': /@nuxt/content-edge/2.1.1-27762558.2f410e8
+      '@nuxt/content': /@nuxt/content-edge/2.1.1-27765909.005fdfd
       '@nuxthq/admin': /@nuxthq/admin-edge/0.0.1-27627055.9933660
       '@vueuse/core': 8.9.4
       '@vueuse/nuxt': 8.9.4
@@ -716,8 +716,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.3.1:
-    resolution: {integrity: sha512-OpmGQQ/sGtoXW4PQRvRjYa9mTlAmAWwFMu8g/1rcdAPaTQQAlRnfZ62wYYqmChLSFlVbn6mCleeljzR9FaYrAg==}
+  /@ionic/core/6.3.2:
+    resolution: {integrity: sha512-L4xqJyixmGApwYc5fQgGoK80wXGCrbjL8vGfeNbjYqxxP0ZIKGAhURPoMAtSTqLLK9gdhh4Mv6gw4gNKvxodPA==}
     dependencies:
       '@stencil/core': 2.18.0
       ionicons: 6.0.3
@@ -823,16 +823,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.3.1:
-    resolution: {integrity: sha512-5m2YpHeqbFZvMOTc1eW+Wb9gJJffiBwlFBy5Bwkhmn3VRfGC7F/gMXP9pKYt+Pb/JWM6HAeK0M+sfPzVDkUnsw==}
+  /@ionic/vue-router/6.3.2:
+    resolution: {integrity: sha512-3LKR7VS4lp22z4shRS2AUtc19nEyGRbSw9Tufv/RYkU+DXKv9SeakWwlIjkbVI+IVbDzy9m4dV0gN37zpxGPbw==}
     dependencies:
-      '@ionic/vue': 6.3.1
+      '@ionic/vue': 6.3.2
     dev: false
 
-  /@ionic/vue/6.3.1:
-    resolution: {integrity: sha512-QFPF9Pshg4Ns3UDrbA+vGA1QyadIvW0r1Gct6Rv9S/eAfHMOXfAiaIqUgTy0BrFjcR+VCgiCZzg1atEvU0XvyA==}
+  /@ionic/vue/6.3.2:
+    resolution: {integrity: sha512-jvcqcVG6cgFBP+JtLW1dg8a77wYLsFpx1vcC0LK59OmFVLkEIcE6TodhXmfaJVglkXTVMbzPRvO7xIUVHydQzQ==}
     dependencies:
-      '@ionic/core': 6.3.1
+      '@ionic/core': 6.3.2
       ionicons: 6.0.3
     dev: false
 
@@ -948,8 +948,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt/content-edge/2.1.1-27762558.2f410e8:
-    resolution: {integrity: sha512-MYtdqmsLi83CeyeGlFqBhOgg3nQ2UtYAFSz+ElqPGrK99RUxW+QICVr6oVIqOGQ6OjMv0lQl2aIKPiVr8APyBg==}
+  /@nuxt/content-edge/2.1.1-27765909.005fdfd:
+    resolution: {integrity: sha512-qHn39nTPyRXFqy6HtlM5fosvmRUzZQCkRrSoI3xfiO1fmMXTl6X9VZ87sm/KsCGBwILQG/DEruvlnU72ZuG5fg==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
       consola: 2.15.3
