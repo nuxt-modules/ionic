@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-ionic",
+  "name": "@nuxtjs/ionic",
   "version": "0.7.0",
   "license": "MIT",
-  "repository": "danielroe/nuxt-ionic",
+  "repository": "nuxt-modules/ionic",
   "description": "Ionic integration for Nuxt",
   "keywords": [
     "nuxt",
@@ -92,7 +92,7 @@
     "vue": "^3.2.41"
   },
   "resolutions": {
-    "nuxt-ionic": "link:."
+    "@nuxtjs/ionic": "link:."
   },
   "packageManager": "pnpm@7.13.5",
   "volta": {
