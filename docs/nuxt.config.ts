@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   extends: ['./node_modules/@docus/docs-theme'],
   build: { transpile: [/dist\/runtime/] },
   github: {
-    owner: 'danielroe',
-    repo: '@nuxtjs/ionic',
+    owner: 'nuxt-modules',
+    repo: 'ionic',
     branch: 'main',
   },
   modules: ['@nuxthq/admin', '@docus/github', 'vue-plausible'],
