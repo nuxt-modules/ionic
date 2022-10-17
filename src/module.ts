@@ -113,7 +113,7 @@ export default defineNuxtModule<ModuleOptions>({
         JSON.stringify(
           {
             name: await readPackageJSON(nuxt.options.rootDir).then(
-              ({ name }) => name || '@nuxtjs/ionic-project'
+              ({ name }) => name || 'nuxt-ionic-project'
             ),
             integrations: {},
             type: 'vue',

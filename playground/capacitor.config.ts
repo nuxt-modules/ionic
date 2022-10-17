@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: '@nuxtjs/ionic-playground',
+  appName: 'nuxt-ionic-playground',
   webDir: 'dist',
   bundledWebRuntime: false,
 }
