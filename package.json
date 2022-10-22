@@ -53,12 +53,12 @@
     "postpublish": "pinst --enable"
   },
   "dependencies": {
-    "@capacitor/cli": "^4.3.0",
-    "@capacitor/core": "^4.3.0",
+    "@capacitor/cli": "^4.4.0",
+    "@capacitor/core": "^4.4.0",
     "@ionic/cli": "^6.20.3",
     "@ionic/vue": "^6.3.2",
     "@ionic/vue-router": "^6.3.2",
-    "@kevinmarrec/nuxt-pwa": "^0.8.0",
+    "@kevinmarrec/nuxt-pwa": "^0.9.1",
     "@nuxt/kit": "^3.0.0-rc.11",
     "ionicons": "^6.0.3",
     "pathe": "^0.3.9",
@@ -79,7 +79,7 @@
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "expect-type": "^0.14.2",
+    "expect-type": "^0.15.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "nuxt": "^3.0.0-rc.11",
@@ -94,7 +94,7 @@
   "resolutions": {
     "@nuxtjs/ionic": "link:."
   },
-  "packageManager": "pnpm@7.13.6",
+  "packageManager": "pnpm@7.14.0",
   "volta": {
     "node": "16.18.0"
   }
