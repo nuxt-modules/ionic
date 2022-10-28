@@ -10,8 +10,8 @@ importers:
       '@capacitor/cli': ^4.4.0
       '@capacitor/core': ^4.4.0
       '@ionic/cli': ^6.20.3
-      '@ionic/vue': ^6.3.2
-      '@ionic/vue-router': ^6.3.2
+      '@ionic/vue': ^6.3.3
+      '@ionic/vue-router': ^6.3.3
       '@kevinmarrec/nuxt-pwa': ^0.9.1
       '@nuxt/kit': ^3.0.0-rc.11
       '@nuxt/module-builder': ^0.2.0
@@ -19,7 +19,7 @@ importers:
       '@nuxt/test-utils': 3.0.0-rc.11
       '@nuxtjs/eslint-config-typescript': ^11.0.0
       '@release-it/conventional-changelog': ^5.1.1
-      '@types/node': ^18.11.6
+      '@types/node': ^18.11.7
       '@vitest/coverage-c8': ^0.24.3
       c8: ^7.12.0
       conventional-changelog-conventionalcommits: ^5.0.0
@@ -33,7 +33,7 @@ importers:
       nuxt: ^3.0.0-rc.11
       pathe: ^0.3.9
       pinst: ^3.0.0
-      pkg-types: ^0.3.5
+      pkg-types: ^0.3.6
       playwright: ^1.27.1
       prettier: ^2.7.1
       release-it: ^15.5.0
@@ -46,13 +46,13 @@ importers:
       '@capacitor/cli': 4.4.0
       '@capacitor/core': 4.4.0
       '@ionic/cli': 6.20.3
-      '@ionic/vue': 6.3.2
-      '@ionic/vue-router': 6.3.2
+      '@ionic/vue': 6.3.3
+      '@ionic/vue-router': 6.3.3
       '@kevinmarrec/nuxt-pwa': 0.9.1
       '@nuxt/kit': 3.0.0-rc.11
       ionicons: 6.0.3
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       ufo: 0.8.6
       unimport: 0.7.0
     devDependencies:
@@ -61,7 +61,7 @@ importers:
       '@nuxt/test-utils': 3.0.0-rc.11_vue@3.2.41
       '@nuxtjs/eslint-config-typescript': 11.0.0_wyqvi574yv7oiwfeinomdzmc3m
       '@release-it/conventional-changelog': 5.1.1_release-it@15.5.0
-      '@types/node': 18.11.6
+      '@types/node': 18.11.7
       '@vitest/coverage-c8': 0.24.3
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
@@ -471,7 +471,7 @@ packages:
       '@vueuse/nuxt': 8.9.4
       defu: 6.1.0
       nuxt: 3.0.0-rc.12
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
     transitivePeerDependencies:
       - '@vue/composition-api'
       - bufferutil
@@ -696,8 +696,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core/6.3.2:
-    resolution: {integrity: sha512-L4xqJyixmGApwYc5fQgGoK80wXGCrbjL8vGfeNbjYqxxP0ZIKGAhURPoMAtSTqLLK9gdhh4Mv6gw4gNKvxodPA==}
+  /@ionic/core/6.3.3:
+    resolution: {integrity: sha512-I7eRsni/3blStScsQcITb4seuunNzS4mIK0GxHljeRRb8oQI9Xy/oP4rq9weo9lsuEVD0sHIqBIS7/Oo9iEymQ==}
     dependencies:
       '@stencil/core': 2.18.0
       ionicons: 6.0.3
@@ -803,16 +803,16 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router/6.3.2:
-    resolution: {integrity: sha512-3LKR7VS4lp22z4shRS2AUtc19nEyGRbSw9Tufv/RYkU+DXKv9SeakWwlIjkbVI+IVbDzy9m4dV0gN37zpxGPbw==}
+  /@ionic/vue-router/6.3.3:
+    resolution: {integrity: sha512-NtLqI0OCrjBrnNQKGVMPFZNhd5wE8ffXjThHcxQUyr+Gsh3EaMBWHr8vu7CPobxUWZMIMgXSMsgKJlFyJU6lCg==}
     dependencies:
-      '@ionic/vue': 6.3.2
+      '@ionic/vue': 6.3.3
     dev: false
 
-  /@ionic/vue/6.3.2:
-    resolution: {integrity: sha512-jvcqcVG6cgFBP+JtLW1dg8a77wYLsFpx1vcC0LK59OmFVLkEIcE6TodhXmfaJVglkXTVMbzPRvO7xIUVHydQzQ==}
+  /@ionic/vue/6.3.3:
+    resolution: {integrity: sha512-MIbnZ1A046ugZroeoK+Tsaykl134bFd5P072JhNQtMAbUFiEfhTkWenbge2DJV8hKPfYmWtZzPze6i0tyw0wlw==}
     dependencies:
-      '@ionic/core': 6.3.2
+      '@ionic/core': 6.3.3
       ionicons: 6.0.3
     dev: false
 
@@ -993,7 +993,7 @@ packages:
       lodash.template: 4.5.0
       mlly: 0.5.16
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       scule: 0.3.2
       semver: 7.3.7
       unctx: 2.0.2
@@ -1018,7 +1018,7 @@ packages:
       lodash.template: 4.5.0
       mlly: 0.5.16
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       scule: 0.3.2
       semver: 7.3.8
       unctx: 2.0.2
@@ -1065,7 +1065,7 @@ packages:
       defu: 6.1.0
       jiti: 1.16.0
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       postcss-import-resolver: 2.0.0
       scule: 0.3.2
       std-env: 3.2.1
@@ -1081,7 +1081,7 @@ packages:
       defu: 6.1.0
       jiti: 1.16.0
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       postcss-import-resolver: 2.0.0
       scule: 0.3.2
       std-env: 3.3.0
@@ -1198,7 +1198,7 @@ packages:
       ohash: 0.1.5
       pathe: 0.3.9
       perfect-debounce: 0.1.3
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       postcss: 8.4.18
       postcss-import: 15.0.0_postcss@8.4.18
       postcss-url: 10.1.3_postcss@8.4.18
@@ -1250,7 +1250,7 @@ packages:
       ohash: 0.1.5
       pathe: 0.3.9
       perfect-debounce: 0.1.3
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       postcss: 8.4.18
       postcss-import: 15.0.0_postcss@8.4.18
       postcss-url: 10.1.3_postcss@8.4.18
@@ -1302,7 +1302,7 @@ packages:
       ohash: 0.1.5
       pathe: 0.3.9
       perfect-debounce: 0.1.3
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       postcss: 8.4.18
       postcss-import: 15.0.0_postcss@8.4.18
       postcss-url: 10.1.3_postcss@8.4.18
@@ -2095,7 +2095,7 @@ packages:
   /@types/fs-extra/8.1.2:
     resolution: {integrity: sha512-SvSrYXfWSc7R4eqnOzbQF4TZmfpNSM9FrSWLU3EUnWBuyZqNBOrv1B1JA3byUDPUl9z4Ab3jeZG2eDdySlgNMg==}
     dependencies:
-      '@types/node': 18.11.6
+      '@types/node': 18.11.7
     dev: false
 
   /@types/hast/2.3.4:
@@ -2134,8 +2134,8 @@ packages:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
-  /@types/node/18.11.6:
-    resolution: {integrity: sha512-j3CEDa2vd96K0AXF8Wur7UucACvnjkk8hYyQAHhUNciabZLDl9nfAEVUSwmh245OOZV15bRA3Y590Gi5jUcDJg==}
+  /@types/node/18.11.7:
+    resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2152,7 +2152,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 18.11.6
+      '@types/node': 18.11.7
     dev: true
 
   /@types/resolve/1.20.2:
@@ -3082,7 +3082,7 @@ packages:
       jiti: 1.16.0
       mlly: 0.5.16
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       rc9: 1.2.2
 
   /c8/7.12.0:
@@ -6679,7 +6679,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.11.6
+      '@types/node': 18.11.7
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -7830,20 +7830,12 @@ packages:
       typescript: 4.8.4
     dev: true
 
-  /mlly/0.5.14:
-    resolution: {integrity: sha512-DgRgNUSX9NIxxCxygX4Xeg9C7GX7OUx1wuQ8cXx9o9LE0e9wrH+OZ9fcnrlEedsC/rtqry3ZhUddC759XD/L0w==}
-    dependencies:
-      acorn: 8.8.0
-      pathe: 0.3.9
-      pkg-types: 0.3.5
-      ufo: 0.8.6
-
   /mlly/0.5.16:
     resolution: {integrity: sha512-LaJ8yuh4v0zEmge/g3c7jjFlhoCPfQn6RCjXgm9A0Qiuochq4BcuOxVfWmdnCoLTlg2MV+hqhOek+W2OhG0Lwg==}
     dependencies:
       acorn: 8.8.0
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       ufo: 0.8.6
 
   /modify-values/1.0.1:
@@ -7976,7 +7968,7 @@ packages:
       ohmyfetch: 0.4.20
       pathe: 0.3.9
       perfect-debounce: 0.1.3
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       pretty-bytes: 6.0.0
       radix3: 0.1.2
       rollup: 2.79.1
@@ -8047,7 +8039,7 @@ packages:
       ohmyfetch: 0.4.20
       pathe: 0.3.9
       perfect-debounce: 0.1.3
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       pretty-bytes: 6.0.0
       radix3: 0.2.1
       rollup: 2.79.1
@@ -8841,11 +8833,11 @@ packages:
     hasBin: true
     dev: true
 
-  /pkg-types/0.3.5:
-    resolution: {integrity: sha512-VkxCBFVgQhNHYk9subx+HOhZ4jzynH11ah63LZsprTKwPCWG9pfWBlkElWFbvkP9BVR0dP1jS9xPdhaHQNK74Q==}
+  /pkg-types/0.3.6:
+    resolution: {integrity: sha512-uQZutkkh6axl1GxDm5/+8ivVdwuJ5pyDGqJeSiIWIUWIqYiK3p9QKozN/Rv6eVvFoeSWkN1uoYeSDBwwBJBtbg==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 0.5.14
+      mlly: 0.5.16
       pathe: 0.3.9
 
   /plausible-tracker/0.3.8:
@@ -11032,7 +11024,7 @@ packages:
       mlly: 0.5.16
       mri: 1.2.0
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       pretty-bytes: 6.0.0
       rimraf: 3.0.2
       rollup: 3.2.0
@@ -11104,7 +11096,7 @@ packages:
       magic-string: 0.26.7
       mlly: 0.5.16
       pathe: 0.3.9
-      pkg-types: 0.3.5
+      pkg-types: 0.3.6
       scule: 0.3.2
       strip-literal: 0.4.2
       unplugin: 0.10.2
@@ -11569,7 +11561,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.3
       '@types/chai-subset': 1.3.3
-      '@types/node': 18.11.6
+      '@types/node': 18.11.7
       chai: 4.3.6
       debug: 4.3.4
       local-pkg: 0.4.2
