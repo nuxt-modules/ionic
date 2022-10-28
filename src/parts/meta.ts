@@ -15,6 +15,9 @@ export const setupMeta = () => {
       nuxt.options.app.head.meta.unshift(meta)
     }
   }
-  nuxt.options.app.head.viewport =
-    'viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+  const viewport = nuxt.options.app.head.meta.find(i => i.name === 'viewport')
+  if (viewport?.content === 'width=device-width, initial-scale=1') {
+    viewport.content =
+      'viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+  }
 }
