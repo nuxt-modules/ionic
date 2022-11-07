@@ -17,31 +17,31 @@ importers:
       '@nuxt/module-builder': ^0.2.0
       '@nuxt/schema': 3.0.0-rc.12
       '@nuxt/test-utils': 3.0.0-rc.12
-      '@nuxtjs/eslint-config-typescript': ^11.0.0
+      '@nuxtjs/eslint-config-typescript': 11.0.0
       '@release-it/conventional-changelog': ^5.1.1
-      '@types/node': ^18.11.9
+      '@types/node': 18.11.9
       '@vitest/coverage-c8': ^0.24.5
       c8: ^7.12.0
-      conventional-changelog-conventionalcommits: ^5.0.0
+      conventional-changelog-conventionalcommits: 5.0.0
       eslint: ^8.26.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
-      expect-type: ^0.15.0
-      husky: ^8.0.1
+      expect-type: 0.15.0
+      husky: 8.0.1
       ionicons: ^6.0.3
-      lint-staged: ^13.0.3
+      lint-staged: 13.0.3
       nuxt: ^3.0.0-rc.12
       pathe: ^0.3.9
-      pinst: ^3.0.0
+      pinst: 3.0.0
       pkg-types: ^0.3.6
-      playwright: ^1.27.1
-      prettier: ^2.7.1
+      playwright: 1.27.1
+      prettier: 2.7.1
       release-it: ^15.5.0
-      typescript: ^4.8.4
+      typescript: 4.8.4
       ufo: ^0.8.6
       unimport: ^0.7.0
       vitest: ^0.24.5
-      vue: ^3.2.41
+      vue: 3.2.41
     dependencies:
       '@capacitor/cli': 4.4.0
       '@capacitor/core': 4.4.0
@@ -84,7 +84,7 @@ importers:
     specifiers:
       '@nuxt-themes/docus': npm:@nuxt-themes/docus-edge@latest
       nuxt: ^3.0.0-rc.13
-      vue-plausible: ^1.3.2
+      vue-plausible: 1.3.2
     devDependencies:
       '@nuxt-themes/docus': /@nuxt-themes/docus-edge/0.1.0-2a7c428_nuxt@3.0.0-rc.13
       nuxt: 3.0.0-rc.13
@@ -92,9 +92,9 @@ importers:
 
   playground:
     specifiers:
-      '@capacitor/camera': ^4.1.3
-      '@capacitor/filesystem': ^4.1.3
-      '@capacitor/storage': ^1.2.5
+      '@capacitor/camera': 4.1.3
+      '@capacitor/filesystem': 4.1.3
+      '@capacitor/storage': 1.2.5
       '@nuxtjs/ionic': link:..
       nuxt: ^3.0.0-rc.12
     devDependencies:
@@ -578,6 +578,7 @@ packages:
 
   /@capacitor/storage/1.2.5:
     resolution: {integrity: sha512-pWhnw4U7wN/zFV4lA4BLMypSufTktCbk548Yk4whSb0KAq3R0mLfSubRIHkGdcPqQWCsM6g/zUuszurhz6ncWQ==}
+    deprecated: package has been renamed to @capacitor/preferences
     peerDependencies:
       '@capacitor/core': ^3.0.0
     dev: true
@@ -1056,7 +1057,7 @@ packages:
       '@tailwindcss/typography': 0.5.7
       '@vueuse/core': 9.4.0
       '@vueuse/nuxt': 9.4.0_nuxt@3.0.0-rc.13
-      pinceau: 0.6.10
+      pinceau: 0.6.12
       socket.io-client: 4.5.3
       vue-plausible: 1.3.2
     transitivePeerDependencies:
@@ -1083,7 +1084,7 @@ packages:
   /@nuxt/content-edge/2.2.1-27791612.bfadb27:
     resolution: {integrity: sha512-vMJZHkQcTjuS7A1Y/MiiEqoGYqCWBpgBQMp8OWDgH0yo3EnCCsd8Qz5L4nQNYmavaTwNRjelGJeF9AF5/pi0SA==}
     dependencies:
-      '@nuxt/kit': 3.0.0-rc.12
+      '@nuxt/kit': 3.0.0-rc.13
       consola: 2.15.3
       defu: 6.1.0
       destr: 1.2.0
@@ -1091,7 +1092,7 @@ packages:
       html-tags: 3.2.0
       json5: 2.2.1
       knitwork: 0.1.2
-      listhen: 0.3.4
+      listhen: 0.3.5
       mdast-util-to-hast: 12.2.4
       mdurl: 1.0.1
       ohash: 0.1.5
@@ -1121,6 +1122,7 @@ packages:
       ws: 8.10.0
     transitivePeerDependencies:
       - bufferutil
+      - rollup
       - supports-color
       - utf-8-validate
     dev: true
@@ -7156,19 +7158,6 @@ packages:
       - supports-color
     dev: true
 
-  /listhen/0.3.4:
-    resolution: {integrity: sha512-cuzWWoIWF8JvsPLmIurTkUXi27owH4RRKnBsbPswRJvB82uTv15W01yOOLaPvjxY5mMlftmW2p1XnxB835AdRA==}
-    dependencies:
-      clipboardy: 3.0.0
-      colorette: 2.0.19
-      defu: 6.1.0
-      get-port-please: 2.6.1
-      http-shutdown: 1.2.2
-      ip-regex: 5.0.0
-      node-forge: 1.3.1
-      ufo: 0.8.6
-    dev: true
-
   /listhen/0.3.5:
     resolution: {integrity: sha512-suyt79hNmCFeBIyftcLqLPfYiXeB795gSUWOJT7nspl2IvREY0Q9xvchLhekxvQ0KiOPvWoyALnc9Mxoelm0Pw==}
     dependencies:
@@ -9114,8 +9103,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.6.10:
-    resolution: {integrity: sha512-ioX7XMn6QUR0Xgdg2dKvy6wnJSA0p6JMWS/ddwjbcfUnegBC5SbdVNgWDReGYT3q9o+RvrY4RjjtVkjM2pSmow==}
+  /pinceau/0.6.12:
+    resolution: {integrity: sha512-IpVX0fjnhrSTrObT3E+FiKetNJs9F65fZT6ngHzNmF/m3oj+VEvkil/H3IhBB5gjkaZ2Z1JhebIaCgUkz1Y2TA==}
     dependencies:
       '@unocss/reset': 0.46.3
       '@volar/vue-language-core': 1.0.9
