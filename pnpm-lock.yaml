@@ -20,8 +20,8 @@ importers:
       '@nuxtjs/eslint-config-typescript': 11.0.0
       '@release-it/conventional-changelog': ^5.1.1
       '@types/node': 18.11.9
-      '@vitest/coverage-c8': ^0.24.5
-      c8: ^7.12.0
+      '@vitest/coverage-c8': 0.24.5
+      c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: ^8.26.0
       eslint-config-prettier: ^8.5.0
@@ -40,7 +40,7 @@ importers:
       typescript: 4.8.4
       ufo: ^0.8.6
       unimport: ^0.7.0
-      vitest: ^0.24.5
+      vitest: 0.24.5
       vue: 3.2.41
     dependencies:
       '@capacitor/cli': 4.4.0
@@ -11897,36 +11897,6 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/3.2.1:
-    resolution: {integrity: sha512-ADtMkfHuWq4tskJsri2n2FZkORO8ZyhI+zIz7zTrDAgDEtct1jdxOg3YsZBfHhKjmMoWLOSCr+64qrEDGo/DbQ==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.15.13
-      postcss: 8.4.18
-      resolve: 1.22.1
-      rollup: 2.79.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/3.2.2:
     resolution: {integrity: sha512-pLrhatFFOWO9kS19bQ658CnRYzv0WLbsPih6R+iFeEEhDOuYgYCX2rztUViMz/uy/V8cLCJvLFeiOK7RJEzHcw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -11989,7 +11959,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 3.2.1
+      vite: 3.2.2
     transitivePeerDependencies:
       - less
       - sass
