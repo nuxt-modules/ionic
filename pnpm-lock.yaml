@@ -18,7 +18,7 @@ importers:
       '@nuxt/schema': 3.0.0-rc.12
       '@nuxt/test-utils': 3.0.0-rc.12
       '@nuxtjs/eslint-config-typescript': 11.0.0
-      '@release-it/conventional-changelog': ^5.1.1
+      '@release-it/conventional-changelog': 5.1.1
       '@types/node': 18.11.9
       '@vitest/coverage-c8': 0.25.1
       c8: 7.12.0
@@ -36,7 +36,7 @@ importers:
       pkg-types: ^0.3.6
       playwright: 1.27.1
       prettier: 2.7.1
-      release-it: ^15.5.0
+      release-it: 15.5.0
       typescript: 4.8.4
       ufo: ^0.8.6
       unimport: ^0.7.0
@@ -1057,7 +1057,7 @@ packages:
       '@tailwindcss/typography': 0.5.7
       '@vueuse/core': 9.4.0
       '@vueuse/nuxt': 9.4.0_nuxt@3.0.0-rc.13
-      pinceau: 0.6.14
+      pinceau: 0.6.15
       socket.io-client: 4.5.3
       vue-plausible: 1.3.2
     transitivePeerDependencies:
@@ -9103,8 +9103,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.6.14:
-    resolution: {integrity: sha512-bjgRpF0VP8TKqkg0o4HRk+03dCGm0qP/5Bm3Pg4M2x9WWfvCXZ3EZgNzhM++r2hwivZfO3xH009N96yMee8zxQ==}
+  /pinceau/0.6.15:
+    resolution: {integrity: sha512-9Jhk6C7ZS9Grs/0AwGLN2SUFOvHH1AdOZZu3wQWHc0A46gBpHrU9gr32LVU0Jtl+/jI58Lt02m5DMVj3sySbVw==}
     dependencies:
       '@unocss/reset': 0.46.3
       '@volar/vue-language-core': 1.0.9
@@ -12327,7 +12327,7 @@ packages:
     dev: true
 
   /xregexp/2.0.0:
-    resolution: {integrity: sha1-UqY+VsoLhKfzpfPWGHLxJq16WUM=}
+    resolution: {integrity: sha512-xl/50/Cf32VsGq/1R8jJE5ajH1yMCQkpmoS10QbFZWl2Oor4H0Me64Pu2yxvsRWK3m6soJbmGfzSR7BYmDcWAA==}
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
