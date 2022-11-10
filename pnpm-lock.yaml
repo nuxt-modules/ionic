@@ -12,7 +12,7 @@ importers:
       '@ionic/cli': ^6.20.3
       '@ionic/vue': ^6.3.4
       '@ionic/vue-router': ^6.3.4
-      '@kevinmarrec/nuxt-pwa': ^0.9.1
+      '@kevinmarrec/nuxt-pwa': ^0.10.0
       '@nuxt/kit': ^3.0.0-rc.12
       '@nuxt/module-builder': ^0.2.0
       '@nuxt/schema': 3.0.0-rc.12
@@ -48,7 +48,7 @@ importers:
       '@ionic/cli': 6.20.3
       '@ionic/vue': 6.3.4
       '@ionic/vue-router': 6.3.4
-      '@kevinmarrec/nuxt-pwa': 0.9.1
+      '@kevinmarrec/nuxt-pwa': 0.10.0
       '@nuxt/kit': 3.0.0-rc.12
       ionicons: 6.0.3
       pathe: 0.3.9
@@ -976,11 +976,11 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kevinmarrec/nuxt-pwa/0.9.1:
-    resolution: {integrity: sha512-xrRn2ACFrr1KmN6HbdQmL6xUQXD8anAs4kd69teK7iNIECMLdCzQEu23GYBGG2uadgxdilynCZjwfwLzRYrdrg==}
+  /@kevinmarrec/nuxt-pwa/0.10.0:
+    resolution: {integrity: sha512-kH2IUSxCuZQnOhfdkKDF69VJyFtMAx/ZvrRA+jHMR4pLxk5PPfFeaePjRis2kttO+UKyaHtLH9kJq2w0Yzhx6A==}
     dependencies:
       hasha: 5.2.2
-      sharp: 0.31.1
+      sharp: 0.31.2
       std-env: 3.3.0
     dev: false
 
@@ -5854,7 +5854,7 @@ packages:
     dev: true
 
   /github-from-package/0.0.0:
-    resolution: {integrity: sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=}
+    resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
     dev: false
 
   /github-slugger/1.4.0:
@@ -10529,8 +10529,8 @@ packages:
   /setprototypeof/1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  /sharp/0.31.1:
-    resolution: {integrity: sha512-GR8M1wBwOiFKLkm9JPun27OQnNRZdHfSf9VwcdZX6UrRmM1/XnOrLFTF0GAil+y/YK4E6qcM/ugxs80QirsHxg==}
+  /sharp/0.31.2:
+    resolution: {integrity: sha512-DUdNVEXgS5A97cTagSLIIp8dUZ/lZtk78iNVZgHdHbx1qnQR7JAHY0BnXnwwH39Iw+VKhO08CTYhIg0p98vQ5Q==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
