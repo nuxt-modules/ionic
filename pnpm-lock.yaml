@@ -34,7 +34,7 @@ importers:
       pathe: ^0.3.9
       pinst: 3.0.0
       pkg-types: ^0.3.6
-      playwright: 1.27.1
+      playwright: 1.28.0
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.9.3
@@ -73,7 +73,7 @@ importers:
       lint-staged: 13.0.3
       nuxt: 3.0.0-rc.12_e3uo4sehh4zr4i6m57mkkxxv7y
       pinst: 3.0.0
-      playwright: 1.27.1
+      playwright: 1.28.0
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.9.3
@@ -448,7 +448,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.20.0
+      '@babel/types': 7.20.2
     dev: true
 
   /@babel/parser/7.20.3:
@@ -527,15 +527,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-
-  /@babel/types/7.20.0:
-    resolution: {integrity: sha512-Jlgt3H0TajCW164wkTOTzHkZb075tMQMULzrLUoUeKmO7eFL96GgDxf7/Axhc5CAuKE3KFyVW1p6ysKsi2oXAg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
-    dev: true
 
   /@babel/types/7.20.2:
     resolution: {integrity: sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==}
@@ -1082,7 +1073,7 @@ packages:
       '@docsearch/js': 3.3.0
       '@fontsource/inter': 4.5.14
       '@iconify/vue': 4.0.0
-      '@nuxt/content': /@nuxt/content-edge/2.2.2-27812161.4563cad
+      '@nuxt/content': /@nuxt/content-edge/2.2.2-27813017.8d4a3ca
       '@nuxtjs/algolia': 1.1.4
       '@nuxtjs/color-mode': 3.1.8
       '@nuxtjs/tailwindcss': 5.3.5
@@ -1092,7 +1083,7 @@ packages:
       '@tailwindcss/typography': 0.5.7
       '@vueuse/core': 9.4.0
       '@vueuse/nuxt': 9.4.0_nuxt@3.0.0-rc.13
-      pinceau: 0.6.19
+      pinceau: 0.6.20
       socket.io-client: 4.5.3
       vue-plausible: 1.3.2
     transitivePeerDependencies:
@@ -1117,8 +1108,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/content-edge/2.2.2-27812161.4563cad:
-    resolution: {integrity: sha512-zAnu0uG+8AHYAfZpeqYydPHM5KnspSglb+EOe27Kn8ZwO1a+CtbvHvhpVRvbLQ2trUSoR4o/cSQ4X1O4xXoChQ==}
+  /@nuxt/content-edge/2.2.2-27813017.8d4a3ca:
+    resolution: {integrity: sha512-WloAzT8uOW2M2kMu2dW3hPaVPAbh3B45smS+u1JDa230ee50EWrCAFWoAsbiPYDCCKlny28K7fhPmLgkxtqxXA==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.13
       consola: 2.15.3
@@ -9538,8 +9529,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.6.19:
-    resolution: {integrity: sha512-4GH51srFJPQ+Fml5Wr74Dufek7GIBd0OFTdHIBOW8CG9jpP4ERyUM0hM1UC8CjXwaLBC/diQ8R+qZ5pTTjl9Pw==}
+  /pinceau/0.6.20:
+    resolution: {integrity: sha512-un9nNWRZRbs5LCS1trVqz4TX9ElV9MQroRshFHLp2zltODWj+/hXOvSVVoaJTOM1SNm3HtfW+w/rcbKTsJ6ZXA==}
     dependencies:
       '@unocss/reset': 0.46.5
       '@volar/vue-language-core': 1.0.9
@@ -9590,19 +9581,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.27.1:
-    resolution: {integrity: sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==}
+  /playwright-core/1.28.0:
+    resolution: {integrity: sha512-nJLknd28kPBiCNTbqpu6Wmkrh63OEqJSFw9xOfL9qxfNwody7h6/L3O2dZoWQ6Oxcm0VOHjWmGiCUGkc0X3VZA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.27.1:
-    resolution: {integrity: sha512-xXYZ7m36yTtC+oFgqH0eTgullGztKSRMb4yuwLPl8IYSmgBM88QiB+3IWb1mRIC9/NNwcgbG0RwtFlg+EAFQHQ==}
+  /playwright/1.28.0:
+    resolution: {integrity: sha512-kyOXGc5y1mgi+hgEcCIyE1P1+JumLrxS09nFHo5sdJNzrucxPRAGwM4A2X3u3SDOfdgJqx61yIoR6Av+5plJPg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.27.1
+      playwright-core: 1.28.0
     dev: true
 
   /plist/3.0.6:
