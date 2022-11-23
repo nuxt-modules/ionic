@@ -34,7 +34,7 @@ importers:
       pathe: ^0.3.9
       pinst: 3.0.0
       pkg-types: ^0.3.6
-      playwright: 1.28.0
+      playwright: 1.28.1
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.9.3
@@ -73,7 +73,7 @@ importers:
       lint-staged: 13.0.3
       nuxt: 3.0.0-rc.12_hsf322ms6xhhd4b5ne6lb74y4a
       pinst: 3.0.0
-      playwright: 1.28.0
+      playwright: 1.28.1
       prettier: 2.7.1
       release-it: 15.5.0
       typescript: 4.9.3
@@ -1065,7 +1065,7 @@ packages:
       '@docsearch/js': 3.3.0
       '@fontsource/inter': 4.5.14
       '@iconify/vue': 4.0.0
-      '@nuxt/content': /@nuxt/content-edge/2.2.2-27817093.7c424d3
+      '@nuxt/content': /@nuxt/content-edge/2.2.2-27820136.5197dab
       '@nuxtjs/algolia': 1.1.4
       '@nuxtjs/color-mode': 3.1.8
       '@nuxtjs/tailwindcss': 5.3.5
@@ -1100,8 +1100,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/content-edge/2.2.2-27817093.7c424d3:
-    resolution: {integrity: sha512-jcO3tkg/ztOb+hz61b/nr3b7puPxieZR1zBfDFW+Q59pub3YuvJnrc439K6xtqxbYzOAOKY/cAjEVmtpi/6LVw==}
+  /@nuxt/content-edge/2.2.2-27820136.5197dab:
+    resolution: {integrity: sha512-Wd7+pRhER3+8uOEUlwj/q3BWf3kzyFcrBlK/vZ0C6B35IVmEPrXcKo4ikDQ9gASNFleGhua7Kp6KL+XFgsn4JQ==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.13
       consola: 2.15.3
@@ -9580,19 +9580,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.28.0:
-    resolution: {integrity: sha512-nJLknd28kPBiCNTbqpu6Wmkrh63OEqJSFw9xOfL9qxfNwody7h6/L3O2dZoWQ6Oxcm0VOHjWmGiCUGkc0X3VZA==}
+  /playwright-core/1.28.1:
+    resolution: {integrity: sha512-3PixLnGPno0E8rSBJjtwqTwJe3Yw72QwBBBxNoukIj3lEeBNXwbNiKrNuB1oyQgTBw5QHUhNO3SteEtHaMK6ag==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.28.0:
-    resolution: {integrity: sha512-kyOXGc5y1mgi+hgEcCIyE1P1+JumLrxS09nFHo5sdJNzrucxPRAGwM4A2X3u3SDOfdgJqx61yIoR6Av+5plJPg==}
+  /playwright/1.28.1:
+    resolution: {integrity: sha512-92Sz6XBlfHlb9tK5UCDzIFAuIkHHpemA9zwUaqvo+w7sFMSmVMGmvKcbptof/eJObq63PGnMhM75x7qxhTR78Q==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.28.0
+      playwright-core: 1.28.1
     dev: true
 
   /plist/3.0.6:
