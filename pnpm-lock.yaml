@@ -29,7 +29,7 @@ importers:
       expect-type: 0.15.0
       husky: 8.0.2
       ionicons: ^6.0.3
-      lint-staged: 13.0.3
+      lint-staged: 13.0.4
       nuxt: ^3.0.0-rc.12
       pathe: ^0.3.9
       pinst: 3.0.0
@@ -70,7 +70,7 @@ importers:
       eslint-plugin-prettier: 4.2.1_cwlo2dingkvfydnaculr42urve
       expect-type: 0.15.0
       husky: 8.0.2
-      lint-staged: 13.0.3
+      lint-staged: 13.0.4
       nuxt: 3.0.0-rc.12_hsf322ms6xhhd4b5ne6lb74y4a
       pinst: 3.0.0
       playwright: 1.28.1
@@ -1065,7 +1065,7 @@ packages:
       '@docsearch/js': 3.3.0
       '@fontsource/inter': 4.5.14
       '@iconify/vue': 4.0.0
-      '@nuxt/content': /@nuxt/content-edge/2.2.2-27820136.5197dab
+      '@nuxt/content': /@nuxt/content-edge/2.2.2-27822801.ef92b20
       '@nuxtjs/algolia': 1.1.4
       '@nuxtjs/color-mode': 3.1.8
       '@nuxtjs/tailwindcss': 5.3.5
@@ -1100,8 +1100,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/content-edge/2.2.2-27820136.5197dab:
-    resolution: {integrity: sha512-Wd7+pRhER3+8uOEUlwj/q3BWf3kzyFcrBlK/vZ0C6B35IVmEPrXcKo4ikDQ9gASNFleGhua7Kp6KL+XFgsn4JQ==}
+  /@nuxt/content-edge/2.2.2-27822801.ef92b20:
+    resolution: {integrity: sha512-SXOTqgHdDLOL8/tZJqhK7x4XZzVS0Pgw/SE7CUU031XOBnSQ2wq5RIbLY16KRw1FDuiM8sAajiO8kTzuHKtmgA==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.13
       consola: 2.15.3
@@ -7478,11 +7478,6 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lilconfig/2.0.5:
-    resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
-    engines: {node: '>=10'}
-    dev: true
-
   /lilconfig/2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
@@ -7492,8 +7487,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/13.0.3:
-    resolution: {integrity: sha512-9hmrwSCFroTSYLjflGI8Uk+GWAwMB4OlpU4bMJEAT5d/llQwtYKoim4bLOyLCuWFAhWEupE0vkIFqtw/WIsPug==}
+  /lint-staged/13.0.4:
+    resolution: {integrity: sha512-HxlHCXoYRsq9QCby5wFozmZW00hMs/9e3l+/dz6Qr8Kle4UH0kJTdABAbqhzG+3pcG6QjL9kz7NgGBfph+a5dw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -7502,8 +7497,8 @@ packages:
       commander: 9.4.1
       debug: 4.3.4
       execa: 6.1.0
-      lilconfig: 2.0.5
-      listr2: 4.0.5
+      lilconfig: 2.0.6
+      listr2: 5.0.5
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-inspect: 1.12.2
@@ -7541,9 +7536,9 @@ packages:
       ufo: 1.0.0
     dev: true
 
-  /listr2/4.0.5:
-    resolution: {integrity: sha512-juGHV1doQdpNT3GSTs9IUN43QJb7KHdF9uqg7Vufs/tG9VTzpFphqF4pm/ICdAABGQxsyNn9CiYA3StkI6jpwA==}
-    engines: {node: '>=12'}
+  /listr2/5.0.5:
+    resolution: {integrity: sha512-DpBel6fczu7oQKTXMekeprc0o3XDgGMkD7JNYyX+X0xbwK+xgrx9dcyKoXKqpLSUvAWfmoePS7kavniOcq3r4w==}
+    engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
       enquirer: '>= 2.3.0 < 3'
     peerDependenciesMeta:
