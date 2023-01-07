@@ -12,7 +12,7 @@ importers:
       '@ionic/cli': ^6.20.3
       '@ionic/vue': ^6.3.4
       '@ionic/vue-router': ^6.3.4
-      '@kevinmarrec/nuxt-pwa': ^0.13.0
+      '@kevinmarrec/nuxt-pwa': ^0.14.0
       '@nuxt/kit': ^3.0.0-rc.12
       '@nuxt/module-builder': ^0.2.0
       '@nuxt/schema': 3.0.0-rc.12
@@ -48,7 +48,7 @@ importers:
       '@ionic/cli': 6.20.3
       '@ionic/vue': 6.3.4
       '@ionic/vue-router': 6.3.4
-      '@kevinmarrec/nuxt-pwa': 0.13.0
+      '@kevinmarrec/nuxt-pwa': 0.14.0
       '@nuxt/kit': 3.0.0-rc.12
       ionicons: 6.0.3
       pathe: 1.0.0
@@ -994,11 +994,11 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kevinmarrec/nuxt-pwa/0.13.0:
-    resolution: {integrity: sha512-0F0FwGEBvBdGEB526rK2cY0cxIf+kEKWa0EjnIQ7R4K85aAlGZVa04E+oOX1A4eGSLpjB5VxcSuZv/y2y7Pg3Q==}
+  /@kevinmarrec/nuxt-pwa/0.14.0:
+    resolution: {integrity: sha512-60YWkyFAgCZVl9BKwC5aKEv7l5s/SuGIP4jf1o4uiE1B5Mxpm4n5HFPmDdirMn+RX+Xe4LFjdB2vuxxcUt3fFw==}
     dependencies:
       hasha: 5.2.2
-      sharp: 0.31.2
+      sharp: 0.31.3
       std-env: 3.3.1
     dev: false
 
@@ -1075,7 +1075,7 @@ packages:
       '@tailwindcss/typography': 0.5.7
       '@vueuse/core': 9.4.0
       '@vueuse/nuxt': 9.4.0_nuxt@3.0.0-rc.13
-      pinceau: 0.10.3
+      pinceau: 0.10.7
       socket.io-client: 4.5.4
       vue-plausible: 1.3.2
     transitivePeerDependencies:
@@ -2581,25 +2581,24 @@ packages:
       - terser
     dev: true
 
-  /@volar/language-core/1.0.18:
-    resolution: {integrity: sha512-PFrqAksKhiuAqNV4fefoMilX+JutVq0Z3iM14xjLvWPv68fs2dLedwU84GiHfSPTMmRiPCJ2HhH2rz4qNY42lA==}
+  /@volar/language-core/1.0.22:
+    resolution: {integrity: sha512-hiJeCOqxNdtG/04FRGLGI9H9DVz2l6cTqPDBzwqplHXAWfMxjzUaGUrn9sfTG7YMFNZUgK4EYxJnRfhqdtbSFQ==}
     dependencies:
-      '@volar/source-map': 1.0.18
-      '@vue/reactivity': 3.2.45
+      '@volar/source-map': 1.0.22
       muggle-string: 0.1.0
     dev: true
 
-  /@volar/source-map/1.0.18:
-    resolution: {integrity: sha512-D8AcjrT2ukG5XiZhtSQBhcvL1TTlWOebCqS//Z/hGLGQZjpZHWaKD4OyDzKDzM0U9EtOuDh9rttnabCHDPvY2Q==}
+  /@volar/source-map/1.0.22:
+    resolution: {integrity: sha512-cv4gypHSP4MWVR82ed/+1IpI6794qAl0Q0+KJ+VGMVF8rVugsiF9QbyMCgjel9wNRsssQsazzsf6txOR9vHQiw==}
     dependencies:
       muggle-string: 0.1.0
     dev: true
 
-  /@volar/vue-language-core/1.0.18:
-    resolution: {integrity: sha512-1yJcXYz9SdQUYoKWPbnr1SgMsBGXH29hS8W47p46P8Mm+5mmDdR/GFQw2+Zo5kAIS8vtLstlowI1Okoy7HFzIQ==}
+  /@volar/vue-language-core/1.0.22:
+    resolution: {integrity: sha512-Ki0G/ZdBj2/GLw+/VVH3n9XR/JL6krMIth02EekFn6JV4PGN3mNxbvoh6lOPSDZLR6biOU5nJPnnjpKy8nuXhw==}
     dependencies:
-      '@volar/language-core': 1.0.18
-      '@volar/source-map': 1.0.18
+      '@volar/language-core': 1.0.22
+      '@volar/source-map': 1.0.22
       '@vue/compiler-dom': 3.2.45
       '@vue/compiler-sfc': 3.2.45
       '@vue/reactivity': 3.2.45
@@ -9611,11 +9610,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.10.3:
-    resolution: {integrity: sha512-hyTrH0Fw73VPLdsU8Ky/yNsv9x6sJQyBvlaVULrzb/aIievbnTpG9jAOvNfy+I3FaIpCb/SH0e/t5Cwc9l9rlw==}
+  /pinceau/0.10.7:
+    resolution: {integrity: sha512-tjre1PwQru5pq8j1/tadujmg6pmzYADuzRqq5XSO5i9lfj6eNTSVbjNKg2+NF0P6mPMr8iEM/F6+VeXgkMo7YQ==}
     dependencies:
       '@unocss/reset': 0.48.0
-      '@volar/vue-language-core': 1.0.18
+      '@volar/vue-language-core': 1.0.22
       acorn: 8.8.1
       chroma-js: 2.4.2
       consola: 2.15.3
@@ -11075,8 +11074,8 @@ packages:
   /setprototypeof/1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  /sharp/0.31.2:
-    resolution: {integrity: sha512-DUdNVEXgS5A97cTagSLIIp8dUZ/lZtk78iNVZgHdHbx1qnQR7JAHY0BnXnwwH39Iw+VKhO08CTYhIg0p98vQ5Q==}
+  /sharp/0.31.3:
+    resolution: {integrity: sha512-XcR4+FCLBFKw1bdB+GEhnUNXNXvnt0tDo4WsBsraKymuo/IAuPuCBVAL2wIkUw2r/dwFW5Q5+g66Kwl2dgDFVg==}
     engines: {node: '>=14.15.0'}
     requiresBuild: true
     dependencies:
