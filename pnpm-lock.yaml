@@ -20,7 +20,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 12.0.0
       '@release-it/conventional-changelog': 5.1.1
       '@types/node': 18.11.18
-      '@vitest/coverage-c8': 0.27.0
+      '@vitest/coverage-c8': 0.27.1
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.31.0
@@ -40,7 +40,7 @@ importers:
       typescript: 4.9.4
       ufo: ^1.0.0
       unimport: ^1.0.0
-      vitest: 0.27.0
+      vitest: 0.27.1
       vue: 3.2.45
     dependencies:
       '@capacitor/cli': 4.4.0
@@ -62,7 +62,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': 12.0.0_iukboom6ndih5an6iafl45j2fe
       '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
       '@types/node': 18.11.18
-      '@vitest/coverage-c8': 0.27.0
+      '@vitest/coverage-c8': 0.27.1
       c8: 7.12.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.31.0
@@ -77,7 +77,7 @@ importers:
       prettier: 2.8.2
       release-it: 15.6.0
       typescript: 4.9.4
-      vitest: 0.27.0
+      vitest: 0.27.1
       vue: 3.2.45
 
   docs:
@@ -281,7 +281,7 @@ packages:
       convert-source-map: 1.9.0
       debug: 4.3.4
       gensync: 1.0.0-beta.2
-      json5: 2.2.1
+      json5: 2.2.3
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1065,7 +1065,7 @@ packages:
       '@docsearch/js': 3.3.0
       '@fontsource/inter': 4.5.14
       '@iconify/vue': 4.0.0
-      '@nuxt/content': /@nuxt/content-edge/2.3.0-27887627.486fcd4
+      '@nuxt/content': /@nuxt/content-edge/2.3.0-27890923.b40d1a3
       '@nuxtjs/algolia': 1.1.4
       '@nuxtjs/color-mode': 3.1.8
       '@nuxtjs/tailwindcss': 5.3.5
@@ -1075,7 +1075,7 @@ packages:
       '@tailwindcss/typography': 0.5.7
       '@vueuse/core': 9.4.0
       '@vueuse/nuxt': 9.4.0_nuxt@3.0.0-rc.13
-      pinceau: 0.10.8
+      pinceau: 0.10.10
       socket.io-client: 4.5.4
       vue-plausible: 1.3.2
     transitivePeerDependencies:
@@ -1100,8 +1100,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/content-edge/2.3.0-27887627.486fcd4:
-    resolution: {integrity: sha512-+azfiVxV40MHqDuOqvFNCeyFMYXX8bI5kedo3hVtgDC61DP0IOb/N1eh9oCceVsvuOUJHsyTXQK49Zqp7hZsZA==}
+  /@nuxt/content-edge/2.3.0-27890923.b40d1a3:
+    resolution: {integrity: sha512-hnZkCQKsHinyvScmJGzHqgCT58GGlCggPjKCAb238FBMhcGKLJqxjJjrpjdEPL7JYp374Bas1brPwm9/7BDH1w==}
     dependencies:
       '@nuxt/kit': 3.0.0
       consola: 2.15.3
@@ -1109,10 +1109,10 @@ packages:
       destr: 1.2.2
       detab: 3.0.2
       html-tags: 3.2.0
-      json5: 2.2.1
+      json5: 2.2.3
       knitwork: 1.0.0
       listhen: 1.0.1
-      mdast-util-to-hast: 12.2.4
+      mdast-util-to-hast: 12.2.5
       mdurl: 1.0.1
       ohash: 1.0.0
       pathe: 1.0.0
@@ -1129,7 +1129,7 @@ packages:
       remark-rehype: 10.1.0
       remark-squeeze-paragraphs: 5.0.1
       scule: 1.0.0
-      shiki-es: 0.1.2
+      shiki-es: 0.2.0
       slugify: 1.6.5
       socket.io-client: 4.5.4
       ufo: 1.0.1
@@ -1138,7 +1138,7 @@ packages:
       unist-util-position: 4.0.3
       unist-util-visit: 4.1.1
       unstorage: 1.0.1
-      ws: 8.11.0
+      ws: 8.12.0
     transitivePeerDependencies:
       - bufferutil
       - rollup
@@ -1164,7 +1164,7 @@ packages:
       jiti: 1.16.0
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.0.0
+      mlly: 1.1.0
       pathe: 1.0.0
       pkg-types: 1.0.1
       scule: 1.0.0
@@ -2562,11 +2562,11 @@ packages:
       vue: 3.2.45
     dev: true
 
-  /@vitest/coverage-c8/0.27.0:
-    resolution: {integrity: sha512-jO/TAz/qUP1ssfIj6Gg1FxTRkOD5tJBiP3mwKayaqGunMsknCmxWVuFrgF1XH+FGZWLnFzR2InTjYxlyGNSgzQ==}
+  /@vitest/coverage-c8/0.27.1:
+    resolution: {integrity: sha512-/9VTGDIAp4hv8PBawfyijxhkiyucfOxFRRP+7kzy3Dj0wONy1Mc2MBoPmiH4aZVc0LViQqecrQLs8JVGt42keA==}
     dependencies:
       c8: 7.12.0
-      vitest: 0.27.0
+      vitest: 0.27.1
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3340,7 +3340,7 @@ packages:
       dotenv: 16.0.3
       gittar: 0.1.1
       jiti: 1.16.0
-      mlly: 1.0.0
+      mlly: 1.1.0
       pathe: 1.0.0
       pkg-types: 1.0.1
       rc9: 2.0.0
@@ -7390,8 +7390,8 @@ packages:
       minimist: 1.2.7
     dev: true
 
-  /json5/2.2.1:
-    resolution: {integrity: sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==}
+  /json5/2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
 
@@ -7650,7 +7650,7 @@ packages:
     dependencies:
       big.js: 5.2.2
       emojis-list: 3.0.0
-      json5: 2.2.1
+      json5: 2.2.3
     dev: true
 
   /local-pkg/0.4.2:
@@ -8004,8 +8004,8 @@ packages:
       - supports-color
     dev: true
 
-  /mdast-util-to-hast/12.2.4:
-    resolution: {integrity: sha512-a21xoxSef1l8VhHxS1Dnyioz6grrJkoaCUgGzMD/7dWHvboYX3VW53esRUfB5tgTyz4Yos1n25SPcj35dJqmAg==}
+  /mdast-util-to-hast/12.2.5:
+    resolution: {integrity: sha512-EFNhT35ZR/VZ85/EedDdCNTq0oFM+NM/+qBomVGQ0+Lcg0nhI8xIwmdCzNMlVlCJNXRprpobtKP/IUh8cfz6zQ==}
     dependencies:
       '@types/hast': 2.3.4
       '@types/mdast': 3.0.10
@@ -8551,6 +8551,15 @@ packages:
       pathe: 1.0.0
       pkg-types: 1.0.1
       ufo: 1.0.1
+
+  /mlly/1.1.0:
+    resolution: {integrity: sha512-cwzBrBfwGC1gYJyfcy8TcZU1f+dbH/T+TuOhtYP2wLv/Fb51/uV7HJQfBPtEupZ2ORLRU1EKFS/QfS3eo9+kBQ==}
+    dependencies:
+      acorn: 8.8.1
+      pathe: 1.0.0
+      pkg-types: 1.0.1
+      ufo: 1.0.1
+    dev: true
 
   /modify-values/1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
@@ -9615,8 +9624,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.10.8:
-    resolution: {integrity: sha512-B9pdXzlbvoUvN4Khbyykh7XvdBPH77gqzvqKFBu3EcMNCdmJyhIsYiClD+Ek1Ao6Lq9Ck9WwK8/UPQTIpdoNfw==}
+  /pinceau/0.10.10:
+    resolution: {integrity: sha512-lY9p4Mm7fiIVQ5WSy3fW6ntdnjhcCdx8neybFkfs0IwQjtsWgBcJYWwqoRrewbOzM1ZssAjvY48JUa48djLIdQ==}
     dependencies:
       '@unocss/reset': 0.48.0
       '@volar/vue-language-core': 1.0.22
@@ -10704,7 +10713,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       '@types/mdast': 3.0.10
-      mdast-util-to-hast: 12.2.4
+      mdast-util-to-hast: 12.2.5
       unified: 10.1.2
     dev: true
 
@@ -11114,8 +11123,8 @@ packages:
       rechoir: 0.6.2
     dev: true
 
-  /shiki-es/0.1.2:
-    resolution: {integrity: sha512-eqtfk8idlYlSLAn0gp0Ly2+FbKc2d78IddigHSS4iHAnpXoY2kdRzyFGZOdi6TvemYMnRhZBi1HsSqZc5eNKqg==}
+  /shiki-es/0.2.0:
+    resolution: {integrity: sha512-RbRMD+IuJJseSZljDdne9ThrUYrwBwJR04FvN4VXpfsU3MNID5VJGHLAD5je/HGThCyEKNgH+nEkSFEWKD7C3Q==}
     dev: true
 
   /side-channel/1.0.4:
@@ -11124,6 +11133,10 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.1.3
       object-inspect: 1.12.2
+
+  /siginfo/2.0.0:
+    resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
+    dev: true
 
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
@@ -11317,6 +11330,10 @@ packages:
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
     dev: true
 
+  /stackback/0.0.2:
+    resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
+    dev: true
+
   /standard-as-callback/2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
     dev: true
@@ -11489,7 +11506,7 @@ packages:
       fs-extra: 10.1.0
       glob: 8.0.3
       jiti: 1.16.0
-      json5: 2.2.1
+      json5: 2.2.3
       jsonc-parser: 3.2.0
       lodash.template: 4.5.0
       tinycolor2: 1.4.2
@@ -12006,7 +12023,7 @@ packages:
       magic-string: 0.27.0
       mkdirp: 1.0.4
       mkdist: 1.0.0_typescript@4.9.4
-      mlly: 1.0.0
+      mlly: 1.1.0
       mri: 1.2.0
       pathe: 1.0.0
       pkg-types: 1.0.1
@@ -12253,7 +12270,7 @@ packages:
       mri: 1.2.0
       ohmyfetch: 0.4.21
       ufo: 0.8.6
-      ws: 8.11.0
+      ws: 8.12.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -12273,7 +12290,7 @@ packages:
       mri: 1.2.0
       ofetch: 1.0.0
       ufo: 1.0.1
-      ws: 8.11.0
+      ws: 8.12.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -12445,14 +12462,14 @@ packages:
       - terser
     dev: true
 
-  /vite-node/0.27.0:
-    resolution: {integrity: sha512-O1o9joT0qCGx5Om6W0VNLr7M00ttrnFlfZX2d+oxt2T9oZ9DvYSv8kDRhNJDVhAgNgUm3Tc0h/+jppNf3mVKbA==}
+  /vite-node/0.27.1:
+    resolution: {integrity: sha512-d6+ue/3NzsfndWaPbYh/bFkHbmAWfDXI4B874zRx+WREnG6CUHUbBC8lKaRYZjeR6gCPN5m1aVNNRXBYICA9XA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
-      mlly: 1.0.0
+      mlly: 1.1.0
       pathe: 0.2.0
       picocolors: 1.0.0
       source-map: 0.6.1
@@ -12637,8 +12654,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.27.0:
-    resolution: {integrity: sha512-BnOa7T6CnXVC6UgcAsvFOZ2Dtvqkt+/Nl6CRgh4qVT70vElf65XwEL6zMRyTF+h2QXJziEkxYdrLo5WCxckMLQ==}
+  /vitest/0.27.1:
+    resolution: {integrity: sha512-1sIpQ1DVFTEn7c1ici1XHcVfdU4nKiBmPtPAtGKJJJLuJjojTv/OHGgcf69P57alM4ty8V4NMv+7Yoi5Cxqx9g==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -12675,7 +12692,8 @@ packages:
       tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 3.2.2
-      vite-node: 0.27.0
+      vite-node: 0.27.1
+      why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
       - sass
@@ -12920,6 +12938,15 @@ packages:
     dependencies:
       isexe: 2.0.0
 
+  /why-is-node-running/2.2.2:
+    resolution: {integrity: sha512-6tSwToZxTOcotxHeA+qGCq1mVzKR3CwcJGmVcY+QE8SHy6TnpFnh8PAvPNHYr7EcuVeG0QSMxtYCuO1ta/G/oA==}
+    engines: {node: '>=8'}
+    hasBin: true
+    dependencies:
+      siginfo: 2.0.0
+      stackback: 0.0.2
+    dev: true
+
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
@@ -12996,12 +13023,12 @@ packages:
       signal-exit: 3.0.7
       typedarray-to-buffer: 3.1.5
 
-  /ws/8.11.0:
-    resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
+  /ws/8.12.0:
+    resolution: {integrity: sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
+      utf-8-validate: '>=5.0.2'
     peerDependenciesMeta:
       bufferutil:
         optional: true
