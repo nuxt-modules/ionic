@@ -12,7 +12,7 @@ importers:
       '@ionic/cli': ^6.20.3
       '@ionic/vue': ^6.3.4
       '@ionic/vue-router': ^6.3.4
-      '@kevinmarrec/nuxt-pwa': ^0.14.0
+      '@kevinmarrec/nuxt-pwa': ^0.15.0
       '@nuxt/kit': ^3.0.0-rc.12
       '@nuxt/module-builder': ^0.2.0
       '@nuxt/schema': 3.0.0-rc.12
@@ -48,7 +48,7 @@ importers:
       '@ionic/cli': 6.20.3
       '@ionic/vue': 6.3.4
       '@ionic/vue-router': 6.3.4
-      '@kevinmarrec/nuxt-pwa': 0.14.0
+      '@kevinmarrec/nuxt-pwa': 0.15.0
       '@nuxt/kit': 3.0.0-rc.12
       ionicons: 6.0.3
       pathe: 1.0.0
@@ -994,8 +994,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kevinmarrec/nuxt-pwa/0.14.0:
-    resolution: {integrity: sha512-60YWkyFAgCZVl9BKwC5aKEv7l5s/SuGIP4jf1o4uiE1B5Mxpm4n5HFPmDdirMn+RX+Xe4LFjdB2vuxxcUt3fFw==}
+  /@kevinmarrec/nuxt-pwa/0.15.0:
+    resolution: {integrity: sha512-7aEX3k123gq15859pHLnZZgSGSsTnH1BduK4sICktnkOJK6u62Uo0TT85ma9m5OOC27RJuCo/G8nBWEa39dD+g==}
     dependencies:
       hasha: 5.2.2
       sharp: 0.31.3
@@ -1065,7 +1065,7 @@ packages:
       '@docsearch/js': 3.3.0
       '@fontsource/inter': 4.5.14
       '@iconify/vue': 4.0.0
-      '@nuxt/content': /@nuxt/content-edge/2.3.0-27890923.b40d1a3
+      '@nuxt/content': /@nuxt/content-edge/2.3.0-27893596.2ba0776
       '@nuxtjs/algolia': 1.1.4
       '@nuxtjs/color-mode': 3.1.8
       '@nuxtjs/tailwindcss': 5.3.5
@@ -1100,8 +1100,8 @@ packages:
       - webpack
     dev: true
 
-  /@nuxt/content-edge/2.3.0-27890923.b40d1a3:
-    resolution: {integrity: sha512-hnZkCQKsHinyvScmJGzHqgCT58GGlCggPjKCAb238FBMhcGKLJqxjJjrpjdEPL7JYp374Bas1brPwm9/7BDH1w==}
+  /@nuxt/content-edge/2.3.0-27893596.2ba0776:
+    resolution: {integrity: sha512-NR1dnzzz+sfpoonjDSvALoo0tUSm/Ck0DCxqgI7iv4hiHn7llI6mEOlClwBMUlVzf9VQouJ6VwYKonIFbIQWrQ==}
     dependencies:
       '@nuxt/kit': 3.0.0
       consola: 2.15.3
