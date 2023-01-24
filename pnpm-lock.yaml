@@ -15,7 +15,7 @@ importers:
       '@kevinmarrec/nuxt-pwa': ^0.15.0
       '@nuxt/kit': ^3.1.0
       '@nuxt/module-builder': ^0.2.0
-      '@nuxt/schema': 3.0.0-rc.12
+      '@nuxt/schema': 3.1.0
       '@nuxt/test-utils': 3.0.0-rc.12
       '@nuxtjs/eslint-config-typescript': 12.0.0
       '@release-it/conventional-changelog': 5.1.1
@@ -57,7 +57,7 @@ importers:
       unimport: 1.0.1
     devDependencies:
       '@nuxt/module-builder': 0.2.0
-      '@nuxt/schema': 3.0.0-rc.12
+      '@nuxt/schema': 3.1.0
       '@nuxt/test-utils': 3.0.0-rc.12_vue@3.2.45
       '@nuxtjs/eslint-config-typescript': 12.0.0_7uibuqfxkfaozanbtbziikiqje
       '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
@@ -1272,7 +1272,7 @@ packages:
       npmlog: 5.0.1
       rimraf: 3.0.2
       semver: 7.3.8
-      tar: 6.1.11
+      tar: 6.1.13
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -7527,7 +7527,7 @@ packages:
     dependencies:
       clipboardy: 3.0.0
       colorette: 2.0.19
-      defu: 6.1.1
+      defu: 6.1.2
       get-port-please: 2.6.1
       http-shutdown: 1.2.2
       ip-regex: 5.0.0
@@ -8407,7 +8407,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      defu: 6.1.1
+      defu: 6.1.2
       esbuild: 0.14.54
       fs-extra: 10.1.0
       globby: 11.1.0
@@ -8452,7 +8452,7 @@ packages:
     resolution: {integrity: sha512-QL108Hwt+u9bXdWgOI0dhzZfACovn5Aen4Xvc8Jasd9ouRH4NjnrXEiyP3nVvJo91zPlYjVRckta0Nt2zfoR6g==}
     dependencies:
       acorn: 8.8.1
-      pathe: 1.0.0
+      pathe: 1.1.0
       pkg-types: 1.0.1
       ufo: 1.0.1
 
@@ -11700,6 +11700,7 @@ packages:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
+    dev: false
 
   /tar/6.1.13:
     resolution: {integrity: sha512-jdIBIN6LTIe2jqzay/2vtYLlBHa3JF42ot3h1dW8Q0PaAG4v8rm0cvpVePtau5C6OKXGGcgO9q2AMNSWxiLqKw==}
