@@ -1,7 +1,6 @@
 export default defineAppConfig({
   docus: {
     title: 'nuxt/ionic',
-    layout: 'docs',
     url: 'https://ionic.nuxtjs.org/',
     description: 'Batteries-included Ionic integration for Nuxt.',
     socials: {
@@ -17,7 +16,6 @@ export default defineAppConfig({
       edit: true,
     },
     header: {
-      title: false,
       logo: true,
     },
     footer: {
@@ -26,11 +24,11 @@ export default defineAppConfig({
         text: 'Powered by Docus',
         href: 'https://docus.com',
       },
-      icons: [
+      iconLinks: [
         {
           label: 'NuxtJS',
           href: 'https://nuxtjs.org',
-          component: 'IconNuxt',
+          icon: 'IconNuxt',
         },
       ],
     },

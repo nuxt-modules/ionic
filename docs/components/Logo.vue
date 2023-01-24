@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-row items-center gap-2 u-text-gray-900 tracking-tight font-extrabold"
-  >
+  <div class="logo">
     <svg
       width="32"
       height="32"
@@ -19,3 +17,15 @@
     nuxt/ionic
   </div>
 </template>
+
+<style scoped lang="ts">
+css({
+  '.logo': {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '0.5rem',
+    fontWeight: '800',
+  }
+})
+</style>
