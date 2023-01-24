@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       branch: 'main',
     },
   },
-  modules: ['vue-plausible'],
+  modules: ['@nuxtjs/plausible'],
   plausible: {
     domain: 'ionic.nuxtjs.org',
   },
