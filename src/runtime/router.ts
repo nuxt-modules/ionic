@@ -40,7 +40,7 @@ export default defineNuxtPlugin(async nuxtApp => {
   const routes = routerOptions.routes?.(_routes) ?? _routes
 
   const initialURL = process.server
-    ? nuxtApp.ssrContext?.url
+    ? nuxtApp.ssrContext!.url
     : createCurrentLocation(routerBase, window.location)
   const router = createRouter({
     ...routerOptions,

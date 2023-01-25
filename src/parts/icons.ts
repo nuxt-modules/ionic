@@ -1,5 +1,6 @@
 import { useNuxt, addImportsSources } from '@nuxt/kit'
 import { defineUnimportPreset } from 'unimport'
+// @ts-expect-error we are importing from untyped
 import * as icons from 'ionicons/icons/index.mjs'
 
 const iconsPreset = defineUnimportPreset({

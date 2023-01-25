@@ -28,7 +28,7 @@ export const setupRouter = () => {
   nuxt.hook('modules:done', () => {
     nuxt.hook('app:resolve', app => {
       app.plugins = app.plugins.filter(
-        p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/router/)
+        p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/)
       )
       app.plugins.unshift({
         src: resolve(runtimeDir, 'router'),
