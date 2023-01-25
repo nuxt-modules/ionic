@@ -1,5 +1,12 @@
 
 
+## [0.8.1](https://github.com/nuxt-modules/ionic/compare/0.8.0...0.8.1) (2023-01-25)
+
+
+### Bug Fixes
+
+* update module compatibility to nuxt v3.1.0 ([#223](https://github.com/nuxt-modules/ionic/issues/223)) ([59b7d5f](https://github.com/nuxt-modules/ionic/commit/59b7d5f7f1c16a243bf1efa7974a034e2942428f))
+
 ## [0.8.0](https://github.com/nuxt-modules/ionic/compare/0.7.0...0.8.0) (2022-10-17)
 
 
