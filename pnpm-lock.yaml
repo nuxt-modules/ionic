@@ -82,11 +82,11 @@ importers:
 
   docs:
     specifiers:
-      '@nuxt-themes/docus': ^1.1.3
-      '@nuxtjs/plausible': ^0.2.0
+      '@nuxt-themes/docus': 1.6.1
+      '@nuxtjs/plausible': 0.2.0
       nuxt: 3.1.0
     devDependencies:
-      '@nuxt-themes/docus': 1.4.7_nuxt@3.1.0
+      '@nuxt-themes/docus': 1.6.1_nuxt@3.1.0
       '@nuxtjs/plausible': 0.2.0
       nuxt: 3.1.0
 
@@ -449,6 +449,31 @@ packages:
     resolution: {integrity: sha512-9CB/MKf/wdvbfkUdfrj+OkEwZ5b7rws0eogJ4293h+7b6KX5toPwym+VQKmILafNB9YiehqY0DlNrDcDhdWHSQ==}
     dependencies:
       mime: 3.0.0
+    dev: true
+
+  /@csstools/cascade-layer-name-parser/1.0.0_jhntdqzgrqlkpxki6fy253alji:
+    resolution: {integrity: sha512-JxdLxJMDximX1vxCFJdwC7MD4aXNSFbOxBZuYKg2FEz4MLR0UFVmamPtzthzqzxAcU0K6ShvEFfMBrEEb16U+A==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.0.0
+      '@csstools/css-tokenizer': ^2.0.0
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.0.0_wcbxa2wg3evugsqpd27xwuyb6a
+      '@csstools/css-tokenizer': 2.0.0
+    dev: true
+
+  /@csstools/css-parser-algorithms/2.0.0_wcbxa2wg3evugsqpd27xwuyb6a:
+    resolution: {integrity: sha512-RbukP8OjQvuH85veuzOq8abPjsvqvleZaQC6W0GJFGpwLUh8XmFMQjvtuIM9bQ589YFx4lwwAcSwN4nfcvxIEw==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-tokenizer': ^2.0.0
+    dependencies:
+      '@csstools/css-tokenizer': 2.0.0
+    dev: true
+
+  /@csstools/css-tokenizer/2.0.0:
+    resolution: {integrity: sha512-IB6EFP0Hc/YEz1sJVD47oFqJP6TXMB+OW1jXSYnOk5g+6wpk2/zkuBa0gm5edIMM9nVUZ3hF0xCBnyFbK5OIyg==}
+    engines: {node: ^14 || ^16 || >=18}
     dev: true
 
   /@esbuild/android-arm/0.15.18:
@@ -1223,12 +1248,12 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt-themes/docus/1.4.7_nuxt@3.1.0:
-    resolution: {integrity: sha512-YOUnOky2QFKSZnSASMBHQmObhdEnRny0e+BxKOx2F++qMHKXx9vNpVWfl+2mYjpYEQihSERJ7WZiOhHo0QBLTg==}
+  /@nuxt-themes/docus/1.6.1_nuxt@3.1.0:
+    resolution: {integrity: sha512-3d8MxxQyBGlvAGNzxyvM5eUcgNY/EJAYfzaKAwqB59CzhCZKTvdNtxPh28GtlgBC1U82WzsyUtkCer10fLKQSg==}
     dependencies:
-      '@nuxt-themes/elements': 0.4.4
-      '@nuxt-themes/tokens': 1.5.3
-      '@nuxt-themes/typography': 0.4.3
+      '@nuxt-themes/elements': 0.5.2
+      '@nuxt-themes/tokens': 1.6.1
+      '@nuxt-themes/typography': 0.5.2
       '@nuxt/content': 2.3.0
       '@nuxthq/studio': 0.6.5
       '@vueuse/nuxt': 9.11.1_nuxt@3.1.0
@@ -1244,10 +1269,10 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/elements/0.4.4:
-    resolution: {integrity: sha512-GsrCCBcvbOJjF2HV7/TvZXq7l7ETA0+z53HmgHV2L3G3gTpIghfr4v/EUjCOQD+qCpuwiQQW0nQeN51pw3xgow==}
+  /@nuxt-themes/elements/0.5.2:
+    resolution: {integrity: sha512-jwcMbXJ9zK8mGi8vJJqKObVlfpkfyr3f1ngKyrX3n8Hphy/G8wKpTLvUKPL28Rzr2fj0FPTT6aOe6VBsB47EJA==}
     dependencies:
-      '@nuxt-themes/tokens': 1.5.3
+      '@nuxt-themes/tokens': 1.6.1
       '@vueuse/core': 9.11.1
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -1258,12 +1283,12 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/tokens/1.5.3:
-    resolution: {integrity: sha512-o0Juq5qhfnWZHCRgKi/rEtx+xqp0MC8tKYhYncISNRFoDCNCOagb65sxsY128OpUJdQOJw0JR3RgYnVGedHyKQ==}
+  /@nuxt-themes/tokens/1.6.1:
+    resolution: {integrity: sha512-mEMFOpMwHmLQnvVbL7bSkKuYqR/8RXta6SaS0a0CqJLND901J934ADWFJf+/i/E1+rCerLUpROIbAx0Sx13jkA==}
     dependencies:
       '@nuxtjs/color-mode': 3.2.0
       '@vueuse/core': 9.11.1
-      pinceau: 0.10.11
+      pinceau: 0.12.5
     transitivePeerDependencies:
       - '@vue/composition-api'
       - postcss
@@ -1273,13 +1298,13 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/typography/0.4.3:
-    resolution: {integrity: sha512-8283IzrIVWYkhs9pCUChpReS0KbKPIM5bkwWc6bzoNEPKuLBbkg959yPdc60cKGRNr2hrqNP6fUnnCYdqAu9rQ==}
+  /@nuxt-themes/typography/0.5.2:
+    resolution: {integrity: sha512-ww6r/IMmRxPtC/S1lcotz7hwYam5ZHTerOfWaNS/bYyBBKlrbdHxDhaZZto+6xhEDcAeYbgKJL6lNd2lyR9txg==}
     dependencies:
-      '@nuxt-themes/tokens': 1.5.3
+      '@nuxt-themes/tokens': 1.6.1
       '@nuxtjs/color-mode': 3.2.0
       nuxt-config-schema: 0.4.4
-      nuxt-icon: 0.2.7
+      nuxt-icon: 0.2.9
       ufo: 1.0.1
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -1739,7 +1764,7 @@ packages:
     resolution: {integrity: sha512-mke+eW94PCca7zK0kNpNA9ULat5JCrBP2JUCmas6ZKpskU3+IaBv2OzWYzWJb/SsungfV9a/dukKbjAJeBTzhQ==}
     dependencies:
       '@nuxt/kit': 3.1.0
-      defu: 6.1.1
+      defu: 6.1.2
       pathe: 1.1.0
       plausible-tracker: 0.3.8
     transitivePeerDependencies:
@@ -2344,8 +2369,8 @@ packages:
       vue: 3.2.45
     dev: true
 
-  /@unocss/reset/0.48.4:
-    resolution: {integrity: sha512-9WPoGwLrG5vZQzMxgd7/zJkUUmL06WYtrAiRdf5gYsCBbnpx6eq0II0TvU8PEzvseqgkhEpN19iSgnsuTZ34kA==}
+  /@unocss/reset/0.48.5:
+    resolution: {integrity: sha512-+JJT3Btj1oNX4XwKBDPRUYre3NYBNmi0PsC3tqkHN2VphJG0iZl91XNfsveLz8pVpDJPUDdLH4xsqh52WmxU1g==}
     dev: true
 
   /@vercel/nft/0.22.6:
@@ -2355,7 +2380,7 @@ packages:
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.10
       '@rollup/pluginutils': 4.2.1
-      acorn: 8.8.1
+      acorn: 8.8.2
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
@@ -2619,7 +2644,7 @@ packages:
       '@nuxt/kit': 3.1.0
       '@vueuse/core': 9.11.1
       '@vueuse/metadata': 9.11.1
-      local-pkg: 0.4.2
+      local-pkg: 0.4.3
       nuxt: 3.1.0
       vue-demi: 0.13.11
     transitivePeerDependencies:
@@ -2654,12 +2679,12 @@ packages:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
 
-  /acorn-jsx/5.3.2_acorn@8.8.1:
+  /acorn-jsx/5.3.2_acorn@8.8.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
     dev: true
 
   /acorn-walk/8.2.0:
@@ -2668,6 +2693,11 @@ packages:
 
   /acorn/8.8.1:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  /acorn/8.8.2:
+    resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -4019,10 +4049,6 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /defu/6.1.1:
-    resolution: {integrity: sha512-aA964RUCsBt0FGoNIlA3uFgo2hO+WWC0fiC6DBps/0SFzkKcYoM/3CzVLIa5xSsrFjdioMdYgAIbwo80qp2MoA==}
-    dev: true
-
   /defu/6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
 
@@ -4980,8 +5006,8 @@ packages:
     resolution: {integrity: sha512-DQmnRpLj7f6TgN/NYb0MTzJXL+vJF9h3pHy4JhCIs3zwcgez8xmGg3sXHcEO97BrmO2OSvCwMdfdlyl+E9KjOw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      acorn: 8.8.1
-      acorn-jsx: 5.3.2_acorn@8.8.1
+      acorn: 8.8.2
+      acorn-jsx: 5.3.2_acorn@8.8.2
       eslint-visitor-keys: 3.3.0
     dev: true
 
@@ -7530,7 +7556,7 @@ packages:
   /mlly/1.1.0:
     resolution: {integrity: sha512-cwzBrBfwGC1gYJyfcy8TcZU1f+dbH/T+TuOhtYP2wLv/Fb51/uV7HJQfBPtEupZ2ORLRU1EKFS/QfS3eo9+kBQ==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       pathe: 1.1.0
       pkg-types: 1.0.1
       ufo: 1.0.1
@@ -7865,8 +7891,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-icon/0.2.7:
-    resolution: {integrity: sha512-Tv1oh33oLJfFDhQ5nMZ8I5vspbg7A8JTW7sVtD58gDkHfFzEHXBcXz7OesFZZQvKPwBWSKhBLgIenbFu5Jkzlw==}
+  /nuxt-icon/0.2.9:
+    resolution: {integrity: sha512-TKOyQ7xrNO4O8vaZoQFhww0N8ejbIG9xIiACsVQdFw2mHa6amc7KGQnPrw+0HMg4v61YQ87Y2CqfKXJyxMxDfA==}
     dependencies:
       '@iconify/vue': 4.0.2
       '@nuxt/kit': 3.1.0
@@ -8450,12 +8476,12 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pinceau/0.10.11:
-    resolution: {integrity: sha512-+sskRfIrlgb2jBiBppfl0Qj/mN8gLaT4hM96q+ztAdOCWn/C8E7hUPAfoWsqHJHA3BNb3GKQHGmn9MIxKW0YcA==}
+  /pinceau/0.12.5:
+    resolution: {integrity: sha512-5qHP6Fy53XZqXOHwaXbJ9v8M0Zz+baqyxLvDtjIzsLkix5KlOr34smulkoWem+H0jSE343P+J3dZGBKb0LUSUg==}
     dependencies:
-      '@unocss/reset': 0.48.4
+      '@unocss/reset': 0.48.5
       '@volar/vue-language-core': 1.0.24
-      acorn: 8.8.1
+      acorn: 8.8.2
       chroma-js: 2.4.2
       consola: 2.15.3
       csstype: 3.1.1
@@ -8463,12 +8489,12 @@ packages:
       magic-string: 0.27.0
       nanoid: 4.0.0
       ohash: 1.0.0
-      postcss-custom-properties: 12.1.11
+      postcss-custom-properties: 13.1.0
       postcss-dark-theme-class: 0.7.3
       postcss-nested: 6.0.0
       recast: 0.22.0
       scule: 1.0.0
-      style-dictionary-esm: 1.1.1
+      style-dictionary-esm: 1.2.0
       unbuild: 1.1.1
       unplugin: 1.0.1
     transitivePeerDependencies:
@@ -8557,12 +8583,15 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-custom-properties/12.1.11:
-    resolution: {integrity: sha512-0IDJYhgU8xDv1KY6+VgUwuQkVtmYzRwu+dMjnmdMafXYv86SWqfxkc7qdDvWS38vsjaEtv8e0vGOUQrAiMBLpQ==}
-    engines: {node: ^12 || ^14 || >=16}
+  /postcss-custom-properties/13.1.0:
+    resolution: {integrity: sha512-O0Lg0CuHwADctEMBgGtaeams7eFES8pXo/9zBClTbRVdU3LFAkFluw1l9eYnJ3rtidp80EGbAIuiisEIu1Z+uA==}
+    engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
-      postcss: ^8.2
+      postcss: ^8.4
     dependencies:
+      '@csstools/cascade-layer-name-parser': 1.0.0_jhntdqzgrqlkpxki6fy253alji
+      '@csstools/css-parser-algorithms': 2.0.0_wcbxa2wg3evugsqpd27xwuyb6a
+      '@csstools/css-tokenizer': 2.0.0
       postcss-value-parser: 4.2.0
     dev: true
 
@@ -10027,10 +10056,10 @@ packages:
   /strip-literal/1.0.0:
     resolution: {integrity: sha512-5o4LsH1lzBzO9UFH63AJ2ad2/S2AVx6NtjOcaz+VTT2h1RiRvbipW72z8M/lxEhcPHDBQwpDrnTF7sXy/7OwCQ==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
 
-  /style-dictionary-esm/1.1.1:
-    resolution: {integrity: sha512-Xt9Dgdeb1D4ENVGfyS6V3CAzWKq2AIebM3ODD3nSoTwN0D5cRaIqBm8kido1XM5gyAeyVbTCWOgZJR9YXwIFEw==}
+  /style-dictionary-esm/1.2.0:
+    resolution: {integrity: sha512-kOMB90UCMlXfYPgp0rB0L0P1FWJHQvNR3FIhYYDpQJhSI6q7608DVqLJXQzQG7CADM4SpaP10hlvr1t90TgWmw==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -10197,7 +10226,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.2
-      acorn: 8.8.1
+      acorn: 8.8.2
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -10478,7 +10507,7 @@ packages:
   /unctx/2.1.1:
     resolution: {integrity: sha512-RffJlpvLOtolWsn0fxXsuSDfwiWcR6cyuykw2e0+zAggvGW1SesXt9WxIWlWpJhwVCZD/WlxxLqKLS50Q0CkWA==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       estree-walker: 3.0.3
       magic-string: 0.26.7
       unplugin: 1.0.1
@@ -10685,7 +10714,7 @@ packages:
   /unplugin/1.0.1:
     resolution: {integrity: sha512-aqrHaVBWW1JVKBHmGo33T5TxeL0qWzfvjWokObHA9bYmN7eNDkwOxmLjhioHl9878qDFMAaT51XNroRyuz7WxA==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
@@ -11167,7 +11196,7 @@ packages:
     engines: {node: '>=6.0'}
     hasBin: true
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-walk: 8.2.0
 
   /vscode-jsonrpc/6.0.0:
