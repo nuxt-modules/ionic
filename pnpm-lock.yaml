@@ -12,7 +12,7 @@ importers:
       '@ionic/cli': ^6.20.3
       '@ionic/vue': ^6.3.4
       '@ionic/vue-router': ^6.3.4
-      '@kevinmarrec/nuxt-pwa': ^0.15.0
+      '@kevinmarrec/nuxt-pwa': ^0.16.0
       '@nuxt/kit': ^3.1.0
       '@nuxt/module-builder': 0.2.1
       '@nuxt/schema': 3.1.0
@@ -48,7 +48,7 @@ importers:
       '@ionic/cli': 6.20.3
       '@ionic/vue': 6.3.4
       '@ionic/vue-router': 6.3.4
-      '@kevinmarrec/nuxt-pwa': 0.15.0
+      '@kevinmarrec/nuxt-pwa': 0.16.0
       '@nuxt/kit': 3.1.0
       ionicons: 6.0.3
       pathe: 1.0.0
@@ -1179,12 +1179,12 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@kevinmarrec/nuxt-pwa/0.15.0:
-    resolution: {integrity: sha512-7aEX3k123gq15859pHLnZZgSGSsTnH1BduK4sICktnkOJK6u62Uo0TT85ma9m5OOC27RJuCo/G8nBWEa39dD+g==}
+  /@kevinmarrec/nuxt-pwa/0.16.0:
+    resolution: {integrity: sha512-GTazJ7Ei2acmzUFPIjTOqlD14TG45QQnCvheOLi+2u8BastEOwPxt//XfIopnTms+B54z4cBJA5hIjUgeZ6irQ==}
     dependencies:
       hasha: 5.2.2
       sharp: 0.31.3
-      std-env: 3.3.1
+      std-env: 3.3.2
     dev: false
 
   /@mapbox/node-pre-gyp/1.0.10:
@@ -1497,7 +1497,7 @@ packages:
       pkg-types: 1.0.1
       postcss-import-resolver: 2.0.0
       scule: 1.0.0
-      std-env: 3.3.1
+      std-env: 3.3.2
       ufo: 1.0.1
       unimport: 2.0.1
       untyped: 1.2.2
@@ -1529,7 +1529,7 @@ packages:
       ofetch: 1.0.0
       parse-git-config: 3.0.0
       rc9: 2.0.0
-      std-env: 3.3.1
+      std-env: 3.3.2
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -7452,7 +7452,7 @@ packages:
       serve-placeholder: 2.0.1
       serve-static: 1.15.0
       source-map-support: 0.5.21
-      std-env: 3.3.1
+      std-env: 3.3.2
       ufo: 1.0.1
       unenv: 1.0.1
       unimport: 1.3.0_rollup@3.10.1
@@ -9684,6 +9684,9 @@ packages:
 
   /std-env/3.3.1:
     resolution: {integrity: sha512-3H20QlwQsSm2OvAxWIYhs+j01MzzqwMwGiiO1NQaJYZgJZFPuAbf95/DiKRBSTYIJ2FeGUc+B/6mPGcWP9dO3Q==}
+
+  /std-env/3.3.2:
+    resolution: {integrity: sha512-uUZI65yrV2Qva5gqE0+A7uVAvO40iPo6jGhs7s8keRfHCmtg+uB2X6EiLGCI9IgL1J17xGhvoOqSz79lzICPTA==}
 
   /stream-combiner2/1.1.1:
     resolution: {integrity: sha512-3PnJbYgS56AeWgtKF5jtJRT6uFJe56Z0Hc5Ngg/6sI6rIt8iiMBTa9cvdyFfpMQjaVHr8dusbNeFGIIonxOvKw==}
