@@ -29,7 +29,7 @@ importers:
       expect-type: 0.15.0
       husky: 8.0.3
       ionicons: ^6.0.3
-      lint-staged: 13.1.0
+      lint-staged: 13.1.1
       nuxt: 3.1.0
       pathe: ^1.0.0
       pinst: 3.0.0
@@ -70,7 +70,7 @@ importers:
       eslint-plugin-prettier: 4.2.1_jqplj6qf3uqpxpu4gdyhwwasnq
       expect-type: 0.15.0
       husky: 8.0.3
-      lint-staged: 13.1.0
+      lint-staged: 13.1.1
       nuxt: 3.1.0_jlpxi3dhvqtowkvjwsn5edwz6a
       pinst: 3.0.0
       playwright: 1.30.0
@@ -3494,6 +3494,7 @@ packages:
   /commander/9.4.1:
     resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
+    dev: false
 
   /commander/9.5.0:
     resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
@@ -6421,14 +6422,14 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/13.1.0:
-    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
+  /lint-staged/13.1.1:
+    resolution: {integrity: sha512-LLJLO0Kdbcv2a+CvSF4p1M7jBZOajKSMpBUvyR8+bXccsqPER0/NxTFQSpNHjqwV9kM3tkHczYerTB5wI+bksQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       cli-truncate: 3.1.0
       colorette: 2.0.19
-      commander: 9.4.1
+      commander: 9.5.0
       debug: 4.3.4
       execa: 6.1.0
       lilconfig: 2.0.6
