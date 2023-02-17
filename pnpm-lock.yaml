@@ -21,7 +21,7 @@ importers:
       '@release-it/conventional-changelog': 5.1.1
       '@types/node': 18.13.0
       '@vitest/coverage-c8': 0.28.5
-      c8: 7.12.0
+      c8: 7.13.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.34.0
       eslint-config-prettier: 8.6.0
@@ -63,7 +63,7 @@ importers:
       '@release-it/conventional-changelog': 5.1.1_release-it@15.6.0
       '@types/node': 18.13.0
       '@vitest/coverage-c8': 0.28.5
-      c8: 7.12.0
+      c8: 7.13.0
       conventional-changelog-conventionalcommits: 5.0.0
       eslint: 8.34.0
       eslint-config-prettier: 8.6.0_eslint@8.34.0
@@ -2413,7 +2413,7 @@ packages:
   /@vitest/coverage-c8/0.28.5:
     resolution: {integrity: sha512-zCNyurjudoG0BAqAgknvlBhkV2V9ZwyYLWOAGtHSDhL/St49MJT+V2p1G0yPaoqBbKOTATVnP5H2p1XL15H75g==}
     dependencies:
-      c8: 7.12.0
+      c8: 7.13.0
       picocolors: 1.0.0
       std-env: 3.3.2
       vitest: 0.28.5
@@ -3091,8 +3091,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /c8/7.12.0:
-    resolution: {integrity: sha512-CtgQrHOkyxr5koX1wEUmN/5cfDa2ckbHRA4Gy5LAL0zaCFtVWJS5++n+w4/sr2GWGerBxgTjpKeDclk/Qk6W/A==}
+  /c8/7.13.0:
+    resolution: {integrity: sha512-/NL4hQTv1gBL6J6ei80zu3IiTrmePDKXKXOTLpHvcIWZTVYQlDhVWjjWvkhICylE8EwwnMVzDZugCvdx0/DIIA==}
     engines: {node: '>=10.12.0'}
     hasBin: true
     dependencies:
