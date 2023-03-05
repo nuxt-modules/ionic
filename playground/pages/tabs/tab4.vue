@@ -17,16 +17,10 @@
           <IonLabel color="primary">
             <strong>Basic animation</strong>
           </IonLabel>
-          <IonAnimation
-            ref="animation1"
-            v-slot="{ animation }"
-            :duration="2000"
-            :fromTo="[
-              { property: 'opacity', fromValue: '1', toValue: '0.2' },
-              { property: 'transform', fromValue: 'translateX(0px)', toValue: 'translateX(-50px)' },
-            ]"
-            fill="forwards"
-          >
+          <IonAnimation id="animation1" v-slot="{ animation }" :duration="2000" :fromTo="[
+  { property: 'opacity', fromValue: '1', toValue: '0.2' },
+  { property: 'transform', fromValue: 'translateX(0px)', toValue: 'translateX(-50px)' },
+]" fill="forwards">
             <div class="red-square"></div>
 
             <div class="buttons">
@@ -41,17 +35,12 @@
           <IonLabel color="primary">
             <strong>Keyframes animation</strong>
           </IonLabel>
-          <IonAnimation
-            v-slot="{ animation }"
-            :duration="3000"
-            :keyframes="[
-              { offset: 0, transform: 'scale(1) translate(0, 0)' },
-              { offset: 0.4, transform: 'scale(1.05) translate(15px, 15px)' },
-              { offset: 0.6, transform: 'scale(1.05) translate(-30px, 15px)' },
-              { offset: 1, transform: 'scale(1) translate(0, 0)' },
-            ]"
-            fill="none"
-          >
+          <IonAnimation id="animation2" v-slot="{ animation }" :duration="3000" :keyframes="[
+  { offset: 0, transform: 'scale(1) translate(0, 0)' },
+  { offset: 0.4, transform: 'scale(1.05) translate(15px, 15px)' },
+  { offset: 0.6, transform: 'scale(1.05) translate(-30px, 15px)' },
+  { offset: 1, transform: 'scale(1) translate(0, 0)' },
+]" fill="none">
             <div class="blue-square"></div>
 
             <div class="buttons">
@@ -66,16 +55,11 @@
           <IonLabel color="primary">
             <strong>Animation that repeats forever</strong>
           </IonLabel>
-          <IonAnimation
-            v-slot="{ animation }"
-            :duration="1000"
-            :keyframes="[
-              { offset: 0, transform: 'scale(1)' },
-              { offset: 0.75, transform: 'scale(1.05)' },
-              { offset: 1, transform: 'scale(1)' },
-            ]"
-            :iterations="Infinity"
-          >
+          <IonAnimation id="animation3" v-slot="{ animation }" :duration="1000" :keyframes="[
+  { offset: 0, transform: 'scale(1)' },
+  { offset: 0.75, transform: 'scale(1.05)' },
+  { offset: 1, transform: 'scale(1)' },
+]" :iterations="Infinity">
             <div class="green-square"></div>
 
             <div class="buttons">
@@ -90,24 +74,15 @@
           <IonLabel color="primary">
             <strong>Animation with style hooks</strong>
           </IonLabel>
-          <IonAnimation
-            v-slot="{ animation }"
-            :duration="2000"
-            :keyframes="[
-              { offset: 0, transform: 'scale(1)' },
-              { offset: 0.75, transform: 'scale(1.1)' },
-              { offset: 1, transform: 'scale(1)' },
-            ]"
-            :beforeStyles="{
-              opacity: 0.5,
-            }"
-            :afterClearStyles="['opacity']"
-            :afterStyles="{
-              transform: 'scale(0.9)',
-            }"
-            :beforeClearStyles="['transform']"
-            fill="none"
-          >
+          <IonAnimation id="animation4" v-slot="{ animation }" :duration="2000" :keyframes="[
+  { offset: 0, transform: 'scale(1)' },
+  { offset: 0.75, transform: 'scale(1.1)' },
+  { offset: 1, transform: 'scale(1)' },
+]" :beforeStyles="{
+  opacity: 0.5,
+}" :afterClearStyles="['opacity']" :afterStyles="{
+  transform: 'scale(0.9)',
+}" :beforeClearStyles="['transform']" fill="none">
             <div class="red-square"></div>
 
             <div class="buttons">
@@ -122,25 +97,20 @@
           <IonLabel color="primary">
             <strong>Animation with specific easing</strong>
           </IonLabel>
-          <IonAnimation
-            v-slot="{ animation }"
-            :duration="2000"
-            :keyframes="[
-              {
-                offset: 0,
-                transform: 'rotate(0)',
-              },
-              {
-                offset: 0.5,
-                transform: 'rotate(60deg)',
-              },
-              {
-                offset: 1,
-                transform: 'rotate(0)',
-              },
-            ]"
-            easing="cubic-bezier(.7,.55,0,1.15)"
-          >
+          <IonAnimation id="animation5" v-slot="{ animation }" :duration="2000" :keyframes="[
+  {
+    offset: 0,
+    transform: 'rotate(0)',
+  },
+  {
+    offset: 0.5,
+    transform: 'rotate(60deg)',
+  },
+  {
+    offset: 1,
+    transform: 'rotate(0)',
+  },
+]" easing="cubic-bezier(.7,.55,0,1.15)">
             <div class="blue-square"></div>
 
             <div class="buttons">
@@ -155,19 +125,13 @@
           <IonLabel color="primary">
             <strong>Reversed animation direction</strong>
           </IonLabel>
-          <IonAnimation
-            v-slot="{ animation }"
-            :duration="3000"
-            :keyframes="[
-              { offset: 0, transform: 'scale(1)' },
-              { offset: 0.3, transform: 'scale(1.2)' },
-              { offset: 0.6, transform: 'scale(1.05)' },
-              { offset: 0.9, transform: 'scale(0.8)' },
-              { offset: 1, transform: 'scale(1)' },
-            ]"
-            direction="reverse"
-            easing="ease-in"
-          >
+          <IonAnimation id="animation6" v-slot="{ animation }" :duration="3000" :keyframes="[
+  { offset: 0, transform: 'scale(1)' },
+  { offset: 0.3, transform: 'scale(1.2)' },
+  { offset: 0.6, transform: 'scale(1.05)' },
+  { offset: 0.9, transform: 'scale(0.8)' },
+  { offset: 1, transform: 'scale(1)' },
+]" direction="reverse" easing="ease-in">
             <div class="green-square"></div>
 
             <div class="buttons">
@@ -194,7 +158,7 @@
   text-align: center;
 }
 
-.animations-grid > *:nth-child(2) {
+.animations-grid>*:nth-child(2) {
   margin-left: auto;
   margin-right: auto;
 }
