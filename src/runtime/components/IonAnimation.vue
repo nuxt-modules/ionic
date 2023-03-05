@@ -30,17 +30,17 @@ interface AnimationOptions {
   easing?: string
   fill?: AnimationFill
   direction?: AnimationDirection
-  from?: AnimationFromObject | AnimationFromObject[]
-  fromTo?: AnimationFromToObject | AnimationFromToObject[]
-  keyframes?: AnimationKeyFrames
+  from?: AnimationFromObject | AnimationFromObject[] | null
+  fromTo?: AnimationFromToObject | AnimationFromToObject[] | null
+  keyframes?: AnimationKeyFrames | null
   playOnMount?: boolean
   playOnVisible?: boolean
-  beforeStyles?: AnimationStyles
-  beforeAddClass?: string | string[]
-  beforeClearStyles?: string[]
-  afterStyles?: AnimationStyles
-  afterAddClass?: string | string[]
-  afterClearStyles?: string[]
+  beforeStyles?: AnimationStyles | null
+  beforeAddClass?: string | string[] | null
+  beforeClearStyles?: string[] | null
+  afterStyles?: AnimationStyles | null
+  afterAddClass?: string | string[] | null
+  afterClearStyles?: string[] | null
 }
 
 const props = withDefaults(defineProps<AnimationOptions>(), {
@@ -63,13 +63,15 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   afterClearStyles: null,
 })
 
-const element = ref<HTMLDivElement>(null)
+const element = ref<HTMLDivElement>(null as any)
 
-const animation = ref<Animation>(null)
+const animation = ref<Animation>(createAnimation(props.id))
+
+let observer: IntersectionObserver
 
 onMounted(() => {
   animation.value = createAnimation(props.id)
-    .addElement(element.value)
+    .addElement(element.value!)
     .duration(props.duration)
     .iterations(props.iterations)
     .easing(props.easing)
@@ -83,10 +85,12 @@ onMounted(() => {
     .afterAddClass(props.afterAddClass ?? [])
     .afterClearStyles(props.afterClearStyles ?? [])
 
+  console.log(animation.value)
+
   let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
 
   if (hasKeyframes) {
-    animation.value.keyframes(props.keyframes)
+    animation.value.keyframes(props.keyframes!)
   }
 
   // From
@@ -112,7 +116,7 @@ onMounted(() => {
   }
 
   if (props.playOnVisible && !props.playOnMount) {
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       () => {
         // Play animation
         animation.value.play()
@@ -127,17 +131,18 @@ onMounted(() => {
       }
     )
     // Start observing for animation element
-    observer.observe(element.value)
-
-    // Disconnect observer when component is about to be unmounted
-    onBeforeUnmount(() => observer.disconnect())
+    observer.observe(element.value!)
   } else if (props.playOnMount) animation.value.play()
 })
 onBeforeUnmount(() => {
+  //Destroy animation and disconnect observer when component is about to be unmounted if it is defined
   animation.value.destroy()
+  if (observer) observer.disconnect()
 })
 </script>
 
 <template>
-  <slot ref="element" :animation="animation" />
+  <div ref="element">
+    <slot :animation="animation" />
+  </div>
 </template>
