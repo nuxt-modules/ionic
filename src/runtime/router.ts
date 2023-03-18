@@ -1,7 +1,12 @@
-import { createRouter, createWebHistory, createMemoryHistory } from '@ionic/vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  createMemoryHistory,
+  createWebHashHistory,
+} from '@ionic/vue-router'
 
-import { computed, ComputedRef, reactive, shallowRef } from 'vue'
-import { createWebHashHistory, NavigationGuard, RouteLocation } from 'vue-router'
+import { computed, reactive, Ref, shallowRef } from 'vue'
+import { NavigationGuard, RouteLocation } from 'vue-router'
 import { createError } from 'h3'
 import { withoutBase, isEqual } from 'ufo'
 import {
@@ -13,6 +18,7 @@ import {
   navigateTo,
   useError,
   useState,
+  type PageMeta,
 } from '#app'
 
 // @ts-expect-error virtual module
@@ -48,6 +54,7 @@ export default defineNuxtPlugin(async nuxtApp => {
     routes,
   })
   nuxtApp.vueApp.use(router)
+
   const previousRoute = shallowRef(router.currentRoute.value)
   router.afterEach((_to, from) => {
     previousRoute.value = from
@@ -72,9 +79,9 @@ export default defineNuxtPlugin(async nuxtApp => {
   })
 
   // https://github.com/vuejs/router/blob/main/packages/router/src/router.ts#L1225-L1233
-  const route = {} as { [K in keyof RouteLocation]: ComputedRef<RouteLocation[K]> }
+  const route = {} as RouteLocation
   for (const key in _route.value) {
-    route[key as 'path'] = computed(() => _route.value[key as 'path'])
+    ;(route as any)[key] = computed(() => _route.value[key as keyof RouteLocation])
   }
 
   nuxtApp._route = reactive(route)
@@ -86,11 +93,23 @@ export default defineNuxtPlugin(async nuxtApp => {
 
   const error = useError()
 
-  const initialLayout = useState<string>('_layout')
-  router.beforeEach(async (to, from) => {
+  try {
+    if (process.server) {
+      await router.push(initialURL)
+    }
+
+    await router.isReady()
+  } catch (error: any) {
+    // We'll catch 404s here
+    await callWithNuxt(nuxtApp, showError, [error])
+  }
+
+  const initialLayout = useState('_layout')
+  router.beforeEach(async (to, from, next) => {
     to.meta = reactive(to.meta)
-    if (nuxtApp.isHydrating) {
-      to.meta.layout = initialLayout.value ?? to.meta.layout
+    if (nuxtApp.isHydrating && initialLayout.value && !isReadonly(to.meta.layout)) {
+      to.meta.layout =
+        (initialLayout.value as Exclude<PageMeta['layout'], Ref | false>) ?? to.meta.layout
     }
     nuxtApp._processingMiddleware = true
 
@@ -131,21 +150,24 @@ export default defineNuxtPlugin(async nuxtApp => {
         throw new Error(`Unknown route middleware: '${entry}'.`)
       }
 
-      const result = await callWithNuxt(nuxtApp, middleware, [to, from])
+      const result = await callWithNuxt(nuxtApp, middleware, [to, from, next])
       if (process.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
         if (result === false || result instanceof Error) {
           const error =
             result ||
             createError({
-              statusMessage: `Route navigation aborted: ${initialURL}`,
+              statusCode: 404,
+              statusMessage: `Page Not Found: ${initialURL}`,
             })
-          return callWithNuxt(nuxtApp, showError, [error])
+          await callWithNuxt(nuxtApp, showError, [error])
+          return false
         }
       }
       if (result || result === false) {
         return result
       }
     }
+    next()
   })
 
   router.afterEach(async to => {
@@ -156,20 +178,35 @@ export default defineNuxtPlugin(async nuxtApp => {
       await callWithNuxt(nuxtApp, clearError)
     }
     if (to.matched.length === 0) {
-      callWithNuxt(nuxtApp, showError, [
+      await callWithNuxt(nuxtApp, showError, [
         createError({
           statusCode: 404,
           fatal: false,
           statusMessage: `Page not found: ${to.fullPath}`,
         }),
       ])
-    } else if (process.server && to.matched[0].name === '404' && nuxtApp.ssrContext) {
-      nuxtApp.ssrContext.event.res.statusCode = 404
     } else if (process.server) {
       const currentURL = to.fullPath || '/'
-      if (!isEqual(currentURL, initialURL)) {
-        await callWithNuxt(nuxtApp, navigateTo, [currentURL])
+      if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
+        const event = await callWithNuxt(nuxtApp, useRequestEvent)
+        const options = {
+          redirectCode: event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
+        }
+        await callWithNuxt(nuxtApp, navigateTo, [currentURL, options])
       }
+    }
+  })
+
+  nuxtApp.hooks.hookOnce('app:created', async () => {
+    try {
+      await router.replace({
+        ...router.resolve(initialURL),
+        name: undefined, // #4920, #$4982
+        force: true,
+      })
+    } catch (error: any) {
+      // We'll catch middleware errors or deliberate exceptions here
+      await callWithNuxt(nuxtApp, showError, [error])
     }
   })
 

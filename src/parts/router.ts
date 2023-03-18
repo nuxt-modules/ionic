@@ -3,7 +3,7 @@ import { useNuxt, useLogger } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { runtimeDir } from '../utils'
 
-export const setupRouter = () => {
+export const setupRouter = async () => {
   const nuxt = useNuxt()
   const logger = useLogger()
 

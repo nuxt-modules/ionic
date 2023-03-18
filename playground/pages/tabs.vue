@@ -1,7 +1,7 @@
 <script setup lang="ts">
-useHead({
-  title: 'Nuxt Ionic',
-})
+// useHead({
+//   title: 'Nuxt Ionic',
+// })
 </script>
 
 <template>
