@@ -34,7 +34,7 @@ importers:
       pathe: ^1.0.0
       pinst: 3.0.0
       pkg-types: ^1.0.1
-      playwright: 1.31.2
+      playwright: 1.32.0
       prettier: 2.8.6
       release-it: 15.9.1
       typescript: 5.0.2
@@ -73,7 +73,7 @@ importers:
       lint-staged: 13.2.0
       nuxt: 3.1.0_gtlryyczx6lbmo2dbdey6x7hia
       pinst: 3.0.0
-      playwright: 1.31.2
+      playwright: 1.32.0
       prettier: 2.8.6
       release-it: 15.9.1
       typescript: 5.0.2
@@ -9210,19 +9210,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.31.2:
-    resolution: {integrity: sha512-a1dFgCNQw4vCsG7bnojZjDnPewZcw7tZUNFN0ZkcLYKj+mPmXvg4MpaaKZ5SgqPsOmqIf2YsVRkgqiRDxD+fDQ==}
+  /playwright-core/1.32.0:
+    resolution: {integrity: sha512-Z9Ij17X5Z3bjpp6XKujGBp9Gv4eViESac9aDmwgQFUEJBW0K80T21m/Z+XJQlu4cNsvPygw33b6V1Va6Bda5zQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.31.2:
-    resolution: {integrity: sha512-jpC47n2PKQNtzB7clmBuWh6ftBRS/Bt5EGLigJ9k2QAKcNeYXZkEaDH5gmvb6+AbcE0DO6GnXdbl9ogG6Eh+og==}
+  /playwright/1.32.0:
+    resolution: {integrity: sha512-zQVzxTGoC/ak2Zu0l3CeBGQ6z5oOka5ecUOk+5QbmAerih6CaVsjY9BjjhiN+UOImd3xLiNeCcmLEWcXlz1Dlg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.31.2
+      playwright-core: 1.32.0
     dev: true
 
   /plist/3.0.6:
