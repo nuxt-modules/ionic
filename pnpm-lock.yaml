@@ -28,7 +28,7 @@ importers:
       eslint-plugin-prettier: 4.2.1
       expect-type: 0.15.0
       husky: 8.0.3
-      ionicons: ^6.0.3
+      ionicons: ^7.0.0
       lint-staged: 13.2.0
       nuxt: 3.3.2
       pathe: ^1.0.0
@@ -50,7 +50,7 @@ importers:
       '@ionic/vue-router': 6.3.4
       '@kevinmarrec/nuxt-pwa': 0.17.0
       '@nuxt/kit': 3.3.2
-      ionicons: 6.0.3
+      ionicons: 7.1.0
       pathe: 1.1.0
       pkg-types: 1.0.2
       ufo: 1.1.1
@@ -5735,6 +5735,12 @@ packages:
     resolution: {integrity: sha512-kVOWER991EMqLiVShrCSWKMHkgHZP7XfVdyN6YPMuoO33W7pc5CPNVNfR8OMe/I8rYEbaunyBs6dXNYpR6gGZw==}
     dependencies:
       '@stencil/core': 2.16.1
+    dev: false
+
+  /ionicons/7.1.0:
+    resolution: {integrity: sha512-iE4GuEdEHARJpp0sWL7WJZCzNCf5VxpNRhAjW0fLnZPnNL5qZOJUcfup2Z2Ty7Jk8Q5hacrHfGEB1lCwOdXqGg==}
+    dependencies:
+      '@stencil/core': 2.19.2
     dev: false
 
   /ioredis/5.3.1:
