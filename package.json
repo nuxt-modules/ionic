@@ -60,42 +60,42 @@
     "@ionic/vue-router": "^6.3.4",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxt/kit": "^3.1.0",
-    "ionicons": "^6.0.3",
+    "ionicons": "^7.0.0",
     "pathe": "^1.0.0",
     "pkg-types": "^1.0.1",
     "ufo": "^1.0.0",
-    "unimport": "^2.0.0"
+    "unimport": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "0.2.1",
-    "@nuxt/schema": "3.1.0",
-    "@nuxt/test-utils": "3.1.0",
+    "@nuxt/schema": "3.3.2",
+    "@nuxt/test-utils": "3.3.2",
     "@nuxtjs/eslint-config-typescript": "12.0.0",
     "@release-it/conventional-changelog": "5.1.1",
-    "@types/node": "18.14.2",
-    "@vitest/coverage-c8": "0.29.2",
+    "@types/node": "18.15.10",
+    "@vitest/coverage-c8": "0.29.7",
     "c8": "7.13.0",
     "conventional-changelog-conventionalcommits": "5.0.0",
-    "eslint": "8.35.0",
-    "eslint-config-prettier": "8.6.0",
+    "eslint": "8.36.0",
+    "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "expect-type": "0.15.0",
     "husky": "8.0.3",
-    "lint-staged": "13.1.2",
-    "nuxt": "3.1.0",
+    "lint-staged": "13.2.0",
+    "nuxt": "3.3.2",
     "pinst": "3.0.0",
-    "playwright": "1.31.2",
-    "prettier": "2.8.4",
-    "release-it": "15.7.0",
-    "typescript": "4.9.5",
-    "vitest": "0.29.2",
-    "vue": "3.2.45"
+    "playwright": "1.32.1",
+    "prettier": "2.8.7",
+    "release-it": "15.9.3",
+    "typescript": "5.0.2",
+    "vitest": "0.29.7",
+    "vue": "3.2.47"
   },
   "resolutions": {
     "@nuxtjs/ionic": "link:."
   },
-  "packageManager": "pnpm@7.28.0",
+  "packageManager": "pnpm@7.30.0",
   "volta": {
-    "node": "18.14.2"
+    "node": "18.15.0"
   }
 }
