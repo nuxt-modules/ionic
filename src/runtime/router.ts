@@ -1,19 +1,22 @@
-import { createRouter, createWebHistory, createMemoryHistory } from '@ionic/vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+  createMemoryHistory,
+} from '@ionic/vue-router'
 
-import { computed, ComputedRef, reactive, shallowRef } from 'vue'
-import { createWebHashHistory, NavigationGuard, RouteLocation } from 'vue-router'
+import { computed, isReadonly, reactive, shallowRef } from 'vue'
+import type { ComputedRef, Ref } from 'vue'
+import type { RouteLocation, Router } from 'vue-router'
 import { createError } from 'h3'
 import { withoutBase, isEqual } from 'ufo'
-import {
-  callWithNuxt,
-  defineNuxtPlugin,
-  useRuntimeConfig,
-  showError,
-  clearError,
-  navigateTo,
-  useError,
-  useState,
-} from '#app'
+
+import type { PageMeta, RouteMiddleware, Plugin } from '#app'
+import { callWithNuxt, defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt'
+import { showError, clearError, useError } from '#app/composables/error'
+import { useRequestEvent } from '#app/composables/ssr'
+import { useState } from '#app/composables/state'
+import { navigateTo } from '#app/composables/router'
 
 // @ts-expect-error virtual module
 import { globalMiddleware, namedMiddleware } from '#build/middleware'
@@ -89,12 +92,12 @@ export default defineNuxtPlugin(async nuxtApp => {
   const initialLayout = useState<string>('_layout')
   router.beforeEach(async (to, from) => {
     to.meta = reactive(to.meta)
-    if (nuxtApp.isHydrating) {
-      to.meta.layout = initialLayout.value ?? to.meta.layout
+    if (nuxtApp.isHydrating && initialLayout.value && !isReadonly(to.meta.layout)) {
+      to.meta.layout = initialLayout.value as Exclude<PageMeta['layout'], Ref | false>
     }
     nuxtApp._processingMiddleware = true
 
-    type MiddlewareDef = string | NavigationGuard
+    type MiddlewareDef = string | RouteMiddleware
     const middlewareEntries = new Set<MiddlewareDef>([
       ...globalMiddleware,
       ...nuxtApp._middleware.global,
@@ -137,9 +140,11 @@ export default defineNuxtPlugin(async nuxtApp => {
           const error =
             result ||
             createError({
-              statusMessage: `Route navigation aborted: ${initialURL}`,
+              statusCode: 404,
+              statusMessage: `Page Not Found: ${initialURL}`,
             })
-          return callWithNuxt(nuxtApp, showError, [error])
+          await callWithNuxt(nuxtApp, showError, [error])
+          return false
         }
       }
       if (result || result === false) {
@@ -156,25 +161,27 @@ export default defineNuxtPlugin(async nuxtApp => {
       await callWithNuxt(nuxtApp, clearError)
     }
     if (to.matched.length === 0) {
-      callWithNuxt(nuxtApp, showError, [
+      await callWithNuxt(nuxtApp, showError, [
         createError({
           statusCode: 404,
           fatal: false,
           statusMessage: `Page not found: ${to.fullPath}`,
         }),
       ])
-    } else if (process.server && to.matched[0].name === '404' && nuxtApp.ssrContext) {
-      nuxtApp.ssrContext.event.res.statusCode = 404
     } else if (process.server) {
       const currentURL = to.fullPath || '/'
-      if (!isEqual(currentURL, initialURL)) {
-        await callWithNuxt(nuxtApp, navigateTo, [currentURL])
+      if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
+        const event = await callWithNuxt(nuxtApp, useRequestEvent)
+        const options = {
+          redirectCode: event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
+        }
+        await callWithNuxt(nuxtApp, navigateTo, [currentURL, options])
       }
     }
   })
 
   return { provide: { router } }
-})
+}) as Plugin<{ router: Router }>
 
 // https://github.com/vuejs/router/blob/4a0cc8b9c1e642cdf47cc007fa5bbebde70afc66/packages/router/src/history/html5.ts#L37
 function createCurrentLocation(base: string, location: Location): string {

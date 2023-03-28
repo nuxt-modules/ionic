@@ -25,15 +25,20 @@ export const setupRouter = () => {
   nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
   nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
 
+  const ROUTER_PLUGIN_RE = /nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
+  const ionicRouterPlugin = {
+    src: resolve(runtimeDir, 'router'),
+    mode: 'all',
+  } as const
+
   nuxt.hook('modules:done', () => {
     nuxt.hook('app:resolve', app => {
-      app.plugins = app.plugins.filter(
-        p => !p.src.match(/nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/)
-      )
-      app.plugins.unshift({
-        src: resolve(runtimeDir, 'router'),
-        mode: 'all',
-      })
+      const routerPlugin = app.plugins.findIndex(p => ROUTER_PLUGIN_RE.test(p.src))
+      if (routerPlugin !== -1) {
+        app.plugins.splice(routerPlugin, 1, ionicRouterPlugin)
+      } else {
+        app.plugins.unshift(ionicRouterPlugin)
+      }
     })
   })
 
