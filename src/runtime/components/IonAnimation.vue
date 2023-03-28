@@ -63,7 +63,7 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   afterClearStyles: null,
 })
 
-const element = ref<HTMLDivElement>(null as any)
+const element = ref<HTMLDivElement | null>(null)
 
 const animation = ref<Animation>(createAnimation(props.id))
 
@@ -84,8 +84,6 @@ onMounted(() => {
     .afterStyles(props.afterStyles ?? {})
     .afterAddClass(props.afterAddClass ?? [])
     .afterClearStyles(props.afterClearStyles ?? [])
-
-  console.log(animation.value)
 
   let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
 
