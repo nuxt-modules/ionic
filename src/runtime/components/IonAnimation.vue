@@ -65,7 +65,7 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
 
 const element = ref<HTMLDivElement | null>(null)
 
-const animation = ref<Animation>(createAnimation(props.id))
+const animation = ref<Animation | null>(null)
 
 let observer: IntersectionObserver
 
@@ -95,7 +95,7 @@ onMounted(() => {
   if (props.from !== null && !hasKeyframes) {
     if (Array.isArray(props.from)) {
       props.from.forEach(({ property, fromValue }) => {
-        animation.value.from(property, fromValue)
+        animation.value!.from(property, fromValue)
       })
     } else {
       animation.value.from(props.from.property, props.from.fromValue)
@@ -106,7 +106,7 @@ onMounted(() => {
   if (props.fromTo !== null && !hasKeyframes) {
     if (Array.isArray(props.fromTo)) {
       props.fromTo.forEach(({ property, fromValue, toValue }) => {
-        animation.value.fromTo(property, fromValue, toValue)
+        animation.value!.fromTo(property, fromValue, toValue)
       })
     } else {
       animation.value.fromTo(props.fromTo.property, props.fromTo.fromValue, props.fromTo.toValue)
@@ -117,7 +117,7 @@ onMounted(() => {
     observer = new IntersectionObserver(
       () => {
         // Play animation
-        animation.value.play()
+        animation.value!.play()
         // Disconnect observer - making animation always trigger ONLY ONCE
         observer.disconnect()
       },
@@ -134,7 +134,7 @@ onMounted(() => {
 })
 onBeforeUnmount(() => {
   //Destroy animation and disconnect observer when component is about to be unmounted if it is defined
-  animation.value.destroy()
+  animation.value?.destroy()
   if (observer) observer.disconnect()
 })
 </script>
