@@ -30,17 +30,17 @@ interface AnimationOptions {
   easing?: string
   fill?: AnimationFill
   direction?: AnimationDirection
-  from?: AnimationFromObject | AnimationFromObject[]
-  fromTo?: AnimationFromToObject | AnimationFromToObject[]
-  keyframes?: AnimationKeyFrames
+  from?: AnimationFromObject | AnimationFromObject[] | null
+  fromTo?: AnimationFromToObject | AnimationFromToObject[] | null
+  keyframes?: AnimationKeyFrames | null
   playOnMount?: boolean
   playOnVisible?: boolean
-  beforeStyles?: AnimationStyles
-  beforeAddClass?: string | string[]
-  beforeClearStyles?: string[]
-  afterStyles?: AnimationStyles
-  afterAddClass?: string | string[]
-  afterClearStyles?: string[]
+  beforeStyles?: AnimationStyles | null
+  beforeAddClass?: string | string[] | null
+  beforeClearStyles?: string[] | null
+  afterStyles?: AnimationStyles | null
+  afterAddClass?: string | string[] | null
+  afterClearStyles?: string[] | null
 }
 
 const props = withDefaults(defineProps<AnimationOptions>(), {
@@ -63,13 +63,15 @@ const props = withDefaults(defineProps<AnimationOptions>(), {
   afterClearStyles: null,
 })
 
-const element = ref<HTMLDivElement>(null)
+const element = ref<HTMLDivElement | null>(null)
 
-const animation = ref<Animation>(null)
+const animation = ref<Animation | null>(null)
+
+let observer: IntersectionObserver
 
 onMounted(() => {
   animation.value = createAnimation(props.id)
-    .addElement(element.value)
+    .addElement(element.value!)
     .duration(props.duration)
     .iterations(props.iterations)
     .easing(props.easing)
@@ -86,14 +88,14 @@ onMounted(() => {
   let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
 
   if (hasKeyframes) {
-    animation.value.keyframes(props.keyframes)
+    animation.value.keyframes(props.keyframes!)
   }
 
   // From
   if (props.from !== null && !hasKeyframes) {
     if (Array.isArray(props.from)) {
       props.from.forEach(({ property, fromValue }) => {
-        animation.value.from(property, fromValue)
+        animation.value!.from(property, fromValue)
       })
     } else {
       animation.value.from(props.from.property, props.from.fromValue)
@@ -104,7 +106,7 @@ onMounted(() => {
   if (props.fromTo !== null && !hasKeyframes) {
     if (Array.isArray(props.fromTo)) {
       props.fromTo.forEach(({ property, fromValue, toValue }) => {
-        animation.value.fromTo(property, fromValue, toValue)
+        animation.value!.fromTo(property, fromValue, toValue)
       })
     } else {
       animation.value.fromTo(props.fromTo.property, props.fromTo.fromValue, props.fromTo.toValue)
@@ -112,10 +114,10 @@ onMounted(() => {
   }
 
   if (props.playOnVisible && !props.playOnMount) {
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       () => {
         // Play animation
-        animation.value.play()
+        animation.value!.play()
         // Disconnect observer - making animation always trigger ONLY ONCE
         observer.disconnect()
       },
@@ -127,17 +129,18 @@ onMounted(() => {
       }
     )
     // Start observing for animation element
-    observer.observe(element.value)
-
-    // Disconnect observer when component is about to be unmounted
-    onBeforeUnmount(() => observer.disconnect())
+    observer.observe(element.value!)
   } else if (props.playOnMount) animation.value.play()
 })
 onBeforeUnmount(() => {
-  animation.value.destroy()
+  //Destroy animation and disconnect observer when component is about to be unmounted if it is defined
+  animation.value?.destroy()
+  if (observer) observer.disconnect()
 })
 </script>
 
 <template>
-  <slot ref="element" :animation="animation" />
+  <div ref="element">
+    <slot :animation="animation" />
+  </div>
 </template>

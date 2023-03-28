@@ -18,7 +18,7 @@
             <strong>Basic animation</strong>
           </IonLabel>
           <IonAnimation
-            ref="animation1"
+            id="animation1"
             v-slot="{ animation }"
             :duration="2000"
             :fromTo="[
@@ -42,6 +42,7 @@
             <strong>Keyframes animation</strong>
           </IonLabel>
           <IonAnimation
+            id="animation2"
             v-slot="{ animation }"
             :duration="3000"
             :keyframes="[
@@ -67,6 +68,7 @@
             <strong>Animation that repeats forever</strong>
           </IonLabel>
           <IonAnimation
+            id="animation3"
             v-slot="{ animation }"
             :duration="1000"
             :keyframes="[
@@ -91,6 +93,7 @@
             <strong>Animation with style hooks</strong>
           </IonLabel>
           <IonAnimation
+            id="animation4"
             v-slot="{ animation }"
             :duration="2000"
             :keyframes="[
@@ -123,6 +126,7 @@
             <strong>Animation with specific easing</strong>
           </IonLabel>
           <IonAnimation
+            id="animation5"
             v-slot="{ animation }"
             :duration="2000"
             :keyframes="[
@@ -156,6 +160,7 @@
             <strong>Reversed animation direction</strong>
           </IonLabel>
           <IonAnimation
+            id="animation6"
             v-slot="{ animation }"
             :duration="3000"
             :keyframes="[
