@@ -34,7 +34,7 @@ importers:
       pathe: ^1.0.0
       pinst: 3.0.0
       pkg-types: ^1.0.1
-      playwright: 1.32.1
+      playwright: 1.32.2
       prettier: 2.8.7
       typescript: 5.0.3
       ufo: ^1.0.0
@@ -72,10 +72,10 @@ importers:
       lint-staged: 13.2.0
       nuxt: 3.3.2_i2n4woepixtecb2zavhfas6mpq
       pinst: 3.0.0
-      playwright: 1.32.1
+      playwright: 1.32.2
       prettier: 2.8.7
       typescript: 5.0.3
-      vitest: 0.29.8_playwright@1.32.1
+      vitest: 0.29.8_playwright@1.32.2
       vue: 3.2.47
 
   docs:
@@ -2097,7 +2097,7 @@ packages:
       c8: 7.13.0
       picocolors: 1.0.0
       std-env: 3.3.2
-      vitest: 0.29.8_playwright@1.32.1
+      vitest: 0.29.8_playwright@1.32.2
     dev: true
 
   /@vitest/expect/0.29.8:
@@ -7209,19 +7209,19 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /playwright-core/1.32.1:
-    resolution: {integrity: sha512-KZYUQC10mXD2Am1rGlidaalNGYk3LU1vZqqNk0gT4XPty1jOqgup8KDP8l2CUlqoNKhXM5IfGjWgW37xvGllBA==}
+  /playwright-core/1.32.2:
+    resolution: {integrity: sha512-zD7aonO+07kOTthsrCR3YCVnDcqSHIJpdFUtZEMOb6//1Rc7/6mZDRdw+nlzcQiQltOOsiqI3rrSyn/SlyjnJQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.32.1:
-    resolution: {integrity: sha512-GnEizysWMvoqHC3I9l8+4/ZxeLwLNdJJG76xdKGxzOcIZDcw5RSk/FKrFb5CuA+zcLpjIM2p9eR9Z4CuUDkWXg==}
+  /playwright/1.32.2:
+    resolution: {integrity: sha512-jHVnXJke0PXpuPszKtk9y1zZSlzO5+2a+aockT/AND0oeXx46FiJEFrafthurglLygVZA+1gEbtUM1C7qtTV+Q==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.32.1
+      playwright-core: 1.32.2
     dev: true
 
   /plist/3.0.6:
@@ -9520,7 +9520,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.29.8_playwright@1.32.1:
+  /vitest/0.29.8_playwright@1.32.2:
     resolution: {integrity: sha512-JIAVi2GK5cvA6awGpH0HvH/gEG9PZ0a/WoxdiV3PmqK+3CjQMf8c+J/Vhv4mdZ2nRyXFw66sAg6qz7VNkaHfDQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -9566,7 +9566,7 @@ packages:
       local-pkg: 0.4.3
       pathe: 1.1.0
       picocolors: 1.0.0
-      playwright: 1.32.1
+      playwright: 1.32.2
       source-map: 0.6.1
       std-env: 3.3.2
       strip-literal: 1.0.1
