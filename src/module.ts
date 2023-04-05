@@ -284,8 +284,6 @@ const IonicBuiltInComponents = [
   'IonSelect',
   'IonSelectOption',
   'IonSkeletonText',
-  'IonSlide',
-  'IonSlides',
   'IonSpinner',
   'IonSplitPane',
   'IonTabBar',
@@ -298,5 +296,4 @@ const IonicBuiltInComponents = [
   'IonToast',
   'IonToggle',
   'IonToolbar',
-  'IonVirtualScroll',
 ]
