@@ -59,12 +59,12 @@
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
-    "@nuxt/kit": "^3.3.3",
-    "ionicons": "^7.1.0",
-    "pathe": "^1.1.0",
-    "pkg-types": "^1.0.2",
-    "ufo": "^1.1.1",
-    "unimport": "^3.0.5"
+    "@nuxt/kit": "^3.1.0",
+    "ionicons": "^7.0.0",
+    "pathe": "^1.0.0",
+    "pkg-types": "^1.0.1",
+    "ufo": "^1.0.0",
+    "unimport": "^3.0.0"
   },
   "devDependencies": {
     "@nuxt/module-builder": "0.2.1",
@@ -91,7 +91,8 @@
     "vue": "3.2.47"
   },
   "resolutions": {
-    "@nuxtjs/ionic": "link:."
+    "@nuxtjs/ionic": "link:.",
+    "@nuxt/schema": "3.3.3"
   },
   "packageManager": "pnpm@8.1.1",
   "volta": {
