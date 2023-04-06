@@ -21,10 +21,6 @@ export const setupRouter = () => {
     return
   }
 
-  nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
-  nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
-  nuxt.options.vite.optimizeDeps.include.push('@ionic/vue-router')
-
   const ROUTER_PLUGIN_RE = /nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
   const ionicRouterPlugin = {
     src: resolve(runtimeDir, 'router'),

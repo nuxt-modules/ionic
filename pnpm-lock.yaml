@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       '@capacitor/cli':
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^4.7.3
+        version: 4.7.3
       '@capacitor/core':
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^4.7.3
+        version: 4.7.3
       '@ionic/cli':
-        specifier: ^6.20.3
-        version: 6.20.3
+        specifier: ^7.0.0
+        version: 7.0.0
       '@ionic/vue':
-        specifier: ^6.3.4
-        version: 6.3.4
+        specifier: ^7.0.0
+        version: 7.0.0
       '@ionic/vue-router':
-        specifier: ^6.3.4
-        version: 6.3.4
+        specifier: ^7.0.0
+        version: 7.0.0
       '@kevinmarrec/nuxt-pwa':
         specifier: ^0.17.0
         version: 0.17.0
@@ -128,13 +128,13 @@ importers:
     devDependencies:
       '@capacitor/camera':
         specifier: 4.1.4
-        version: 4.1.4(@capacitor/core@4.4.0)
+        version: 4.1.4(@capacitor/core@4.7.3)
       '@capacitor/filesystem':
         specifier: 4.1.4
-        version: 4.1.4(@capacitor/core@4.4.0)
+        version: 4.1.4(@capacitor/core@4.7.3)
       '@capacitor/storage':
         specifier: 1.2.5
-        version: 1.2.5(@capacitor/core@4.4.0)
+        version: 1.2.5(@capacitor/core@4.7.3)
       '@nuxtjs/ionic':
         specifier: link:..
         version: link:..
@@ -433,16 +433,16 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@capacitor/camera@4.1.4(@capacitor/core@4.4.0):
+  /@capacitor/camera@4.1.4(@capacitor/core@4.7.3):
     resolution: {integrity: sha512-7f4n7PlnstYsdGyxc0Kc4hIyS6csFLOjXvffm7pJsuy9pSo+kfdOPdYgGg360QwbUAmA+Yv+J1ZW1eFIwgvWrQ==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.4.0
+      '@capacitor/core': 4.7.3
     dev: true
 
-  /@capacitor/cli@4.4.0:
-    resolution: {integrity: sha512-BB/gbUtZ2PVrUSoqkQAOCvOtEP/5IDG3aZvlqT53RAzmt/rIbcOi7qimOoLsS9iCtNtAIN+UgCqb+f62GdvV5Q==}
+  /@capacitor/cli@4.7.3:
+    resolution: {integrity: sha512-/9Vjl0A91UjRA0b8a5YCqHfHcM50vQ3Fh0typ3ScwYZhg3shkFtB03e8liAD/u0rhr/MerN8VGgN75QNEXN0Lg==}
     engines: {node: '>=12.4.0'}
     hasBin: true
     dependencies:
@@ -467,26 +467,26 @@ packages:
       - supports-color
     dev: false
 
-  /@capacitor/core@4.4.0:
-    resolution: {integrity: sha512-9k6EJTCMlHhr6g2oGo2FJM2byRyX5GEfB24Bv2e4fnemiiHrQEeAKdg++6Hj7jNNZtI1q+5EImTrcpXzPkiX7Q==}
+  /@capacitor/core@4.7.3:
+    resolution: {integrity: sha512-IDhJapHqfJNpSlq89M0quOZGb08uOUZhVhyRDdrGUrwa4ttFoWeX/Vi9F+b9bffsDRKkSLF0BhzA9TH7ko5c3A==}
     dependencies:
       tslib: 2.4.0
 
-  /@capacitor/filesystem@4.1.4(@capacitor/core@4.4.0):
+  /@capacitor/filesystem@4.1.4(@capacitor/core@4.7.3):
     resolution: {integrity: sha512-ivko1RNK4hq63xhMacq8D6D97N5/SAafTsrmY/pghYrG6Cl2SEY0+IgRu7V9/VWeN3FSplyUPucjUTAFQxXN5g==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.4.0
+      '@capacitor/core': 4.7.3
     dev: true
 
-  /@capacitor/storage@1.2.5(@capacitor/core@4.4.0):
+  /@capacitor/storage@1.2.5(@capacitor/core@4.7.3):
     resolution: {integrity: sha512-pWhnw4U7wN/zFV4lA4BLMypSufTktCbk548Yk4whSb0KAq3R0mLfSubRIHkGdcPqQWCsM6g/zUuszurhz6ncWQ==}
     deprecated: package has been renamed to @capacitor/preferences
     peerDependencies:
       '@capacitor/core': ^3.0.0
     dependencies:
-      '@capacitor/core': 4.4.0
+      '@capacitor/core': 4.7.3
     dev: true
 
   /@cloudflare/kv-asset-handler@0.3.0:
@@ -799,11 +799,22 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/cli-framework-prompts@2.1.10:
-    resolution: {integrity: sha512-h8HbA0teR0vWtGKB3ahzRbDq4yYaxfukgbOqhu9CAEJHosoFlBmDB8PbPnGFYxUg2J1MuCqeiN2ftJQYV/BO1w==}
-    engines: {node: '>=10.3.0'}
+  /@ionic/cli-framework-output@2.2.6:
+    resolution: {integrity: sha512-YLPRwnk5Lw0XQ9pKWG+p2KoR5HjMBigZ6yv+/XtL3TGOnCS1+oAz56ABbAORCjTWhSJQisr8APNFiELAecY6QA==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      '@ionic/utils-terminal': 2.3.3
+      '@ionic/utils-terminal': 2.3.4
+      debug: 4.3.4
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/cli-framework-prompts@2.1.11:
+    resolution: {integrity: sha512-zTSLrw1gjDc5y4e62HB3JlPqtA8wXlV5QJBMWK1bGqjVSea4pdJ/RlYOT8U/uCZkBkFiZXv8E9/bmm1BTEnfoQ==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@ionic/utils-terminal': 2.3.4
       debug: 4.3.4
       inquirer: 7.3.3
       tslib: 2.4.0
@@ -811,18 +822,18 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/cli-framework@5.1.3:
-    resolution: {integrity: sha512-T2KN/TurzNoAcc3iDt1KHU6GeEa7x9kXngMnu5xs+DzJv5HhBKjVOoo74b8rgVxdPx+dLOV8aLrorlyvsHR/tQ==}
-    engines: {node: '>=10.3.0'}
+  /@ionic/cli-framework@5.1.4:
+    resolution: {integrity: sha512-SSUG0JGHmf23I1C1zU2LtZYz41o/zNWXOz58Xa4bapAo6DDBGt8LDndTCznKhRzNAqWHOa7+M8ogA4K3paTB3A==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      '@ionic/cli-framework-output': 2.2.5
-      '@ionic/utils-array': 2.1.5
-      '@ionic/utils-fs': 3.1.6
-      '@ionic/utils-object': 2.1.5
-      '@ionic/utils-process': 2.1.10
-      '@ionic/utils-stream': 3.1.5
-      '@ionic/utils-subprocess': 2.1.11
-      '@ionic/utils-terminal': 2.3.3
+      '@ionic/cli-framework-output': 2.2.6
+      '@ionic/utils-array': 2.1.6
+      '@ionic/utils-fs': 3.1.7
+      '@ionic/utils-object': 2.1.6
+      '@ionic/utils-process': 2.1.11
+      '@ionic/utils-stream': 3.1.6
+      '@ionic/utils-subprocess': 2.1.12
+      '@ionic/utils-terminal': 2.3.4
       chalk: 4.1.2
       debug: 4.3.4
       lodash: 4.17.21
@@ -834,21 +845,21 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/cli@6.20.3:
-    resolution: {integrity: sha512-9hBUcyZaEnVhnh3GMoqffaDaeYNXnJxlfQcDdT5vA/ep81AV7b/JqCrPFpUDe50vAG/5IDh1qOjfBbZfdGbDUg==}
-    engines: {node: '>=10.3.0'}
+  /@ionic/cli@7.0.0:
+    resolution: {integrity: sha512-7ox288eWiZx/ujjQHVMKET6HS567aDLpbU2AHegWyGDQErAuzKp7Q5fXRd/GnMXHhw+kaneG8424AboTqfi+yw==}
+    engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
-      '@ionic/cli-framework': 5.1.3
-      '@ionic/cli-framework-output': 2.2.5
-      '@ionic/cli-framework-prompts': 2.1.10
-      '@ionic/utils-array': 2.1.5
-      '@ionic/utils-fs': 3.1.6
-      '@ionic/utils-network': 2.1.5
-      '@ionic/utils-process': 2.1.10
-      '@ionic/utils-stream': 3.1.5
-      '@ionic/utils-subprocess': 2.1.11
-      '@ionic/utils-terminal': 2.3.3
+      '@ionic/cli-framework': 5.1.4
+      '@ionic/cli-framework-output': 2.2.6
+      '@ionic/cli-framework-prompts': 2.1.11
+      '@ionic/utils-array': 2.1.6
+      '@ionic/utils-fs': 3.1.7
+      '@ionic/utils-network': 2.1.6
+      '@ionic/utils-process': 2.1.11
+      '@ionic/utils-stream': 3.1.6
+      '@ionic/utils-subprocess': 2.1.12
+      '@ionic/utils-terminal': 2.3.4
       chalk: 4.1.2
       debug: 4.3.4
       diff: 4.0.2
@@ -861,25 +872,35 @@ packages:
       split2: 3.2.2
       ssh-config: 1.1.6
       stream-combiner2: 1.1.1
-      superagent: 5.3.1
-      superagent-proxy: 3.0.0(superagent@5.3.1)
+      superagent: 8.0.9
+      superagent-proxy: 3.0.0(superagent@8.0.9)
       tar: 6.1.13
       tslib: 2.4.0
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@ionic/core@6.3.4:
-    resolution: {integrity: sha512-3EnKqFdon7Im8JNvuPoq/iGyYK7hskdb9u5hlQE0fHU/9Q0DvFVh17QTq1sQjXntoJovfRhaPJhG+kvZK3mVAQ==}
+  /@ionic/core@7.0.0:
+    resolution: {integrity: sha512-pM8qOaea9ZbqZbGnoIswaeeTiHJKNQ9ziSNHSILDpdd4FjpxZjOeMgNUdvYzh5rX9fA6hEM2wodg7McIWHgvZQ==}
     dependencies:
-      '@stencil/core': 2.19.2
-      ionicons: 6.0.3
+      '@stencil/core': 3.2.0
+      ionicons: 7.1.0
       tslib: 2.4.0
     dev: false
 
   /@ionic/utils-array@2.1.5:
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
     engines: {node: '>=10.3.0'}
+    dependencies:
+      debug: 4.3.4
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/utils-array@2.1.6:
+    resolution: {integrity: sha512-0JZ1Zkp3wURnv8oq6Qt7fMPo5MpjbLoUoa9Bu2Q4PJuSDWM8H8gwF3dQO7VTeUj3/0o1IB1wGkFWZZYgUXZMUg==}
+    engines: {node: '>=16.0.0'}
     dependencies:
       debug: 4.3.4
       tslib: 2.4.0
@@ -899,9 +920,21 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/utils-network@2.1.5:
-    resolution: {integrity: sha512-HUQ1Ec4Mh2MXzzKdbbbDS6xYKwpFJ2XRY7SYXbaZT8+jiNahfHbsOfe62/p8bk41Yil7E9EagzGC2JvIFJh01w==}
-    engines: {node: '>=10.3.0'}
+  /@ionic/utils-fs@3.1.7:
+    resolution: {integrity: sha512-2EknRvMVfhnyhL1VhFkSLa5gOcycK91VnjfrTB0kbqkTFCOXyXgVLI5whzq7SLrgD9t1aqos3lMMQyVzaQ5gVA==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@types/fs-extra': 8.1.2
+      debug: 4.3.4
+      fs-extra: 9.1.0
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/utils-network@2.1.6:
+    resolution: {integrity: sha512-CJ91+WXSBlH2mJjJH70g6vhJ+wkXm1/3DyklW0gP42CgumzMtPWkm/DiROKCVqdwC+Ak7o40wyi5mtlCU742cw==}
+    engines: {node: '>=16.0.0'}
     dependencies:
       debug: 4.3.4
       tslib: 2.4.0
@@ -912,6 +945,16 @@ packages:
   /@ionic/utils-object@2.1.5:
     resolution: {integrity: sha512-XnYNSwfewUqxq+yjER1hxTKggftpNjFLJH0s37jcrNDwbzmbpFTQTVAp4ikNK4rd9DOebX/jbeZb8jfD86IYxw==}
     engines: {node: '>=10.3.0'}
+    dependencies:
+      debug: 4.3.4
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/utils-object@2.1.6:
+    resolution: {integrity: sha512-vCl7sl6JjBHFw99CuAqHljYJpcE88YaH2ZW4ELiC/Zwxl5tiwn4kbdP/gxi2OT3MQb1vOtgAmSNRtusvgxI8ww==}
+    engines: {node: '>=16.0.0'}
     dependencies:
       debug: 4.3.4
       tslib: 2.4.0
@@ -933,9 +976,33 @@ packages:
       - supports-color
     dev: false
 
+  /@ionic/utils-process@2.1.11:
+    resolution: {integrity: sha512-Uavxn+x8j3rDlZEk1X7YnaN6wCgbCwYQOeIjv/m94i1dzslqWhqIHEqxEyeE8HsT5Negboagg7GtQiABy+BLbA==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@ionic/utils-object': 2.1.6
+      '@ionic/utils-terminal': 2.3.4
+      debug: 4.3.4
+      signal-exit: 3.0.7
+      tree-kill: 1.2.2
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /@ionic/utils-stream@3.1.5:
     resolution: {integrity: sha512-hkm46uHvEC05X/8PHgdJi4l4zv9VQDELZTM+Kz69odtO9zZYfnt8DkfXHJqJ+PxmtiE5mk/ehJWLnn/XAczTUw==}
     engines: {node: '>=10.3.0'}
+    dependencies:
+      debug: 4.3.4
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/utils-stream@3.1.6:
+    resolution: {integrity: sha512-4+Kitey1lTA1yGtnigeYNhV/0tggI3lWBMjC7tBs1K9GXa/q7q4CtOISppdh8QgtOhrhAXS2Igp8rbko/Cj+lA==}
+    engines: {node: '>=16.0.0'}
     dependencies:
       debug: 4.3.4
       tslib: 2.4.0
@@ -952,6 +1019,22 @@ packages:
       '@ionic/utils-process': 2.1.10
       '@ionic/utils-stream': 3.1.5
       '@ionic/utils-terminal': 2.3.3
+      cross-spawn: 7.0.3
+      debug: 4.3.4
+      tslib: 2.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@ionic/utils-subprocess@2.1.12:
+    resolution: {integrity: sha512-N05Y+dIXBHofKWJTheCMzVqmgY9wFmZcRv/LdNnfXaaA/mxLTyGxQYeig8fvQXTtDafb/siZXcrTkmQ+y6n3Yg==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@ionic/utils-array': 2.1.6
+      '@ionic/utils-fs': 3.1.7
+      '@ionic/utils-process': 2.1.11
+      '@ionic/utils-stream': 3.1.6
+      '@ionic/utils-terminal': 2.3.4
       cross-spawn: 7.0.3
       debug: 4.3.4
       tslib: 2.4.0
@@ -976,17 +1059,34 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router@6.3.4:
-    resolution: {integrity: sha512-Tq1BJkgdlmDoPsgdkKMUDYTSip61nTOEfwwvyrADXorYxfx1SClEAnuVKlDZGKgWo0zFYV19oOrOT7e1nMncFA==}
+  /@ionic/utils-terminal@2.3.4:
+    resolution: {integrity: sha512-cEiMFl3jklE0sW60r8JHH3ijFTwh/jkdEKWbylSyExQwZ8pPuwoXz7gpkWoJRLuoRHHSvg+wzNYyPJazIHfoJA==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      '@ionic/vue': 6.3.4
+      '@types/slice-ansi': 4.0.0
+      debug: 4.3.4
+      signal-exit: 3.0.7
+      slice-ansi: 4.0.0
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      tslib: 2.4.0
+      untildify: 4.0.0
+      wrap-ansi: 7.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
-  /@ionic/vue@6.3.4:
-    resolution: {integrity: sha512-Ww1qa+5iaF+Qmm131/5YxCQg+sL7GmKvTe1ODrLkP8l06Hp3usWft848dM1zP2yw5M+CdEOTBmLFpOitRGUQ1Q==}
+  /@ionic/vue-router@7.0.0:
+    resolution: {integrity: sha512-OFm1lRFQ2rkrjdtjWBsUfsRa6b/FZ+1jez8gLfS2z/nM8yw5MFW7vnfPWgLHBGwWtQ++6MYpiSkybc7XQk4Kbw==}
     dependencies:
-      '@ionic/core': 6.3.4
-      ionicons: 6.0.3
+      '@ionic/vue': 7.0.0
+    dev: false
+
+  /@ionic/vue@7.0.0:
+    resolution: {integrity: sha512-bikmbUm59EIciZS/Xdm3dhcoeg3PpoiFHl5YsgaydgiZccV7Hu9y7n5zT1ydIPYnJryb2gRaNQ4N8O4JvDll8w==}
+    dependencies:
+      '@ionic/core': 7.0.0
+      ionicons: 7.1.0
     dev: false
 
   /@ioredis/commands@1.2.0:
@@ -1664,15 +1764,15 @@ packages:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: true
 
-  /@stencil/core@2.16.1:
-    resolution: {integrity: sha512-s/UJp9qxExL3DyQPT70kiuWeb3AdjbUZM+5lEIXn30I2DLcLYPOPXfsoWJODieQywq+3vPiLZeIdkoqjf6jcSw==}
+  /@stencil/core@2.19.2:
+    resolution: {integrity: sha512-TK3sHqyQAACwcac4fWntypFtN9c/y+y9ioZojeCnNDY3dxF33Ax70lL9ZLDyQnWWR+aTh1WFoqB5sYOnZIUKMA==}
     engines: {node: '>=12.10.0', npm: '>=6.0.0'}
     hasBin: true
     dev: false
 
-  /@stencil/core@2.19.2:
-    resolution: {integrity: sha512-TK3sHqyQAACwcac4fWntypFtN9c/y+y9ioZojeCnNDY3dxF33Ax70lL9ZLDyQnWWR+aTh1WFoqB5sYOnZIUKMA==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
+  /@stencil/core@3.2.0:
+    resolution: {integrity: sha512-vAZiHg4h6hZn4GP6P4w/d7qJwovW0xroitVAn/Ay0rUOeMHqMDYTX5jq0Vy/bgKactKam5WL/to50esGe6lDUQ==}
+    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
     hasBin: true
     dev: false
 
@@ -2385,6 +2485,10 @@ packages:
       es-shim-unscopables: 1.0.0
     dev: true
 
+  /asap@2.0.6:
+    resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
+    dev: false
+
   /assert@2.0.0:
     resolution: {integrity: sha512-se5Cd+js9dXJnu6Ag2JFc00t+HmHOen+8Q+L7O9zI0PqQXr20uk2J0XQqMxZEeo5U50o8Nvmmx7dZrl+Ufr35A==}
     dependencies:
@@ -3032,8 +3136,8 @@ packages:
     resolution: {integrity: sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==}
     dev: true
 
-  /cookiejar@2.1.3:
-    resolution: {integrity: sha512-JxbCBUdrfr6AQjOXrxoTvAMJO4HBTUIlBzslcJPAz+/KT8yk53fXun51u+RenNYvad/+Vc2DIz5o9UxlCDymFQ==}
+  /cookiejar@2.1.4:
+    resolution: {integrity: sha512-LDx6oHrK+PhzLKJU9j5S7/Y3jM/mUHvD/DeI1WQmJn652iPC5Y4TBzC9l+5OMOXlyTTA+SmVUPm0HQUwpD5Jqw==}
     dev: false
 
   /core-util-is@1.0.3:
@@ -3335,6 +3439,13 @@ packages:
   /detect-libc@2.0.1:
     resolution: {integrity: sha512-463v3ZeIrcWtdgIg6vI6XUncguvr2TnGl4SzDXinkt9mSLpBJKXT3mW6xT3VQdDN11+WVs29pgvivTc4Lp8v+w==}
     engines: {node: '>=8'}
+
+  /dezalgo@1.0.4:
+    resolution: {integrity: sha512-rXSP0bf+5n0Qonsb+SVVfNfIsimO4HEtmnIpPHY8Q1UCzKlQrDMfdobr8nJOOsRgWCyMRqeSBQzmWUMq7zvVig==}
+    dependencies:
+      asap: 2.0.6
+      wrappy: 1.0.2
+    dev: false
 
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
@@ -4257,8 +4368,8 @@ packages:
       signal-exit: 3.0.7
     dev: true
 
-  /form-data@3.0.1:
-    resolution: {integrity: sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==}
+  /form-data@4.0.0:
+    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
     engines: {node: '>= 6'}
     dependencies:
       asynckit: 0.4.0
@@ -4273,9 +4384,13 @@ packages:
       fetch-blob: 3.2.0
     dev: true
 
-  /formidable@1.2.6:
-    resolution: {integrity: sha512-KcpbcpuLNOwrEjnbpMC0gS+X8ciDoZE1kkqzat4a8vrprf+s9pKNQ/QIwWfbfs4ltgmFl3MD177SNTkve3BwGQ==}
-    deprecated: 'Please upgrade to latest, formidable@v2 or formidable@v3! Check these notes: https://bit.ly/2ZEqIau'
+  /formidable@2.1.2:
+    resolution: {integrity: sha512-CM3GuJ57US06mlpQ47YcunuUZ9jpm8Vx+P2CGt2j7HpgkKZO/DJYQ0Bobim8G6PFQmK5lOqOOdUXboU+h73A4g==}
+    dependencies:
+      dezalgo: 1.0.4
+      hexoid: 1.0.0
+      once: 1.4.0
+      qs: 6.11.0
     dev: false
 
   /fraction.js@4.2.0:
@@ -4745,6 +4860,11 @@ packages:
       tslib: 2.4.0
     dev: true
 
+  /hexoid@1.0.0:
+    resolution: {integrity: sha512-QFLV0taWQOZtvIRIAdBChesmogZrtuXvVWsFHZTk2SU+anspqZ2vMnoLg7IE1+Uk16N19APic1BuF8bC8c2m5g==}
+    engines: {node: '>=8'}
+    dev: false
+
   /hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
@@ -4936,12 +5056,6 @@ packages:
       has: 1.0.3
       side-channel: 1.0.4
     dev: true
-
-  /ionicons@6.0.3:
-    resolution: {integrity: sha512-kVOWER991EMqLiVShrCSWKMHkgHZP7XfVdyN6YPMuoO33W7pc5CPNVNfR8OMe/I8rYEbaunyBs6dXNYpR6gGZw==}
-    dependencies:
-      '@stencil/core': 2.16.1
-    dev: false
 
   /ionicons@7.1.0:
     resolution: {integrity: sha512-iE4GuEdEHARJpp0sWL7WJZCzNCf5VxpNRhAjW0fLnZPnNL5qZOJUcfup2Z2Ty7Jk8Q5hacrHfGEB1lCwOdXqGg==}
@@ -8465,7 +8579,7 @@ packages:
       postcss-selector-parser: 6.0.11
     dev: true
 
-  /superagent-proxy@3.0.0(superagent@5.3.1):
+  /superagent-proxy@3.0.0(superagent@8.0.9):
     resolution: {integrity: sha512-wAlRInOeDFyd9pyonrkJspdRAxdLrcsZ6aSnS+8+nu4x1aXbz6FWSTT9M6Ibze+eG60szlL7JA8wEIV7bPWuyQ==}
     engines: {node: '>=6'}
     peerDependencies:
@@ -8473,26 +8587,24 @@ packages:
     dependencies:
       debug: 4.3.4
       proxy-agent: 5.0.0
-      superagent: 5.3.1
+      superagent: 8.0.9
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /superagent@5.3.1:
-    resolution: {integrity: sha512-wjJ/MoTid2/RuGCOFtlacyGNxN9QLMgcpYLDQlWFIhhdJ93kNscFonGvrpAHSCVjRVj++DGCglocF7Aej1KHvQ==}
-    engines: {node: '>= 7.0.0'}
-    deprecated: Please upgrade to v7.0.2+ of superagent.  We have fixed numerous issues with streams, form-data, attach(), filesystem errors not bubbling up (ENOENT on attach()), and all tests are now passing.  See the releases tab for more information at <https://github.com/visionmedia/superagent/releases>.
+  /superagent@8.0.9:
+    resolution: {integrity: sha512-4C7Bh5pyHTvU33KpZgwrNKh/VQnvgtCSqPRfJAUdmrtSYePVzVg4E4OzsrbkhJj9O7SO6Bnv75K/F8XVZT8YHA==}
+    engines: {node: '>=6.4.0 <13 || >=14'}
     dependencies:
       component-emitter: 1.3.0
-      cookiejar: 2.1.3
+      cookiejar: 2.1.4
       debug: 4.3.4
       fast-safe-stringify: 2.1.1
-      form-data: 3.0.1
-      formidable: 1.2.6
+      form-data: 4.0.0
+      formidable: 2.1.2
       methods: 1.1.2
       mime: 2.6.0
       qs: 6.11.0
-      readable-stream: 3.6.0
       semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
