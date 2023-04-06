@@ -129,9 +129,6 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Set up Ionic Core
     addPlugin(resolve(runtimeDir, 'ionic'))
-    nuxt.options.vite.optimizeDeps = nuxt.options.vite.optimizeDeps || {}
-    nuxt.options.vite.optimizeDeps.include = nuxt.options.vite.optimizeDeps.include || []
-    nuxt.options.vite.optimizeDeps.include.push('@ionic/vue')
 
     // Add Nuxt Vue custom utility components
     setupUtilityComponents()
