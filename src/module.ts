@@ -41,8 +41,10 @@ export interface ModuleOptions {
     alertEnter?: AnimationBuilder
     alertLeave?: AnimationBuilder
     animated?: boolean
+    backButtonDefaultHref?: string
     backButtonIcon?: string
     backButtonText?: string
+    innerHTMLTemplatesEnabled?: boolean
     hardwareBackButton?: boolean
     infiniteLoadingSpinner?: SpinnerTypes
     loadingEnter?: AnimationBuilder
@@ -72,8 +74,10 @@ export interface ModuleOptions {
       | 'icon-bottom'
       | 'icon-hide'
       | 'label-hide'
+    toastDuration?: number
     toastEnter?: AnimationBuilder
     toastLeave?: AnimationBuilder
+    toggleOnOffLabels?: boolean
   }
 }
 
