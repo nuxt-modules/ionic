@@ -118,8 +118,8 @@ importers:
         specifier: 1.11.1
         version: 1.11.1(nuxt@3.4.3)(postcss@8.4.23)(rollup@3.20.2)(vue@3.2.47)
       '@nuxtjs/plausible':
-        specifier: 0.2.0
-        version: 0.2.0(rollup@3.20.2)
+        specifier: 0.2.1
+        version: 0.2.1(rollup@3.20.2)
       nuxt:
         specifier: 3.4.3
         version: 3.4.3(@types/node@18.16.5)(eslint@8.40.0)(rollup@3.20.2)(typescript@5.0.4)
@@ -1552,62 +1552,8 @@ packages:
       - supports-color
     dev: false
 
-  /@nuxt/kit@3.3.3(rollup@3.20.2):
-    resolution: {integrity: sha512-8ql3DweT1BNOCM6mmP8st+33NCAHHvmQuOS6Q75kXMZ6Ygqv06hxp5slpLXpT1ZOEoM+vzfkjO2lJ3rnjWYC4Q==}
-    engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
-    dependencies:
-      '@nuxt/schema': 3.4.3(rollup@3.20.2)
-      c12: 1.4.1
-      consola: 2.15.3
-      defu: 6.1.2
-      globby: 13.1.4
-      hash-sum: 2.0.0
-      ignore: 5.2.4
-      jiti: 1.18.2
-      knitwork: 1.0.0
-      lodash.template: 4.5.0
-      mlly: 1.2.0
-      pathe: 1.1.0
-      pkg-types: 1.0.2
-      scule: 1.0.0
-      semver: 7.5.0
-      unctx: 2.3.0
-      unimport: 3.0.6(rollup@3.20.2)
-      untyped: 1.3.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
   /@nuxt/kit@3.4.1(rollup@3.20.2):
     resolution: {integrity: sha512-VeH26umZW6Rf4F1QX9nTIuTBp6HeL/MgmKY3+FgQiLD07afgFTLUJZohVE5xU7hb66zCnYvwKxa3JpjXFJZrhQ==}
-    engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
-    dependencies:
-      '@nuxt/schema': 3.4.3(rollup@3.20.2)
-      c12: 1.4.1
-      consola: 3.1.0
-      defu: 6.1.2
-      globby: 13.1.4
-      hash-sum: 2.0.0
-      ignore: 5.2.4
-      jiti: 1.18.2
-      knitwork: 1.0.0
-      lodash.template: 4.5.0
-      mlly: 1.2.0
-      pathe: 1.1.0
-      pkg-types: 1.0.2
-      scule: 1.0.0
-      semver: 7.5.0
-      unctx: 2.3.0
-      unimport: 3.0.6(rollup@3.20.2)
-      untyped: 1.3.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /@nuxt/kit@3.4.2(rollup@3.20.2):
-    resolution: {integrity: sha512-bFUpkyG2ZF6RYqiW+tXnWssccHQQqMF4kZJJLP/0eKXf+Fkt/Is0R7IY768jy8ylnyqeMBbmpg4Zv5gSZjfZQw==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       '@nuxt/schema': 3.4.3(rollup@3.20.2)
@@ -1820,7 +1766,7 @@ packages:
   /@nuxthq/studio@0.11.0(rollup@3.20.2):
     resolution: {integrity: sha512-9cIJSguUWvtiFs6/dlZB6f/xQ588HGqWXzRU9logl5THig6X5lYwV4hfleaY4tYoitve3j5OUCXzfFhUQqCxGA==}
     dependencies:
-      '@nuxt/kit': 3.4.2(rollup@3.20.2)
+      '@nuxt/kit': 3.4.3(rollup@3.20.2)
       defu: 6.1.2
       nuxt-component-meta: 0.5.1(rollup@3.20.2)
       nuxt-config-schema: 0.4.5(rollup@3.20.2)
@@ -1836,7 +1782,7 @@ packages:
   /@nuxtjs/color-mode@3.2.0(rollup@3.20.2):
     resolution: {integrity: sha512-isDR01yfadopiHQ/VEVUpyNSPrk5PCjUHS4t1qYRZwuRGefU4s9Iaxf6H9nmr1QFzoMgTm+3T0r/54jLwtpZbA==}
     dependencies:
-      '@nuxt/kit': 3.4.2(rollup@3.20.2)
+      '@nuxt/kit': 3.4.3(rollup@3.20.2)
       lodash.template: 4.5.0
       pathe: 1.1.0
     transitivePeerDependencies:
@@ -1883,10 +1829,10 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/plausible@0.2.0(rollup@3.20.2):
-    resolution: {integrity: sha512-mke+eW94PCca7zK0kNpNA9ULat5JCrBP2JUCmas6ZKpskU3+IaBv2OzWYzWJb/SsungfV9a/dukKbjAJeBTzhQ==}
+  /@nuxtjs/plausible@0.2.1(rollup@3.20.2):
+    resolution: {integrity: sha512-1AyV9woFeZKBhwYy05S7NBk4jeAXzWcF/SIK/S/GZ8C86G8x7f2hR2eJi9FRRQYGwHutBx2guU4tZAW4J71Azg==}
     dependencies:
-      '@nuxt/kit': 3.3.3(rollup@3.20.2)
+      '@nuxt/kit': 3.4.3(rollup@3.20.2)
       defu: 6.1.2
       pathe: 1.1.0
       plausible-tracker: 0.3.8
