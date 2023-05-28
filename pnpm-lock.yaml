@@ -46,8 +46,8 @@ importers:
         version: 3.0.4(rollup@3.23.0)
     devDependencies:
       '@nuxt/module-builder':
-        specifier: 0.3.1
-        version: 0.3.1
+        specifier: 0.4.0
+        version: 0.4.0(@nuxt/kit@3.2.3)(nuxi@3.5.1)
       '@nuxt/schema':
         specifier: 3.5.1
         version: 3.5.1(rollup@3.23.0)
@@ -1249,7 +1249,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: false
 
   /@nuxt/kit@3.4.1(rollup@3.23.0):
     resolution: {integrity: sha512-VeH26umZW6Rf4F1QX9nTIuTBp6HeL/MgmKY3+FgQiLD07afgFTLUJZohVE5xU7hb66zCnYvwKxa3JpjXFJZrhQ==}
@@ -1305,13 +1304,18 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/module-builder@0.3.1:
-    resolution: {integrity: sha512-qH/F3SgIE4mobpAfJ6D9c6IqIrhEsiPM+aSdckyJgRGUbyU8urKqPR0d3DkGanN9mWy5Nk6Fwqon6jNKz97SRA==}
+  /@nuxt/module-builder@0.4.0(@nuxt/kit@3.2.3)(nuxi@3.5.1):
+    resolution: {integrity: sha512-B+UAYgFV1Hkc2ZcD7GaiKZ3SNHhyxFlXzZoBWTc9ulE0Z/+rq6RTa9fNm13BZyGhVhDCl5FN/wF/yYa1O/D2iw==}
     hasBin: true
+    peerDependencies:
+      '@nuxt/kit': ^3.5.0
+      nuxi: ^3.5.0
     dependencies:
+      '@nuxt/kit': 3.2.3(rollup@3.23.0)
       consola: 3.1.0
       mlly: 1.3.0
       mri: 1.2.0
+      nuxi: 3.5.1
       pathe: 1.1.0
       unbuild: 1.2.1
     transitivePeerDependencies:
@@ -9110,7 +9114,6 @@ packages:
       unplugin: 1.3.1
     transitivePeerDependencies:
       - rollup
-    dev: false
 
   /unimport@3.0.4(rollup@3.23.0):
     resolution: {integrity: sha512-eoof/HLiNJcIkVpnqc7sJbzKSLx39J6xTaP7E4ElgVQKeq2t9fPTkvJKcA55IJTaRPkEkDq8kcc/IZPmrypnFg==}
