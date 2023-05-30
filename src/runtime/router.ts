@@ -89,94 +89,109 @@ export default defineNuxtPlugin(async nuxtApp => {
 
   const error = useError()
 
-  const initialLayout = useState<string>('_layout')
-  router.beforeEach(async (to, from) => {
-    to.meta = reactive(to.meta)
-    if (nuxtApp.isHydrating && initialLayout.value && !isReadonly(to.meta.layout)) {
-      to.meta.layout = initialLayout.value as Exclude<PageMeta['layout'], Ref | false>
-    }
-    nuxtApp._processingMiddleware = true
-
-    type MiddlewareDef = string | RouteMiddleware
-    const middlewareEntries = new Set<MiddlewareDef>([
-      ...globalMiddleware,
-      ...nuxtApp._middleware.global,
-    ])
-    for (const component of to.matched) {
-      const componentMiddleware = component.meta.middleware as MiddlewareDef | MiddlewareDef[]
-      if (!componentMiddleware) {
-        continue
+  nuxtApp.hooks.hookOnce('app:mounted', async () => {
+    const initialLayout = useState<string>('_layout')
+    router.beforeEach(async (to, from) => {
+      to.meta = reactive(to.meta)
+      if (nuxtApp.isHydrating && initialLayout.value && !isReadonly(to.meta.layout)) {
+        to.meta.layout = initialLayout.value as Exclude<PageMeta['layout'], Ref | false>
       }
-      if (Array.isArray(componentMiddleware)) {
-        for (const entry of componentMiddleware) {
-          middlewareEntries.add(entry)
-        }
-      } else {
-        middlewareEntries.add(componentMiddleware)
-      }
-    }
+      nuxtApp._processingMiddleware = true
 
-    for (const entry of middlewareEntries) {
-      const middleware =
-        typeof entry === 'string'
-          ? nuxtApp._middleware.named[entry] ||
-            (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
-          : entry
-
-      if (!middleware) {
-        if (process.dev) {
-          throw new Error(
-            `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(namedMiddleware)
-              .map(mw => `'${mw}'`)
-              .join(', ')}.`
-          )
-        }
-        throw new Error(`Unknown route middleware: '${entry}'.`)
-      }
-
-      const result = await callWithNuxt(nuxtApp, middleware, [to, from])
-      if (process.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
-        if (result === false || result instanceof Error) {
-          const error =
-            result ||
-            createError({
-              statusCode: 404,
-              statusMessage: `Page Not Found: ${initialURL}`,
-            })
-          await callWithNuxt(nuxtApp, showError, [error])
-          return false
-        }
-      }
-      if (result || result === false) {
-        return result
-      }
-    }
-  })
-
-  router.afterEach(async to => {
-    delete nuxtApp._processingMiddleware
-
-    if (process.client && !nuxtApp.isHydrating && error.value) {
-      // Clear any existing errors
-      await callWithNuxt(nuxtApp, clearError)
-    }
-    if (to.matched.length === 0) {
-      await callWithNuxt(nuxtApp, showError, [
-        createError({
-          statusCode: 404,
-          fatal: false,
-          statusMessage: `Page not found: ${to.fullPath}`,
-        }),
+      type MiddlewareDef = string | RouteMiddleware
+      const middlewareEntries = new Set<MiddlewareDef>([
+        ...globalMiddleware,
+        ...nuxtApp._middleware.global,
       ])
-    } else if (process.server) {
-      const currentURL = to.fullPath || '/'
-      if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
-        const event = await callWithNuxt(nuxtApp, useRequestEvent)
-        const options = {
-          redirectCode: event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
+      for (const component of to.matched) {
+        const componentMiddleware = component.meta.middleware as MiddlewareDef | MiddlewareDef[]
+        if (!componentMiddleware) {
+          continue
         }
-        await callWithNuxt(nuxtApp, navigateTo, [currentURL, options])
+        if (Array.isArray(componentMiddleware)) {
+          for (const entry of componentMiddleware) {
+            middlewareEntries.add(entry)
+          }
+        } else {
+          middlewareEntries.add(componentMiddleware)
+        }
       }
+
+      for (const entry of middlewareEntries) {
+        const middleware =
+          typeof entry === 'string'
+            ? nuxtApp._middleware.named[entry] ||
+            (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
+            : entry
+
+        if (!middleware) {
+          if (process.dev) {
+            throw new Error(
+              `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(namedMiddleware)
+                .map(mw => `'${mw}'`)
+                .join(', ')}.`
+            )
+          }
+          throw new Error(`Unknown route middleware: '${entry}'.`)
+        }
+
+        const result = await callWithNuxt(nuxtApp, middleware, [to, from])
+        if (process.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
+          if (result === false || result instanceof Error) {
+            const error =
+              result ||
+              createError({
+                statusCode: 404,
+                statusMessage: `Page Not Found: ${initialURL}`,
+              })
+            await callWithNuxt(nuxtApp, showError, [error])
+            return false
+          }
+        }
+        if (result || result === false) {
+          return result
+        }
+      }
+    })
+
+    router.afterEach(async to => {
+      delete nuxtApp._processingMiddleware
+
+      if (process.client && !nuxtApp.isHydrating && error.value) {
+        // Clear any existing errors
+        await callWithNuxt(nuxtApp, clearError)
+      }
+      if (to.matched.length === 0) {
+        await callWithNuxt(nuxtApp, showError, [
+          createError({
+            statusCode: 404,
+            fatal: false,
+            statusMessage: `Page not found: ${to.fullPath}`,
+          }),
+        ])
+      } else if (process.server) {
+        const currentURL = to.fullPath || '/'
+        if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
+          const event = await callWithNuxt(nuxtApp, useRequestEvent)
+          const options = {
+            redirectCode: event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
+          }
+          await callWithNuxt(nuxtApp, navigateTo, [currentURL, options])
+        }
+      }
+    })
+
+    try {
+      if (process.client) {
+        await router.replace({
+          ...router.resolve(initialURL),
+          name: undefined, // #4920, #4982
+          force: true
+        })
+      }
+    } catch (error: any) {
+      // We'll catch middleware errors or deliberate exceptions here
+      await nuxtApp.runWithContext(() => showError(error))
     }
   })
 
