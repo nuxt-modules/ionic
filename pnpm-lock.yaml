@@ -121,8 +121,8 @@ importers:
   docs:
     devDependencies:
       '@nuxt-themes/docus':
-        specifier: 1.12.0
-        version: 1.12.0(nuxt@3.5.2)(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4)
+        specifier: 1.12.3
+        version: 1.12.3(nuxt@3.5.2)(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4)
       '@nuxtjs/plausible':
         specifier: 0.2.1
         version: 0.2.1(rollup@3.23.0)
@@ -1097,14 +1097,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@nuxt-themes/docus@1.12.0(nuxt@3.5.2)(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4):
-    resolution: {integrity: sha512-/YAlsKbyyjxIflFOIO3bKdM/QNsWLNRBXK11CTXod8zBlJe7lL/XqtNmbtqoNyQ+WumnkfVRA4UyKnu4W/Ya9w==}
+  /@nuxt-themes/docus@1.12.3(nuxt@3.5.2)(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4):
+    resolution: {integrity: sha512-qIdBUnwm/5OEhKtFJ3of+C5HEZzOU/wFx9CuY+Y3jdZVVJcDGjryLY+I1R/N9U+KuS32QevzAY9vJrdJNf8u9A==}
     dependencies:
       '@nuxt-themes/elements': 0.9.4(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4)
       '@nuxt-themes/tokens': 1.9.1(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4)
       '@nuxt-themes/typography': 0.11.0(postcss@8.4.24)(rollup@3.23.0)(vue@3.3.4)
       '@nuxt/content': 2.6.0(rollup@3.23.0)
-      '@nuxthq/studio': 0.12.1(rollup@3.23.0)
+      '@nuxthq/studio': 0.13.2(rollup@3.23.0)
       '@vueuse/nuxt': 10.1.2(nuxt@3.5.2)(rollup@3.23.0)(vue@3.3.4)
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -1419,8 +1419,8 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxthq/studio@0.12.1(rollup@3.23.0):
-    resolution: {integrity: sha512-g9GV8JkQqqYLtP+gsNtPr4fh49jc3eIdAB2ZfiudZKkFdW0BxtT/xPx8RjNYQwyInKssDDB26zzYrRYH9hhHCQ==}
+  /@nuxthq/studio@0.13.2(rollup@3.23.0):
+    resolution: {integrity: sha512-lSjMDSq0yxX3I3O8EVJWoU+kA9iEwUuTS1sZfyha625FhiU2qDIGGkc7gEeA1ubBNeZmJMXTl2hIauxOVTSfgQ==}
     dependencies:
       '@nuxt/kit': 3.5.2(rollup@3.23.0)
       defu: 6.1.2
@@ -2134,7 +2134,7 @@ packages:
       '@vue/shared': 3.3.4
       estree-walker: 2.0.2
       magic-string: 0.30.0
-      postcss: 8.4.23
+      postcss: 8.4.24
       source-map-js: 1.0.2
     dev: true
 
@@ -7580,15 +7580,6 @@ packages:
 
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
-    dev: true
-
-  /postcss@8.4.23:
-    resolution: {integrity: sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
     dev: true
 
   /postcss@8.4.24:
