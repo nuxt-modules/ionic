@@ -136,8 +136,8 @@ importers:
         specifier: 5.0.4
         version: 5.0.4(@capacitor/core@5.0.0)
       '@capacitor/filesystem':
-        specifier: 5.0.2
-        version: 5.0.2(@capacitor/core@5.0.0)
+        specifier: 5.0.4
+        version: 5.0.4(@capacitor/core@5.0.0)
       '@capacitor/storage':
         specifier: 1.2.5
         version: 1.2.5(@capacitor/core@5.0.0)
@@ -478,8 +478,8 @@ packages:
     dependencies:
       tslib: 2.4.0
 
-  /@capacitor/filesystem@5.0.2(@capacitor/core@5.0.0):
-    resolution: {integrity: sha512-seAyASEPhHzpJRap+zZRzvcY+R4LSgMgiKCzen8aReGM5+l6ZFENnzCIeHL4ib5HEMMI4s/sbPGpcwpMndfDdA==}
+  /@capacitor/filesystem@5.0.4(@capacitor/core@5.0.0):
+    resolution: {integrity: sha512-dsmy8Hz19+SMI5hwTzHto3TXT3ckbgCJ5kfI4oel73yyn3G7zjdKZuHoZRINoX1BbFNSZryzpbMQ69lSOLCpnQ==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
