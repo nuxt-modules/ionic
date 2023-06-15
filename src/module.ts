@@ -155,6 +155,29 @@ export default defineNuxtModule<ModuleOptions>({
       })
     )
 
+    if (nuxt.options._generate) {
+      nuxt.hook('nitro:config', config => {
+        config.prerender ||= {}
+        config.prerender.routes ||= []
+        config.prerender.routes.push('/200.html')
+      })
+
+      // Ensure there is an index.html file present when doing static file generation
+      let publicFolder: string
+      nuxt.hook('nitro:init', nitro => {
+        publicFolder = nitro.options.output.publicDir
+      })
+      
+      nuxt.hook('close', async () => {
+        const indexFile = join(publicFolder, 'index.html')
+        const fallbackFile = join(publicFolder, '200.html')
+        
+        if (!existsSync(indexFile) && existsSync(fallbackFile)) {
+          await fsp.copyFile(fallbackFile, indexFile)
+        }
+      })
+    }
+
     const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
 
     // Add Ionic Core CSS
