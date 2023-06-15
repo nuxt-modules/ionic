@@ -121,13 +121,15 @@ export default defineNuxtPlugin(async nuxtApp => {
         const middleware =
           typeof entry === 'string'
             ? nuxtApp._middleware.named[entry] ||
-            (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
+              (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
             : entry
 
         if (!middleware) {
           if (process.dev) {
             throw new Error(
-              `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(namedMiddleware)
+              `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(
+                namedMiddleware
+              )
                 .map(mw => `'${mw}'`)
                 .join(', ')}.`
             )
@@ -174,7 +176,8 @@ export default defineNuxtPlugin(async nuxtApp => {
         if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
           const event = await callWithNuxt(nuxtApp, useRequestEvent)
           const options = {
-            redirectCode: event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
+            redirectCode:
+              event.node.res.statusCode !== 200 ? event.node.res.statusCode || 302 : 302,
           }
           await callWithNuxt(nuxtApp, navigateTo, [currentURL, options])
         }
@@ -186,7 +189,7 @@ export default defineNuxtPlugin(async nuxtApp => {
         await router.replace({
           ...router.resolve(initialURL),
           name: undefined, // #4920, #4982
-          force: true
+          force: true,
         })
       }
     } catch (error: any) {

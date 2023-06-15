@@ -179,11 +179,11 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.hook('nitro:init', nitro => {
         publicFolder = nitro.options.output.publicDir
       })
-      
+
       nuxt.hook('close', async () => {
         const indexFile = join(publicFolder, 'index.html')
         const fallbackFile = join(publicFolder, '200.html')
-        
+
         if (!existsSync(indexFile) && existsSync(fallbackFile)) {
           await fsp.copyFile(fallbackFile, indexFile)
         }
