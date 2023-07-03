@@ -37,7 +37,7 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "pnpm nuxt-module-build --stub && nuxi prepare playground",
     "docs:dev": "nuxi dev docs",
-    "docs:build": "nuxi generate docs",
+    "docs:build": "nuxi build docs",
     "lint": "pnpm lint:all:eslint && pnpm lint:all:prettier",
     "lint:all:eslint": "pnpm lint:eslint --ext .ts,.js,.mjs,.cjs .",
     "lint:all:prettier": "pnpm lint:prettier \"{src,test}/**/*.{js,json,ts}\"",
