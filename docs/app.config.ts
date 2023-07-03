@@ -12,6 +12,9 @@ export default defineAppConfig({
       alt: 'Nuxt Ionic module.',
     },
     github: {
+      owner: 'nuxt-modules',
+      repo: 'ionic',
+      branch: 'main',
       root: 'docs/content',
       edit: true,
     },
