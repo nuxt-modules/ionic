@@ -113,7 +113,7 @@ export default defineNuxtModule<ModuleOptions>({
       getContents: () => `export default ${JSON.stringify(options.config)}`,
     })
 
-    // Set up Ionic config file
+    // Create an Ionic config file if it doesn't exist yet
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
     if (!existsSync(ionicConfigPath)) {
       await fsp.writeFile(
