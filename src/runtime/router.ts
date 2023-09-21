@@ -69,9 +69,7 @@ export default defineNuxtPlugin(async nuxtApp => {
   router.afterEach((to, from) => {
     // We won't trigger suspense if the component is reused between routes
     // so we need to update the route manually
-    if (to.matched[0]?.components?.default === from.matched[0]?.components?.default) {
-      syncCurrentRoute()
-    }
+    syncCurrentRoute()
   })
 
   // https://github.com/vuejs/router/blob/main/packages/router/src/router.ts#L1225-L1233
