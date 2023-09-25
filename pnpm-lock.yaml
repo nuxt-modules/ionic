@@ -118,8 +118,8 @@ importers:
         specifier: 1.14.6
         version: 1.14.6(nuxt@3.6.5)(postcss@8.4.27)(rollup@3.28.0)(vue@3.3.4)
       '@nuxtjs/plausible':
-        specifier: 0.2.1
-        version: 0.2.1(rollup@3.28.0)
+        specifier: 0.2.3
+        version: 0.2.3(rollup@3.28.0)
       nuxt:
         specifier: 3.6.5
         version: 3.6.5(@types/node@20.5.9)(eslint@8.47.0)(rollup@3.28.0)(typescript@5.1.6)
@@ -1699,8 +1699,8 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/plausible@0.2.1(rollup@3.28.0):
-    resolution: {integrity: sha512-1AyV9woFeZKBhwYy05S7NBk4jeAXzWcF/SIK/S/GZ8C86G8x7f2hR2eJi9FRRQYGwHutBx2guU4tZAW4J71Azg==}
+  /@nuxtjs/plausible@0.2.3(rollup@3.28.0):
+    resolution: {integrity: sha512-HGZA70ad6IgaP0bN2N3sEsBxURZfUb8HMMxQ7s/Iqw1U8snBsByAEaIxD0eafWLOvwNckHMTYzCIl+Xs6ZiXSA==}
     dependencies:
       '@nuxt/kit': 3.6.5(rollup@3.28.0)
       defu: 6.1.2
