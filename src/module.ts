@@ -115,7 +115,6 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     // Create an Ionic config file if it doesn't exist yet
-    // Create an Ionic config file if it doesn't exist yet
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
     if (!existsSync(ionicConfigPath)) {
       // Look for any `capacitor.config.{json,js,ts}` and load it
