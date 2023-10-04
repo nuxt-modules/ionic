@@ -107,6 +107,9 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
+    // Disable payload extraction, otherwise it will break the non-SSR build
+    nuxt.options.experimental.payloadExtraction = false
+
     // Inject options for the Ionic Vue plugin as a virtual module
     addTemplate({
       filename: 'ionic/vue-config.mjs',
