@@ -115,8 +115,8 @@ importers:
   docs:
     devDependencies:
       '@nuxt-themes/docus':
-        specifier: 1.14.6
-        version: 1.14.6(nuxt@3.6.5)(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4)
+        specifier: 1.15.0
+        version: 1.15.0(nuxt@3.6.5)(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4)
       '@nuxtjs/plausible':
         specifier: 0.2.3
         version: 0.2.3(rollup@3.29.4)
@@ -1522,14 +1522,14 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nuxt-themes/docus@1.14.6(nuxt@3.6.5)(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4):
-    resolution: {integrity: sha512-tkSG7j0jhVo53wEpK9V48hIvaK0XEzVU64hXhFfnIMv6LJu99cKOC//boebPbN9qLbJmkBdo4IAIJ0tN5MD0qw==}
+  /@nuxt-themes/docus@1.15.0(nuxt@3.6.5)(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4):
+    resolution: {integrity: sha512-V2kJ5ecGUxXcEovXeQkJBPYfQwjmjaxB5fnl2XaQV+S2Epcn+vhPWShSlL6/WXzLPiAkQFdwbBj9xedTvXgjkw==}
     dependencies:
       '@nuxt-themes/elements': 0.9.5(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4)
       '@nuxt-themes/tokens': 1.9.1(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4)
       '@nuxt-themes/typography': 0.11.0(postcss@8.4.31)(rollup@3.29.4)(vue@3.3.4)
       '@nuxt/content': 2.8.5(rollup@3.29.4)(vue@3.3.4)
-      '@nuxthq/studio': 0.13.4(rollup@3.29.4)
+      '@nuxthq/studio': 1.0.1(rollup@3.29.4)
       '@vueuse/integrations': 10.5.0(focus-trap@7.5.3)(fuse.js@6.6.2)(vue@3.3.4)
       '@vueuse/nuxt': 10.5.0(nuxt@3.6.5)(rollup@3.29.4)(vue@3.3.4)
       focus-trap: 7.5.3
@@ -1845,8 +1845,8 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxthq/studio@0.13.4(rollup@3.29.4):
-    resolution: {integrity: sha512-+Jn0iN6TvRTTtTBX4qXWhtOMLL4rsyUIX3/9HM+eBAwr5/cELLw3RuI1tgp942QteTi7PvI5Av4nEi6BlLBr+A==}
+  /@nuxthq/studio@1.0.1(rollup@3.29.4):
+    resolution: {integrity: sha512-7geTulbJ2ZEhgtoBHZDxbWrorNT7nZiAwXOoGtjciCrsnJhuQiHiQDq/007yvvvz5tN/sDZBaxn8glct6pFzgg==}
     dependencies:
       '@nuxt/kit': 3.6.5(rollup@3.29.4)
       defu: 6.1.2
