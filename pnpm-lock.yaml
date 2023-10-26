@@ -15,20 +15,20 @@ importers:
   .:
     dependencies:
       '@capacitor/cli':
-        specifier: ^5.0.4
-        version: 5.0.4
+        specifier: ^5.5.1
+        version: 5.5.1
       '@capacitor/core':
-        specifier: ^5.0.4
-        version: 5.0.4
+        specifier: ^5.5.1
+        version: 5.5.1
       '@ionic/cli':
-        specifier: ^7.0.1
-        version: 7.0.1
+        specifier: ^7.1.1
+        version: 7.1.1
       '@ionic/vue':
-        specifier: ^7.0.1
-        version: 7.0.1
+        specifier: ^7.5.2
+        version: 7.5.2
       '@ionic/vue-router':
-        specifier: ^7.0.1
-        version: 7.0.1
+        specifier: ^7.5.2
+        version: 7.5.2
       '@kevinmarrec/nuxt-pwa':
         specifier: ^0.17.0
         version: 0.17.0
@@ -36,8 +36,8 @@ importers:
         specifier: 3.6.5
         version: 3.6.5(rollup@3.29.4)
       ionicons:
-        specifier: ^7.0.0
-        version: 7.0.0
+        specifier: ^7.2.1
+        version: 7.2.1
       pathe:
         specifier: ^1.1.1
         version: 1.1.1
@@ -128,13 +128,13 @@ importers:
     devDependencies:
       '@capacitor/camera':
         specifier: 5.0.7
-        version: 5.0.7(@capacitor/core@5.0.4)
+        version: 5.0.7(@capacitor/core@5.5.1)
       '@capacitor/filesystem':
-        specifier: 5.0.5
-        version: 5.0.5(@capacitor/core@5.0.4)
+        specifier: 5.1.4
+        version: 5.1.4(@capacitor/core@5.5.1)
       '@capacitor/storage':
         specifier: 1.2.5
-        version: 1.2.5(@capacitor/core@5.0.4)
+        version: 1.2.5(@capacitor/core@5.5.1)
       '@nuxtjs/ionic':
         specifier: link:..
         version: link:..
@@ -431,16 +431,16 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@capacitor/camera@5.0.7(@capacitor/core@5.0.4):
+  /@capacitor/camera@5.0.7(@capacitor/core@5.5.1):
     resolution: {integrity: sha512-1Wk3Dk0UhhNHdBB07UrPvUOSL7Wi5gFZRyLY1LZL2awt34iqy2cnajtfJplFmEZHk8lD0i7NAl3HbkWm4td4OQ==}
     peerDependencies:
       '@capacitor/core': ^5.0.0
     dependencies:
-      '@capacitor/core': 5.0.4
+      '@capacitor/core': 5.5.1
     dev: true
 
-  /@capacitor/cli@5.0.4:
-    resolution: {integrity: sha512-ALzAZlU1L0lwrxtBcvYeu6tFt5i3cLglQdsbohGLqAhipMWW/QNuafIJshxMMR8lMeBAEVYizdDOxEUFHcnWOQ==}
+  /@capacitor/cli@5.5.1:
+    resolution: {integrity: sha512-/oGd2IIc+k1H/fc7tUzP7vqMtZi0gNcJ4/4wUE2kzAnETxxxHXMM/2V62KfjCby/OOAzJbtI7n5OPlnWE9un1A==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -465,26 +465,26 @@ packages:
       - supports-color
     dev: false
 
-  /@capacitor/core@5.0.4:
-    resolution: {integrity: sha512-BFvziz9jM87pLHW2sXPNIzwrdmI5mAP0tBsBHgXoCO2+wVdpvIMYCpcst5BuTULaMz5JBFZZ6g6nqwgfs+SMCA==}
+  /@capacitor/core@5.5.1:
+    resolution: {integrity: sha512-VG6Iv8Q7ZAbvjodxpvjcSe0jfxUwZXnvjbi93ehuJ6eYP8U926qLSXyrT/DToZq+F6v/HyGyVgn3mrE/9jW2Tg==}
     dependencies:
       tslib: 2.6.2
 
-  /@capacitor/filesystem@5.0.5(@capacitor/core@5.0.4):
-    resolution: {integrity: sha512-7byHHMytarU3gLfLdMn1INNBFr7SRh362ZLDayppg3xm5/8iyCKiNRGoSDV5/IdCEzEaC21mza+foWD9/LFN2Q==}
+  /@capacitor/filesystem@5.1.4(@capacitor/core@5.5.1):
+    resolution: {integrity: sha512-10EM1KvFMs+pTzxkcflspzxBWcX9sOnS9nTP5Afjr5hn4OxLrwTFySw2Z12Uv6jdN4OnhY3jXtDKXPljXvXILg==}
     peerDependencies:
-      '@capacitor/core': ^5.0.0
+      '@capacitor/core': ^5.1.1
     dependencies:
-      '@capacitor/core': 5.0.4
+      '@capacitor/core': 5.5.1
     dev: true
 
-  /@capacitor/storage@1.2.5(@capacitor/core@5.0.4):
+  /@capacitor/storage@1.2.5(@capacitor/core@5.5.1):
     resolution: {integrity: sha512-pWhnw4U7wN/zFV4lA4BLMypSufTktCbk548Yk4whSb0KAq3R0mLfSubRIHkGdcPqQWCsM6g/zUuszurhz6ncWQ==}
     deprecated: package has been renamed to @capacitor/preferences
     peerDependencies:
       '@capacitor/core': ^3.0.0
     dependencies:
-      '@capacitor/core': 5.0.4
+      '@capacitor/core': 5.5.1
     dev: true
 
   /@cloudflare/kv-asset-handler@0.3.0:
@@ -1233,8 +1233,8 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/cli@7.0.1:
-    resolution: {integrity: sha512-MagrUrjbcgNxpazS8ly7A8ltbzQhYgvjH7TlZq5BFUYy/fQvAUE/tsKd/DjgzCohBM8pfpmbqH5cG7ZSPZYpGg==}
+  /@ionic/cli@7.1.1:
+    resolution: {integrity: sha512-Av9vaFGtOu6PQvKlBFUSMk+XWGWsUDWF9ZeQQ/jcfjYMv1u7BcvUNyw84hnelk/TDz4iWVooO7HFKpTGKkz/0g==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -1268,11 +1268,11 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/core@7.0.1:
-    resolution: {integrity: sha512-RK69pJ+2e5gLM4eASR2vccPQibIz+Lsc1uHql61lV8Xghb7+usYdeSXUvmn2JL3hkbSMt6JxKCTLfQjFJc+d8Q==}
+  /@ionic/core@7.5.2:
+    resolution: {integrity: sha512-0O8YgaE7CzrhDLGpnNq2Ia4bR+qFE1uHJHafoNWhoTXkydNnqSMZlxMCvtSetfv9bwLic93lcXYNoZ8I8zV3XA==}
     dependencies:
-      '@stencil/core': 3.4.2
-      ionicons: 7.1.2
+      '@stencil/core': 4.6.0
+      ionicons: 7.2.1
       tslib: 2.6.2
     dev: false
 
@@ -1375,17 +1375,17 @@ packages:
       - supports-color
     dev: false
 
-  /@ionic/vue-router@7.0.1:
-    resolution: {integrity: sha512-eSJjb1tjUpXuE7uLg2SOvornBdAVeZbCUVWX15nlCpyE6CbVn7D7Vq+D4BiBJRCaT66Nhzjw9Qpmfz8Lmze/xw==}
+  /@ionic/vue-router@7.5.2:
+    resolution: {integrity: sha512-JK25DzqiEHk+u4rX+GlKoctTNNr7Ups8OBrX0XnBsmyHxNq0EI2B3MbhUbnEP6wF9MzAK7ReaV57Bf7CdfZoFA==}
     dependencies:
-      '@ionic/vue': 7.0.1
+      '@ionic/vue': 7.5.2
     dev: false
 
-  /@ionic/vue@7.0.1:
-    resolution: {integrity: sha512-5z3yd5y9lpq4NmPdOCM5rv+ltMwnMl3scCjTYjySsbi5tdq72VO0sk18QOc7xXkcxBRelUQbrCXG8q3Env4z7Q==}
+  /@ionic/vue@7.5.2:
+    resolution: {integrity: sha512-U0JYDF6nSo0+j5S1BlVW0EEcpBGWzLV1jhZmda72E4D/ol5yYFJldcJJ1rw4wkK+Q1zifRD5GRJljfcxbXl+mA==}
     dependencies:
-      '@ionic/core': 7.0.1
-      ionicons: 7.0.0
+      '@ionic/core': 7.5.2
+      ionicons: 7.2.1
     dev: false
 
   /@ioredis/commands@1.2.0:
@@ -1691,7 +1691,7 @@ packages:
     resolution: {integrity: sha512-B+UAYgFV1Hkc2ZcD7GaiKZ3SNHhyxFlXzZoBWTc9ulE0Z/+rq6RTa9fNm13BZyGhVhDCl5FN/wF/yYa1O/D2iw==}
     hasBin: true
     peerDependencies:
-      '@nuxt/kit': ^3.5.0
+      '@nuxt/kit': 3.6.5
       nuxi: ^3.5.0
     dependencies:
       '@nuxt/kit': 3.6.5(rollup@3.29.4)
@@ -2296,15 +2296,9 @@ packages:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: true
 
-  /@stencil/core@2.22.3:
-    resolution: {integrity: sha512-kmVA0M/HojwsfkeHsifvHVIYe4l5tin7J5+DLgtl8h6WWfiMClND5K3ifCXXI2ETDNKiEk21p6jql3Fx9o2rng==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-    dev: false
-
-  /@stencil/core@3.4.2:
-    resolution: {integrity: sha512-FAUhUVaakCy29nU2GwO/HQBRV1ihPRvncz3PUc8oR+UJLAxGabTmP8PLY7wvHfbw+Cvi4VXfJFTBvdfDu6iKPQ==}
-    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
+  /@stencil/core@4.6.0:
+    resolution: {integrity: sha512-5Y6/fP28aspPDRB+Tz5GuB1jRVGuUEk5/rnyE8ACGcuzEOG+zR0A/IHRJSU3XmCxUlVDKfKoO6St5W84oUCVMA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
     dev: false
 
@@ -5953,16 +5947,10 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /ionicons@7.0.0:
-    resolution: {integrity: sha512-5G9gBxaUfJm0aAr/Kg5Eb/d7d+pMC65yiHjlkGATLrHSZgAzlc9l6ho0dCSdfq3wGef2QiZeNsvyChPVggfXwQ==}
+  /ionicons@7.2.1:
+    resolution: {integrity: sha512-2pvCM7DGVEtbbj48PJzQrCADCQrqjU1nUYX9l9PyEWz3ZfdnLdAouqwPxLdl8tbaF9cE7OZRSlyQD7oLOLnGoQ==}
     dependencies:
-      '@stencil/core': 2.22.3
-    dev: false
-
-  /ionicons@7.1.2:
-    resolution: {integrity: sha512-zZ4njAqSP39H8RRvZhJvkHsv7cBjYE/VfInH218Osf2UVxJITSOutTTd25MW+tAXKN5fheYzclUXUsF55JHUDg==}
-    dependencies:
-      '@stencil/core': 2.22.3
+      '@stencil/core': 4.6.0
     dev: false
 
   /ioredis@5.3.2:

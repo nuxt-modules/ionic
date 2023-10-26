@@ -53,14 +53,14 @@
     "postpublish": "pinst --enable"
   },
   "dependencies": {
-    "@capacitor/cli": "^5.0.4",
-    "@capacitor/core": "^5.0.4",
-    "@ionic/cli": "^7.0.1",
-    "@ionic/vue": "^7.0.1",
-    "@ionic/vue-router": "^7.0.1",
+    "@capacitor/cli": "^5.5.1",
+    "@capacitor/core": "^5.5.1",
+    "@ionic/cli": "^7.1.1",
+    "@ionic/vue": "^7.5.2",
+    "@ionic/vue-router": "^7.5.2",
     "@kevinmarrec/nuxt-pwa": "^0.17.0",
     "@nuxt/kit": "^3.1.0",
-    "ionicons": "^7.0.0",
+    "ionicons": "^7.2.1",
     "pathe": "^1.1.1",
     "pkg-types": "^1.0.3",
     "ufo": "^1.1.2",
@@ -94,5 +94,5 @@
     "@nuxt/schema": "3.6.5",
     "consola": "^3.0.0"
   },
-  "packageManager": "pnpm@8.6.12"
+  "packageManager": "pnpm@8.9.2"
 }
