@@ -6,6 +6,7 @@
 export const IonicHooks = [
   'createAnimation',
   'createGesture',
+  'getIonPageElement',
   'getPlatforms',
   'getTimeGivenProgression',
   'iosTransitionAnimation',
@@ -16,6 +17,7 @@ export const IonicHooks = [
   'onIonViewDidLeave',
   'onIonViewWillEnter',
   'onIonViewWillLeave',
+  'openURL',
   'useBackButton',
   'useIonRouter',
   'useKeyboard',
