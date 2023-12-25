@@ -70,8 +70,8 @@ importers:
         specifier: 0.34.6
         version: 0.34.6(vitest@0.34.6)
       bumpp:
-        specifier: 9.2.0
-        version: 9.2.0
+        specifier: 9.2.1
+        version: 9.2.1
       eslint:
         specifier: 8.55.0
         version: 8.55.0
@@ -1684,7 +1684,7 @@ packages:
       '@nuxt/schema': 3.6.5(rollup@3.29.4)
       c12: 1.4.2
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       globby: 13.2.2
       hash-sum: 2.0.0
       ignore: 5.2.4
@@ -1746,7 +1746,7 @@ packages:
       ci-info: 3.9.0
       consola: 3.2.3
       create-require: 1.1.1
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       dotenv: 16.3.1
       git-url-parse: 13.1.0
@@ -1814,7 +1814,7 @@ packages:
       clear: 0.1.0
       consola: 3.2.3
       cssnano: 6.0.1(postcss@8.4.31)
-      defu: 6.1.2
+      defu: 6.1.3
       esbuild: 0.18.20
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
@@ -1896,7 +1896,7 @@ packages:
       '@types/mdast': 4.0.1
       '@vue/compiler-core': 3.3.4
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       detab: 3.0.2
       github-slugger: 2.0.0
@@ -3385,15 +3385,15 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /bumpp@9.2.0:
-    resolution: {integrity: sha512-pgp7y3jp33QTaXFVDrE0IKuZF5Y8EsIz+ywZXFALW2nD+ZD+4crxJe/GypBQBoJuZrr5dc6TGrR3wl7fk3+C6w==}
+  /bumpp@9.2.1:
+    resolution: {integrity: sha512-mq6/e8+bnIsOMy1VceTLC49WucMIZqd2nYn0e7Et5LhTO3yYQ8OWJsTl/B+uJDs5eywZmJ4Yt1WTEd2HCI35pw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
-      c12: 1.4.2
+      c12: 1.5.1
       cac: 6.7.14
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       prompts: 2.4.2
       semver: 7.5.4
     transitivePeerDependencies:
@@ -3416,7 +3416,7 @@ packages:
     resolution: {integrity: sha512-3IP/MuamSVRVw8W8+CHWAz9gKN4gd+voF2zm/Ln6D25C2RhytEZ1ABbC8MjKr4BR9rhoV1JQ7jJA158LDiTkLg==}
     dependencies:
       chokidar: 3.5.3
-      defu: 6.1.2
+      defu: 6.1.3
       dotenv: 16.3.1
       giget: 1.1.3
       jiti: 1.20.0
@@ -3428,6 +3428,24 @@ packages:
       rc9: 2.1.1
     transitivePeerDependencies:
       - supports-color
+
+  /c12@1.5.1:
+    resolution: {integrity: sha512-BWZRJgDEveT8uI+cliCwvYSSSSvb4xKoiiu5S0jaDbKBopQLQF7E+bq9xKk1pTcG+mUa3yXuFO7bD9d8Lr9Xxg==}
+    dependencies:
+      chokidar: 3.5.3
+      defu: 6.1.3
+      dotenv: 16.3.1
+      giget: 1.1.3
+      jiti: 1.20.0
+      mlly: 1.4.2
+      ohash: 1.1.3
+      pathe: 1.1.1
+      perfect-debounce: 1.0.0
+      pkg-types: 1.0.3
+      rc9: 2.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /cac@6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
@@ -4053,7 +4071,6 @@ packages:
 
   /defu@6.1.3:
     resolution: {integrity: sha512-Vy2wmG3NTkmHNg/kzpuvHhkqeIx3ODWqasgCRbKtbXEN0G+HpEEv9BtJLp7ZG1CZloFaC41Ah3ZFbq7aqCqMeQ==}
-    dev: true
 
   /degenerator@3.0.4:
     resolution: {integrity: sha512-Z66uPeBfHZAHVmue3HPfyKu2Q0rC2cRxbTOsvmU/po5fvvcx27W4mIu9n0PUlQih4oUYvcG1BsbtVv8x7KDOSw==}
@@ -4714,6 +4731,17 @@ packages:
       merge2: 1.4.1
       micromatch: 4.0.5
 
+  /fast-glob@3.3.2:
+    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: true
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
@@ -4982,7 +5010,7 @@ packages:
     hasBin: true
     dependencies:
       colorette: 2.0.20
-      defu: 6.1.2
+      defu: 6.1.3
       https-proxy-agent: 7.0.2
       mri: 1.2.0
       node-fetch-native: 1.4.0
@@ -5130,7 +5158,7 @@ packages:
     resolution: {integrity: sha512-1Ca0orJJlCaiFY68BvzQtP2lKLk46kcLAxVM8JgYbtm2cUg6IY7pjpYgWMwUvDO9QI30N5JAukOKoT8KD3Q0PQ==}
     dependencies:
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       iron-webcrypto: 0.10.1
       radix3: 1.1.0
@@ -5940,7 +5968,7 @@ packages:
       citty: 0.1.4
       clipboardy: 3.0.0
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       get-port-please: 3.1.1
       h3: 1.8.2
       http-shutdown: 1.2.2
@@ -7088,7 +7116,7 @@ packages:
       citty: 0.1.4
       consola: 3.2.3
       cookie-es: 1.0.0
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       dot-prop: 8.0.2
       esbuild: 0.19.4
@@ -8333,7 +8361,7 @@ packages:
   /rc9@2.1.1:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
     dependencies:
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       flat: 5.0.2
 
@@ -8734,7 +8762,7 @@ packages:
   /serve-placeholder@2.0.1:
     resolution: {integrity: sha512-rUzLlXk4uPFnbEaIz3SW8VISTxMuONas88nYWjAWaM2W9VDbt9tyFOr3lq8RhVOFrT3XISoBw8vni5una8qMnQ==}
     dependencies:
-      defu: 6.1.2
+      defu: 6.1.3
     dev: true
 
   /serve-static@1.15.0:
@@ -9514,7 +9542,7 @@ packages:
     resolution: {integrity: sha512-fjYsXYi30It0YCQYqLOcT6fHfMXsBr2hw9XC7ycf8rTG7Xxpe3ZssiqUnD0khrjiZEmkBXWLwm42yCSCH46fMw==}
     dependencies:
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       mime: 3.0.0
       node-fetch-native: 1.4.0
       pathe: 1.1.1
@@ -9791,7 +9819,7 @@ packages:
       '@babel/core': 7.23.0
       '@babel/standalone': 7.23.1
       '@babel/types': 7.23.0
-      defu: 6.1.2
+      defu: 6.1.3
       jiti: 1.20.0
       mri: 1.2.0
       scule: 1.0.0
