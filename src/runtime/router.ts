@@ -12,7 +12,7 @@ import { createError } from 'h3'
 import { withoutBase, isEqual } from 'ufo'
 
 import type { PageMeta, RouteMiddleware } from '#app'
-import type { Plugin } from 'nuxt/app';
+import type { Plugin } from 'nuxt/app'
 import { callWithNuxt, defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt'
 import { showError, clearError, useError } from '#app/composables/error'
 import { useRequestEvent } from '#app/composables/ssr'
