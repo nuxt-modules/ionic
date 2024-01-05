@@ -8,7 +8,7 @@ import {
   addImportsSources,
 } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
-import { readPackageJSON } from 'pkg-types'
+import { loadConfig } from 'c12'
 import { defineUnimportPreset } from 'unimport'
 
 import { runtimeDir } from './utils'
@@ -21,6 +21,7 @@ import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
 
+import type { CapacitorConfig } from '@capacitor/cli'
 import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 
 export interface ModuleOptions {
@@ -116,15 +117,26 @@ export default defineNuxtModule<ModuleOptions>({
     // Create an Ionic config file if it doesn't exist yet
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
     if (!existsSync(ionicConfigPath)) {
+      // Look for any `capacitor.config.{json,js,ts}` and load it
+      const { config } = await loadConfig<CapacitorConfig>({
+        cwd: nuxt.options.rootDir,
+        name: 'capacitor',
+        rcFile: false,
+        jitiOptions: {
+          interopDefault: true,
+          esmResolve: true,
+        },
+      })
+
       await fsp.writeFile(
         ionicConfigPath,
         JSON.stringify(
           {
-            name: await readPackageJSON(nuxt.options.rootDir).then(
-              ({ name }) => name || 'nuxt-ionic-project'
-            ),
-            integrations: {},
-            type: 'vue',
+            name: config?.appName || 'nuxt-ionic-project',
+            integrations: {
+              capacitor: {},
+            },
+            type: 'vue-vite',
           },
           null,
           2
