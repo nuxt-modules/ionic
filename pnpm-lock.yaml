@@ -92,7 +92,7 @@ importers:
         version: 15.2.0
       nuxt:
         specifier: 3.6.5
-        version: 3.6.5(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
+        version: 3.6.5(@capacitor/preferences@5.0.6)(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
       pinst:
         specifier: 3.0.0
         version: 3.0.0
@@ -122,7 +122,7 @@ importers:
         version: 0.2.4(rollup@3.29.4)
       nuxt:
         specifier: 3.6.5
-        version: 3.6.5(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
+        version: 3.6.5(@capacitor/preferences@5.0.6)(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
 
   playground:
     devDependencies:
@@ -132,15 +132,15 @@ importers:
       '@capacitor/filesystem':
         specifier: 5.2.0
         version: 5.2.0(@capacitor/core@5.6.0)
-      '@capacitor/storage':
-        specifier: 1.2.5
-        version: 1.2.5(@capacitor/core@5.6.0)
+      '@capacitor/preferences':
+        specifier: 5.0.6
+        version: 5.0.6(@capacitor/core@5.6.0)
       '@nuxtjs/ionic':
         specifier: link:..
         version: link:..
       nuxt:
         specifier: 3.6.5
-        version: 3.6.5(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
+        version: 3.6.5(@capacitor/preferences@5.0.6)(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
 
 packages:
 
@@ -478,11 +478,10 @@ packages:
       '@capacitor/core': 5.6.0
     dev: true
 
-  /@capacitor/storage@1.2.5(@capacitor/core@5.6.0):
-    resolution: {integrity: sha512-pWhnw4U7wN/zFV4lA4BLMypSufTktCbk548Yk4whSb0KAq3R0mLfSubRIHkGdcPqQWCsM6g/zUuszurhz6ncWQ==}
-    deprecated: package has been renamed to @capacitor/preferences
+  /@capacitor/preferences@5.0.6(@capacitor/core@5.6.0):
+    resolution: {integrity: sha512-aDe4wGTVSAIue6XXdUFgyz7SGszxK/Ptt/iWTydMpzc1PlZXw1XTTnciM+S+SLLNZFzXlkpXT3wMnh9t0DojUA==}
     peerDependencies:
-      '@capacitor/core': ^3.0.0
+      '@capacitor/core': ^5.0.0
     dependencies:
       '@capacitor/core': 5.6.0
     dev: true
@@ -1694,7 +1693,7 @@ packages:
       socket.io-client: 4.7.2
       ufo: 1.3.2
       unist-util-stringify-position: 4.0.0
-      unstorage: 1.9.0
+      unstorage: 1.9.0(@capacitor/preferences@5.0.6)
       ws: 8.14.2
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -3119,7 +3118,7 @@ packages:
       '@vueuse/core': 10.5.0(vue@3.4.7)
       '@vueuse/metadata': 10.5.0
       local-pkg: 0.5.0
-      nuxt: 3.6.5(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
+      nuxt: 3.6.5(@capacitor/preferences@5.0.6)(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3)
       vue-demi: 0.14.6(vue@3.4.7)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -7113,7 +7112,7 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: false
 
-  /nitropack@2.6.3:
+  /nitropack@2.6.3(@capacitor/preferences@5.0.6):
     resolution: {integrity: sha512-k1GC9GiIrjAmLx48g52/38u6OfWVUAhvWtxm5G4vFUaGAt82WPVl+P5S9YXMRXgNtUnTFfzC4Vfp5TUEG0i7zQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
@@ -7185,7 +7184,7 @@ packages:
       unctx: 2.3.1
       unenv: 1.7.4
       unimport: 3.7.1(rollup@3.29.4)
-      unstorage: 1.9.0
+      unstorage: 1.9.0(@capacitor/preferences@5.0.6)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -7359,7 +7358,7 @@ packages:
       - vue
     dev: true
 
-  /nuxt@3.6.5(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3):
+  /nuxt@3.6.5(@capacitor/preferences@5.0.6)(@types/node@20.10.7)(eslint@8.56.0)(rollup@3.29.4)(typescript@5.3.3):
     resolution: {integrity: sha512-0A7V8B1HrIXX9IlqPc2w+5ZPXi+7MYa9QVhtuGYuLvjRKoSFANhCoMPRP6pKdoxigM1MBxhLue2VmHA/VbtJCw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -7400,7 +7399,7 @@ packages:
       local-pkg: 0.4.3
       magic-string: 0.30.5
       mlly: 1.4.2
-      nitropack: 2.6.3
+      nitropack: 2.6.3(@capacitor/preferences@5.0.6)
       nuxi: 3.6.5
       nypm: 0.2.2
       ofetch: 1.3.3
@@ -9678,7 +9677,7 @@ packages:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
 
-  /unstorage@1.9.0:
+  /unstorage@1.9.0(@capacitor/preferences@5.0.6):
     resolution: {integrity: sha512-VpD8ZEYc/le8DZCrny3bnqKE4ZjioQxBRnWE+j5sGNvziPjeDlaS1NaFFHzl/kkXaO3r7UaF8MGQrs14+1B4pQ==}
     peerDependencies:
       '@azure/app-configuration': ^1.4.1
@@ -9716,6 +9715,7 @@ packages:
       idb-keyval:
         optional: true
     dependencies:
+      '@capacitor/preferences': 5.0.6(@capacitor/core@5.6.0)
       anymatch: 3.1.3
       chokidar: 3.5.3
       destr: 2.0.1

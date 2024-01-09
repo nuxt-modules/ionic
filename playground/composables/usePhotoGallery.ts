@@ -1,14 +1,14 @@
 import { Capacitor } from '@capacitor/core'
 import { Camera, CameraSource, CameraResultType, Photo } from '@capacitor/camera'
 import { Filesystem, Directory } from '@capacitor/filesystem'
-import { Storage } from '@capacitor/storage'
+import { Preferences } from '@capacitor/preferences'
 
 export function usePhotoGallery() {
   const photos = ref<UserPhoto[]>([])
   const PHOTO_STORAGE = 'photos'
 
   const loadSaved = async () => {
-    const photoList = await Storage.get({ key: PHOTO_STORAGE })
+    const photoList = await Preferences.get({ key: PHOTO_STORAGE })
     const photosInStorage = photoList.value ? JSON.parse(photoList.value) : []
 
     // If running on the web...
@@ -100,7 +100,7 @@ export function usePhotoGallery() {
   }
 
   const cachePhotos = () => {
-    Storage.set({
+    Preferences.set({
       key: PHOTO_STORAGE,
       value: JSON.stringify(photos.value),
     })
