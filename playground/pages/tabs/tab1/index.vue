@@ -23,7 +23,7 @@ definePageMeta({
 
       <ion-list>
         <ion-item>
-          <ion-checkbox slot="start" />
+          <ion-checkbox slot="start" aria-label="Mark idea complete" />
           <ion-label>
             <h1>Create Idea</h1>
             <ion-note>Run Idea By Brandy</ion-note>
