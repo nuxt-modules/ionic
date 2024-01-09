@@ -1,10 +1,5 @@
 {
   "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "types": [
-      "@kevinmarrec/nuxt-pwa"
-    ]
-  },
   "exclude": [
     "docs",
     "playground"
