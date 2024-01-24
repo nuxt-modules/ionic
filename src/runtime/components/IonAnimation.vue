@@ -2,6 +2,9 @@
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import {
   createAnimation,
+} from '@ionic/vue'
+
+import type {
   Animation,
   AnimationDirection,
   AnimationFill,

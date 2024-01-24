@@ -16,19 +16,30 @@ import { IonicBuiltInComponents, IonicHooks } from './imports'
 
 import { setupUtilityComponents } from './parts/components'
 import { useCSSSetup } from './parts/css'
-import { setupIcons } from './parts/icons'
+import { setupIonIcons } from './parts/icons/ionicons'
+import { setupIonicIconsSvg } from './parts/icons/ionic-icons-svg'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
 
 import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 
+export interface ModuleOptionIconSvg {
+  enable?: boolean
+  directoryAsNamespace?: boolean
+}
+
+export interface ModuleOptionIcon {
+  ionicons?: boolean
+  svg?: ModuleOptionIconSvg
+}
+
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
     pwa?: boolean
     meta?: boolean
-    icons?: boolean
+    icons?: ModuleOptionIcon
   }
   css?: {
     core?: boolean
@@ -94,7 +105,13 @@ export default defineNuxtModule<ModuleOptions>({
       meta: true,
       pwa: true,
       router: true,
-      icons: true,
+      icons: {
+        ionicons: true,
+        svg: {
+          enable: false,
+          directoryAsNamespace: true,
+        },
+      },
     },
     css: {
       core: true,
@@ -206,8 +223,13 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Add auto-imported icons
-    if (options.integrations?.icons) {
-      await setupIcons()
+    if (options.integrations?.icons?.ionicons) {
+      await setupIonIcons()
+    }
+
+    // Add auto-imported custom icons
+    if (options.integrations?.icons?.svg?.enable) {
+      setupIonicIconsSvg(options.integrations?.icons?.svg)
     }
 
     if (options.integrations?.meta) {
