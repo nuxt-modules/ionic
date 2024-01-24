@@ -19,6 +19,7 @@
 
 - Zero-config required
 - Auto-import Ionic components, composables and icons
+- Support SVG Icons
 - Ionic Router integration
 - Pre-render routes
 - Mobile meta tags
