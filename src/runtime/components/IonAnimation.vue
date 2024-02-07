@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
-import {
-  createAnimation,
+
+import { createAnimation } from '@ionic/vue'
+import type {
   Animation,
   AnimationDirection,
   AnimationFill,
