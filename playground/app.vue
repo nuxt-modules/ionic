@@ -5,6 +5,5 @@
   </template>
   
   <script setup>
-  import '@ionic/vue/css/core.css';
   </script>
   
