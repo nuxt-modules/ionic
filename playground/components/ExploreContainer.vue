@@ -1,5 +1,10 @@
 <script setup lang="ts">
-defineProps({ name: String })
+defineProps<{ 
+    name: string 
+}>();
+useIonHead({
+  title: 'Explore Container',
+});
 </script>
 
 <template>

@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useIonHead({
+  title: 'Page Two - Tab 3',
+})
+</script>
+
 <template>
   <ion-page>
     <ion-header>

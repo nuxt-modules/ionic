@@ -6,16 +6,16 @@ import {
   addPlugin,
   addTemplate,
   addImportsSources,
+  createResolver,
 } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
-import { runtimeDir } from './utils'
 import { IonicBuiltInComponents, IonicHooks } from './imports'
 
 import { setupUtilityComponents } from './parts/components'
-import { useCSSSetup } from './parts/css'
+import { useCSSSetup } from './parts/css';
 import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
@@ -104,7 +104,9 @@ export default defineNuxtModule<ModuleOptions>({
     config: {},
   },
   async setup(options, nuxt) {
-    nuxt.options.build.transpile.push(runtimeDir)
+    const runtimeDir = createResolver(import.meta.url);
+
+    nuxt.options.build.transpile.push(runtimeDir.resolve('./runtime'))
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
     // Inject options for the Ionic Vue plugin as a virtual module
@@ -133,10 +135,10 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Set up Ionic Core
-    addPlugin(resolve(runtimeDir, 'ionic'))
+    addPlugin(runtimeDir.resolve('./runtime/ionic'))
 
     // Add Nuxt Vue custom utility components
-    setupUtilityComponents()
+    setupUtilityComponents(runtimeDir)
 
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
@@ -148,12 +150,16 @@ export default defineNuxtModule<ModuleOptions>({
     )
 
     // Add auto-imported composables
-    addImportsSources(
+    addImportsSources([
       defineUnimportPreset({
         from: '@ionic/vue',
         imports: [...IonicHooks],
+      }),
+      defineUnimportPreset({
+        from: createResolver(import.meta.url).resolve('./utils'),
+        imports: ['useIonHead']
       })
-    )
+    ])
 
     if (nuxt.options._generate) {
       nuxt.hook('nitro:config', async config => {
@@ -190,7 +196,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     }
 
-    const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
+    const { setupBasic, setupCore, setupUtilities } = useCSSSetup(nuxt)
 
     // Add Ionic Core CSS
     if (options.css?.core) {
@@ -220,7 +226,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Set up Ionic Router integration
     if (options.integrations?.router) {
-      await setupRouter()
+      await setupRouter(runtimeDir)
     }
   },
 })

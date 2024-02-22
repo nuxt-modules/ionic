@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useIonHead({
+  title: "Overlapping - no tabs",
+});
+</script>
+
 <template>
   <ion-page>
     <ion-header>

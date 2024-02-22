@@ -1,7 +1,8 @@
 <script setup lang="ts">
-useHead({
-  title: 'Nuxt Ionic',
-})
+useIonHead({
+  title: 'House Tabs',
+});
+
 </script>
 
 <template>

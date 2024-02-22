@@ -1,5 +1,5 @@
 import { Capacitor } from '@capacitor/core'
-import { Camera, CameraSource, CameraResultType, Photo } from '@capacitor/camera'
+import { Camera, CameraSource, CameraResultType, type Photo } from '@capacitor/camera'
 import { Filesystem, Directory } from '@capacitor/filesystem'
 import { Preferences } from '@capacitor/preferences'
 

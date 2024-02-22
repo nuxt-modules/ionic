@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { actionSheetController } from '@ionic/vue'
-import { UserPhoto } from '~/composables/usePhotoGallery'
-const { photos, takePhoto, deletePhoto } = usePhotoGallery()
+import type { UserPhoto } from '~/composables/usePhotoGallery'
+useIonHead({
+  title: 'Tab 2 - Photos',
+});
+
+const { photos, takePhoto, deletePhoto } = usePhotoGallery();
 
 const showActionSheet = async (photo: UserPhoto) => {
   const actionSheet = await actionSheetController.create({
