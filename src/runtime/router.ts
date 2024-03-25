@@ -38,7 +38,7 @@ export default defineNuxtPlugin({
 
     const history =
       routerOptions.history?.(routerBase) ??
-      (process.client
+      (import.meta.client
         ? routerOptions.hashMode
           ? createWebHashHistory(routerBase)
           : createWebHistory(routerBase)
@@ -46,7 +46,7 @@ export default defineNuxtPlugin({
 
     const routes = routerOptions.routes?.(_routes) ?? _routes
 
-    const initialURL = process.server
+    const initialURL = import.meta.server
       ? nuxtApp.ssrContext!.url
       : createCurrentLocation(routerBase, window.location)
     const router = createRouter({
@@ -129,7 +129,7 @@ export default defineNuxtPlugin({
               : entry
 
           if (!middleware) {
-            if (process.dev) {
+            if (import.meta.dev) {
               throw new Error(
                 `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(
                   namedMiddleware
@@ -142,7 +142,7 @@ export default defineNuxtPlugin({
           }
 
           const result = await callWithNuxt(nuxtApp, middleware, [to, from])
-          if (process.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
+          if (import.meta.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
             if (result === false || result instanceof Error) {
               const error =
                 result ||
@@ -163,7 +163,7 @@ export default defineNuxtPlugin({
       router.afterEach(async to => {
         delete nuxtApp._processingMiddleware
 
-        if (process.client && !nuxtApp.isHydrating && error.value) {
+        if (import.meta.client && !nuxtApp.isHydrating && error.value) {
           // Clear any existing errors
           await callWithNuxt(nuxtApp, clearError)
         }
@@ -175,7 +175,7 @@ export default defineNuxtPlugin({
               statusMessage: `Page not found: ${to.fullPath}`,
             }),
           ])
-        } else if (process.server) {
+        } else if (import.meta.server) {
           const currentURL = to.fullPath || '/'
           if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
             const event = await callWithNuxt(nuxtApp, useRequestEvent)
@@ -189,7 +189,7 @@ export default defineNuxtPlugin({
       })
 
       try {
-        if (process.client) {
+        if (import.meta.client) {
           await router.replace({
             ...router.resolve(initialURL),
             name: undefined, // #4920, #4982
