@@ -156,22 +156,10 @@ export default defineNuxtModule<ModuleOptions>({
     )
 
     if (nuxt.options._generate) {
-      nuxt.hook('nitro:config', async config => {
+      nuxt.hook('nitro:config', config => {
         config.prerender ||= {}
         config.prerender.routes ||= []
         config.prerender.routes.push('/200.html')
-
-        config.output ||= {}
-        if (!config.output.publicDir) {
-          const distDir = resolve(nuxt.options.rootDir, 'dist')
-          const stats = await fsp.lstat(distDir).catch(() => null)
-          if (!stats || !stats.isSymbolicLink()) {
-            config.output.publicDir = distDir
-            if (!existsSync(distDir)) {
-              await fsp.mkdir(distDir, { recursive: true })
-            }
-          }
-        }
       })
 
       // Ensure there is an index.html file present when doing static file generation
