@@ -200,7 +200,8 @@ export default defineNuxtPlugin({
           })
         }
       }
-      catch (error: unknown) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      catch (error: any) {
         // We'll catch middleware errors or deliberate exceptions here
         await nuxtApp.runWithContext(() => showError(error))
       }
