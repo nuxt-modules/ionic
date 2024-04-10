@@ -8,7 +8,6 @@ export const setupRouter = () => {
   const logger = useLogger()
 
   const pagesDirs = nuxt.options._layers.map(layer =>
-
     resolve(layer.config?.srcDir || layer.cwd!, layer.config?.dir?.pages || 'pages'),
   )
 

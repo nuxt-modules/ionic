@@ -126,6 +126,7 @@ export default defineNuxtPlugin({
           const middleware
             = typeof entry === 'string'
               ? nuxtApp._middleware.named[entry]
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               || (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
               : entry
 
@@ -199,7 +200,7 @@ export default defineNuxtPlugin({
           })
         }
       }
-      catch (error: any) {
+      catch (error: unknown) {
         // We'll catch middleware errors or deliberate exceptions here
         await nuxtApp.runWithContext(() => showError(error))
       }
