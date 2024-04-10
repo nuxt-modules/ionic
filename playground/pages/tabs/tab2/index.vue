@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { actionSheetController } from '@ionic/vue'
-import { UserPhoto } from '~/composables/usePhotoGallery'
+import type { UserPhoto } from '~/composables/usePhotoGallery'
+
 const { photos, takePhoto, deletePhoto } = usePhotoGallery()
 
 const showActionSheet = async (photo: UserPhoto) => {
@@ -39,22 +40,36 @@ const showActionSheet = async (photo: UserPhoto) => {
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Photo Gallery</ion-title>
+          <ion-title size="large">
+            Photo Gallery
+          </ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-grid>
         <ion-row>
-          <ion-col size="6" :key="photo.filepath" v-for="photo in photos">
-            <ion-img :src="photo.webviewPath" @click="showActionSheet(photo)"></ion-img>
+          <ion-col
+            v-for="photo in photos"
+            :key="photo.filepath"
+            size="6"
+          >
+            <ion-img
+              :src="photo.webviewPath"
+              @click="showActionSheet(photo)"
+            />
           </ion-col>
         </ion-row>
       </ion-grid>
 
-      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-        <ion-fab-button @click="takePhoto()">
-          <ion-icon :icon="ioniconsCamera"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
+      <template #fixed>
+        <ion-fab
+          vertical="bottom"
+          horizontal="center"
+        >
+          <ion-fab-button @click="takePhoto()">
+            <ion-icon :icon="ioniconsCamera" />
+          </ion-fab-button>
+        </ion-fab>
+      </template>
     </ion-content>
   </ion-page>
 </template>

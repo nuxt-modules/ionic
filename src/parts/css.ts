@@ -13,7 +13,7 @@ export const useCSSSetup = () => {
     nuxt.options.css.push(
       '@ionic/vue/css/normalize.css',
       '@ionic/vue/css/structure.css',
-      '@ionic/vue/css/typography.css'
+      '@ionic/vue/css/typography.css',
     )
   }
 
@@ -25,7 +25,7 @@ export const useCSSSetup = () => {
       '@ionic/vue/css/text-alignment.css',
       '@ionic/vue/css/text-transformation.css',
       '@ionic/vue/css/flex-utils.css',
-      '@ionic/vue/css/display.css'
+      '@ionic/vue/css/display.css',
     )
   }
 

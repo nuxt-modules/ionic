@@ -11,6 +11,7 @@ import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
+import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 import { runtimeDir } from './utils'
 import { IonicBuiltInComponents, IonicHooks } from './imports'
 
@@ -20,8 +21,6 @@ import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
-
-import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 
 export interface ModuleOptions {
   integrations?: {
@@ -121,14 +120,14 @@ export default defineNuxtModule<ModuleOptions>({
         JSON.stringify(
           {
             name: await readPackageJSON(nuxt.options.rootDir).then(
-              ({ name }) => name || 'nuxt-ionic-project'
+              ({ name }) => name || 'nuxt-ionic-project',
             ),
             integrations: {},
             type: 'vue',
           },
           null,
-          2
-        )
+          2,
+        ),
       )
     }
 
@@ -144,7 +143,7 @@ export default defineNuxtModule<ModuleOptions>({
         name,
         export: name,
         filePath: '@ionic/vue',
-      })
+      }),
     )
 
     // Add auto-imported composables
@@ -152,11 +151,11 @@ export default defineNuxtModule<ModuleOptions>({
       defineUnimportPreset({
         from: '@ionic/vue',
         imports: [...IonicHooks],
-      })
+      }),
     )
 
     if (nuxt.options._generate) {
-      nuxt.hook('nitro:config', async config => {
+      nuxt.hook('nitro:config', async (config) => {
         config.prerender ||= {}
         config.prerender.routes ||= []
         config.prerender.routes.push('/200.html')
@@ -176,7 +175,7 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Ensure there is an index.html file present when doing static file generation
       let publicFolder: string
-      nuxt.hook('nitro:init', nitro => {
+      nuxt.hook('nitro:init', (nitro) => {
         publicFolder = nitro.options.output.publicDir
       })
 
