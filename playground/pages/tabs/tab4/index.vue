@@ -8,7 +8,9 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Animation examples</ion-title>
+          <ion-title size="large">
+            Animation examples
+          </ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -21,18 +23,24 @@
             id="animation1"
             v-slot="{ animation }"
             :duration="2000"
-            :fromTo="[
+            :from-to="[
               { property: 'opacity', fromValue: '1', toValue: '0.2' },
               { property: 'transform', fromValue: 'translateX(0px)', toValue: 'translateX(-50px)' },
             ]"
             fill="forwards"
           >
-            <div class="red-square"></div>
+            <div class="red-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>
@@ -53,12 +61,18 @@
             ]"
             fill="none"
           >
-            <div class="blue-square"></div>
+            <div class="blue-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>
@@ -78,12 +92,18 @@
             ]"
             :iterations="Infinity"
           >
-            <div class="green-square"></div>
+            <div class="green-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>
@@ -101,22 +121,28 @@
               { offset: 0.75, transform: 'scale(1.1)' },
               { offset: 1, transform: 'scale(1)' },
             ]"
-            :beforeStyles="{
+            :before-styles="{
               opacity: 0.5,
             }"
-            :afterClearStyles="['opacity']"
-            :afterStyles="{
+            :after-clear-styles="['opacity']"
+            :after-styles="{
               transform: 'scale(0.9)',
             }"
-            :beforeClearStyles="['transform']"
+            :before-clear-styles="['transform']"
             fill="none"
           >
-            <div class="red-square"></div>
+            <div class="red-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>
@@ -145,12 +171,18 @@
             ]"
             easing="cubic-bezier(.7,.55,0,1.15)"
           >
-            <div class="blue-square"></div>
+            <div class="blue-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>
@@ -173,12 +205,18 @@
             direction="reverse"
             easing="ease-in"
           >
-            <div class="green-square"></div>
+            <div class="green-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">Play</IonButton>
-              <IonButton @click="animation.pause()">Pause</IonButton>
-              <IonButton @click="animation.stop()">Stop</IonButton>
+              <IonButton @click="animation.play()">
+                Play
+              </IonButton>
+              <IonButton @click="animation.pause()">
+                Pause
+              </IonButton>
+              <IonButton @click="animation.stop()">
+                Stop
+              </IonButton>
             </div>
           </IonAnimation>
         </section>

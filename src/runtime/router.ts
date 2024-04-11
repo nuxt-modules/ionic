@@ -11,8 +11,8 @@ import type { RouteLocation, Router } from 'vue-router'
 import { createError } from 'h3'
 import { withoutBase, isEqual } from 'ufo'
 
-import type { PageMeta, RouteMiddleware } from '#app'
 import type { Plugin } from 'nuxt/app'
+import type { PageMeta, RouteMiddleware } from '#app'
 import { callWithNuxt, defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt'
 import { showError, clearError, useError } from '#app/composables/error'
 import { useRequestEvent } from '#app/composables/ssr'
@@ -36,9 +36,9 @@ export default defineNuxtPlugin({
       routerBase += '#'
     }
 
-    const history =
-      routerOptions.history?.(routerBase) ??
-      (process.client
+    const history
+      = routerOptions.history?.(routerBase)
+      ?? (import.meta.client
         ? routerOptions.hashMode
           ? createWebHashHistory(routerBase)
           : createWebHistory(routerBase)
@@ -46,7 +46,7 @@ export default defineNuxtPlugin({
 
     const routes = routerOptions.routes?.(_routes) ?? _routes
 
-    const initialURL = process.server
+    const initialURL = import.meta.server
       ? nuxtApp.ssrContext!.url
       : createCurrentLocation(routerBase, window.location)
     const router = createRouter({
@@ -116,37 +116,39 @@ export default defineNuxtPlugin({
             for (const entry of componentMiddleware) {
               middlewareEntries.add(entry)
             }
-          } else {
+          }
+          else {
             middlewareEntries.add(componentMiddleware)
           }
         }
 
         for (const entry of middlewareEntries) {
-          const middleware =
-            typeof entry === 'string'
-              ? nuxtApp._middleware.named[entry] ||
-                (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
+          const middleware
+            = typeof entry === 'string'
+              ? nuxtApp._middleware.named[entry]
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              || (await namedMiddleware[entry]?.().then((r: any) => r.default || r))
               : entry
 
           if (!middleware) {
-            if (process.dev) {
+            if (import.meta.dev) {
               throw new Error(
                 `Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(
-                  namedMiddleware
+                  namedMiddleware,
                 )
                   .map(mw => `'${mw}'`)
-                  .join(', ')}.`
+                  .join(', ')}.`,
               )
             }
             throw new Error(`Unknown route middleware: '${entry}'.`)
           }
 
           const result = await callWithNuxt(nuxtApp, middleware, [to, from])
-          if (process.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
+          if (import.meta.server || (!nuxtApp.payload.serverRendered && nuxtApp.isHydrating)) {
             if (result === false || result instanceof Error) {
-              const error =
-                result ||
-                createError({
+              const error
+                = result
+                || createError({
                   statusCode: 404,
                   statusMessage: `Page Not Found: ${initialURL}`,
                 })
@@ -160,10 +162,10 @@ export default defineNuxtPlugin({
         }
       })
 
-      router.afterEach(async to => {
+      router.afterEach(async (to) => {
         delete nuxtApp._processingMiddleware
 
-        if (process.client && !nuxtApp.isHydrating && error.value) {
+        if (import.meta.client && !nuxtApp.isHydrating && error.value) {
           // Clear any existing errors
           await callWithNuxt(nuxtApp, clearError)
         }
@@ -175,7 +177,8 @@ export default defineNuxtPlugin({
               statusMessage: `Page not found: ${to.fullPath}`,
             }),
           ])
-        } else if (process.server) {
+        }
+        else if (import.meta.server) {
           const currentURL = to.fullPath || '/'
           if (!isEqual(currentURL, initialURL, { trailingSlash: true })) {
             const event = await callWithNuxt(nuxtApp, useRequestEvent)
@@ -189,14 +192,16 @@ export default defineNuxtPlugin({
       })
 
       try {
-        if (process.client) {
+        if (import.meta.client) {
           await router.replace({
             ...router.resolve(initialURL),
             name: undefined, // #4920, #4982
             force: true,
           })
         }
-      } catch (error: any) {
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      catch (error: any) {
         // We'll catch middleware errors or deliberate exceptions here
         await nuxtApp.runWithContext(() => showError(error))
       }

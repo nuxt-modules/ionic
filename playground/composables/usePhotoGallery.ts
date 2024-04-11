@@ -1,5 +1,6 @@
 import { Capacitor } from '@capacitor/core'
-import { Camera, CameraSource, CameraResultType, Photo } from '@capacitor/camera'
+import type { Photo } from '@capacitor/camera'
+import { Camera, CameraSource, CameraResultType } from '@capacitor/camera'
 import { Filesystem, Directory } from '@capacitor/filesystem'
 import { Preferences } from '@capacitor/preferences'
 
@@ -41,13 +42,14 @@ export const usePhotoGallery = () => {
     // "hybrid" will detect Cordova or Capacitor;
     if (isPlatform('hybrid')) {
       const file = await Filesystem.readFile({
-        // eslint-disable-next-line
+
         path: photo.path!,
       })
       base64Data = file.data
-    } else {
+    }
+    else {
       // Fetch the photo, read as a blob, then convert to base64 format
-      // eslint-disable-next-line
+
       const response = await fetch(photo.webPath!)
       const blob = await response.blob()
       base64Data = (await convertBlobToBase64(blob)) as string
@@ -65,7 +67,8 @@ export const usePhotoGallery = () => {
         filepath: savedFile.uri,
         webviewPath: Capacitor.convertFileSrc(savedFile.uri),
       }
-    } else {
+    }
+    else {
       // Use webPath to display the new image instead of base64 since it's
       // already loaded into memory
       return {
