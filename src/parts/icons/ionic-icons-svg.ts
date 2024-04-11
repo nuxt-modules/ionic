@@ -1,18 +1,20 @@
+import fs from 'node:fs'
 import { defineUnimportPreset } from 'unimport'
 import { useNuxt, addTemplate, addImportsSources } from '@nuxt/kit'
 import { join, resolve, basename, sep } from 'pathe'
 import svgo from 'svgo'
-import fs from 'node:fs'
 import type { ModuleOptionIconSvg } from '../../module'
 
-const getIcons: any = (dir: string) => {
-  const items = fs.readdirSync(dir),
-    files = []
+const getIcons = (dir: string): string[] => {
+  const items = fs.readdirSync(dir)
+  const files: string[] = []
+
   for (const item of items) {
     const pathFile = join(dir, item)
     if (fs.existsSync(pathFile) && fs.lstatSync(pathFile).isDirectory()) {
       files.push(...getIcons(pathFile))
-    } else if (pathFile.endsWith(`.svg`)) {
+    }
+    else if (pathFile.endsWith(`.svg`)) {
       files.push(pathFile)
     }
   }
@@ -22,34 +24,33 @@ const getIcons: any = (dir: string) => {
 export const setupIonicIconsSvg = async (options: ModuleOptionIconSvg) => {
   // init
   const nuxt = useNuxt()
-  const newIcons: any = []
+  const newIcons: Array<{ name: string, path: string }> = []
   const fileNameConfigIonicIcons = 'ionic-icons.ts'
   const pathConfigIonicIcons = resolve(nuxt.options.buildDir, fileNameConfigIonicIcons)
   const pathIonicIcons = join(nuxt?.options?.rootDir, `assets/ionic-icons`)
   if (!fs.existsSync(pathIonicIcons)) {
-    fs.mkdir(pathIonicIcons, { recursive: true }, err => {
+    fs.mkdir(pathIonicIcons, { recursive: true }, (err) => {
       if (err) {
         // note: this does NOT get triggered if the directory already existed
         console.info(
-          'Unfortunately, a problem has occurred. We cannot create the ionic-icons folder. Please create the ionic-icons folder manually in the assets path.'
+          'Unfortunately, a problem has occurred. We cannot create the ionic-icons folder. Please create the ionic-icons folder manually in the assets path.',
         )
       }
     })
   }
   if (fs.existsSync(pathIonicIcons)) {
-    const icons = await getIcons(pathIonicIcons)
+    const icons = getIcons(pathIonicIcons)
 
     // check length
     if (Object.keys(icons).length > 0) {
       for (const icon of icons) {
         let fileName = basename(icon)
         if (options.directoryAsNamespace) {
-          let item = icon.replace(pathIonicIcons, '')
-          item = item.split(sep)
-          item.splice(0, 1)
-          item = item.map((name: string) => name[0].toUpperCase() + name.slice(1)).join('')
-          fileName = item.replace('.svg', '')
-        } else {
+          const segments = icon.replace(pathIonicIcons, '').split(sep)
+          segments.splice(0, 1)
+          fileName = segments.map((name: string) => name[0].toUpperCase() + name.slice(1)).join('').replace('.svg', '')
+        }
+        else {
           fileName = fileName.replace('.svg', '').toUpperCase()
         }
         fileName = fileName
@@ -67,7 +68,7 @@ export const setupIonicIconsSvg = async (options: ModuleOptionIconSvg) => {
 * @author rasool-deldar
 */\n`
       let count = 0
-      await newIcons.forEach(function (newIcon: any) {
+      for (const newIcon of newIcons) {
         fs.readFile(newIcon.path, 'utf8', async (err, data) => {
           if (err) console.log(err)
           const resultSvgo = svgo.optimize(data, {
@@ -100,22 +101,21 @@ export const setupIonicIconsSvg = async (options: ModuleOptionIconSvg) => {
             })
           }
         })
-      })
+      }
     }
   }
   // Generated auto import
   addImportsSources(
     defineUnimportPreset({
       from: pathConfigIonicIcons,
-      // @ts-ignore
-      imports: newIcons.map((icon: any) => ({
+      imports: newIcons.map(icon => ({
         name: icon.name,
         as: 'ionicIconSvg' + icon.name,
       })),
-    })
+    }),
   )
   // builder:watch
-  nuxt.hook('builder:watch', async (event: any, path) => {
+  nuxt.hook('builder:watch', async (_event, path) => {
     if (path.includes('assets/ionic-icons')) {
       await nuxt.callHook('restart')
     }
