@@ -44,12 +44,11 @@
     "lint:eslint": "eslint --fix",
     "prepack": "pnpm build",
     "prepare": "husky install",
-    "prepublishOnly": "pnpm lint && pnpm test && pinst --disable",
+    "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && npm publish && git push --follow-tags",
     "test": "vitest run",
     "test:types": "tsc --noEmit",
-    "postinstall": "husky install",
-    "postpublish": "pinst --enable"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@capacitor/cli": "^5.7.4",
@@ -78,7 +77,6 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "nuxt": "3.9.1",
-    "pinst": "3.0.0",
     "playwright": "1.43.0",
     "typescript": "5.4.5",
     "vitest": "1.4.0",
