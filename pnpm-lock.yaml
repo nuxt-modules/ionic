@@ -28,7 +28,7 @@ importers:
         version: 8.0.1
       '@ionic/vue-router':
         specifier: ^8.0.0
-        version: 8.0.0
+        version: 8.0.1
       '@kevinmarrec/nuxt-pwa':
         specifier: ^0.17.0
         version: 0.17.0
@@ -833,9 +833,6 @@ packages:
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@ionic/core@8.0.0':
-    resolution: {integrity: sha512-jW1LA5mSUYmG4Go9EBWPiLv0Uxwm9vF8+3gwYNeLxJrRwzsirc1qBW/zvDTqcbyMwopAfwtb690iSv5e3i1CwA==}
-
   '@ionic/core@8.0.1':
     resolution: {integrity: sha512-6FEa0kSXSs82aCYcB7JcLGt5Z0XBU8mRFQGVrJtdh3ybQQntIAWKHc9H2OFaiT3SSAK+XQqlU6kq0jM9nWKveQ==}
 
@@ -899,11 +896,8 @@ packages:
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/vue-router@8.0.0':
-    resolution: {integrity: sha512-LARP0ASkeGEFapmipCsw2oAUIEh61+Rr7ZKrnq12tW/IZoQHy69mxnuSXjrpaOQ6xEMoymM3gIECya4XSzWSYQ==}
-
-  '@ionic/vue@8.0.0':
-    resolution: {integrity: sha512-jKynlvprQE4GnEDAoUuwp3HCuodI8uT97FoOMOQoe8DelVcjDAN1w9RjcHm9bau+r25vZ5AZMVmCki7kXQDKfg==}
+  '@ionic/vue-router@8.0.1':
+    resolution: {integrity: sha512-23MjJZyszeqw5MV6hkU91wRrzTn7MDGPAYJp4A8qzHRqaJCumrovSFTh7jEOx1fIMRib4lDqhnYkJlkhIPYV7g==}
 
   '@ionic/vue@8.0.1':
     resolution: {integrity: sha512-BRP5ig5AfazmuVHJfpnd8FmlNIZZEkF/bn6iqm0nIyvtsd4nweSYCgZEjClrHU2eKK0I/xCIaPnatHt/NLMM5A==}
@@ -6995,12 +6989,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/core@8.0.0':
-    dependencies:
-      '@stencil/core': 4.15.0
-      ionicons: 7.3.1
-      tslib: 2.6.2
-
   '@ionic/core@8.0.1':
     dependencies:
       '@stencil/core': 4.17.1
@@ -7150,14 +7138,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@8.0.0':
+  '@ionic/vue-router@8.0.1':
     dependencies:
-      '@ionic/vue': 8.0.0
-
-  '@ionic/vue@8.0.0':
-    dependencies:
-      '@ionic/core': 8.0.0
-      ionicons: 7.3.1
+      '@ionic/vue': 8.0.1
 
   '@ionic/vue@8.0.1':
     dependencies:
