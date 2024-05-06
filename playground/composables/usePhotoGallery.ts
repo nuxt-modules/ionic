@@ -4,7 +4,7 @@ import { Camera, CameraSource, CameraResultType } from '@capacitor/camera'
 import { Filesystem, Directory } from '@capacitor/filesystem'
 import { Preferences } from '@capacitor/preferences'
 
-export function usePhotoGallery() {
+export const usePhotoGallery = () => {
   const photos = ref<UserPhoto[]>([])
   const PHOTO_STORAGE = 'photos'
 

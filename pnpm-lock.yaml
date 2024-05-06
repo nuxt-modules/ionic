@@ -44,6 +44,9 @@ importers:
       pkg-types:
         specifier: ^1.0.3
         version: 1.0.3
+      svgo:
+        specifier: ^3.2.0
+        version: 3.2.0
       ufo:
         specifier: ^1.5.3
         version: 1.5.3
@@ -8145,8 +8148,6 @@ snapshots:
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
-  '@trysound/sax@0.2.0': {}
-
   '@tufjs/canonical-json@2.0.0': {}
 
   '@tufjs/models@2.0.0':
@@ -8575,10 +8576,6 @@ snapshots:
   '@vue/compiler-core@3.4.24':
     dependencies:
       '@babel/parser': 7.24.4
-      '@vue/shared': 3.4.24
-      entities: 4.5.0
-      estree-walker: 2.0.2
-      source-map-js: 1.2.0
 
   '@vue/compiler-dom@3.4.24':
     dependencies:
@@ -8929,8 +8926,6 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  boolbase@1.0.0: {}
-
   bplist-parser@0.2.0:
     dependencies:
       big-integer: 1.6.51
@@ -9211,8 +9206,6 @@ snapshots:
 
   commander@2.20.3: {}
 
-  commander@7.2.0: {}
-
   commander@8.3.0: {}
 
   commander@9.5.0: {}
@@ -9300,8 +9293,6 @@ snapshots:
     dependencies:
       mdn-data: 2.0.30
       source-map-js: 1.2.0
-
-  css-what@6.1.0: {}
 
   cssesc@3.0.0: {}
 
@@ -9521,8 +9512,6 @@ snapshots:
       domhandler: 5.0.3
       entities: 4.5.0
 
-  domelementtype@2.3.0: {}
-
   domhandler@5.0.3:
     dependencies:
       domelementtype: 2.3.0
@@ -9599,8 +9588,6 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
-
-  entities@4.5.0: {}
 
   env-paths@2.2.1: {}
 
@@ -11172,10 +11159,6 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.1
 
-  mdn-data@2.0.28: {}
-
-  mdn-data@2.0.30: {}
-
   mdurl@1.0.1: {}
 
   merge-stream@2.0.0: {}
@@ -12665,8 +12648,6 @@ snapshots:
 
   postcss-unique-selectors@7.0.0(postcss@8.4.38):
     dependencies:
-      postcss: 8.4.38
-      postcss-selector-parser: 6.0.16
 
   postcss-value-parser@4.2.0: {}
 
@@ -13246,8 +13227,6 @@ snapshots:
     dependencies:
       ip: 2.0.0
       smart-buffer: 4.2.0
-
-  source-map-js@1.2.0: {}
 
   source-map-support@0.5.21:
     dependencies:
