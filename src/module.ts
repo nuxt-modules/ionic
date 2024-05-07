@@ -19,13 +19,11 @@ import { setupUtilityComponents } from './parts/components'
 import { useCSSSetup } from './parts/css'
 import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
-import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
 
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
-    pwa?: boolean
     meta?: boolean
     icons?: boolean
   }
@@ -91,7 +89,6 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     integrations: {
       meta: true,
-      pwa: true,
       router: true,
       icons: true,
     },
@@ -213,8 +210,9 @@ export default defineNuxtModule<ModuleOptions>({
       await setupMeta()
     }
 
+    // @ts-expect-error removed module option
     if (options.integrations?.pwa) {
-      await setupPWA()
+      console.log('PWA integration is has been removed from @nuxtjs/ionic. It is recommended to install and configure @vite-pwa/nuxt instead following the instructions in https://vite-pwa-org.netlify.app/frameworks/nuxt.html.')
     }
 
     // Set up Ionic Router integration
