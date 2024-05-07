@@ -28,7 +28,7 @@ importers:
         version: 8.0.1
       '@ionic/vue-router':
         specifier: ^8.0.0
-        version: 8.0.1
+        version: 8.1.0
       '@kevinmarrec/nuxt-pwa':
         specifier: ^0.17.0
         version: 0.17.0
@@ -840,6 +840,9 @@ packages:
   '@ionic/core@8.0.1':
     resolution: {integrity: sha512-6FEa0kSXSs82aCYcB7JcLGt5Z0XBU8mRFQGVrJtdh3ybQQntIAWKHc9H2OFaiT3SSAK+XQqlU6kq0jM9nWKveQ==}
 
+  '@ionic/core@8.1.0':
+    resolution: {integrity: sha512-CTa0JZA7T0Je7HiAinj/kjpxChQYDvitFBqMtNv88nOJn1KerbUKmV2JfQ0quNFneN8z/bBdNOaKc8T++cyDyg==}
+
   '@ionic/utils-array@2.1.5':
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
     engines: {node: '>=10.3.0'}
@@ -900,11 +903,14 @@ packages:
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/vue-router@8.0.1':
-    resolution: {integrity: sha512-23MjJZyszeqw5MV6hkU91wRrzTn7MDGPAYJp4A8qzHRqaJCumrovSFTh7jEOx1fIMRib4lDqhnYkJlkhIPYV7g==}
+  '@ionic/vue-router@8.1.0':
+    resolution: {integrity: sha512-Wu0lOzAZbVuEoI3vVmaKaOAZ6GUYlFu9kvq126RPMUC/bh8Q64MSjI5eVAFxVFQQfcA27b7BxQwVVOqpQfhx2A==}
 
   '@ionic/vue@8.0.1':
     resolution: {integrity: sha512-BRP5ig5AfazmuVHJfpnd8FmlNIZZEkF/bn6iqm0nIyvtsd4nweSYCgZEjClrHU2eKK0I/xCIaPnatHt/NLMM5A==}
+
+  '@ionic/vue@8.1.0':
+    resolution: {integrity: sha512-KjyWomJGdBhpYuVModSwrD1JK2dFpwfPznorlaX8Srt087BMpKEoKYK9bkPj6VILaOkMN3FI8eIgChFt7JYq3A==}
 
   '@ioredis/commands@1.2.0':
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -1430,6 +1436,11 @@ packages:
 
   '@stencil/core@4.17.1':
     resolution: {integrity: sha512-nlARe1QtK5abnCG8kPQKJMWiELg39vKabvf3ebm6YEhQA35CgrxC1pVYTsYq3yktJKoY+k+VzGRnATLKyaLbvA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+
+  '@stencil/core@4.17.2':
+    resolution: {integrity: sha512-MX7yaLmpTU9iZvCire9nhecTcE0qBlV0vPWrLMeIXewYN7/hb8B3NjnhQyBKC93FDPI8NBRmt6KIugLw9zcRZg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -7025,6 +7036,12 @@ snapshots:
       ionicons: 7.3.1
       tslib: 2.6.2
 
+  '@ionic/core@8.1.0':
+    dependencies:
+      '@stencil/core': 4.17.2
+      ionicons: 7.3.1
+      tslib: 2.6.2
+
   '@ionic/utils-array@2.1.5':
     dependencies:
       debug: 4.3.4
@@ -7168,13 +7185,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@8.0.1':
+  '@ionic/vue-router@8.1.0':
     dependencies:
-      '@ionic/vue': 8.0.1
+      '@ionic/vue': 8.1.0
 
   '@ionic/vue@8.0.1':
     dependencies:
       '@ionic/core': 8.0.1
+      ionicons: 7.3.1
+
+  '@ionic/vue@8.1.0':
+    dependencies:
+      '@ionic/core': 8.1.0
       ionicons: 7.3.1
 
   '@ioredis/commands@1.2.0': {}
@@ -8094,6 +8116,8 @@ snapshots:
   '@stencil/core@4.15.0': {}
 
   '@stencil/core@4.17.1': {}
+
+  '@stencil/core@4.17.2': {}
 
   '@stylistic/eslint-plugin-js@1.7.2(eslint@9.0.0)':
     dependencies:
