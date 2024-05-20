@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   modules: ['@nuxtjs/ionic'],
-  ssr: false,
   ionic: {
     // integrations: {
     //   icons: true,
