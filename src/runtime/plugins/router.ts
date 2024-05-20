@@ -20,7 +20,6 @@ import { navigateTo } from '#app/composables/router'
 
 // @ts-expect-error virtual file
 import { globalMiddleware, namedMiddleware } from '#build/middleware'
-// @ts-expect-error virtual file
 import { appManifest as isAppManifestEnabled } from '#build/nuxt.config.mjs'
 // @ts-expect-error virtual file
 import routerOptions from '#build/router.options'
