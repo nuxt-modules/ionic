@@ -25,4 +25,10 @@ export default createConfigForNuxt({
       'vue/multi-word-component-names': 'off',
     },
   },
+  {
+    files: ['playground/**'],
+    rules: {
+      'vue/no-deprecated-slot-attribute': 'off',
+    },
+  },
 )

@@ -8,11 +8,9 @@ definePageMeta({
   <ion-page>
     <ion-header translucent>
       <ion-toolbar>
-        <template #start>
-          <ion-thumbnail>
-            <ion-img src="/icon.png" />
-          </ion-thumbnail>
-        </template>
+        <ion-thumbnail slot="start">
+          <ion-img src="/icon.png" />
+        </ion-thumbnail>
         <ion-title> Nuxt Ionic </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -27,18 +25,20 @@ definePageMeta({
 
       <ion-list>
         <ion-item>
-          <template #start>
-            <ion-checkbox aria-label="Mark idea complete" />
-          </template>
+          <ion-checkbox
+            slot="start"
+            aria-label="Mark idea complete"
+          />
           <ion-label>
             <h1>Create Idea</h1>
             <ion-note>Run Idea By Brandy</ion-note>
           </ion-label>
-          <template #end>
-            <ion-badge color="success">
-              5 Days
-            </ion-badge>
-          </template>
+          <ion-badge
+            slot="end"
+            color="success"
+          >
+            5 Days
+          </ion-badge>
         </ion-item>
       </ion-list>
     </ion-content>

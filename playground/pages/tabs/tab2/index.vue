@@ -60,16 +60,15 @@ const showActionSheet = async (photo: UserPhoto) => {
         </ion-row>
       </ion-grid>
 
-      <template #fixed>
-        <ion-fab
-          vertical="bottom"
-          horizontal="center"
-        >
-          <ion-fab-button @click="takePhoto()">
-            <ion-icon :icon="ioniconsCamera" />
-          </ion-fab-button>
-        </ion-fab>
-      </template>
+      <ion-fab
+        slot="fixed"
+        vertical="bottom"
+        horizontal="center"
+      >
+        <ion-fab-button @click="takePhoto()">
+          <ion-icon :icon="ioniconsCamera" />
+        </ion-fab-button>
+      </ion-fab>
     </ion-content>
   </ion-page>
 </template>
