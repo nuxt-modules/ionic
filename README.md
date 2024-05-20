@@ -22,7 +22,6 @@
 - Ionic Router integration
 - Pre-render routes
 - Mobile meta tags
-- PWA support with [`nuxt-pwa-module`](https://github.com/kevinmarrec/nuxt-pwa-module)
 - Works out-of-the-box with [Capacitor](https://capacitorjs.com/) to build mobile apps
 
 **In progress**

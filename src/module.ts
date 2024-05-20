@@ -12,21 +12,18 @@ import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
+import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 import { IonicBuiltInComponents, IonicHooks } from './imports'
 
 import { setupUtilityComponents } from './parts/components'
-import { useCSSSetup } from './parts/css';
+import { useCSSSetup } from './parts/css'
 import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
-import { setupPWA } from './parts/pwa'
 import { setupRouter } from './parts/router'
-
-import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
 
 export interface ModuleOptions {
   integrations?: {
     router?: boolean
-    pwa?: boolean
     meta?: boolean
     icons?: boolean
   }
@@ -92,7 +89,6 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     integrations: {
       meta: true,
-      pwa: true,
       router: true,
       icons: true,
     },
@@ -104,7 +100,7 @@ export default defineNuxtModule<ModuleOptions>({
     config: {},
   },
   async setup(options, nuxt) {
-    const runtimeDir = createResolver(import.meta.url);
+    const runtimeDir = createResolver(import.meta.url)
 
     nuxt.options.build.transpile.push(runtimeDir.resolve('./runtime'))
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
@@ -123,19 +119,19 @@ export default defineNuxtModule<ModuleOptions>({
         JSON.stringify(
           {
             name: await readPackageJSON(nuxt.options.rootDir).then(
-              ({ name }) => name || 'nuxt-ionic-project'
+              ({ name }) => name || 'nuxt-ionic-project',
             ),
             integrations: {},
             type: 'vue',
           },
           null,
-          2
-        )
+          2,
+        ),
       )
     }
 
     // Set up Ionic Core
-    addPlugin(runtimeDir.resolve('./runtime/ionic'))
+    addPlugin(runtimeDir.resolve('./runtime/plugins/ionic'))
 
     // Add Nuxt Vue custom utility components
     setupUtilityComponents(runtimeDir)
@@ -146,7 +142,7 @@ export default defineNuxtModule<ModuleOptions>({
         name,
         export: name,
         filePath: '@ionic/vue',
-      })
+      }),
     )
 
     // Add auto-imported composables
@@ -157,12 +153,12 @@ export default defineNuxtModule<ModuleOptions>({
       }),
       defineUnimportPreset({
         from: createResolver(import.meta.url).resolve('./utils'),
-        imports: ['useIonHead']
-      })
+        imports: ['useIonHead'],
+      }),
     ])
 
     if (nuxt.options._generate) {
-      nuxt.hook('nitro:config', async config => {
+      nuxt.hook('nitro:config', async (config) => {
         config.prerender ||= {}
         config.prerender.routes ||= []
         config.prerender.routes.push('/200.html')
@@ -182,7 +178,7 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Ensure there is an index.html file present when doing static file generation
       let publicFolder: string
-      nuxt.hook('nitro:init', nitro => {
+      nuxt.hook('nitro:init', (nitro) => {
         publicFolder = nitro.options.output.publicDir
       })
 
@@ -220,8 +216,9 @@ export default defineNuxtModule<ModuleOptions>({
       await setupMeta()
     }
 
+    // @ts-expect-error removed module option
     if (options.integrations?.pwa) {
-      await setupPWA()
+      console.log('PWA integration is has been removed from @nuxtjs/ionic. It is recommended to install and configure @vite-pwa/nuxt instead following the instructions in https://vite-pwa-org.netlify.app/frameworks/nuxt.html.')
     }
 
     // Set up Ionic Router integration

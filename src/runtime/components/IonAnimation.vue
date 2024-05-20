@@ -21,6 +21,7 @@ interface AnimationFromToObject {
 }
 
 type AnimationStyles = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any
 }
 
@@ -86,7 +87,7 @@ onMounted(() => {
     .afterAddClass(props.afterAddClass ?? [])
     .afterClearStyles(props.afterClearStyles ?? [])
 
-  let hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
+  const hasKeyframes = Array.isArray(props.keyframes) && props.keyframes.length > 0
 
   if (hasKeyframes) {
     animation.value.keyframes(props.keyframes!)
@@ -98,7 +99,8 @@ onMounted(() => {
       props.from.forEach(({ property, fromValue }) => {
         animation.value!.from(property, fromValue)
       })
-    } else {
+    }
+    else {
       animation.value.from(props.from.property, props.from.fromValue)
     }
   }
@@ -109,7 +111,8 @@ onMounted(() => {
       props.fromTo.forEach(({ property, fromValue, toValue }) => {
         animation.value!.fromTo(property, fromValue, toValue)
       })
-    } else {
+    }
+    else {
       animation.value.fromTo(props.fromTo.property, props.fromTo.fromValue, props.fromTo.toValue)
     }
   }
@@ -127,14 +130,15 @@ onMounted(() => {
         root: null,
         rootMargin: '0px',
         threshold: 0.5,
-      }
+      },
     )
     // Start observing for animation element
     observer.observe(element.value!)
-  } else if (props.playOnMount) animation.value.play()
+  }
+  else if (props.playOnMount) animation.value.play()
 })
 onBeforeUnmount(() => {
-  //Destroy animation and disconnect observer when component is about to be unmounted if it is defined
+  // Destroy animation and disconnect observer when component is about to be unmounted if it is defined
   animation.value?.destroy()
   if (observer) observer.disconnect()
 })

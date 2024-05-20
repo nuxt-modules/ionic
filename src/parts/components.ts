@@ -1,5 +1,5 @@
+import { resolve } from 'node:path'
 import { addComponent, type Resolver } from '@nuxt/kit'
-import { resolve } from 'path';
 
 export const setupUtilityComponents = (runtimeDir: Resolver) => {
   addComponent({

@@ -1,16 +1,22 @@
 <script setup lang="ts">
-defineProps<{ 
-    name: string 
-}>();
+defineProps<{
+  name: string
+}>()
 useIonHead({
   title: 'Explore Container',
-});
+})
 </script>
 
 <template>
   <div id="container">
     <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Explore <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+      >UI Components</a>
+    </p>
   </div>
 </template>
 

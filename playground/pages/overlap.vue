@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useIonHead({
-  title: "Overlapping - no tabs",
-});
+  title: 'Overlapping - no tabs',
+})
 </script>
 
 <template>

@@ -1,11 +1,9 @@
-/* eslint-disable prettier/prettier */
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
 import { getActiveHead } from 'unhead'
-import { useHead } from '@unhead/vue'
+import type { useHead } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useRouter } from '#vue-router'
-
 
 // This is used to store the active head for each path as long as the path's page is still in the DOM
 const headMap = new Map<
@@ -42,17 +40,18 @@ export function useIonHead(obj: Parameters<typeof useHead>[0]) {
       const [, headToPatch] = headArr[headArrIndex]
       innerObj = newObj
       headToPatch?.patch(innerObj)
-      headArr.splice(headArrIndex, 1, [innerObj, headToPatch]);
+      headArr.splice(headArrIndex, 1, [innerObj, headToPatch])
       headMap.set(currentPath, headArr)
     },
   }
 
-  /* Initially assign the head to the respected slots in the map 
+  /* Initially assign the head to the respected slots in the map
      because Ionic components don't unmount the way we expect them to */
   if (!headMap.has(currentPath)) {
     const headObj = activeHead?.push(obj)
     headMap.set(currentPath, [[obj, headObj]])
-  } else {
+  }
+  else {
     const headObj = activeHead?.push(obj)
     const metaArr = headMap.get(currentPath) || []
     headMap.set(currentPath, [...metaArr, [obj, headObj]])
