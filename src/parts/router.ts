@@ -1,8 +1,9 @@
 import { existsSync } from 'node:fs'
-import { useNuxt, useLogger, type Resolver } from '@nuxt/kit'
-import { resolve } from 'pathe'
+import { useNuxt, useLogger } from '@nuxt/kit'
+import { join, resolve } from 'pathe'
+import { runtimeDir } from '../utils'
 
-export const setupRouter = (runtimeDir: Resolver) => {
+export const setupRouter = () => {
   const nuxt = useNuxt()
   const logger = useLogger()
 
@@ -22,7 +23,7 @@ export const setupRouter = (runtimeDir: Resolver) => {
   const ROUTER_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
   const PAGE_USAGE_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?check-if-page-unused/
   const ionicRouterPlugin = {
-    src: runtimeDir.resolve('./runtime/router'),
+    src: resolve(runtimeDir, 'plugins/router'),
     mode: 'all',
   } as const
 
@@ -46,7 +47,7 @@ export const setupRouter = (runtimeDir: Resolver) => {
       || app.mainComponent.includes('@nuxt/ui-templates')
       || app.mainComponent.match(/nuxt3?\/dist/)
     ) {
-      app.mainComponent = resolve(runtimeDir.resolve('./runtime'), 'app.vue')
+      app.mainComponent = join(runtimeDir, 'app.vue')
     }
   })
 }

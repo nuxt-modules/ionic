@@ -1,9 +1,10 @@
 import { resolve } from 'node:path'
-import { addComponent, type Resolver } from '@nuxt/kit'
+import { addComponent } from '@nuxt/kit'
+import { runtimeDir } from '../utils'
 
-export const setupUtilityComponents = (runtimeDir: Resolver) => {
+export const setupUtilityComponents = () => {
   addComponent({
     name: 'IonAnimation',
-    filePath: resolve(runtimeDir.resolve('./runtime'), 'components', 'IonAnimation.vue'),
+    filePath: resolve(runtimeDir, 'components', 'IonAnimation.vue'),
   })
 }

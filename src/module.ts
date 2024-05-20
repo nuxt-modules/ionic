@@ -6,13 +6,13 @@ import {
   addPlugin,
   addTemplate,
   addImportsSources,
-  createResolver,
 } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
 import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
+import { runtimeDir } from './utils'
 import { IonicBuiltInComponents, IonicHooks } from './imports'
 
 import { setupUtilityComponents } from './parts/components'
@@ -100,9 +100,7 @@ export default defineNuxtModule<ModuleOptions>({
     config: {},
   },
   async setup(options, nuxt) {
-    const runtimeDir = createResolver(import.meta.url)
-
-    nuxt.options.build.transpile.push(runtimeDir.resolve('./runtime'))
+    nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
     // Inject options for the Ionic Vue plugin as a virtual module
@@ -131,10 +129,10 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Set up Ionic Core
-    addPlugin(runtimeDir.resolve('./runtime/plugins/ionic'))
+    addPlugin(resolve(runtimeDir, 'plugins/ionic'))
 
     // Add Nuxt Vue custom utility components
-    setupUtilityComponents(runtimeDir)
+    setupUtilityComponents()
 
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
@@ -152,7 +150,7 @@ export default defineNuxtModule<ModuleOptions>({
         imports: [...IonicHooks],
       }),
       defineUnimportPreset({
-        from: createResolver(import.meta.url).resolve('./utils'),
+        from: resolve(runtimeDir, 'composables/head'),
         imports: ['useIonHead'],
       }),
     ])
@@ -192,7 +190,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     }
 
-    const { setupBasic, setupCore, setupUtilities } = useCSSSetup(nuxt)
+    const { setupBasic, setupCore, setupUtilities } = useCSSSetup()
 
     // Add Ionic Core CSS
     if (options.css?.core) {
@@ -223,7 +221,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Set up Ionic Router integration
     if (options.integrations?.router) {
-      await setupRouter(runtimeDir)
+      await setupRouter()
     }
   },
 })

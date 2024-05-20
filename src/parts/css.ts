@@ -1,7 +1,7 @@
-import type { useNuxt } from '@nuxt/kit'
+import { useNuxt } from '@nuxt/kit'
 
-export const useCSSSetup = (nuxt: ReturnType<typeof useNuxt>) => {
-  // const nuxt = useNuxt()
+export const useCSSSetup = () => {
+  const nuxt = useNuxt()
 
   const setupCore = () => {
     // Core CSS required for Ionic components to work properly
