@@ -1,7 +1,5 @@
 <script setup lang="ts">
-defineProps<{
-  name: string
-}>()
+defineProps({ name: String })
 useIonHead({
   title: 'Explore Container',
 })

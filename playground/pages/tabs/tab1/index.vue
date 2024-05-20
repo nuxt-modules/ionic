@@ -18,7 +18,7 @@ useIonHead({
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <explore-container name="Tab 1" />
+      <ExploreContainer name="Tab 1" />
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">
