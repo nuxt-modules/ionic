@@ -129,7 +129,7 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Set up Ionic Core
-    addPlugin(resolve(runtimeDir, 'ionic'))
+    addPlugin(resolve(runtimeDir, 'plugins/ionic'))
 
     // Add Nuxt Vue custom utility components
     setupUtilityComponents()

@@ -22,7 +22,7 @@ export const setupRouter = () => {
 
   const ROUTER_PLUGIN_RE = /nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
   const ionicRouterPlugin = {
-    src: resolve(runtimeDir, 'router'),
+    src: resolve(runtimeDir, 'plugins/router'),
     mode: 'all',
   } as const
 
