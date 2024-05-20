@@ -20,14 +20,16 @@ export const setupRouter = () => {
     return
   }
 
-  const ROUTER_PLUGIN_RE = /nuxt3?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
+  const ROUTER_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
+  const PAGE_USAGE_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?check-if-page-unused/
   const ionicRouterPlugin = {
-    src: resolve(runtimeDir, 'router'),
+    src: resolve(runtimeDir, 'plugins/router'),
     mode: 'all',
   } as const
 
   nuxt.hook('modules:done', () => {
     nuxt.hook('app:resolve', (app) => {
+      app.plugins = app.plugins.filter(p => !PAGE_USAGE_PLUGIN_RE.test(p.src))
       const routerPlugin = app.plugins.findIndex(p => ROUTER_PLUGIN_RE.test(p.src))
       if (routerPlugin !== -1) {
         app.plugins.splice(routerPlugin, 1, ionicRouterPlugin)
