@@ -1,5 +1,8 @@
 <script setup lang="ts">
-defineProps({ name: String })
+const props = defineProps({ name: String })
+useHead({
+  title: `Explore Container - ${props.name}`,
+})
 </script>
 
 <template>

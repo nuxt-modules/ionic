@@ -266,7 +266,7 @@ function createCurrentLocation(base: string, location: Location, renderedPath?: 
   return path + (path.includes('?') ? '' : search) + hash
 }
 
-function toArray<T> (value: T | T[]): T[] {
+function toArray<T>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value]
 }
 

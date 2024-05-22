@@ -1,3 +1,10 @@
+<script setup lang="ts">
+useHead({
+  title: 'Tab 3',
+})
+const isExploreEnabled = ref(true)
+</script>
+
 <template>
   <ion-page>
     <ion-header>
@@ -19,7 +26,21 @@
       <ion-button router-link="/overlap">
         Go to overlapping page
       </ion-button>
-      <ExploreContainer name="Tab 3 page" />
+      <ExploreContainer
+        v-if="isExploreEnabled"
+        name="Tab 3"
+      />
+      <p style="text-align: center;">
+        <ion-button
+          class="explorer-toggle-3"
+          fill="solid"
+          color="primary"
+          strong
+          @click="isExploreEnabled = !isExploreEnabled"
+        >
+          Toggle Explore Container - Tab 3
+        </ion-button>
+      </p>
     </ion-content>
   </ion-page>
 </template>

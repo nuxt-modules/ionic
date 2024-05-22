@@ -144,12 +144,17 @@ export default defineNuxtModule<ModuleOptions>({
     )
 
     // Add auto-imported composables
-    addImportsSources(
+    addImportsSources([
       defineUnimportPreset({
         from: '@ionic/vue',
         imports: [...IonicHooks],
       }),
-    )
+      defineUnimportPreset({
+        from: resolve(runtimeDir, 'composables/head'),
+        imports: ['useHead'],
+        priority: 2,
+      }),
+    ])
 
     if (nuxt.options._generate) {
       nuxt.hook('nitro:config', async (config) => {

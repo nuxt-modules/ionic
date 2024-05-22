@@ -47,7 +47,7 @@ jobs:
         run: pnpm dev:prepare
 
       - name: 🎭 Set up playwright
-        run: pnpm playwright install
+        run: pnpm playwright-core install
 
       - name: 🧪 Test project
         run: pnpm test -- --coverage

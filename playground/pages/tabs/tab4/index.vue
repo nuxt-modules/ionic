@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useHead({
+  title: 'Tab 4',
+})
+</script>
+
 <template>
   <ion-page>
     <ion-header>
@@ -32,13 +38,13 @@
             <div class="red-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>
@@ -64,13 +70,13 @@
             <div class="blue-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>
@@ -95,13 +101,13 @@
             <div class="green-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>
@@ -134,13 +140,13 @@
             <div class="red-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>
@@ -174,13 +180,13 @@
             <div class="blue-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>
@@ -208,13 +214,13 @@
             <div class="green-square" />
 
             <div class="buttons">
-              <IonButton @click="animation.play()">
+              <IonButton @click="animation?.play()">
                 Play
               </IonButton>
-              <IonButton @click="animation.pause()">
+              <IonButton @click="animation?.pause()">
                 Pause
               </IonButton>
-              <IonButton @click="animation.stop()">
+              <IonButton @click="animation?.stop()">
                 Stop
               </IonButton>
             </div>

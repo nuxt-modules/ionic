@@ -33,5 +33,7 @@ describe('nuxt ionic', async () => {
     await page.goto(url('/tabs/tab1'))
     await page.waitForLoadState('networkidle')
     expect(logs).toContain('ran middleware')
+
+    await page.close()
   })
 })

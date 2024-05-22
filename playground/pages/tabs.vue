@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Nuxt Ionic',
+  title: 'House Tabs',
 })
 </script>
 
