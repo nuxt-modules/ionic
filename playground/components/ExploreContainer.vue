@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps({ name: String })
-useIonHead({
-  title: 'Explore Container',
+const props = defineProps({ name: String })
+useHead({
+  title: `Explore Container - ${props.name}`,
 })
 </script>
 

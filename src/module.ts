@@ -151,7 +151,8 @@ export default defineNuxtModule<ModuleOptions>({
       }),
       defineUnimportPreset({
         from: resolve(runtimeDir, 'composables/head'),
-        imports: ['useIonHead'],
+        imports: ['useHead'],
+        priority: 2
       }),
     ])
 

@@ -2,9 +2,10 @@
 definePageMeta({
   alias: ['/', '/tabs'],
 })
-useIonHead({
+useHead({
   title: 'Tab 1',
-})
+});
+const isExploreEnabled = ref(true);
 </script>
 
 <template>
@@ -18,7 +19,7 @@ useIonHead({
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ExploreContainer name="Tab 1" />
+      <ExploreContainer v-if="isExploreEnabled" name="Tab 1" />
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">
@@ -45,6 +46,8 @@ useIonHead({
           </ion-badge>
         </ion-item>
       </ion-list>
+
+      <p style="text-align: center;"><ion-button class="explorer-toggle-1" fill="solid" color="primary" strong @click="isExploreEnabled = !isExploreEnabled">Toggle Explore Container - Tab 1</ion-button></p>
     </ion-content>
   </ion-page>
 </template>

@@ -1,6 +1,6 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
 import { getActiveHead } from 'unhead'
-import type { useHead } from '@unhead/vue'
+import type { useHead as useHead$1 } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 import { useRouter } from '#vue-router'
@@ -8,20 +8,20 @@ import { useRouter } from '#vue-router'
 // This is used to store the active head for each path as long as the path's page is still in the DOM
 const headMap = new Map<
   string,
-  Array<[Parameters<typeof useHead>[0], ReturnType<typeof useHead>]>
+  Array<[Parameters<typeof useHead$1>[0], ReturnType<typeof useHead$1>]>
 >()
 let beforeHook: (() => void) | undefined
 let afterHook: (() => void) | undefined
 let currPath$1: string
 let prevPath: string
-export function useIonHead(obj: Parameters<typeof useHead>[0]) {
+export function useHead(obj: Parameters<typeof useHead$1>[0]) {
   const currentPath = useRoute().path
   const activeHead = getActiveHead()
   const { currentRoute } = useRouter()
   const router = useRouter()
   let hasReallyLeft = false
   let innerObj = obj
-  const __returned: ReturnType<typeof useHead> = {
+  const __returned: ReturnType<typeof useHead$1> = {
     dispose() {
       // Can just easily mutate the array instead of wasting little CPU to slice/spread it :P
       const headArr = [...headMap.get(currentPath)!]

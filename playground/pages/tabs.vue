@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useIonHead({
+useHead({
   title: 'House Tabs',
 })
 </script>

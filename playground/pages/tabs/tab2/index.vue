@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { actionSheetController } from '@ionic/vue'
+import { actionSheetController } from '@ionic/vue';
 import type { UserPhoto } from '~/composables/usePhotoGallery'
 
-useIonHead({
+useHead({
   title: 'Tab 2 - Photos',
 })
 
