@@ -4,7 +4,7 @@ import { describe, it } from 'vitest'
 import type { Page } from 'playwright-core'
 
 function expectTitleToBe(page: Page, title: string) {
-  return page.waitForFunction((title) => (document.querySelector('title') as HTMLTitleElement).innerText.trim() === title, title)
+  return page.waitForFunction(title => (document.querySelector('title') as HTMLTitleElement).textContent?.trim() === title, title)
 }
 
 describe('Nuxt Ionic useHead', async () => {
