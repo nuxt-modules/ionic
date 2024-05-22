@@ -2,7 +2,7 @@
 useHead({
   title: 'Overlapping - no tabs',
 })
-const isExploreEnabled = ref(true);
+const isExploreEnabled = ref(true)
 </script>
 
 <template>
@@ -16,9 +16,21 @@ const isExploreEnabled = ref(true);
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ExploreContainer v-if="isExploreEnabled" name="Overlap Page" />
-      <p style="text-align: center;"><ion-button class="explorer-toggle-op" fill="solid" color="primary" strong
-          @click="isExploreEnabled = !isExploreEnabled">Toggle Overlap Explore Container</ion-button></p>
+      <ExploreContainer
+        v-if="isExploreEnabled"
+        name="Overlap Page"
+      />
+      <p style="text-align: center;">
+        <ion-button
+          class="explorer-toggle-op"
+          fill="solid"
+          color="primary"
+          strong
+          @click="isExploreEnabled = !isExploreEnabled"
+        >
+          Toggle Overlap Explore Container
+        </ion-button>
+      </p>
     </ion-content>
   </ion-page>
 </template>

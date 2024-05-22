@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'node:url'
+import { dirname, join } from 'node:path'
 import { setup, createPage, url } from '@nuxt/test-utils/e2e'
 import { describe, expect, it } from 'vitest'
-import { dirname, join } from 'path'
 
 function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -13,7 +13,7 @@ describe('Nuxt Ionic useHead', async () => {
     server: true,
     browser: true,
     rootDir: join(__dirname, '../../playground'),
-    /* rootDir: fileURLToPath(new URL('../../playground', import.meta.url)), 
+    /* rootDir: fileURLToPath(new URL('../../playground', import.meta.url)),
        This throws on my Windows machine, and I don't know why, so I had to use the dirname method
     */
   })
@@ -32,12 +32,12 @@ describe('Nuxt Ionic useHead', async () => {
     await delay(500)
     titleText1 = await page.title()
     expect(titleText1).toBe('Explore Container - Tab 1');
-    
+
     // Navigate to /tabs/tab2
     (await page.$('#tab-button-tab2'))?.click()
     await page.waitForURL(url('/tabs/tab2'))
     await delay(500)
-    let titleText2 = await page.title()
+    const titleText2 = await page.title()
     expect(titleText2).toBe('Tab 2 - Photos');
 
     // Navigate to /tabs/tab3
@@ -48,7 +48,7 @@ describe('Nuxt Ionic useHead', async () => {
     expect(titleText3).toBe('Explore Container - Tab 3');
     (await page.$('.explorer-toggle-3'))?.click()
     await delay(500)
-    titleText3 = await page.title();
+    titleText3 = await page.title()
     expect(titleText3).toBe('Tab 3');
     (await page.$('.explorer-toggle-3'))?.click()
     await delay(500)
@@ -59,14 +59,14 @@ describe('Nuxt Ionic useHead', async () => {
     (await page.$('#tab-button-tab4'))?.click()
     await page.waitForURL(url('/tabs/tab4'))
     await delay(500)
-    let titleText4 = await page.title()
+    const titleText4 = await page.title()
     expect(titleText4).toBe('Tab 4')
 
     // Navigate back to /tabs/tab3
-    await page.goBack();
+    await page.goBack()
     await page.waitForURL(url('/tabs/tab3'))
     await delay(500)
-    let titleText5 = await page.title()
+    const titleText5 = await page.title()
     expect(titleText5).toBe('Explore Container - Tab 3');
 
     // Navigate to tabs/tab3/page-two
@@ -87,27 +87,27 @@ describe('Nuxt Ionic useHead', async () => {
 
     // Navigate to tabs/tab3/overlap
     (await page.$('[routerlink="/overlap"]'))?.click()
-    await page.waitForURL(url('/overlap'));
-    await delay(500);
+    await page.waitForURL(url('/overlap'))
+    await delay(500)
     let titleText7 = await page.title()
-    expect(titleText7).toBe('Explore Container - Overlap Page');
+    expect(titleText7).toBe('Explore Container - Overlap Page')
     await page.evaluate(() => {
-      let el = document.querySelector('.explorer-toggle-op') as HTMLElement;
-      if(!el) return;
-      el.click();
+      const el = document.querySelector('.explorer-toggle-op') as HTMLElement
+      if (!el) return
+      el.click()
     })
-    /* 
+    /*
     await (await page.$('#explorer-toggle-op'))?.click({ force: true });
     This throws Error: elementHandle.click: Element is not visible
     When the element is visible, and can be clicked in this case
     */
-    await delay(500);
+    await delay(500)
     titleText7 = await page.title()
-    expect(titleText7).toBe('Overlapping - no tabs');
+    expect(titleText7).toBe('Overlapping - no tabs')
     await page.evaluate(() => {
-      let el = document.querySelector('.explorer-toggle-op') as HTMLElement;
-      if(!el) return;
-      el.click();
+      const el = document.querySelector('.explorer-toggle-op') as HTMLElement
+      if (!el) return
+      el.click()
     })
     await delay(500)
     titleText7 = await page.title()
@@ -118,9 +118,9 @@ describe('Nuxt Ionic useHead', async () => {
     (await page.$('#tab-button-tab1'))?.click()
     await page.waitForURL(url('/tabs/tab1'))
     await delay(500)
-    let titleText8 = await page.title()
+    const titleText8 = await page.title()
     expect(titleText8).toBe('Explore Container - Tab 1')
 
-    await page.close();
+    await page.close()
   })
 })
