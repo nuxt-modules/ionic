@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/plausible'],
   plausible: {
     domain: 'ionic.nuxtjs.org',
+    apiHost: 'https://v.roe.dev',
   },
   colorMode: {
     preference: 'dark',
