@@ -20,8 +20,8 @@ export const setupRouter = () => {
     return
   }
 
-  const ROUTER_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?router/
-  const PAGE_USAGE_PLUGIN_RE = /nuxt(3|-nightly)?\/dist\/(app\/plugins|pages\/runtime)\/(plugins\/)?check-if-page-unused/
+  const ROUTER_PLUGIN_RE = /nuxt(?:3|-nightly)?\/dist\/(?:app\/plugins|pages\/runtime)\/(?:plugins\/)?router/
+  const PAGE_USAGE_PLUGIN_RE = /nuxt(?:3|-nightly)?\/dist\/(?:app\/plugins|pages\/runtime)\/(?:plugins\/)?check-if-page-unused/
   const ionicRouterPlugin = {
     src: resolve(runtimeDir, 'plugins/router'),
     mode: 'all',
