@@ -50,8 +50,7 @@
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && npm publish && git push --follow-tags",
     "test": "vitest run",
-    "test:types": "tsc --noEmit",
-    "postinstall": "husky install"
+    "test:types": "tsc --noEmit"
   },
   "dependencies": {
     "@capacitor/cli": "^6.0.0",
