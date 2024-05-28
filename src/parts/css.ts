@@ -5,12 +5,12 @@ export const useCSSSetup = () => {
 
   const setupCore = () => {
     // Core CSS required for Ionic components to work properly
-    nuxt.options.css.push('@ionic/vue/css/core.css')
+    nuxt.options.css.unshift('@ionic/vue/css/core.css')
   }
 
   const setupBasic = () => {
     // Basic CSS for apps built with Ionic
-    nuxt.options.css.push(
+    nuxt.options.css.unshift(
       '@ionic/vue/css/normalize.css',
       '@ionic/vue/css/structure.css',
       '@ionic/vue/css/typography.css',
@@ -19,7 +19,7 @@ export const useCSSSetup = () => {
 
   const setupUtilities = () => {
     // Optional CSS utils that can be commented out
-    nuxt.options.css.push(
+    nuxt.options.css.unshift(
       '@ionic/vue/css/padding.css',
       '@ionic/vue/css/float-elements.css',
       '@ionic/vue/css/text-alignment.css',
