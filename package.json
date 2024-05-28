@@ -46,7 +46,7 @@
     "lint:all:eslint": "pnpm lint:eslint .",
     "lint:eslint": "eslint --fix",
     "prepack": "pnpm build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && npm publish && git push --follow-tags",
     "test": "vitest run",
