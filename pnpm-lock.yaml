@@ -125,8 +125,8 @@ importers:
   playground:
     devDependencies:
       '@capacitor/camera':
-        specifier: 6.0.0
-        version: 6.0.0(@capacitor/core@6.0.0)
+        specifier: 6.0.1
+        version: 6.0.1(@capacitor/core@6.0.0)
       '@capacitor/filesystem':
         specifier: 6.0.0
         version: 6.0.0(@capacitor/core@6.0.0)
@@ -338,8 +338,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@capacitor/camera@6.0.0':
-    resolution: {integrity: sha512-AZ/gfVPC3lsKbk9/yHI60ygNyOkN5jsCb4bHxXFbW0bss3XYtR/J1XWFJGkFNiRErNnTz6jnDrhsGCr7+JPfiA==}
+  '@capacitor/camera@6.0.1':
+    resolution: {integrity: sha512-KGfjv8q0Q9OEcpBGqSSZD2yb1KeDe12mlzOOPp4wr6GvcOY0EIvZ0o3KiPXegLVuRZeemz71/lCxPHAQ/5gAiA==}
     peerDependencies:
       '@capacitor/core': ^6.0.0
 
@@ -6717,7 +6717,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@capacitor/camera@6.0.0(@capacitor/core@6.0.0)':
+  '@capacitor/camera@6.0.1(@capacitor/core@6.0.0)':
     dependencies:
       '@capacitor/core': 6.0.0
 
