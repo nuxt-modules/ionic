@@ -134,6 +134,10 @@ export default defineNuxtModule<ModuleOptions>({
     // Add Nuxt Vue custom utility components
     setupUtilityComponents()
 
+    // Ensure `@ionic/vue` types flow through
+    nuxt.options.typescript.hoist ||= []
+    nuxt.options.typescript.hoist.push('@ionic/vue')
+
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
       addComponent({
