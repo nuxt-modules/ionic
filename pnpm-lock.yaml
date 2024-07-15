@@ -100,6 +100,9 @@ importers:
       typescript:
         specifier: 5.4.5
         version: 5.4.5
+      unbuild:
+        specifier: ^2.0.0
+        version: 2.0.0(typescript@5.4.5)(vue-tsc@2.0.26(typescript@5.4.5))
       vitest:
         specifier: 1.4.0
         version: 1.4.0(@types/node@20.12.12)(happy-dom@14.11.0)(terser@5.21.0)
