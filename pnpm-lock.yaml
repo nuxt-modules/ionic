@@ -18,10 +18,10 @@ importers:
     dependencies:
       '@capacitor/cli':
         specifier: ^6.1.0
-        version: 6.1.0
+        version: 6.1.1
       '@capacitor/core':
         specifier: ^6.1.0
-        version: 6.1.0
+        version: 6.1.1
       '@ionic/cli':
         specifier: ^7.2.0
         version: 7.2.0
@@ -127,25 +127,25 @@ importers:
         version: 1.0.0(magicast@0.3.4)(rollup@4.18.1)
       nuxt:
         specifier: 3.12.3
-        version: 3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3))
+        version: 3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3))
 
   playground:
     devDependencies:
       '@capacitor/camera':
         specifier: 6.0.1
-        version: 6.0.1(@capacitor/core@6.1.0)
+        version: 6.0.1(@capacitor/core@6.1.1)
       '@capacitor/filesystem':
         specifier: 6.0.0
-        version: 6.0.0(@capacitor/core@6.1.0)
+        version: 6.0.0(@capacitor/core@6.1.1)
       '@capacitor/preferences':
         specifier: 6.0.1
-        version: 6.0.1(@capacitor/core@6.1.0)
+        version: 6.0.1(@capacitor/core@6.1.1)
       '@nuxtjs/ionic':
         specifier: link:..
         version: link:..
       nuxt:
         specifier: 3.12.3
-        version: 3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3))
+        version: 3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3))
 
 packages:
 
@@ -339,13 +339,13 @@ packages:
     peerDependencies:
       '@capacitor/core': ^6.0.0
 
-  '@capacitor/cli@6.1.0':
-    resolution: {integrity: sha512-HEKDh3+FuNZKFHmSDZ7nAnaX3bzhtznYk9GsZBMac1y4CTAxIykPX9wzZ3DzLeM/EbMBGFClUbefkIkimAyfYg==}
+  '@capacitor/cli@6.1.1':
+    resolution: {integrity: sha512-rsRqEadfnBSUX90RZj59oXvi30bpSusLMfIcgbOIArOloTgfaaWr9R471F6m3gGWF7BhNoskJpZcCgSUsfywwA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  '@capacitor/core@6.1.0':
-    resolution: {integrity: sha512-Kt4ONm0X9xxJXn9Q73oBaKdzep5B/VJw3VjXa2eGul4cD2k37mJwgjpXSMRnLH0Aju5bCiRL8J/hMAfTlokO6A==}
+  '@capacitor/core@6.1.1':
+    resolution: {integrity: sha512-b1s4WDMy3Y1/owTG2/XNGCI6G5SDpF2NT1JMAgcShue13fiAuHA+Ans7Wfei6McvR0KdopAE6tMHmDAfL5PM8Q==}
 
   '@capacitor/filesystem@6.0.0':
     resolution: {integrity: sha512-GnC4CBfky7fvG9zSV/aQnZaGs6ZJ90AaQorr53z81ArTCqcrSUeBMuCxWmvti9HrdXLhBavyA1UOjvRGObOFjg==}
@@ -3927,6 +3927,9 @@ packages:
     resolution: {integrity: sha512-voV4dDrdVZVNz84n39LFKDaRzfwhdzJ7akpyXfTMxCgRUp07U3lcJUXRlhTKP17rgt09sUzLi5iCitpEAr+6ug==}
     engines: {node: 14 || 16 || 18 || 20 || >=22}
 
+  lru-cache@10.4.3:
+    resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
@@ -5099,6 +5102,11 @@ packages:
 
   semver@7.6.2:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -6328,11 +6336,11 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@capacitor/camera@6.0.1(@capacitor/core@6.1.0)':
+  '@capacitor/camera@6.0.1(@capacitor/core@6.1.1)':
     dependencies:
-      '@capacitor/core': 6.1.0
+      '@capacitor/core': 6.1.1
 
-  '@capacitor/cli@6.1.0':
+  '@capacitor/cli@6.1.1':
     dependencies:
       '@ionic/cli-framework-output': 2.2.8
       '@ionic/utils-fs': 3.1.7
@@ -6348,24 +6356,24 @@ snapshots:
       plist: 3.1.0
       prompts: 2.4.2
       rimraf: 4.4.1
-      semver: 7.6.2
+      semver: 7.6.3
       tar: 6.2.1
       tslib: 2.6.3
       xml2js: 0.5.0
     transitivePeerDependencies:
       - supports-color
 
-  '@capacitor/core@6.1.0':
+  '@capacitor/core@6.1.1':
     dependencies:
       tslib: 2.6.3
 
-  '@capacitor/filesystem@6.0.0(@capacitor/core@6.1.0)':
+  '@capacitor/filesystem@6.0.0(@capacitor/core@6.1.1)':
     dependencies:
-      '@capacitor/core': 6.1.0
+      '@capacitor/core': 6.1.1
 
-  '@capacitor/preferences@6.0.1(@capacitor/core@6.1.0)':
+  '@capacitor/preferences@6.0.1(@capacitor/core@6.1.1)':
     dependencies:
-      '@capacitor/core': 6.1.0
+      '@capacitor/core': 6.1.1
 
   '@cloudflare/kv-asset-handler@0.3.4':
     dependencies:
@@ -7233,7 +7241,7 @@ snapshots:
       socket.io-client: 4.7.5
       ufo: 1.5.4
       unist-util-stringify-position: 4.0.0
-      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1)
+      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1)
       ws: 8.18.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -7593,7 +7601,7 @@ snapshots:
       h3: 1.12.0
       local-pkg: 0.5.0
       magic-string: 0.30.10
-      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(encoding@0.1.13)(magicast@0.3.4)
+      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(encoding@0.1.13)(magicast@0.3.4)
       node-fetch-native: 1.6.4
       ofetch: 1.3.4
       pathe: 1.1.2
@@ -8231,7 +8239,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -9377,7 +9385,7 @@ snapshots:
       '@one-ini/wasm': 0.1.1
       commander: 10.0.1
       minimatch: 9.0.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   ee-first@1.1.1: {}
 
@@ -9613,7 +9621,7 @@ snapshots:
       get-tsconfig: 4.7.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -9628,7 +9636,7 @@ snapshots:
       eslint: 9.7.0
       esquery: 1.5.0
       is-builtin-module: 3.2.1
-      semver: 7.6.2
+      semver: 7.6.3
       spdx-expression-parse: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -9661,7 +9669,7 @@ snapshots:
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
       regjsparser: 0.10.0
-      semver: 7.6.2
+      semver: 7.6.3
       strip-indent: 3.0.0
     transitivePeerDependencies:
       - supports-color
@@ -9674,7 +9682,7 @@ snapshots:
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.1.1
-      semver: 7.6.2
+      semver: 7.6.3
       vue-eslint-parser: 9.4.2(eslint@9.7.0)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
@@ -10746,6 +10754,8 @@ snapshots:
 
   lru-cache@10.4.2: {}
 
+  lru-cache@10.4.3: {}
+
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
@@ -10788,7 +10798,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   markdown-table@3.0.3: {}
 
@@ -11192,7 +11202,7 @@ snapshots:
       pkg-types: 1.1.3
       postcss: 8.4.39
       postcss-nested: 6.0.1(postcss@8.4.39)
-      semver: 7.6.2
+      semver: 7.6.3
     optionalDependencies:
       typescript: 5.5.3
       vue-tsc: 2.0.26(typescript@5.5.3)
@@ -11248,7 +11258,7 @@ snapshots:
 
   netmask@2.0.2: {}
 
-  nitropack@2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(encoding@0.1.13)(magicast@0.3.4):
+  nitropack@2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(encoding@0.1.13)(magicast@0.3.4):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@netlify/functions': 2.8.1
@@ -11314,7 +11324,7 @@ snapshots:
       unctx: 2.3.1
       unenv: 1.9.0
       unimport: 3.7.2(rollup@4.18.1)
-      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1)
+      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1)
       unwasm: 0.3.9
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -11442,7 +11452,7 @@ snapshots:
       - supports-color
       - vue
 
-  nuxt@3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3)):
+  nuxt@3.12.3(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(@parcel/watcher@2.4.1)(@types/node@20.14.10)(encoding@0.1.13)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.3)(rollup@4.18.1)(terser@5.21.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))(vue-tsc@2.0.26(typescript@5.5.3)):
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/devtools': 1.3.9(rollup@4.18.1)(vite@5.3.3(@types/node@20.14.10)(terser@5.21.0))
@@ -11475,7 +11485,7 @@ snapshots:
       knitwork: 1.1.0
       magic-string: 0.30.10
       mlly: 1.7.1
-      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(encoding@0.1.13)(magicast@0.3.4)
+      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(encoding@0.1.13)(magicast@0.3.4)
       nuxi: 3.12.0
       nypm: 0.3.9
       ofetch: 1.3.4
@@ -11496,7 +11506,7 @@ snapshots:
       unimport: 3.7.2(rollup@4.18.1)
       unplugin: 1.11.0
       unplugin-vue-router: 0.10.0(rollup@4.18.1)(vue-router@4.4.0(vue@3.4.31(typescript@5.5.3)))(vue@3.4.31(typescript@5.5.3))
-      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1)
+      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1)
       untyped: 1.4.2
       vue: 3.4.31(typescript@5.5.3)
       vue-bundle-renderer: 2.1.0
@@ -11580,7 +11590,7 @@ snapshots:
       knitwork: 1.1.0
       magic-string: 0.30.10
       mlly: 1.7.1
-      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(encoding@0.1.13)(magicast@0.3.4)
+      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(encoding@0.1.13)(magicast@0.3.4)
       nuxi: 3.12.0
       nypm: 0.3.9
       ofetch: 1.3.4
@@ -11601,7 +11611,7 @@ snapshots:
       unimport: 3.7.2(rollup@3.29.4)
       unplugin: 1.11.0
       unplugin-vue-router: 0.10.0(rollup@3.29.4)(vue-router@4.4.0(vue@3.4.31(typescript@5.5.3)))(vue@3.4.31(typescript@5.5.3))
-      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1)
+      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1)
       untyped: 1.4.2
       vue: 3.4.31(typescript@5.5.3)
       vue-bundle-renderer: 2.1.0
@@ -11685,7 +11695,7 @@ snapshots:
       knitwork: 1.1.0
       magic-string: 0.30.10
       mlly: 1.7.1
-      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(encoding@0.1.13)(magicast@0.3.4)
+      nitropack: 2.9.7(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(encoding@0.1.13)(magicast@0.3.4)
       nuxi: 3.12.0
       nypm: 0.3.9
       ofetch: 1.3.4
@@ -11706,7 +11716,7 @@ snapshots:
       unimport: 3.7.2(rollup@4.18.1)
       unplugin: 1.11.0
       unplugin-vue-router: 0.10.0(rollup@4.18.1)(vue-router@4.4.0(vue@3.4.31(typescript@5.5.3)))(vue@3.4.31(typescript@5.5.3))
-      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1)
+      unstorage: 1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1)
       untyped: 1.4.2
       vue: 3.4.31(typescript@5.5.3)
       vue-bundle-renderer: 2.1.0
@@ -11978,7 +11988,7 @@ snapshots:
 
   path-scurry@1.11.1:
     dependencies:
-      lru-cache: 10.4.2
+      lru-cache: 10.4.3
       minipass: 7.1.2
 
   path-type@4.0.0: {}
@@ -12592,6 +12602,8 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.6.2: {}
+
+  semver@7.6.3: {}
 
   send@0.18.0:
     dependencies:
@@ -13267,7 +13279,7 @@ snapshots:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
 
-  unstorage@1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.0))(ioredis@5.4.1):
+  unstorage@1.10.2(@capacitor/preferences@6.0.1(@capacitor/core@6.1.1))(ioredis@5.4.1):
     dependencies:
       anymatch: 3.1.3
       chokidar: 3.6.0
@@ -13280,7 +13292,7 @@ snapshots:
       ofetch: 1.3.4
       ufo: 1.5.3
     optionalDependencies:
-      '@capacitor/preferences': 6.0.1(@capacitor/core@6.1.0)
+      '@capacitor/preferences': 6.0.1(@capacitor/core@6.1.1)
       ioredis: 5.4.1
     transitivePeerDependencies:
       - uWebSockets.js
@@ -13600,7 +13612,7 @@ snapshots:
       espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.6.2
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
 
