@@ -27,7 +27,7 @@ importers:
         version: 7.2.0
       '@ionic/vue':
         specifier: ^8.2.5
-        version: 8.2.5
+        version: 8.2.6
       '@ionic/vue-router':
         specifier: ^8.2.5
         version: 8.2.5
@@ -1150,6 +1150,9 @@ packages:
   '@ionic/core@8.2.5':
     resolution: {integrity: sha512-NhK5KfP5NL5NITibj8sOUlfI/ARNCF5rBu5HdIEfFe25MJkd0IYBQWjVaESFhSk7aB8pXEP8DIx1AHbT9e3Sog==}
 
+  '@ionic/core@8.2.6':
+    resolution: {integrity: sha512-9vLxIR+QFzeim/C6LV62vOm5e6EIoVZsLb5RjlnQICDbDf14iqcBjA+MZpW628HbADX7p9/ulaq8WFgx5085ZA==}
+
   '@ionic/utils-array@2.1.5':
     resolution: {integrity: sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA==}
     engines: {node: '>=10.3.0'}
@@ -1215,6 +1218,9 @@ packages:
 
   '@ionic/vue@8.2.5':
     resolution: {integrity: sha512-Is6ZwHlLltR0YF54cgd/Fc/eVTW2VDIOExm3paGkczcaka6Jut3UY9m0ukbILeuRG+phjet31QKKbcGSaooWyg==}
+
+  '@ionic/vue@8.2.6':
+    resolution: {integrity: sha512-/Rqx5ZUqbbDIHow9ZzRsVCnkt6aZwxMZo00/FE4/EzL95aa7z3A4y6yZ9p98KVkHIIIpcFzyI3SUkEIabLC/QQ==}
 
   '@ioredis/commands@1.2.0':
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -1695,6 +1701,11 @@ packages:
 
   '@stencil/core@4.19.2':
     resolution: {integrity: sha512-ZdnbHmHEl8E5vN0GWDtONe5w6j3CrSqqxZM4hNLBPkV/aouWKug7D5/Mi6RazfYO5U4fmHQYLwMz60rHcx0G4g==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+
+  '@stencil/core@4.20.0':
+    resolution: {integrity: sha512-WPrTHFngvN081RY+dJPneKQLwnOFD60OMCOQGmmSHfCW0f4ujPMzzhwWU1gcSwXPWXz5O+8cBiiCaxAbJU7kAg==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -6996,6 +7007,12 @@ snapshots:
       ionicons: 7.4.0
       tslib: 2.6.3
 
+  '@ionic/core@8.2.6':
+    dependencies:
+      '@stencil/core': 4.20.0
+      ionicons: 7.4.0
+      tslib: 2.6.3
+
   '@ionic/utils-array@2.1.5':
     dependencies:
       debug: 4.3.5
@@ -7146,6 +7163,11 @@ snapshots:
   '@ionic/vue@8.2.5':
     dependencies:
       '@ionic/core': 8.2.5
+      ionicons: 7.4.0
+
+  '@ionic/vue@8.2.6':
+    dependencies:
+      '@ionic/core': 8.2.6
       ionicons: 7.4.0
 
   '@ioredis/commands@1.2.0': {}
@@ -8253,6 +8275,8 @@ snapshots:
   '@socket.io/component-emitter@3.1.0': {}
 
   '@stencil/core@4.19.2': {}
+
+  '@stencil/core@4.20.0': {}
 
   '@stylistic/eslint-plugin-js@2.1.0(eslint@9.7.0)':
     dependencies:
