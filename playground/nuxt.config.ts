@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2024-08-19',
   modules: ['@nuxtjs/ionic'],
   css: ['~/assets/css/ionic.css'],
   ionic: {
