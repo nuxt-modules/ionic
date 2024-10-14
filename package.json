@@ -49,7 +49,7 @@
     "prepare": "husky",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && npm publish && git push --follow-tags",
-    "test": "vitest run",
+    "test": "vitest run --coverage",
     "test:types": "tsc --noEmit"
   },
   "dependencies": {

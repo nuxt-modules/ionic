@@ -12,7 +12,10 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +35,10 @@ jobs:
         run: pnpm run lint
 
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
@@ -52,7 +58,7 @@ jobs:
         run: pnpm playwright-core install
 
       - name: 🧪 Test project
-        run: pnpm test -- --coverage
+        run: pnpm test
 
       - name: 💪 Test types
         run: pnpm test:types
