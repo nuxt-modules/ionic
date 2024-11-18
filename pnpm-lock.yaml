@@ -123,8 +123,8 @@ importers:
         specifier: 1.15.1
         version: 1.15.1(@capacitor/preferences@6.0.2(@capacitor/core@6.1.2))(change-case@5.4.4)(ioredis@5.4.1)(magicast@0.3.5)(nuxt@3.14.159(@capacitor/preferences@6.0.2(@capacitor/core@6.1.2))(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.27.2)(terser@5.36.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue-tsc@2.1.10(typescript@5.6.3)))(postcss@8.4.49)(rollup@4.27.2)(vue-tsc@2.1.10(typescript@5.6.3))(vue@3.5.12(typescript@5.6.3))
       '@nuxtjs/plausible':
-        specifier: 1.0.3
-        version: 1.0.3(magicast@0.3.5)(rollup@4.27.2)
+        specifier: 1.1.1
+        version: 1.1.1(magicast@0.3.5)(rollup@4.27.2)
       nuxt:
         specifier: 3.14.159
         version: 3.14.159(@capacitor/preferences@6.0.2(@capacitor/core@6.1.2))(@parcel/watcher@2.5.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@2.4.0))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.27.2)(terser@5.36.0)(typescript@5.6.3)(vite@5.4.11(@types/node@22.9.0)(terser@5.36.0))(vue-tsc@2.1.10(typescript@5.6.3))
@@ -1266,8 +1266,8 @@ packages:
   '@nuxtjs/mdc@0.9.2':
     resolution: {integrity: sha512-dozIPTPjEYu8jChHNCICZP3mN0sFC6l3aLxTkgv/DAr1EI8jqqqoSZKevzuiHUWGNTguS70+fLcztCwrzWdoYA==}
 
-  '@nuxtjs/plausible@1.0.3':
-    resolution: {integrity: sha512-jf6W9+Q/VhfHk/jal1gp0OpYU2qwq7eOV4evNKvHWKVM0Qbps+LbKSxNcewgqN91tVx9sv4RbnOEJ8Uq0/FRkg==}
+  '@nuxtjs/plausible@1.1.1':
+    resolution: {integrity: sha512-vjpMg84+oQ5zte+XeDMMwXIa4lIkS19i8CfOBNjqoX9zZWmWNsL6zIzPn4zdg9puzapKQYw1IBCki1E0PG11mA==}
 
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
@@ -7711,7 +7711,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@nuxtjs/plausible@1.0.3(magicast@0.3.5)(rollup@4.27.2)':
+  '@nuxtjs/plausible@1.1.1(magicast@0.3.5)(rollup@4.27.2)':
     dependencies:
       '@barbapapazes/plausible-tracker': 0.5.3
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.27.2)
