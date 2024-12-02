@@ -69,8 +69,8 @@ importers:
         specifier: 22.9.1
         version: 22.9.1
       '@vitest/coverage-v8':
-        specifier: 2.1.6
-        version: 2.1.6(vitest@2.1.7(@types/node@22.9.1)(happy-dom@15.11.7)(terser@5.36.0))
+        specifier: 2.1.7
+        version: 2.1.7(vitest@2.1.7(@types/node@22.9.1)(happy-dom@15.11.7)(terser@5.36.0))
       '@vue/test-utils':
         specifier: 2.4.6
         version: 2.4.6
@@ -1801,11 +1801,11 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
 
-  '@vitest/coverage-v8@2.1.6':
-    resolution: {integrity: sha512-qItJVYDbG3MUFO68dOZUz+rWlqe9LMzotERXFXKg25s2A/kSVsyS9O0yNGrITfBd943GsnBeQZkBUu7Pc+zVeA==}
+  '@vitest/coverage-v8@2.1.7':
+    resolution: {integrity: sha512-deQ4J+yu6nEjmEfcBndbgrRM95IZoRpV1dDVRbZhjUcgYVZz/Wc4YaLiDDt9Sy5qcikrJUZMlrUxDy7dBojebg==}
     peerDependencies:
-      '@vitest/browser': 2.1.6
-      vitest: 2.1.6
+      '@vitest/browser': 2.1.7
+      vitest: 2.1.7
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
@@ -8309,7 +8309,7 @@ snapshots:
       vite: 5.4.11(@types/node@22.9.1)(terser@5.36.0)
       vue: 3.5.13(typescript@5.6.3)
 
-  '@vitest/coverage-v8@2.1.6(vitest@2.1.7(@types/node@22.9.1)(happy-dom@15.11.7)(terser@5.36.0))':
+  '@vitest/coverage-v8@2.1.7(vitest@2.1.7(@types/node@22.9.1)(happy-dom@15.11.7)(terser@5.36.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
