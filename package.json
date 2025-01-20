@@ -41,7 +41,7 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "pnpm nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "docs:dev": "nuxi dev docs",
-    "docs:build": "nuxi build docs",
+    "docs:build": "nuxi generate docs",
     "lint": "pnpm lint:all:eslint",
     "lint:all:eslint": "pnpm lint:eslint .",
     "lint:eslint": "eslint --fix",
