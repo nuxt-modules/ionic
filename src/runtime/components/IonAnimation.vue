@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
+import type {} from '@ionic/core'
 import { createAnimation } from '@ionic/vue'
 import type {
   Animation,
