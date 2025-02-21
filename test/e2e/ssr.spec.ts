@@ -13,7 +13,7 @@ describe('nuxt ionic', async () => {
   it('renders web components', async () => {
     const html = await $fetch('/')
     expect(html).toContain(
-      '<ion-app><!--[--><ion-router-outlet></ion-router-outlet><!--]--></ion-app>',
+      '<ion-app name="IonApp"><!--[--><ion-router-outlet></ion-router-outlet><!--]--></ion-app>',
     )
   })
 
