@@ -42,11 +42,9 @@
     "dev:prepare": "pnpm nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "docs:dev": "nuxi dev docs",
     "docs:build": "nuxi generate docs",
-    "lint": "pnpm lint:all:eslint",
-    "lint:all:eslint": "pnpm lint:eslint .",
-    "lint:eslint": "eslint --fix",
+    "lint": "eslint",
     "prepack": "pnpm build",
-    "prepare": "husky",
+    "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm lint && pnpm test",
     "release": "bumpp && npm publish && git push --follow-tags",
     "test": "vitest run --coverage",
@@ -83,12 +81,21 @@
     "lint-staged": "15.4.3",
     "nuxt": "3.15.4",
     "playwright-core": "1.50.1",
+    "simple-git-hooks": "2.11.1",
     "typescript": "5.7.3",
     "unbuild": "3.3.1",
     "unhead": "1.11.19",
     "vitest": "3.0.6",
     "vue": "3.5.13",
     "vue-tsc": "2.2.2"
+  },
+  "lint-staged": {
+    "*.{md,js,ts,mjs,cjs,json,.*rc}": [
+      "npx eslint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
   "resolutions": {
     "@nuxt/content": "2.13.4",

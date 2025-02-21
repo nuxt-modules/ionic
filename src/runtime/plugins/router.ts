@@ -38,11 +38,11 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
 
     const history
       = routerOptions.history?.(routerBase)
-      ?? (import.meta.client
-        ? routerOptions.hashMode
-          ? createWebHashHistory(routerBase)
-          : createWebHistory(routerBase)
-        : createMemoryHistory(routerBase))
+        ?? (import.meta.client
+          ? routerOptions.hashMode
+            ? createWebHashHistory(routerBase)
+            : createWebHistory(routerBase)
+          : createMemoryHistory(routerBase))
 
     const routes = routerOptions.routes?.(_routes) ?? _routes
 
