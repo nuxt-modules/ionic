@@ -53,18 +53,18 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@capacitor/cli": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
+    "@capacitor/cli": "^7.0.1",
+    "@capacitor/core": "^7.0.1",
     "@ionic/cli": "^7.2.0",
-    "@ionic/vue": "^8.2.6",
-    "@ionic/vue-router": "^8.2.6",
-    "@nuxt/kit": "^3.12.4",
-    "@unhead/vue": "^1.11.18",
+    "@ionic/vue": "^8.4.3",
+    "@ionic/vue-router": "^8.4.3",
+    "@nuxt/kit": "^3.15.4",
+    "@unhead/vue": "^1.11.19",
     "ionicons": "^7.4.0",
-    "pathe": "^2.0.0",
-    "pkg-types": "^1.1.3",
+    "pathe": "^2.0.3",
+    "pkg-types": "^1.3.1",
     "ufo": "^1.5.4",
-    "unimport": "^4.0.0"
+    "unimport": "^4.1.2"
   },
   "devDependencies": {
     "@ionic/core": "8.4.3",
@@ -73,12 +73,12 @@
     "@nuxt/schema": "3.15.4",
     "@nuxt/test-utils": "3.17.0",
     "@types/node": "22.13.5",
-    "@vitest/coverage-v8": "3.0.5",
+    "@vitest/coverage-v8": "3.0.6",
     "@vue/test-utils": "2.4.6",
     "bumpp": "10.0.3",
-    "eslint": "9.20.1",
+    "eslint": "9.21.0",
     "expect-type": "1.1.0",
-    "happy-dom": "17.1.0",
+    "happy-dom": "17.1.1",
     "husky": "9.1.7",
     "lint-staged": "15.4.3",
     "nuxt": "3.15.4",
@@ -86,7 +86,7 @@
     "typescript": "5.7.3",
     "unbuild": "3.3.1",
     "unhead": "1.11.19",
-    "vitest": "3.0.5",
+    "vitest": "3.0.6",
     "vue": "3.5.13",
     "vue-tsc": "2.2.2"
   },
@@ -95,8 +95,8 @@
     "@nuxt/kit": "3.15.4",
     "@nuxt/schema": "3.15.4",
     "@nuxtjs/ionic": "link:.",
-    "consola": "^3.2.3",
-    "nuxt-component-meta": ">=0.7.0"
+    "consola": "^3.4.0",
+    "nuxt-component-meta": ">=0.10.0"
   },
-  "packageManager": "pnpm@9.15.5"
+  "packageManager": "pnpm@10.4.1"
 }
