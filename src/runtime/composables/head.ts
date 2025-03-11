@@ -1,8 +1,8 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
-import { getActiveHead } from 'unhead'
 import type { useHead as useHead$1 } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { injectHead } from '#imports'
 
 // This is used to store the active head for each path as long as the path's page is still in the DOM
 const headMap = new Map<
@@ -15,7 +15,7 @@ let currPath$1: string
 let prevPath: string
 export function useHead(obj: Parameters<typeof useHead$1>[0]) {
   const currentPath = useRoute().path
-  const activeHead = getActiveHead()
+  const activeHead = injectHead()
   const { currentRoute } = useRouter()
   const router = useRouter()
   let hasReallyLeft = false
