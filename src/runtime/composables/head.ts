@@ -1,26 +1,29 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
-import { getActiveHead } from 'unhead'
-import type { useHead as useHead$1 } from '@unhead/vue'
+import type { ActiveHeadEntry, UseHeadInput } from '@unhead/vue/types'
+import type { useHead as _useHead } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { injectHead } from '#imports'
 
 // This is used to store the active head for each path as long as the path's page is still in the DOM
-const headMap = new Map<
-  string,
-  Array<[Parameters<typeof useHead$1>[0], ReturnType<typeof useHead$1>]>
->()
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const headMap = new Map<string, Array<[UseHeadInput<any>, ActiveHeadEntry<UseHeadInput<any>>]>>()
+
 let beforeHook: (() => void) | undefined
 let afterHook: (() => void) | undefined
-let currPath$1: string
+let currPath: string
 let prevPath: string
-export function useHead(obj: Parameters<typeof useHead$1>[0]) {
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
   const currentPath = useRoute().path
-  const activeHead = getActiveHead()
+  const activeHead = injectHead()
   const { currentRoute } = useRouter()
   const router = useRouter()
   let hasReallyLeft = false
   let innerObj = obj
-  const __returned: ReturnType<typeof useHead$1> = {
+
+  const __returned: Omit<ActiveHeadEntry<UseHeadInput<T>>, '_poll'> = {
     dispose() {
       // Can just easily mutate the array instead of wasting little CPU to slice/spread it :P
       const headArr = [...headMap.get(currentPath)!]
@@ -65,7 +68,7 @@ export function useHead(obj: Parameters<typeof useHead$1>[0]) {
   }
   if (!afterHook) {
     afterHook = router.afterEach(() => {
-      currPath$1 = currentRoute.value.path
+      currPath = currentRoute.value.path
     })
   }
 
@@ -74,7 +77,7 @@ export function useHead(obj: Parameters<typeof useHead$1>[0]) {
     if (headArr) {
       headArr = headArr.map(([obj, head]) => {
         head?.dispose()
-        return [obj, undefined]
+        return [obj, head]
       })
       headMap.set(prevPath, headArr)
     }
@@ -83,14 +86,14 @@ export function useHead(obj: Parameters<typeof useHead$1>[0]) {
 
   onIonViewDidEnter(() => {
     if (hasReallyLeft) {
-      let headArr = headMap.get(currPath$1)
+      let headArr = headMap.get(currPath)
       if (headArr) {
         headArr = headArr.map(([obj, head]) => {
           head?.dispose()
           const newHead = activeHead?.push(obj)
           return [obj, newHead]
         })
-        headMap.set(currPath$1, headArr)
+        headMap.set(currPath, headArr)
       }
     }
   })
