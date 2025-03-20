@@ -15,8 +15,6 @@
 
 ## Features
 
-**⚠️ `@nuxtjs/ionic` is currently a work in progress. ⚠️**
-
 - Zero-config required
 - Auto-import Ionic components, composables and icons
 - Ionic Router integration
