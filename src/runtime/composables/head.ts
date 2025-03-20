@@ -1,8 +1,8 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
-import type { useHead as _useHead, MergeHead, ActiveHeadEntry } from '@unhead/vue'
+import type { ActiveHeadEntry, UseHeadInput } from '@unhead/vue/types'
+import type { useHead as _useHead } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import type { UseHeadInput } from 'unhead'
 import { injectHead } from '#imports'
 
 // This is used to store the active head for each path as long as the path's page is still in the DOM
@@ -14,8 +14,8 @@ let afterHook: (() => void) | undefined
 let currPath: string
 let prevPath: string
 
-// <T extends MergeHead>(input: UseHeadInput<T>
-export function useHead<T extends MergeHead>(obj: UseHeadInput<T>) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
   const currentPath = useRoute().path
   const activeHead = injectHead()
   const { currentRoute } = useRouter()
@@ -23,7 +23,7 @@ export function useHead<T extends MergeHead>(obj: UseHeadInput<T>) {
   let hasReallyLeft = false
   let innerObj = obj
 
-  const __returned: ActiveHeadEntry<UseHeadInput<T>> = {
+  const __returned: Omit<ActiveHeadEntry<UseHeadInput<T>>, '_poll'> = {
     dispose() {
       // Can just easily mutate the array instead of wasting little CPU to slice/spread it :P
       const headArr = [...headMap.get(currentPath)!]
