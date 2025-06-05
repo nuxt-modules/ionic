@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{js,ts,mjs,cjs,json}': ['pnpm lint:eslint'],
+  '*.{js,ts,mjs,cjs,json}': ['pnpm lint'],
 }
