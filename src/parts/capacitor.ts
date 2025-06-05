@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli'
 import { findPath, useNuxt } from '@nuxt/kit'
 import { join } from 'pathe'
 
-export const useTypescrip = () => {
+export const useCapacitor = () => {
   const nuxt = useNuxt()
 
   /** Find the path to capacitor configuration file (if it exists) */
@@ -19,13 +19,7 @@ export const useTypescrip = () => {
     return path
   }
 
-  const detectIfCapacatorIsEnabled = async () => {
-    const paths = await findCapacitorConfig()
-    return !!paths
-  }
-
-  const parseCapacitorConfig = async () => {
-    const path = await findCapacitorConfig()
+  const parseCapacitorConfig = async (path: string | null) => {
     if (!path) {
       return {
         androidPath: null,
@@ -41,6 +35,7 @@ export const useTypescrip = () => {
     }
   }
 
+  /** Exclude native folder paths from type checking by excluding them in tsconfig */
   const excludeNativeFolders = (androidPath: string | null, iosPath: string | null) => {
     nuxt.options.typescript.tsConfig ||= {}
     nuxt.options.typescript.tsConfig.exclude ||= []
@@ -52,7 +47,7 @@ export const useTypescrip = () => {
 
   return {
     excludeNativeFolders,
-    detectIfCapacatorIsEnabled,
+    findCapacitorConfig,
     parseCapacitorConfig,
   }
 }
