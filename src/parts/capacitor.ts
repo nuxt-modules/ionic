@@ -19,7 +19,10 @@ export const useCapacitor = () => {
     return path
   }
 
-  const parseCapacitorConfig = async (path: string | null) => {
+  const parseCapacitorConfig = async (path: string | null): Promise<{
+    androidPath: string | null
+    iosPath: string | null
+  }> => {
     if (!path) {
       return {
         androidPath: null,
