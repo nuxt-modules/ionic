@@ -160,6 +160,7 @@ export default defineNuxtModule<ModuleOptions>({
       }),
     ])
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (nuxt.options.nitro.static || (nuxt.options as any)._generate /* TODO: remove in future */) {
       nuxt.hook('nitro:config', async (config) => {
         config.prerender ||= {}
