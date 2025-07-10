@@ -38,8 +38,8 @@ importers:
         specifier: ^2.0.0-rc.13
         version: 2.0.12(vue@3.5.17(typescript@5.8.3))
       ionicons:
-        specifier: ^7.4.0
-        version: 7.4.0
+        specifier: ^8.0.0
+        version: 8.0.13
       pathe:
         specifier: ^2.0.3
         version: 2.0.3
@@ -3841,6 +3841,9 @@ packages:
 
   ionicons@7.4.0:
     resolution: {integrity: sha512-ZK94MMqgzMCPPMhmk8Ouu6goyVHFIlw/ACP6oe3FrikcI0N7CX0xcwVaEbUc0G/v3W0shI93vo+9ve/KpvcNhQ==}
+
+  ionicons@8.0.13:
+    resolution: {integrity: sha512-2QQVyG2P4wszne79jemMjWYLp0DBbDhr4/yFroPCxvPP1wtMxgdIV3l5n+XZ5E9mgoXU79w7yTWpm2XzJsISxQ==}
 
   ioredis@5.6.1:
     resolution: {integrity: sha512-UxC0Yv1Y4WRJiGQxQkP0hfdL0/5/6YvdfOOClRgJ0qppSarkhneSa6UvkMkms0AkdGimSH3Ikqm+6mkMmX7vGA==}
@@ -11143,6 +11146,10 @@ snapshots:
       through: 2.3.8
 
   ionicons@7.4.0:
+    dependencies:
+      '@stencil/core': 4.35.3
+
+  ionicons@8.0.13:
     dependencies:
       '@stencil/core': 4.35.3
 
