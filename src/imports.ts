@@ -66,6 +66,7 @@ export const IonicBuiltInComponents = [
   'IonInfiniteScroll',
   'IonInfiniteScrollContent',
   'IonInput',
+  'IonInputOtp',
   'IonInputPasswordToggle',
   'IonItem',
   'IonItemDivider',
