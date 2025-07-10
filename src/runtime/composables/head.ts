@@ -1,5 +1,5 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
-import type { ActiveHeadEntry, UseHeadInput } from '@unhead/vue/types'
+import type { ActiveHeadEntry, UseHeadInput, UseHeadOptions } from '@unhead/vue/types'
 import type { useHead as _useHead } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -15,7 +15,7 @@ let currPath: string
 let prevPath: string
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
+export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?: UseHeadOptions) {
   const currentPath = useRoute().path
   const activeHead = injectHead()
   const { currentRoute } = useRouter()
