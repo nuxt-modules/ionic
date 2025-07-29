@@ -9,7 +9,7 @@ const iconsPreset = defineUnimportPreset({
   from: 'ionicons/icons',
   imports: Object.keys(icons).map(name => ({
     name,
-    as: 'ionicons' + name[0].toUpperCase() + name.slice(1),
+    as: 'ionicons' + name[0]!.toUpperCase() + name.slice(1),
   })),
 })
 

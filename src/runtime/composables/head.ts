@@ -29,7 +29,7 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
       const headArr = [...headMap.get(currentPath)!]
       const headArrIndex = headArr.findIndex(headVal => headVal[0] === innerObj)
       if (headArrIndex === -1) return
-      const headToDispose = headArr[headArrIndex][1]
+      const headToDispose = headArr[headArrIndex]![1]
       headToDispose?.dispose()
       headArr.splice(headArrIndex, 1)
       headMap.set(currentPath, headArr)
@@ -39,7 +39,7 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
       const headArr = [...headMap.get(currentPath)!]
       const headArrIndex = headArr.findIndex(headVal => headVal[0] === innerObj)
       if (headArrIndex === -1) return
-      const [, headToPatch] = headArr[headArrIndex]
+      const [, headToPatch] = headArr[headArrIndex]!
       innerObj = newObj
       headToPatch?.patch(innerObj)
       headArr.splice(headArrIndex, 1, [innerObj, headToPatch])
