@@ -1,5 +1,5 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
-import type { ActiveHeadEntry, UseHeadInput } from '@unhead/vue/types'
+import type { ActiveHeadEntry, UseHeadInput, UseHeadOptions } from '@unhead/vue/types'
 import type { useHead as _useHead } from '@unhead/vue'
 import { onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -15,7 +15,7 @@ let currPath: string
 let prevPath: string
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
+export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?: UseHeadOptions) {
   const currentPath = useRoute().path
   const activeHead = injectHead()
   const { currentRoute } = useRouter()
@@ -29,7 +29,7 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
       const headArr = [...headMap.get(currentPath)!]
       const headArrIndex = headArr.findIndex(headVal => headVal[0] === innerObj)
       if (headArrIndex === -1) return
-      const headToDispose = headArr[headArrIndex][1]
+      const headToDispose = headArr[headArrIndex]![1]
       headToDispose?.dispose()
       headArr.splice(headArrIndex, 1)
       headMap.set(currentPath, headArr)
@@ -39,7 +39,7 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>) {
       const headArr = [...headMap.get(currentPath)!]
       const headArrIndex = headArr.findIndex(headVal => headVal[0] === innerObj)
       if (headArrIndex === -1) return
-      const [, headToPatch] = headArr[headArrIndex]
+      const [, headToPatch] = headArr[headArrIndex]!
       innerObj = newObj
       headToPatch?.patch(innerObj)
       headArr.splice(headArrIndex, 1, [innerObj, headToPatch])
