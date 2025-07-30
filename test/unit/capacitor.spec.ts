@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { useNuxt, findPath } from '@nuxt/kit'
-import { useCapacitor } from '../../src/parts/capacitor'
+import { setupCapacitor } from '../../src/parts/capacitor'
 
 // Mock @nuxt/kit
 vi.mock('@nuxt/kit', () => ({
@@ -30,7 +30,7 @@ describe('useCapacitor', () => {
       const mockPath = '/project/capacitor.config.ts'
       vi.mocked(findPath).mockResolvedValue(mockPath)
 
-      const { findCapacitorConfig } = useCapacitor()
+      const { findCapacitorConfig } = setupCapacitor()
       const result = await findCapacitorConfig()
 
       expect(result).toBe(mockPath)
@@ -39,7 +39,7 @@ describe('useCapacitor', () => {
     it('should return null when no config found', async () => {
       vi.mocked(findPath).mockResolvedValue(null)
 
-      const { findCapacitorConfig } = useCapacitor()
+      const { findCapacitorConfig } = setupCapacitor()
       const result = await findCapacitorConfig()
 
       expect(result).toBeNull()
@@ -48,7 +48,7 @@ describe('useCapacitor', () => {
 
   describe('parseCapacitorConfig', () => {
     it('should return null paths when no config path provided', async () => {
-      const { parseCapacitorConfig } = useCapacitor()
+      const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(null)
 
       expect(result).toEqual({
@@ -69,7 +69,7 @@ describe('useCapacitor', () => {
         ...mockConfig,
       }))
 
-      const { parseCapacitorConfig } = useCapacitor()
+      const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
       expect(result).toEqual({
@@ -90,7 +90,7 @@ describe('useCapacitor', () => {
         ...mockConfig,
       }))
 
-      const { parseCapacitorConfig } = useCapacitor()
+      const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
       expect(result).toEqual({
@@ -102,7 +102,7 @@ describe('useCapacitor', () => {
 
   describe('excludeNativeFolders', () => {
     it('should add native folders to typescript exclude', () => {
-      const { excludeNativeFolders } = useCapacitor()
+      const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders('android', 'ios')
 
       expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../android')
@@ -110,7 +110,7 @@ describe('useCapacitor', () => {
     })
 
     it('should handle null paths with defaults', () => {
-      const { excludeNativeFolders } = useCapacitor()
+      const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders(null, null)
 
       expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../android')
@@ -121,7 +121,7 @@ describe('useCapacitor', () => {
       // @ts-expect-error should not be undefined
       mockNuxt.options.typescript.tsConfig = undefined
 
-      const { excludeNativeFolders } = useCapacitor()
+      const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders('android', 'ios')
 
       expect(mockNuxt.options.typescript.tsConfig).toBeDefined()

@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli'
 import { findPath, useNuxt } from '@nuxt/kit'
 import { join } from 'pathe'
 
-export const useCapacitor = () => {
+export const setupCapacitor = () => {
   const nuxt = useNuxt()
 
   /** Find the path to capacitor configuration file (if it exists) */
