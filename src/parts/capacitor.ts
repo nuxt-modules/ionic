@@ -40,11 +40,23 @@ export const setupCapacitor = () => {
 
   /** Exclude native folder paths from type checking by excluding them in tsconfig */
   const excludeNativeFolders = (androidPath: string | null, iosPath: string | null) => {
-    nuxt.options.typescript.tsConfig ||= {}
-    nuxt.options.typescript.tsConfig.exclude ||= []
-    nuxt.options.typescript.tsConfig.exclude.push(
-      join('..', androidPath ?? 'android'),
-      join('..', iosPath ?? 'ios'),
+    nuxt.hook('prepare:types', (ctx) => {
+      const paths = [
+        join('..', androidPath ?? 'android'),
+        join('..', iosPath ?? 'ios'),
+      ]
+
+      for (const key of ['tsConfig', 'nodeTsConfig', 'sharedTsConfig'] as const) {
+        if (ctx[key]) {
+          ctx[key].exclude ||= []
+          ctx[key].exclude.push(...paths)
+        }
+      }
+    })
+
+    nuxt.options.ignore.push(
+      join(androidPath ?? 'android'),
+      join(iosPath ?? 'ios'),
     )
   }
 

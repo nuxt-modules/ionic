@@ -140,8 +140,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.typescript.hoist.push('@ionic/vue')
 
     // add capacitor integration
-    const { excludeNativeFolders, findCapacitorConfig, parseCapacitorConfig }
-      = setupCapacitor()
+    const { excludeNativeFolders, findCapacitorConfig, parseCapacitorConfig } = setupCapacitor()
 
     // add the `android` and `ios` folders to the TypeScript config exclude list if capacitor is enabled
     // this is to prevent TypeScript from trying to resolve the Capacitor native code
