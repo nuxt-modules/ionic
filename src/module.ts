@@ -20,6 +20,7 @@ import { useCSSSetup } from './parts/css'
 import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupRouter } from './parts/router'
+import { setupCapacitor } from './parts/capacitor'
 
 export interface ModuleOptions {
   integrations?: {
@@ -137,6 +138,17 @@ export default defineNuxtModule<ModuleOptions>({
     // Ensure `@ionic/vue` types flow through
     nuxt.options.typescript.hoist ||= []
     nuxt.options.typescript.hoist.push('@ionic/vue')
+
+    // add capacitor integration
+    const { excludeNativeFolders, findCapacitorConfig, parseCapacitorConfig } = setupCapacitor()
+
+    // add the `android` and `ios` folders to the TypeScript config exclude list if capacitor is enabled
+    // this is to prevent TypeScript from trying to resolve the Capacitor native code
+    const capacitorConfigPath = await findCapacitorConfig()
+    if (capacitorConfigPath) {
+      const { androidPath, iosPath } = await parseCapacitorConfig(capacitorConfigPath)
+      excludeNativeFolders(androidPath, iosPath)
+    }
 
     // Add auto-imported components
     IonicBuiltInComponents.map(name =>
