@@ -10,19 +10,16 @@ vi.mock('@nuxt/kit', () => ({
 
 describe('useCapacitor', () => {
   const mockNuxt = {
+    hook: vi.fn(),
     options: {
-      typescript: {
-        tsConfig: {
-          exclude: [],
-        },
-      },
+      ignore: [],
     },
   }
 
   beforeEach(() => {
     vi.clearAllMocks()
     vi.mocked(useNuxt).mockReturnValue(mockNuxt as any)
-    mockNuxt.options.typescript.tsConfig.exclude = []
+    mockNuxt.options.ignore = []
   })
 
   describe('findCapacitorConfig', () => {
@@ -101,31 +98,86 @@ describe('useCapacitor', () => {
   })
 
   describe('excludeNativeFolders', () => {
-    it('should add native folders to typescript exclude', () => {
+    it('should register prepare:types hook and add native folders to ignore', () => {
       const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders('android', 'ios')
 
-      expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../android')
-      expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../ios')
+      expect(mockNuxt.hook).toHaveBeenCalledWith('prepare:types', expect.any(Function))
+      expect(mockNuxt.options.ignore).toContain('android')
+      expect(mockNuxt.options.ignore).toContain('ios')
     })
 
     it('should handle null paths with defaults', () => {
       const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders(null, null)
 
-      expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../android')
-      expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../ios')
+      expect(mockNuxt.hook).toHaveBeenCalledWith('prepare:types', expect.any(Function))
+      expect(mockNuxt.options.ignore).toContain('android')
+      expect(mockNuxt.options.ignore).toContain('ios')
     })
 
-    it('should initialize tsConfig if not present', () => {
-      // @ts-expect-error should not be undefined
-      mockNuxt.options.typescript.tsConfig = undefined
+    it('should modify typescript configs in prepare:types hook', () => {
+      const { excludeNativeFolders } = setupCapacitor()
+      excludeNativeFolders('custom-android', 'custom-ios')
 
+      // Get the hook callback that was registered
+      const hookCallback = mockNuxt.hook.mock.calls.find(call => call[0] === 'prepare:types')?.[1]
+      expect(hookCallback).toBeDefined()
+
+      // Mock typescript context
+      const mockCtx = {
+        tsConfig: { exclude: [] },
+        nodeTsConfig: { exclude: [] },
+        sharedTsConfig: { exclude: [] },
+      }
+
+      // Call the hook callback
+      hookCallback(mockCtx)
+
+      // Verify all configs were updated
+      expect(mockCtx.tsConfig.exclude).toContain('../custom-android')
+      expect(mockCtx.tsConfig.exclude).toContain('../custom-ios')
+      expect(mockCtx.nodeTsConfig.exclude).toContain('../custom-android')
+      expect(mockCtx.nodeTsConfig.exclude).toContain('../custom-ios')
+      expect(mockCtx.sharedTsConfig.exclude).toContain('../custom-android')
+      expect(mockCtx.sharedTsConfig.exclude).toContain('../custom-ios')
+    })
+
+    it('should initialize exclude arrays if not present in typescript configs', () => {
       const { excludeNativeFolders } = setupCapacitor()
       excludeNativeFolders('android', 'ios')
 
-      expect(mockNuxt.options.typescript.tsConfig).toBeDefined()
-      expect(mockNuxt.options.typescript.tsConfig.exclude).toContain('../android')
+      const hookCallback = mockNuxt.hook.mock.calls.find(call => call[0] === 'prepare:types')?.[1]
+
+      // Mock context without exclude arrays
+      const mockCtx = {
+        tsConfig: {} as any,
+        nodeTsConfig: {} as any,
+        sharedTsConfig: {} as any,
+      }
+
+      hookCallback(mockCtx)
+
+      expect(mockCtx.tsConfig.exclude).toEqual(['../android', '../ios'])
+      expect(mockCtx.nodeTsConfig.exclude).toEqual(['../android', '../ios'])
+      expect(mockCtx.sharedTsConfig.exclude).toEqual(['../android', '../ios'])
+    })
+
+    it('should handle missing typescript configs gracefully', () => {
+      const { excludeNativeFolders } = setupCapacitor()
+      excludeNativeFolders('android', 'ios')
+
+      const hookCallback = mockNuxt.hook.mock.calls.find(call => call[0] === 'prepare:types')?.[1]
+
+      // Mock context with only some configs present
+      const mockCtx = {
+        tsConfig: { exclude: [] },
+        // nodeTsConfig and sharedTsConfig are undefined
+      }
+
+      expect(() => hookCallback(mockCtx)).not.toThrow()
+      expect(mockCtx.tsConfig.exclude).toContain('../android')
+      expect(mockCtx.tsConfig.exclude).toContain('../ios')
     })
   })
 })
