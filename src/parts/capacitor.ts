@@ -8,7 +8,7 @@ export const setupCapacitor = () => {
   /** Find the path to capacitor configuration file (if it exists) */
   const findCapacitorConfig = async () => {
     const path = await findPath(
-      ['capacitor.config.ts', 'capacitor.config.json'],
+      'capacitor.config',
       {
         extensions: ['ts', 'json'],
         virtual: false,
@@ -43,8 +43,8 @@ export const setupCapacitor = () => {
     nuxt.options.typescript.tsConfig ||= {}
     nuxt.options.typescript.tsConfig.exclude ||= []
     nuxt.options.typescript.tsConfig.exclude.push(
-      join('../', androidPath ?? '/android'),
-      join('../', iosPath ?? '/ios'),
+      join('..', androidPath ?? 'android'),
+      join('..', iosPath ?? 'ios'),
     )
   }
 
