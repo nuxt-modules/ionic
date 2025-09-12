@@ -1,7 +1,7 @@
 import { onIonViewDidEnter, onIonViewDidLeave } from '@ionic/vue'
 import type { ActiveHeadEntry, UseHeadInput, UseHeadOptions } from '@unhead/vue/types'
 import type { useHead as _useHead } from '@unhead/vue'
-import { onBeforeUnmount } from 'vue'
+import { getCurrentInstance, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { injectHead } from '#imports'
 
@@ -16,13 +16,13 @@ let prevPath: string
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?: UseHeadOptions) {
-  const currentPath = useRoute().path
+  const instance = getCurrentInstance()
   const activeHead = injectHead()
-  const { currentRoute } = useRouter()
-  const router = useRouter()
-  let hasReallyLeft = false
-  let innerObj = obj
 
+  // vue-router composables require being called in setup
+  const currentPath = (instance && useRoute().path) || ''
+
+  let innerObj = obj
   const __returned: Omit<ActiveHeadEntry<UseHeadInput<T>>, '_poll'> = {
     dispose() {
       // Can just easily mutate the array instead of wasting little CPU to slice/spread it :P
@@ -58,44 +58,53 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
     const metaArr = headMap.get(currentPath) || []
     headMap.set(currentPath, [...metaArr, [obj, headObj]])
   }
-  /* Clear any reference to the input Object and the bound head object before unmounting the component */
-  onBeforeUnmount(__returned.dispose)
 
-  if (!beforeHook) {
-    beforeHook = router.beforeEach(() => {
-      prevPath = currentRoute.value.path
-    })
-  }
-  if (!afterHook) {
-    afterHook = router.afterEach(() => {
-      currPath = currentRoute.value.path
-    })
-  }
+  // Only use lifecycle hooks if called inside component setup
+  if (instance) {
+    const router = useRouter()
+    const currentRoute = router!.currentRoute
 
-  onIonViewDidLeave(() => {
-    let headArr = headMap.get(prevPath)
-    if (headArr) {
-      headArr = headArr.map(([obj, head]) => {
-        head?.dispose()
-        return [obj, head]
+    /* Clear any reference to the input Object and the bound head object before unmounting the component */
+    onBeforeUnmount(__returned.dispose)
+
+    if (!beforeHook) {
+      beforeHook = router?.beforeEach(() => {
+        prevPath = currentRoute.value.path
       })
-      headMap.set(prevPath, headArr)
     }
-    hasReallyLeft = true
-  })
+    if (!afterHook) {
+      afterHook = router?.afterEach(() => {
+        currPath = currentRoute.value.path
+      })
+    }
 
-  onIonViewDidEnter(() => {
-    if (hasReallyLeft) {
-      let headArr = headMap.get(currPath)
+    let hasReallyLeft = false
+    onIonViewDidLeave(() => {
+      let headArr = headMap.get(prevPath)
       if (headArr) {
         headArr = headArr.map(([obj, head]) => {
           head?.dispose()
-          const newHead = activeHead?.push(obj)
-          return [obj, newHead]
+          return [obj, head]
         })
-        headMap.set(currPath, headArr)
+        headMap.set(prevPath, headArr)
       }
-    }
-  })
+      hasReallyLeft = true
+    })
+
+    onIonViewDidEnter(() => {
+      if (hasReallyLeft) {
+        let headArr = headMap.get(currPath)
+        if (headArr) {
+          headArr = headArr.map(([obj, head]) => {
+            head?.dispose()
+            const newHead = activeHead?.push(obj)
+            return [obj, newHead]
+          })
+          headMap.set(currPath, headArr)
+        }
+      }
+    })
+  }
+
   return __returned
 }
