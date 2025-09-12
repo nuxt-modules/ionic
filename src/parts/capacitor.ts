@@ -30,7 +30,7 @@ export const setupCapacitor = () => {
       }
     }
 
-    const capacitorConfig = (await import(path)) as CapacitorConfig
+    const capacitorConfig = (await import(path, { with: { type: 'json' } })) as CapacitorConfig
 
     return {
       androidPath: capacitorConfig.android?.path || null,
