@@ -3,14 +3,16 @@
   "description": "Batteries-included Ionic integration for Nuxt.",
   "homepage": "https://github.com/nuxt-modules/ionic/",
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview"
+    "dev": "nuxt dev --extends docus",
+    "build": "nuxt build --extends docus",
+    "generate": "nuxt generate --extends docus",
+    "preview": "nuxt preview --extends docus"
   },
   "devDependencies": {
-    "@nuxt-themes/docus": "1.15.1",
+    "@nuxt/content": "^3.7.0",
     "@nuxtjs/plausible": "2.0.1",
+    "better-sqlite3": "^12.2.0",
+    "docus": "^4.1.4",
     "nuxt": "4.1.1"
   }
 }

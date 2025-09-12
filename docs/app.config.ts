@@ -1,4 +1,10 @@
 export default defineAppConfig({
+  ui: {
+    colors: {
+      primary: 'blue',
+      neutral: 'zinc',
+    },
+  },
   docus: {
     title: 'nuxt/ionic',
     url: 'https://ionic.nuxtjs.org/',

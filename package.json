@@ -46,8 +46,8 @@
     "dev": "nuxt dev playground",
     "dev:build": "nuxt build playground",
     "dev:prepare": "pnpm nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
-    "docs:dev": "nuxt dev docs",
-    "docs:build": "nuxt generate docs",
+    "docs:dev": "pnpm --filter 'nuxt-ionic-docs' dev",
+    "docs:build": "pnpm --filter 'nuxt-ionic-docs' generate",
     "lint": "eslint",
     "prepack": "pnpm build",
     "prepare": "simple-git-hooks",
@@ -104,7 +104,6 @@
     "pre-commit": "npx lint-staged"
   },
   "resolutions": {
-    "@nuxt/content": "2.13.4",
     "@nuxt/kit": "^4.0.0",
     "@nuxt/schema": "4.1.1",
     "@nuxtjs/ionic": "link:.",
