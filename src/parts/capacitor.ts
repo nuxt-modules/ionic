@@ -1,9 +1,13 @@
 import type { CapacitorConfig } from '@capacitor/cli'
 import { findPath, useNuxt } from '@nuxt/kit'
 import { join } from 'pathe'
+import { pathToFileURL } from 'node:url'
+import { isWindows } from 'std-env'
+import { createJiti } from 'jiti'
 
 export const setupCapacitor = () => {
   const nuxt = useNuxt()
+  const jiti = createJiti(import.meta.url)
 
   /** Find the path to capacitor configuration file (if it exists) */
   const findCapacitorConfig = async () => {
@@ -30,7 +34,7 @@ export const setupCapacitor = () => {
       }
     }
 
-    const capacitorConfig = (await import(path)) as CapacitorConfig
+    const capacitorConfig = (await jiti.import(isWindows ? pathToFileURL(path).href : path)) as CapacitorConfig
 
     return {
       androidPath: capacitorConfig.android?.path || null,
