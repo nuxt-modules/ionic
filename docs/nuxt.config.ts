@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  extends: ['docus'],
   modules: ['@nuxtjs/plausible'],
   css: ['~/assets/css/main.css'],
   site: {
