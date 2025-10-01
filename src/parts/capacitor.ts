@@ -3,11 +3,11 @@ import { findPath, useNuxt } from '@nuxt/kit'
 import { join } from 'pathe'
 import { pathToFileURL } from 'node:url'
 import { isWindows } from 'std-env'
-import { createJiti } from 'jiti'
+import { createJiti, type Jiti } from 'jiti'
 
 export const setupCapacitor = () => {
   const nuxt = useNuxt()
-  const jiti = createJiti(import.meta.url)
+  let jiti: Jiti
 
   /** Find the path to capacitor configuration file (if it exists) */
   const findCapacitorConfig = async () => {
@@ -33,6 +33,8 @@ export const setupCapacitor = () => {
         iosPath: null,
       }
     }
+
+    jiti ||= createJiti(import.meta.url)
 
     const capacitorConfig = await jiti.import<CapacitorConfig>(isWindows ? pathToFileURL(path).href : path)
 
