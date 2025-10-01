@@ -1,11 +1,21 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { useNuxt, findPath } from '@nuxt/kit'
 import { setupCapacitor } from '../../src/parts/capacitor'
+import { pathToFileURL } from 'node:url'
+import { isWindows } from 'std-env'
 
 // Mock @nuxt/kit
 vi.mock('@nuxt/kit', () => ({
   findPath: vi.fn(),
   useNuxt: vi.fn(),
+}))
+
+// Mock jiti
+const mockJitiImport = vi.fn()
+vi.mock('jiti', () => ({
+  createJiti: vi.fn(() => ({
+    import: mockJitiImport,
+  })),
 }))
 
 describe('useCapacitor', () => {
@@ -20,6 +30,7 @@ describe('useCapacitor', () => {
     vi.clearAllMocks()
     vi.mocked(useNuxt).mockReturnValue(mockNuxt as any)
     mockNuxt.options.ignore = []
+    mockJitiImport.mockClear()
   })
 
   describe('findCapacitorConfig', () => {
@@ -61,14 +72,13 @@ describe('useCapacitor', () => {
         ios: { path: 'custom-ios' },
       }
 
-      vi.doMock(configPath, () => ({
-        default: mockConfig,
-        ...mockConfig,
-      }))
+      mockJitiImport.mockResolvedValue(mockConfig)
 
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
+      const expectedPath = isWindows ? pathToFileURL(configPath).href : configPath
+      expect(mockJitiImport).toHaveBeenCalledWith(expectedPath)
       expect(result).toEqual({
         androidPath: 'custom-android',
         iosPath: 'custom-ios',
@@ -82,14 +92,13 @@ describe('useCapacitor', () => {
         ios: undefined,
       }
 
-      vi.doMock(configPath, () => ({
-        default: mockConfig,
-        ...mockConfig,
-      }))
+      mockJitiImport.mockResolvedValue(mockConfig)
 
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
+      const expectedPath = isWindows ? pathToFileURL(configPath).href : configPath
+      expect(mockJitiImport).toHaveBeenCalledWith(expectedPath)
       expect(result).toEqual({
         androidPath: null,
         iosPath: null,
