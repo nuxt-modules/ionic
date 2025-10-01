@@ -1,6 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { useNuxt, findPath } from '@nuxt/kit'
 import { setupCapacitor } from '../../src/parts/capacitor'
+import { pathToFileURL } from 'node:url'
+import { isWindows } from 'std-env'
 
 // Mock @nuxt/kit
 vi.mock('@nuxt/kit', () => ({
@@ -75,7 +77,8 @@ describe('useCapacitor', () => {
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
-      expect(mockJitiImport).toHaveBeenCalledWith(configPath)
+      const expectedPath = isWindows ? pathToFileURL(configPath).href : configPath
+      expect(mockJitiImport).toHaveBeenCalledWith(expectedPath)
       expect(result).toEqual({
         androidPath: 'custom-android',
         iosPath: 'custom-ios',
@@ -94,7 +97,8 @@ describe('useCapacitor', () => {
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
-      expect(mockJitiImport).toHaveBeenCalledWith(configPath)
+      const expectedPath = isWindows ? pathToFileURL(configPath).href : configPath
+      expect(mockJitiImport).toHaveBeenCalledWith(expectedPath)
       expect(result).toEqual({
         androidPath: null,
         iosPath: null,
