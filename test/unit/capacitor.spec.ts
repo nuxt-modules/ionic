@@ -8,6 +8,14 @@ vi.mock('@nuxt/kit', () => ({
   useNuxt: vi.fn(),
 }))
 
+// Mock jiti
+const mockJitiImport = vi.fn()
+vi.mock('jiti', () => ({
+  createJiti: vi.fn(() => ({
+    import: mockJitiImport,
+  })),
+}))
+
 describe('useCapacitor', () => {
   const mockNuxt = {
     hook: vi.fn(),
@@ -20,6 +28,7 @@ describe('useCapacitor', () => {
     vi.clearAllMocks()
     vi.mocked(useNuxt).mockReturnValue(mockNuxt as any)
     mockNuxt.options.ignore = []
+    mockJitiImport.mockClear()
   })
 
   describe('findCapacitorConfig', () => {
@@ -61,14 +70,12 @@ describe('useCapacitor', () => {
         ios: { path: 'custom-ios' },
       }
 
-      vi.doMock(configPath, () => ({
-        default: mockConfig,
-        ...mockConfig,
-      }))
+      mockJitiImport.mockResolvedValue(mockConfig)
 
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
+      expect(mockJitiImport).toHaveBeenCalledWith(configPath)
       expect(result).toEqual({
         androidPath: 'custom-android',
         iosPath: 'custom-ios',
@@ -82,14 +89,12 @@ describe('useCapacitor', () => {
         ios: undefined,
       }
 
-      vi.doMock(configPath, () => ({
-        default: mockConfig,
-        ...mockConfig,
-      }))
+      mockJitiImport.mockResolvedValue(mockConfig)
 
       const { parseCapacitorConfig } = setupCapacitor()
       const result = await parseCapacitorConfig(configPath)
 
+      expect(mockJitiImport).toHaveBeenCalledWith(configPath)
       expect(result).toEqual({
         androidPath: null,
         iosPath: null,
