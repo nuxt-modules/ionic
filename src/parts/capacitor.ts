@@ -34,7 +34,7 @@ export const setupCapacitor = () => {
       }
     }
 
-    const capacitorConfig = (await jiti.import(isWindows ? pathToFileURL(path).href : path)) as CapacitorConfig
+    const capacitorConfig = await jiti.import<CapacitorConfig>(isWindows ? pathToFileURL(path).href : path)
 
     return {
       androidPath: capacitorConfig.android?.path || null,
