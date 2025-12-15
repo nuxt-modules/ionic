@@ -155,8 +155,8 @@ importers:
   playground:
     devDependencies:
       '@capacitor/camera':
-        specifier: 7.0.2
-        version: 7.0.2(@capacitor/core@8.0.0)
+        specifier: 8.0.0
+        version: 8.0.0(@capacitor/core@8.0.0)
       '@capacitor/filesystem':
         specifier: 8.0.0
         version: 8.0.0(@capacitor/core@8.0.0)
@@ -326,10 +326,10 @@ packages:
       commander:
         optional: true
 
-  '@capacitor/camera@7.0.2':
-    resolution: {integrity: sha512-1/UbZZ8MSbRTMMvjQHQFJ0cs2ZNURNoyuUex0rAJwECsyHO0I5SRvu7YoMY5qTcRWScBcqT+3QZcJvETtRg7ug==}
+  '@capacitor/camera@8.0.0':
+    resolution: {integrity: sha512-Iu8j2oxoIhY2mLuoEckbL7PFgw1XFm1nqmeWdIkILpcT3H9A+BrSDUDlzWqM/EeaDKo6JnhR59tYHwUhOdXaUg==}
     peerDependencies:
-      '@capacitor/core': '>=7.0.0'
+      '@capacitor/core': '>=8.0.0'
 
   '@capacitor/cli@8.0.0':
     resolution: {integrity: sha512-v9hEBi69xGxuuZhg55N031bMEenKaPSv71Il8C22VOOH6surDyv/MPeImN0oVfFc7eiklaW3rDFYVz6cmXfJWQ==}
@@ -7523,7 +7523,7 @@ snapshots:
       cac: 6.7.14
       citty: 0.1.6
 
-  '@capacitor/camera@7.0.2(@capacitor/core@8.0.0)':
+  '@capacitor/camera@8.0.0(@capacitor/core@8.0.0)':
     dependencies:
       '@capacitor/core': 8.0.0
 
