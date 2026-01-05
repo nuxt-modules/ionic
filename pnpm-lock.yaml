@@ -26,10 +26,10 @@ importers:
         version: 7.2.1
       '@ionic/vue':
         specifier: ^8.7.3
-        version: 8.7.15(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+        version: 8.7.16(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@ionic/vue-router':
         specifier: ^8.7.3
-        version: 8.7.15(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+        version: 8.7.16(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       '@nuxt/kit':
         specifier: ^4.1.2
         version: 4.2.2(magicast@0.5.1)
@@ -1051,6 +1051,10 @@ packages:
     resolution: {integrity: sha512-u1w9c6dx2iuatXIW5X1JY0ighDhQPjBwOHZsrOcnpm891pktuEjJDdyhDulWFa6kKVkXw1q7khwxXBEurvKc2g==}
     engines: {node: '>= 16'}
 
+  '@ionic/core@8.7.16':
+    resolution: {integrity: sha512-+vdv/o2Z/2YfoZJIDBLnoh11eJmOOZqQdfwC0zl2MemAVRSofjGuIQlUTZqiUUNht56Rnk9oo53TvmgjNCtmDA==}
+    engines: {node: '>= 16'}
+
   '@ionic/utils-array@2.1.6':
     resolution: {integrity: sha512-0JZ1Zkp3wURnv8oq6Qt7fMPo5MpjbLoUoa9Bu2Q4PJuSDWM8H8gwF3dQO7VTeUj3/0o1IB1wGkFWZZYgUXZMUg==}
     engines: {node: '>=16.0.0'}
@@ -1083,11 +1087,11 @@ packages:
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/vue-router@8.7.15':
-    resolution: {integrity: sha512-AUoKeVz326V0hUbLC6UuHM5pRUmyYbRnZd3B+su+uwlB+OhPBD3M0kP1rT7eK0jWLap+EJRM8GLWFSCkjxPmJQ==}
+  '@ionic/vue-router@8.7.16':
+    resolution: {integrity: sha512-lpKssNp/Nfsw1oSLi84VhgK6njhv/zVLv/icIRQ1ov5K4Ar1KHMy87qI6Gh7d8lbpzgCO+9oifZynb9Tp6D2qA==}
 
-  '@ionic/vue@8.7.15':
-    resolution: {integrity: sha512-F94GoGBsLoFFkJLe+W401SynIfUzEL1Z+Y4YUQ2EGpulnFpY4tXKzDhRNrisPnM0k3BWQRh8AA8fwTtMqEiISw==}
+  '@ionic/vue@8.7.16':
+    resolution: {integrity: sha512-7ZKKUj+PgzV/SiSbSPFE/anQzT3kHLrb7JGrw394QZB1E3aehljgt/hDaQzityRtgqgUaaJZx22MGrg5r9kePQ==}
 
   '@ioredis/commands@1.4.0':
     resolution: {integrity: sha512-aFT2yemJJo+TZCmieA7qnYGQooOS7QfNmYrzGtsYd3g9j5iDP8AimYYAesf79ohjbLG12XxC4nG5DyEnC88AsQ==}
@@ -5205,8 +5209,8 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  lib0@0.2.116:
-    resolution: {integrity: sha512-4zsosjzmt33rx5XjmFVYUAeLNh+BTeDTiwGdLt4muxiir2btsc60Nal0EvkvDRizg+pnlK1q+BtYi7M+d4eStw==}
+  lib0@0.2.117:
+    resolution: {integrity: sha512-DeXj9X5xDCjgKLU/7RR+/HQEVzuuEUiwldwOGsHK/sfAfELGWEyTcf0x+uOvCvK3O2zPmZePXWL85vtia6GyZw==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -8790,6 +8794,12 @@ snapshots:
       ionicons: 8.0.13
       tslib: 2.8.1
 
+  '@ionic/core@8.7.16':
+    dependencies:
+      '@stencil/core': 4.38.0
+      ionicons: 8.0.13
+      tslib: 2.8.1
+
   '@ionic/utils-array@2.1.6':
     dependencies:
       debug: 4.4.3
@@ -8865,17 +8875,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@8.7.15(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
+  '@ionic/vue-router@8.7.16(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
-      '@ionic/vue': 8.7.15(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
+      '@ionic/vue': 8.7.16(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
     transitivePeerDependencies:
       - '@stencil/core'
       - vue
       - vue-router
 
-  '@ionic/vue@8.7.15(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
+  '@ionic/vue@8.7.16(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))':
     dependencies:
-      '@ionic/core': 8.7.15
+      '@ionic/core': 8.7.16
       '@stencil/vue-output-target': 0.10.7(@stencil/core@4.38.3)(vue-router@4.6.3(vue@3.5.26(typescript@5.9.3)))(vue@3.5.26(typescript@5.9.3))
       ionicons: 8.0.13
     transitivePeerDependencies:
@@ -10897,7 +10907,7 @@ snapshots:
 
   '@tiptap/y-tiptap@3.0.1(prosemirror-model@1.25.4)(prosemirror-state@1.4.4)(prosemirror-view@1.41.4)(y-protocols@1.0.7(yjs@13.6.28))(yjs@13.6.28)':
     dependencies:
-      lib0: 0.2.116
+      lib0: 0.2.117
       prosemirror-model: 1.25.4
       prosemirror-state: 1.4.4
       prosemirror-view: 1.41.4
@@ -13833,7 +13843,7 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  lib0@0.2.116:
+  lib0@0.2.117:
     dependencies:
       isomorphic.js: 0.2.5
 
@@ -17540,7 +17550,7 @@ snapshots:
 
   y-protocols@1.0.7(yjs@13.6.28):
     dependencies:
-      lib0: 0.2.116
+      lib0: 0.2.117
       yjs: 13.6.28
 
   y18n@5.0.8: {}
@@ -17577,7 +17587,7 @@ snapshots:
 
   yjs@13.6.28:
     dependencies:
-      lib0: 0.2.116
+      lib0: 0.2.117
 
   yocto-queue@0.1.0: {}
 
