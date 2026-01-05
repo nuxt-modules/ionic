@@ -59,8 +59,8 @@ importers:
         version: 5.6.0
     devDependencies:
       '@ionic/core':
-        specifier: 8.7.15
-        version: 8.7.15
+        specifier: 8.7.16
+        version: 8.7.16
       '@nuxt/eslint-config':
         specifier: 1.12.1
         version: 1.12.1(@typescript-eslint/utils@8.49.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.26)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
@@ -1047,8 +1047,8 @@ packages:
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@ionic/core@8.7.15':
-    resolution: {integrity: sha512-u1w9c6dx2iuatXIW5X1JY0ighDhQPjBwOHZsrOcnpm891pktuEjJDdyhDulWFa6kKVkXw1q7khwxXBEurvKc2g==}
+  '@ionic/core@8.7.16':
+    resolution: {integrity: sha512-+vdv/o2Z/2YfoZJIDBLnoh11eJmOOZqQdfwC0zl2MemAVRSofjGuIQlUTZqiUUNht56Rnk9oo53TvmgjNCtmDA==}
     engines: {node: '>= 16'}
 
   '@ionic/core@8.7.16':
@@ -8788,7 +8788,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/core@8.7.15':
+  '@ionic/core@8.7.16':
     dependencies:
       '@stencil/core': 4.38.0
       ionicons: 8.0.13
