@@ -8,6 +8,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'dark',
   },
+  routeRules: {
+    '/overview': { redirect: '/overview/routing' },
+    '/cookbook': { redirect: '/cookbook/customising-app-vue' },
+  },
   plausible: {
     domain: 'ionic.nuxtjs.org',
     apiHost: 'https://v.roe.dev',
