@@ -143,8 +143,8 @@ importers:
         specifier: 12.6.2
         version: 12.6.2
       docus:
-        specifier: 5.4.2
-        version: 5.4.2(43a440f835b61297ebf397bcb54da8d2)
+        specifier: 5.4.4
+        version: 5.4.4(43a440f835b61297ebf397bcb54da8d2)
       nuxt:
         specifier: 4.2.2
         version: 4.2.2(@parcel/watcher@2.5.1)(@types/node@24.10.9)(@vue/compiler-sfc@3.5.27)(better-sqlite3@12.6.2)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.6.2))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.0)(lightningcss@1.30.2)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@24.10.9)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue-tsc@3.2.2(typescript@5.9.3))(xml2js@0.6.2)(yaml@2.8.2)
@@ -801,14 +801,14 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/lucide@1.2.82':
-    resolution: {integrity: sha512-fHZWegspOZonl5GNTvOkHsjnTMdSslFh3EzpzUtRyLxO8bOonqk2OTU3hCl0k4VXzViMjqpRK3X1sotnuBXkFA==}
+  '@iconify-json/lucide@1.2.86':
+    resolution: {integrity: sha512-W/Jz7/gGOkI9u43r+UHmQtZtcyw2YLvMwiHa01WV6V4DYltrPNXiD+bCa+djV8LZB1uwF8CiympOMIbgiQ74nA==}
 
-  '@iconify-json/simple-icons@1.2.65':
-    resolution: {integrity: sha512-v/O0UeqrDz6ASuRVE5g2Puo5aWyej4M/CxX6WYDBARgswwxK0mp3VQbGgPFEAAUU9QN02IjTgjMuO021gpWf2w==}
+  '@iconify-json/simple-icons@1.2.67':
+    resolution: {integrity: sha512-RGJRwlxyup54L1UDAjCshy3ckX5zcvYIU74YLSnUgHGvqh6B4mvksbGNHAIEp7dZQ6cM13RZVT5KC07CmnFNew==}
 
-  '@iconify-json/vscode-icons@1.2.37':
-    resolution: {integrity: sha512-HLRdU6nZks4N8x3JYz6j+b3+hcUCvYvlTLwGzM3xyXfTJyDSA2cAdWcEXfoA4hQMJGA+zCDSPAWFelFptH5Kbw==}
+  '@iconify-json/vscode-icons@1.2.40':
+    resolution: {integrity: sha512-Q7JIWAxENwmcRg4EGRY+u16gBwrAj6mWeuSmuyuPvNvoTJHh8Ss8qoeDhrFYNgtWqNkzH5hSf4b2T9XLK5MsrA==}
 
   '@iconify/collections@1.0.636':
     resolution: {integrity: sha512-rfHaZuA60MeAbylEGv8lzSYN0x/LvYj7B8h7JYlhSWgozox7VkNO+S/PcLfVcseNSzOzj1GChfUw1xwsh+XFiw==}
@@ -1381,9 +1381,6 @@ packages:
     peerDependenciesMeta:
       agents:
         optional: true
-
-  '@nuxtjs/mdc@0.19.2':
-    resolution: {integrity: sha512-mtwBb9D5U7H1R3kpqEmqwML1RudN6qOJqJwebrqLxk+EWhtGUXAdUBXC2L/kPWiCNA4Yz/EO+tSfSQV8Idh5nw==}
 
   '@nuxtjs/mdc@0.20.0':
     resolution: {integrity: sha512-CV1FuCZppBpNjtWT+OaV+t7qbm/dD+2bbf7Or0h1gxperlf1bB3VZnDoBkOTRjgPWyYvzzRS7FUOQJLQG28MEA==}
@@ -3977,8 +3974,8 @@ packages:
     resolution: {integrity: sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==}
     engines: {node: '>=0.3.1'}
 
-  docus@5.4.2:
-    resolution: {integrity: sha512-haH2qb8HZumZ9MXovc6cvpXyzcnmOIH5hPXShhmvw8bFRPRH79KSLQjtnS1gIGb96Za3QfoE75dn4/8mJcADeQ==}
+  docus@5.4.4:
+    resolution: {integrity: sha512-OkWHn85YjbcivLWhl1YAGX1fE04yd8R5l0aaB1oAmeYfdmKlgkDwD54352pRmZ8P3X1be6PNujLrU9yc0Bbr9w==}
     peerDependencies:
       better-sqlite3: 12.x
       nuxt: 4.x
@@ -4537,6 +4534,20 @@ packages:
 
   fraction.js@5.3.4:
     resolution: {integrity: sha512-1X1NTtiJphryn/uLQz3whtY6jK3fTqoE3ohKs0tT+Ujr1W59oopxmoEh7Lu5p6vBaPbgoM0bzveAW4Qi5RyWDQ==}
+
+  framer-motion@12.27.1:
+    resolution: {integrity: sha512-cEAqO69kcZt3gL0TGua8WTgRQfv4J57nqt1zxHtLKwYhAwA0x9kDS/JbMa1hJbwkGY74AGJKvZ9pX/IqWZtZWQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fresh@2.0.0:
     resolution: {integrity: sha512-Rx/WycZ60HOaqLKAi6cHRKKI7zxWbJ31MhntmtwMoaTeF7XFH9hhBp8vITaMidfljRQ6eYWCKkaTK+ykVJHP2A==}
@@ -5718,14 +5729,14 @@ packages:
   mocked-exports@0.1.1:
     resolution: {integrity: sha512-aF7yRQr/Q0O2/4pIXm6PZ5G+jAd7QS4Yu8m+WEeEHGnbo+7mE36CbLSDQiXYV8bVL3NfmdeqPJct0tUlnjVSnA==}
 
-  motion-dom@12.24.0:
-    resolution: {integrity: sha512-RD2kZkFd/GH4fITI8IJvypGgn0vIu5vkrJaXIAkYqORGs5P0CKDHKNvswmoY1H+tbUAOPSh6VtUqoAmc/3Gvig==}
+  motion-dom@12.27.1:
+    resolution: {integrity: sha512-V/53DA2nBqKl9O2PMJleSUb/G0dsMMeZplZwgIQf5+X0bxIu7Q1cTv6DrjvTTGYRm3+7Y5wMlRZ1wT61boU/bQ==}
 
-  motion-utils@12.23.28:
-    resolution: {integrity: sha512-0W6cWd5Okoyf8jmessVK3spOmbyE0yTdNKujHctHH9XdAE4QDuZ1/LjSXC68rrhsJU+TkzXURC5OdSWh9ibOwQ==}
+  motion-utils@12.24.10:
+    resolution: {integrity: sha512-x5TFgkCIP4pPsRLpKoI86jv/q8t8FQOiM/0E8QKBzfMozWHfkKap2gA1hOki+B5g3IsBNpxbUnfOum1+dgvYww==}
 
-  motion-v@1.7.5:
-    resolution: {integrity: sha512-xSqAWoMVAlh0RhdjMCnPMv62mr3yZ2bynXirj2Aq/rDFxiZ69JuIz63aSBCiK87A3wxVqwCZzZE2p4WN875k3Q==}
+  motion-v@1.9.0:
+    resolution: {integrity: sha512-B5VeO69gO416yIqCyNL9EAD7v6n/h/9ktv7gGSRKzTCQhAhnC/N1VWLOTYvOiH90f/tZivbgN/V0MzSU5nsJLA==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       vue: '>=3.0.0'
@@ -5870,8 +5881,8 @@ packages:
   nuxt-define@1.0.0:
     resolution: {integrity: sha512-CYZ2WjU+KCyCDVzjYUM4eEpMF0rkPmkpiFrybTqqQCRpUbPt2h3snswWIpFPXTi+osRCY6Og0W/XLAQgDL4FfQ==}
 
-  nuxt-llms@0.1.3:
-    resolution: {integrity: sha512-+LaySko5UnlZw37GoTbsRX6KBFccSAzh6ENAYjV+xlVwsG8lSMz+IWnE7z5rstyVxHiX3Rx62M9JVut4jotJ3w==}
+  nuxt-llms@0.2.0:
+    resolution: {integrity: sha512-GoEW00x8zaZ1wS0R0aOYptt3b54JEaRwlyVtuAiQoH51BwYdjN5/3+00/+4wi39M5cT4j5XcnGwOxJ7v4WVb9A==}
 
   nuxt-og-image@5.1.13:
     resolution: {integrity: sha512-H9kqGlmcEb9agWURwT5iFQjbr7Ec7tcQHZZaYSpC/JXKq2/dFyRyAoo6oXTk6ob20dK9aNjkJDcX2XmgZy67+w==}
@@ -8511,15 +8522,15 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@iconify-json/lucide@1.2.82':
+  '@iconify-json/lucide@1.2.86':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.65':
+  '@iconify-json/simple-icons@1.2.67':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/vscode-icons@1.2.37':
+  '@iconify-json/vscode-icons@1.2.40':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -9596,7 +9607,7 @@ snapshots:
       knitwork: 1.3.0
       magic-string: 0.30.21
       mlly: 1.8.0
-      motion-v: 1.7.5(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3))
+      motion-v: 1.9.0(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3))
       ohash: 2.0.11
       pathe: 2.0.3
       reka-ui: 2.6.1(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
@@ -9625,6 +9636,7 @@ snapshots:
       - '@babel/parser'
       - '@capacitor/preferences'
       - '@deno/kv'
+      - '@emotion/is-prop-valid'
       - '@floating-ui/dom'
       - '@netlify/blobs'
       - '@planetscale/database'
@@ -9649,6 +9661,8 @@ snapshots:
       - magicast
       - nprogress
       - qrcode
+      - react
+      - react-dom
       - sortablejs
       - supports-color
       - universal-cookie
@@ -9858,55 +9872,6 @@ snapshots:
     transitivePeerDependencies:
       - '@cfworker/json-schema'
       - hono
-      - magicast
-      - supports-color
-
-  '@nuxtjs/mdc@0.19.2(magicast@0.5.1)':
-    dependencies:
-      '@nuxt/kit': 4.2.2(magicast@0.5.1)
-      '@shikijs/core': 3.21.0
-      '@shikijs/langs': 3.21.0
-      '@shikijs/themes': 3.21.0
-      '@shikijs/transformers': 3.21.0
-      '@types/hast': 3.0.4
-      '@types/mdast': 4.0.4
-      '@vue/compiler-core': 3.5.27
-      consola: 3.4.2
-      debug: 4.4.3
-      defu: 6.1.4
-      destr: 2.0.5
-      detab: 3.0.2
-      github-slugger: 2.0.0
-      hast-util-format: 1.1.0
-      hast-util-to-mdast: 10.1.2
-      hast-util-to-string: 3.0.1
-      mdast-util-to-hast: 13.2.1
-      micromark-util-sanitize-uri: 2.0.1
-      parse5: 8.0.0
-      pathe: 2.0.3
-      property-information: 7.1.0
-      rehype-external-links: 3.0.0
-      rehype-minify-whitespace: 6.0.2
-      rehype-raw: 7.0.0
-      rehype-remark: 10.0.1
-      rehype-slug: 6.0.0
-      rehype-sort-attribute-values: 5.0.1
-      rehype-sort-attributes: 5.0.1
-      remark-emoji: 5.0.2
-      remark-gfm: 4.0.1
-      remark-mdc: 3.10.0
-      remark-parse: 11.0.0
-      remark-rehype: 11.1.2
-      remark-stringify: 11.0.0
-      scule: 1.3.0
-      shiki: 3.21.0
-      ufo: 1.6.3
-      unified: 11.0.5
-      unist-builder: 4.0.0
-      unist-util-visit: 5.0.0
-      unwasm: 0.5.3
-      vfile: 6.0.3
-    transitivePeerDependencies:
       - magicast
       - supports-color
 
@@ -12270,18 +12235,18 @@ snapshots:
 
   diff@8.0.2: {}
 
-  docus@5.4.2(43a440f835b61297ebf397bcb54da8d2):
+  docus@5.4.4(43a440f835b61297ebf397bcb54da8d2):
     dependencies:
-      '@iconify-json/lucide': 1.2.82
-      '@iconify-json/simple-icons': 1.2.65
-      '@iconify-json/vscode-icons': 1.2.37
+      '@iconify-json/lucide': 1.2.86
+      '@iconify-json/simple-icons': 1.2.67
+      '@iconify-json/vscode-icons': 1.2.40
       '@nuxt/content': 3.11.0(better-sqlite3@12.6.2)(magicast@0.5.1)
       '@nuxt/image': 2.0.0(db0@0.3.4(better-sqlite3@12.6.2))(ioredis@5.9.0)(magicast@0.5.1)
       '@nuxt/kit': 4.2.2(magicast@0.5.1)
       '@nuxt/ui': 4.3.0(ef5263eb43494726fc527516bd8a16bf)
       '@nuxtjs/i18n': 10.2.1(@vue/compiler-dom@3.5.27)(db0@0.3.4(better-sqlite3@12.6.2))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.0)(magicast@0.5.1)(rollup@4.55.1)(vue@3.5.27(typescript@5.9.3))
       '@nuxtjs/mcp-toolkit': 0.6.2(hono@4.11.3)(magicast@0.5.1)(zod@4.3.5)
-      '@nuxtjs/mdc': 0.19.2(magicast@0.5.1)
+      '@nuxtjs/mdc': 0.20.0(magicast@0.5.1)
       '@nuxtjs/robots': 5.6.7(magicast@0.5.1)(vue@3.5.27(typescript@5.9.3))(zod@4.3.5)
       '@vueuse/core': 14.1.0(vue@3.5.27(typescript@5.9.3))
       better-sqlite3: 12.6.2
@@ -12289,9 +12254,9 @@ snapshots:
       exsolve: 1.0.8
       git-url-parse: 16.1.0
       minimark: 0.2.0
-      motion-v: 1.7.5(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3))
+      motion-v: 1.9.0(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3))
       nuxt: 4.2.2(@parcel/watcher@2.5.1)(@types/node@24.10.9)(@vue/compiler-sfc@3.5.27)(better-sqlite3@12.6.2)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.6.2))(eslint@9.39.2(jiti@2.6.1))(ioredis@5.9.0)(lightningcss@1.30.2)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@5.9.3)(vite@7.3.0(@types/node@24.10.9)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue-tsc@3.2.2(typescript@5.9.3))(xml2js@0.6.2)(yaml@2.8.2)
-      nuxt-llms: 0.1.3(magicast@0.5.1)
+      nuxt-llms: 0.2.0(magicast@0.5.1)
       nuxt-og-image: 5.1.13(@unhead/vue@2.1.2(vue@3.5.27(typescript@5.9.3)))(magicast@0.5.1)(unstorage@1.17.3(db0@0.3.4(better-sqlite3@12.6.2))(ioredis@5.9.0))(vite@7.3.0(@types/node@24.10.9)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))(vue@3.5.27(typescript@5.9.3))
       pkg-types: 2.3.0
       scule: 1.3.0
@@ -12311,6 +12276,7 @@ snapshots:
       - '@cfworker/json-schema'
       - '@deno/kv'
       - '@electric-sql/pglite'
+      - '@emotion/is-prop-valid'
       - '@floating-ui/dom'
       - '@inertiajs/vue3'
       - '@libsql/client'
@@ -12348,6 +12314,8 @@ snapshots:
       - nprogress
       - petite-vue-i18n
       - qrcode
+      - react
+      - react-dom
       - rollup
       - sortablejs
       - sqlite3
@@ -13084,6 +13052,12 @@ snapshots:
   forwarded@0.2.0: {}
 
   fraction.js@5.3.4: {}
+
+  framer-motion@12.27.1:
+    dependencies:
+      motion-dom: 12.27.1
+      motion-utils: 12.24.10
+      tslib: 2.8.1
 
   fresh@2.0.0: {}
 
@@ -14546,18 +14520,23 @@ snapshots:
 
   mocked-exports@0.1.1: {}
 
-  motion-dom@12.24.0:
+  motion-dom@12.27.1:
     dependencies:
-      motion-utils: 12.23.28
+      motion-utils: 12.24.10
 
-  motion-utils@12.23.28: {}
+  motion-utils@12.24.10: {}
 
-  motion-v@1.7.5(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3)):
+  motion-v@1.9.0(@vueuse/core@14.1.0(vue@3.5.27(typescript@5.9.3)))(vue@3.5.27(typescript@5.9.3)):
     dependencies:
       '@vueuse/core': 14.1.0(vue@3.5.27(typescript@5.9.3))
+      framer-motion: 12.27.1
       hey-listen: 1.0.8
-      motion-dom: 12.24.0
+      motion-dom: 12.27.1
       vue: 3.5.27(typescript@5.9.3)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - react
+      - react-dom
 
   mrmime@2.0.1: {}
 
@@ -14777,7 +14756,7 @@ snapshots:
 
   nuxt-define@1.0.0: {}
 
-  nuxt-llms@0.1.3(magicast@0.5.1):
+  nuxt-llms@0.2.0(magicast@0.5.1):
     dependencies:
       '@nuxt/kit': 4.2.2(magicast@0.5.1)
     transitivePeerDependencies:
