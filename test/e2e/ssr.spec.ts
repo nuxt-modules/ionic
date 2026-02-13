@@ -36,4 +36,26 @@ describe('nuxt ionic', async () => {
 
     await page.close()
   })
+
+  it('runs plugin and middleware in correct order', async () => {
+    const logs: string[] = []
+    const page = await createPage()
+    page.on('console', (msg) => {
+      logs.push(msg.text())
+    })
+    await page.goto(url('/tabs/tab1'))
+    await page.waitForLoadState('networkidle')
+
+    expect(logs).toContain('ran plugin')
+    expect(logs).toContain('ran middleware')
+
+    // Plugin should run before middleware
+    const pluginIndex = logs.indexOf('ran plugin')
+    const middlewareIndex = logs.indexOf('ran middleware')
+    expect(pluginIndex).toBeGreaterThanOrEqual(0)
+    expect(middlewareIndex).toBeGreaterThanOrEqual(0)
+    expect(pluginIndex).toBeLessThan(middlewareIndex)
+
+    await page.close()
+  })
 })

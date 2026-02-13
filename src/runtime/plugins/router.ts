@@ -15,7 +15,6 @@ import type { PageMeta, Plugin, RouteMiddleware } from '#app'
 import { getRouteRules } from '#app/composables/manifest'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt'
 import { clearError, showError, useError } from '#app/composables/error'
-import { onNuxtReady } from '#app/composables/ready'
 import { navigateTo } from '#app/composables/router'
 
 // @ts-expect-error virtual file
@@ -141,13 +140,35 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
     }
 
     const initialLayout = nuxtApp.payload.state._layout
+
+    const pluginsReady = new Promise<void>((resolve) => {
+      nuxtApp.hooks.hookOnce('app:created', async () => {
+        delete nuxtApp._processingMiddleware
+        resolve()
+      })
+    })
+
+    let needsCorrection = import.meta.client
+
     router.beforeEach(async (to, from) => {
+      // wait for plugins to finish
+      await pluginsReady
       await nuxtApp.callHook('page:loading:start')
+
       to.meta = reactive(to.meta)
       if (nuxtApp.isHydrating && initialLayout && !isReadonly(to.meta.layout)) {
         to.meta.layout = initialLayout as Exclude<PageMeta['layout'], Ref | false>
       }
       nuxtApp._processingMiddleware = true
+
+      if (needsCorrection) {
+        needsCorrection = false
+        // #4920, #4982
+        if ('name' in resolvedInitialRoute) {
+          resolvedInitialRoute.name = undefined
+        }
+        return { ...resolvedInitialRoute, replace: true }
+      }
 
       if (import.meta.client || !nuxtApp.ssrContext?.islandContext) {
         type MiddlewareDef = string | RouteMiddleware
@@ -217,30 +238,6 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
     router.onError(async () => {
       delete nuxtApp._processingMiddleware
       await nuxtApp.callHook('page:loading:end')
-    })
-
-    nuxtApp.hooks.hookOnce('app:created', async () => {
-      delete nuxtApp._processingMiddleware
-    })
-
-    onNuxtReady(async () => {
-      try {
-        if (import.meta.client) {
-          // #4920, #4982
-          if ('name' in resolvedInitialRoute) {
-            resolvedInitialRoute.name = undefined
-          }
-          await router.replace({
-            ...resolvedInitialRoute,
-            force: true,
-          })
-        }
-      }
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      catch (error: any) {
-        // We'll catch middleware errors or deliberate exceptions here
-        await nuxtApp.runWithContext(() => showError(error))
-      }
     })
 
     return { provide: { router } }
