@@ -58,4 +58,46 @@ describe('nuxt ionic', async () => {
 
     await page.close()
   })
+
+  it('has correct route information when landing on page', async () => {
+    const logs: string[] = []
+    const page = await createPage()
+    page.on('console', (msg) => {
+      logs.push(msg.text())
+    })
+    await page.goto(url('/tabs/tab1'))
+    await page.waitForLoadState('networkidle')
+
+    // Route name should be logged and not be undefined or null
+    const routeNameLog = logs.find(log => log && log !== 'undefined' && log !== 'null' && !log.startsWith('ran'))
+    expect(routeNameLog).toBeDefined()
+    expect(routeNameLog).not.toBe('undefined')
+    expect(routeNameLog).not.toBe('null')
+
+    await page.close()
+  })
+
+  it('maintains correct route information during navigation', async () => {
+    const logs: string[] = []
+    const page = await createPage()
+    page.on('console', (msg) => {
+      logs.push(msg.text())
+    })
+
+    // Navigate to tab1
+    await page.goto(url('/tabs/tab1'))
+    await page.waitForLoadState('networkidle')
+
+    logs.length = 0
+
+    // Navigate to tab2
+    await page.goto(url('/tabs/tab2'))
+    await page.waitForLoadState('networkidle')
+
+    // Route should not be undefined during or after navigation
+    const hasUndefinedRoute = logs.some(log => log === 'undefined' || log === 'null')
+    expect(hasUndefinedRoute).toBe(false)
+
+    await page.close()
+  })
 })
