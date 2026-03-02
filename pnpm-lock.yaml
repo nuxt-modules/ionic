@@ -137,8 +137,8 @@ importers:
         specifier: 4.5.0
         version: 4.5.0(@capacitor/preferences@8.0.1(@capacitor/core@8.1.0))(@nuxt/content@3.12.0(better-sqlite3@12.6.2)(magicast@0.5.1))(@tiptap/extensions@3.20.0(@tiptap/core@3.20.0(@tiptap/pm@3.20.0))(@tiptap/pm@3.20.0))(@tiptap/y-tiptap@3.0.1(prosemirror-model@1.25.4)(prosemirror-state@1.4.4)(prosemirror-view@1.41.4)(y-protocols@1.0.7(yjs@13.6.29))(yjs@13.6.29))(change-case@5.4.4)(db0@0.3.4(better-sqlite3@12.6.2))(embla-carousel@8.6.0)(ioredis@5.9.2)(magicast@0.5.1)(tailwindcss@4.2.1)(typescript@5.9.3)(vite@7.3.1(@types/node@24.11.0)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2))(vue-router@4.6.4(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))(yjs@13.6.29)(zod@4.3.6)
       '@nuxtjs/plausible':
-        specifier: 2.0.1
-        version: 2.0.1(magicast@0.5.1)
+        specifier: 3.0.2
+        version: 3.0.2(magicast@0.5.1)
       better-sqlite3:
         specifier: 12.6.2
         version: 12.6.2
@@ -343,9 +343,6 @@ packages:
   '@babel/types@7.29.0':
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
-
-  '@barbapapazes/plausible-tracker@0.5.6':
-    resolution: {integrity: sha512-GRZxn3ZngYQ1+QbdP8d66D/lQg+T2oEevG8kBGfNwVbt9VZB67sgMx/gkRo/Ww2lH7QelgjUNzvOeG+DsJX2HQ==}
 
   '@bcoe/v8-coverage@1.0.2':
     resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
@@ -1457,8 +1454,8 @@ packages:
   '@nuxtjs/mdc@0.20.1':
     resolution: {integrity: sha512-fGmtLDQAmmDHF5Z37Apfc3k806rb2XWDOQFhb5xlDSL7+HiiUjyFy3ctx3qWdlC08dRzfAetmsGOYbfDqYsB/w==}
 
-  '@nuxtjs/plausible@2.0.1':
-    resolution: {integrity: sha512-Edr7oFIeZ9Og2lS21NhC3MRgcR7X9H1Hyjve8EsM2CycJGBlCcGKHs0+vi4KpbCVi33VlTXUUYNRPtGyeUX6Fw==}
+  '@nuxtjs/plausible@3.0.2':
+    resolution: {integrity: sha512-6z01a7XbggSmI4CTWCkDDmLHQNm7wob2dx1QnvpIoo+YEV19298+GsuvlBclXVxXSk7op8r8qJpw25xKo8mzQQ==}
 
   '@nuxtjs/robots@5.7.0':
     resolution: {integrity: sha512-pkGtOP88rzIalvYE3rTCkJ+f0TDHfB/sbSCcA7inVemFa17JVu8AFlO4e+y4zthj+Jh98Tkf7yCuaDU5w3C1vQ==}
@@ -2152,6 +2149,9 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@plausible-analytics/tracker@0.4.4':
+    resolution: {integrity: sha512-fz0NOYUEYXtg1TBaPEEvtcBq3FfmLFuTe1VZw4M8sTWX129br5dguu3M15+plOQnc181ShYe67RfwhKgK89VnA==}
 
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
@@ -8532,8 +8532,6 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@barbapapazes/plausible-tracker@0.5.6': {}
-
   '@bcoe/v8-coverage@1.0.2': {}
 
   '@bomb.sh/tab@0.0.12(cac@6.7.14)(citty@0.2.0)':
@@ -10186,10 +10184,10 @@ snapshots:
       - magicast
       - supports-color
 
-  '@nuxtjs/plausible@2.0.1(magicast@0.5.1)':
+  '@nuxtjs/plausible@3.0.2(magicast@0.5.1)':
     dependencies:
-      '@barbapapazes/plausible-tracker': 0.5.6
       '@nuxt/kit': 4.3.1(magicast@0.5.1)
+      '@plausible-analytics/tracker': 0.4.4
       defu: 6.1.4
       ufo: 1.6.3
     transitivePeerDependencies:
@@ -10575,6 +10573,8 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@plausible-analytics/tracker@0.4.4': {}
 
   '@polka/url@1.0.0-next.29': {}
 
