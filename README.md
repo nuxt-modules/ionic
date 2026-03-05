@@ -47,9 +47,9 @@ Published under the [MIT License](./LICENCE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/ionic?style=flat-square
-[npm-version-href]: https://npmjs.com/package/@nuxtjs/ionic
-[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/ionic?style=flat-square
+[npm-version-src]: https://npmx.dev/api/registry/badge/version/@nuxtjs/ionic
+[npm-version-href]: https://npmx.dev/package/@nuxtjs/ionic
+[npm-downloads-src]: https://npmx.dev/api/registry/badge/downloads/@nuxtjs/ionic
 [npm-downloads-href]: https://npm.chart.dev/@nuxtjs/ionic
 [github-actions-src]: https://img.shields.io/github/actions/workflow/status/nuxt-modules/ionic/ci.yml?style=flat-square&branch=main
 [github-actions-href]: https://github.com/nuxt-modules/ionic/actions?query=workflow%3Aci
