@@ -116,8 +116,8 @@ importers:
         specifier: 3.6.1
         version: 3.6.1(typescript@5.9.3)(vue-sfc-transformer@0.1.17(@vue/compiler-core@3.5.30)(esbuild@0.27.3)(vue@3.5.30(typescript@5.9.3)))(vue-tsc@3.2.5(typescript@5.9.3))(vue@3.5.30(typescript@5.9.3))
       unhead:
-        specifier: 2.1.10
-        version: 2.1.10
+        specifier: 2.1.11
+        version: 2.1.11
       vitest:
         specifier: 4.0.18
         version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@24.12.0)(happy-dom@20.8.3)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.44.1)(yaml@2.8.2)
@@ -7557,6 +7557,9 @@ packages:
 
   unhead@2.1.10:
     resolution: {integrity: sha512-We8l9uNF8zz6U8lfQaVG70+R/QBfQx1oPIgXin4BtZnK2IQpz6yazQ0qjMNVBDw2ADgF2ea58BtvSK+XX5AS7g==}
+
+  unhead@2.1.11:
+    resolution: {integrity: sha512-EAgw0fgo390WIATJOjn0jHUBCMhjRM046WZXyQX4MOdnEiwYeDgTRzJYR0nVWiQPta6568jc5OLCDJswHCkgNg==}
 
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
@@ -16881,6 +16884,10 @@ snapshots:
       pathe: 2.0.3
 
   unhead@2.1.10:
+    dependencies:
+      hookable: 6.0.1
+
+  unhead@2.1.11:
     dependencies:
       hookable: 6.0.1
 
