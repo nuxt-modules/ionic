@@ -105,12 +105,5 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "resolutions": {
-    "@nuxt/kit": "^4.1.2",
-    "@nuxt/schema": "4.3.1",
-    "@nuxtjs/ionic": "link:.",
-    "consola": "^3.4.2",
-    "nuxt-component-meta": ">=0.14.0"
-  },
   "packageManager": "pnpm@10.33.0"
 }
