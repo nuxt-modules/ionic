@@ -6,7 +6,7 @@ settings:
 
 overrides:
   '@nuxt/kit': ^4.1.2
-  '@nuxt/schema': 4.4.7
+  '@nuxt/schema': 4.4.8
   '@nuxtjs/ionic': link:.
   consola: ^3.4.2
   nuxt-component-meta: '>=0.14.0'
@@ -66,10 +66,10 @@ importers:
         version: 1.15.2(@typescript-eslint/utils@8.56.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.2))(@vue/compiler-sfc@3.5.35)(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.2)
       '@nuxt/module-builder':
         specifier: 1.0.2
-        version: 1.0.2(@nuxt/cli@3.33.1(@nuxt/schema@4.4.7)(cac@6.7.14)(magicast@0.5.2))(@vue/compiler-core@3.5.35)(esbuild@0.27.3)(typescript@6.0.2)(vue-tsc@3.2.6(typescript@6.0.2))(vue@3.5.35(typescript@6.0.2))
+        version: 1.0.2(@nuxt/cli@3.33.1(@nuxt/schema@4.4.8)(cac@6.7.14)(magicast@0.5.2))(@vue/compiler-core@3.5.35)(esbuild@0.27.3)(typescript@6.0.2)(vue-tsc@3.2.6(typescript@6.0.2))(vue@3.5.35(typescript@6.0.2))
       '@nuxt/schema':
-        specifier: 4.4.7
-        version: 4.4.7
+        specifier: 4.4.8
+        version: 4.4.8
       '@nuxt/test-utils':
         specifier: 4.0.3
         version: 4.0.3(@vue/test-utils@2.4.6)(happy-dom@20.10.2)(magicast@0.5.2)(playwright-core@1.58.2)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vitest@4.1.8)
@@ -1206,7 +1206,7 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
     peerDependencies:
-      '@nuxt/schema': 4.4.7
+      '@nuxt/schema': 4.4.8
     peerDependenciesMeta:
       '@nuxt/schema':
         optional: true
@@ -1309,8 +1309,8 @@ packages:
     peerDependencies:
       nuxt: ^4.3.1
 
-  '@nuxt/schema@4.4.7':
-    resolution: {integrity: sha512-jcyXJlOR/GmxDQHrIEdEevUCUuBv7B6GCQXIBt4oKTCasIwWgGuqo48IM35RsxdQVTb4tBohnqJbS2lKJlCBWg==}
+  '@nuxt/schema@4.4.8':
+    resolution: {integrity: sha512-igfWuMF0x0Pmx/XwhPwH/bcXgbuwNnjUjqxCAsY6VQhmGKo0e9soJq3Q0ohj+rBkBfX6o2ysTP1/t2M82aK4qA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   '@nuxt/telemetry@2.7.0':
@@ -7010,8 +7010,8 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.8.1:
-    resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
+  semver@7.8.2:
+    resolution: {integrity: sha512-c8jsqUZm3omBOI66G90z1Dyw5z622G8oLG+omfsHBJf3CWQTlOcwOjvOG6wtiNfW6anKm/eA39LMwMtMez2TiQ==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -8488,7 +8488,7 @@ snapshots:
       plist: 3.1.0
       prompts: 2.4.2
       rimraf: 6.1.3
-      semver: 7.8.1
+      semver: 7.8.2
       tar: 7.5.13
       tslib: 2.8.1
       xml2js: 0.6.2
@@ -9067,7 +9067,7 @@ snapshots:
       open: 7.4.2
       os-name: 4.0.1
       proxy-agent: 6.5.0
-      semver: 7.8.1
+      semver: 7.8.2
       split2: 3.2.2
       ssh-config: 1.1.6
       stream-combiner2: 1.1.1
@@ -9232,7 +9232,7 @@ snapshots:
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0
       nopt: 8.1.0
-      semver: 7.8.1
+      semver: 7.8.2
       tar: 7.5.13
     transitivePeerDependencies:
       - encoding
@@ -9294,7 +9294,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.20.1
 
-  '@nuxt/cli@3.33.1(@nuxt/schema@4.4.7)(cac@6.7.14)(magicast@0.5.2)':
+  '@nuxt/cli@3.33.1(@nuxt/schema@4.4.8)(cac@6.7.14)(magicast@0.5.2)':
     dependencies:
       '@bomb.sh/tab': 0.0.12(cac@6.7.14)(citty@0.2.2)
       '@clack/prompts': 1.2.0
@@ -9318,14 +9318,14 @@ snapshots:
       perfect-debounce: 2.1.0
       pkg-types: 2.3.1
       scule: 1.3.0
-      semver: 7.8.1
+      semver: 7.8.2
       srvx: 0.11.16
       std-env: 3.10.0
       tinyexec: 1.1.2
       ufo: 1.6.4
       youch: 4.1.0-beta.13
     optionalDependencies:
-      '@nuxt/schema': 4.4.7
+      '@nuxt/schema': 4.4.8
     transitivePeerDependencies:
       - cac
       - commander
@@ -9426,7 +9426,7 @@ snapshots:
       pathe: 2.0.3
       pkg-types: 2.3.1
       prompts: 2.4.2
-      semver: 7.8.1
+      semver: 7.8.2
 
   '@nuxt/devtools@3.1.1(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue@3.5.35(typescript@6.0.2))':
     dependencies:
@@ -9453,7 +9453,7 @@ snapshots:
       pathe: 2.0.3
       perfect-debounce: 2.1.0
       pkg-types: 2.3.1
-      semver: 7.8.1
+      semver: 7.8.2
       simple-git: 3.30.0
       sirv: 3.0.2
       structured-clone-es: 1.0.0
@@ -9623,7 +9623,7 @@ snapshots:
       pkg-types: 2.3.1
       rc9: 3.0.1
       scule: 1.3.0
-      semver: 7.8.1
+      semver: 7.8.2
       tinyglobby: 0.2.17
       ufo: 1.6.4
       unctx: 2.5.0
@@ -9631,9 +9631,9 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/module-builder@1.0.2(@nuxt/cli@3.33.1(@nuxt/schema@4.4.7)(cac@6.7.14)(magicast@0.5.2))(@vue/compiler-core@3.5.35)(esbuild@0.27.3)(typescript@6.0.2)(vue-tsc@3.2.6(typescript@6.0.2))(vue@3.5.35(typescript@6.0.2))':
+  '@nuxt/module-builder@1.0.2(@nuxt/cli@3.33.1(@nuxt/schema@4.4.8)(cac@6.7.14)(magicast@0.5.2))(@vue/compiler-core@3.5.35)(esbuild@0.27.3)(typescript@6.0.2)(vue-tsc@3.2.6(typescript@6.0.2))(vue@3.5.35(typescript@6.0.2))':
     dependencies:
-      '@nuxt/cli': 3.33.1(@nuxt/schema@4.4.7)(cac@6.7.14)(magicast@0.5.2)
+      '@nuxt/cli': 3.33.1(@nuxt/schema@4.4.8)(cac@6.7.14)(magicast@0.5.2)
       citty: 0.1.6
       consola: 3.4.2
       defu: 6.1.7
@@ -9719,7 +9719,7 @@ snapshots:
       - uploadthing
       - xml2js
 
-  '@nuxt/schema@4.4.7':
+  '@nuxt/schema@4.4.8':
     dependencies:
       '@vue/shared': 3.5.35
       defu: 6.1.7
@@ -9787,7 +9787,7 @@ snapshots:
       '@nuxt/fonts': 0.14.0(@capacitor/preferences@8.0.1(@capacitor/core@8.4.0))(db0@0.3.4(better-sqlite3@12.8.0))(ioredis@5.9.2)(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))
       '@nuxt/icon': 2.2.1(magicast@0.5.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue@3.5.35(typescript@6.0.2))
       '@nuxt/kit': 4.4.7(magicast@0.5.2)
-      '@nuxt/schema': 4.4.7
+      '@nuxt/schema': 4.4.8
       '@nuxtjs/color-mode': 3.5.2(magicast@0.5.2)
       '@standard-schema/spec': 1.1.0
       '@tailwindcss/postcss': 4.2.2
@@ -9955,7 +9955,7 @@ snapshots:
       '@nuxt/kit': 4.4.7(magicast@0.5.2)
       pathe: 1.1.2
       pkg-types: 1.3.1
-      semver: 7.8.1
+      semver: 7.8.2
     transitivePeerDependencies:
       - magicast
 
@@ -11387,7 +11387,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.56.1
       debug: 4.4.3
       minimatch: 10.2.4
-      semver: 7.8.1
+      semver: 7.8.2
       tinyglobby: 0.2.17
       ts-api-utils: 2.4.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -11402,7 +11402,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.56.1
       debug: 4.4.3
       minimatch: 10.2.4
-      semver: 7.8.1
+      semver: 7.8.2
       tinyglobby: 0.2.17
       ts-api-utils: 2.4.0(typescript@6.0.2)
       typescript: 6.0.2
@@ -12094,7 +12094,7 @@ snapshots:
       cac: 7.0.0
       jsonc-parser: 3.3.1
       package-manager-detector: 1.6.0
-      semver: 7.8.1
+      semver: 7.8.2
       tinyexec: 1.1.2
       tinyglobby: 0.2.17
       unconfig: 7.5.0
@@ -12681,7 +12681,7 @@ snapshots:
       '@one-ini/wasm': 0.1.1
       commander: 10.0.1
       minimatch: 9.0.1
-      semver: 7.8.1
+      semver: 7.8.2
 
   ee-first@1.1.1: {}
 
@@ -12906,7 +12906,7 @@ snapshots:
       eslint-import-context: 0.1.9(unrs-resolver@1.11.1)
       is-glob: 4.0.3
       minimatch: 10.2.4
-      semver: 7.8.1
+      semver: 7.8.2
       stable-hash-x: 0.2.0
       unrs-resolver: 1.11.1
     optionalDependencies:
@@ -12928,7 +12928,7 @@ snapshots:
       html-entities: 2.6.0
       object-deep-merge: 2.0.0
       parse-imports-exports: 0.2.4
-      semver: 7.8.1
+      semver: 7.8.2
       spdx-expression-parse: 4.0.0
       to-valid-identifier: 1.0.0
     transitivePeerDependencies:
@@ -12962,7 +12962,7 @@ snapshots:
       pluralize: 8.0.0
       regexp-tree: 0.1.27
       regjsparser: 0.13.0
-      semver: 7.8.1
+      semver: 7.8.2
       strip-indent: 4.1.1
 
   eslint-plugin-vue@10.8.0(@stylistic/eslint-plugin@5.9.0(eslint@10.4.1(jiti@2.7.0)))(@typescript-eslint/parser@8.56.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.2))(eslint@10.4.1(jiti@2.7.0))(vue-eslint-parser@10.4.0(eslint@10.4.1(jiti@2.7.0))):
@@ -12972,7 +12972,7 @@ snapshots:
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 7.1.1
-      semver: 7.8.1
+      semver: 7.8.2
       vue-eslint-parser: 10.4.0(eslint@10.4.1(jiti@2.7.0))
       xml-name-validator: 4.0.0
     optionalDependencies:
@@ -14085,7 +14085,7 @@ snapshots:
       acorn: 8.16.0
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.8.1
+      semver: 7.8.2
 
   jsonc-parser@3.3.1: {}
 
@@ -14343,7 +14343,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.8.1
+      semver: 7.8.2
 
   markdown-it@14.1.0:
     dependencies:
@@ -14776,7 +14776,7 @@ snapshots:
       pkg-types: 2.3.1
       postcss: 8.5.15
       postcss-nested: 7.0.2(postcss@8.5.15)
-      semver: 7.8.1
+      semver: 7.8.2
       tinyglobby: 0.2.17
     optionalDependencies:
       typescript: 6.0.2
@@ -14921,7 +14921,7 @@ snapshots:
       rollup: 4.55.1
       rollup-plugin-visualizer: 6.0.5(rollup@4.55.1)
       scule: 1.3.0
-      semver: 7.8.1
+      semver: 7.8.2
       serve-placeholder: 2.0.2
       serve-static: 2.2.1
       source-map: 0.7.6
@@ -14972,7 +14972,7 @@ snapshots:
 
   node-abi@3.85.0:
     dependencies:
-      semver: 7.8.1
+      semver: 7.8.2
 
   node-addon-api@7.1.1: {}
 
@@ -15116,11 +15116,11 @@ snapshots:
   nuxt@4.3.1(@capacitor/preferences@8.0.1(@capacitor/core@8.4.0))(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@parcel/watcher@2.5.1)(@types/node@24.12.0)(@vue/compiler-sfc@3.5.35)(better-sqlite3@12.8.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.8.0))(eslint@10.4.1(jiti@2.7.0))(ioredis@5.9.2)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue-tsc@3.2.6(typescript@6.0.2))(xml2js@0.6.2)(yaml@2.8.4):
     dependencies:
       '@dxup/nuxt': 0.3.2(magicast@0.5.2)
-      '@nuxt/cli': 3.33.1(@nuxt/schema@4.4.7)(cac@6.7.14)(magicast@0.5.2)
+      '@nuxt/cli': 3.33.1(@nuxt/schema@4.4.8)(cac@6.7.14)(magicast@0.5.2)
       '@nuxt/devtools': 3.1.1(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue@3.5.35(typescript@6.0.2))
       '@nuxt/kit': 4.4.7(magicast@0.5.2)
       '@nuxt/nitro-server': 4.3.1(@capacitor/preferences@8.0.1(@capacitor/core@8.4.0))(better-sqlite3@12.8.0)(db0@0.3.4(better-sqlite3@12.8.0))(ioredis@5.9.2)(magicast@0.5.2)(nuxt@4.3.1(@capacitor/preferences@8.0.1(@capacitor/core@8.4.0))(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@parcel/watcher@2.5.1)(@types/node@24.12.0)(@vue/compiler-sfc@3.5.35)(better-sqlite3@12.8.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.8.0))(eslint@10.4.1(jiti@2.7.0))(ioredis@5.9.2)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue-tsc@3.2.6(typescript@6.0.2))(xml2js@0.6.2)(yaml@2.8.4))(typescript@6.0.2)(xml2js@0.6.2)
-      '@nuxt/schema': 4.4.7
+      '@nuxt/schema': 4.4.8
       '@nuxt/telemetry': 2.7.0(@nuxt/kit@4.4.7(magicast@0.5.2))
       '@nuxt/vite-builder': 4.3.1(@types/node@24.12.0)(eslint@10.4.1(jiti@2.7.0))(lightningcss@1.32.0)(magicast@0.5.2)(nuxt@4.3.1(@capacitor/preferences@8.0.1(@capacitor/core@8.4.0))(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@parcel/watcher@2.5.1)(@types/node@24.12.0)(@vue/compiler-sfc@3.5.35)(better-sqlite3@12.8.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.8.0))(eslint@10.4.1(jiti@2.7.0))(ioredis@5.9.2)(lightningcss@1.32.0)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@6.0.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.44.1)(yaml@2.8.4))(vue-tsc@3.2.6(typescript@6.0.2))(xml2js@0.6.2)(yaml@2.8.4))(optionator@0.9.4)(rollup@4.55.1)(terser@5.44.1)(typescript@6.0.2)(vue-tsc@3.2.6(typescript@6.0.2))(vue@3.5.35(typescript@6.0.2))(yaml@2.8.4)
       '@unhead/vue': 2.1.15(vue@3.5.35(typescript@6.0.2))
@@ -15159,7 +15159,7 @@ snapshots:
       pkg-types: 2.3.1
       rou3: 0.7.12
       scule: 1.3.0
-      semver: 7.8.1
+      semver: 7.8.2
       std-env: 3.10.0
       tinyglobby: 0.2.17
       ufo: 1.6.4
@@ -16340,7 +16340,7 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.8.1: {}
+  semver@7.8.2: {}
 
   send@1.2.1:
     dependencies:
@@ -16398,7 +16398,7 @@ snapshots:
     dependencies:
       '@img/colour': 1.0.0
       detect-libc: 2.1.2
-      semver: 7.8.1
+      semver: 7.8.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.5
       '@img/sharp-darwin-x64': 0.34.5
@@ -17481,7 +17481,7 @@ snapshots:
       eslint-visitor-keys: 5.0.1
       espree: 11.2.0
       esquery: 1.7.0
-      semver: 7.8.1
+      semver: 7.8.2
     transitivePeerDependencies:
       - supports-color
 
