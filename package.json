@@ -73,7 +73,7 @@
     "unimport": "^6.0.0"
   },
   "devDependencies": {
-    "@ionic/core": "8.8.14",
+    "@ionic/core": "8.8.15",
     "@nuxt/eslint-config": "1.16.0",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/schema": "4.5.0",
@@ -86,16 +86,16 @@
     "expect-type": "1.4.0",
     "happy-dom": "20.11.0",
     "husky": "9.1.7",
-    "lint-staged": "17.1.0",
+    "lint-staged": "17.2.0",
     "nuxt": "4.4.7",
-    "playwright-core": "1.61.1",
+    "playwright-core": "1.62.0",
     "simple-git-hooks": "2.13.1",
     "typescript": "6.0.3",
     "unbuild": "3.6.1",
     "unhead": "2.1.16",
     "vitest": "4.1.10",
     "vue": "3.5.40",
-    "vue-tsc": "3.3.7"
+    "vue-tsc": "3.3.8"
   },
   "lint-staged": {
     "*.{md,js,ts,mjs,cjs,json,.*rc}": [
@@ -105,5 +105,5 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.17.0"
 }
