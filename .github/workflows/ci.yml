@@ -9,6 +9,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     if: github.event_name == 'pull_request' || github.event_name == 'push' && github.ref != 'refs/heads/renovate/*' || github.event_name == 'push' && github.ref == 'refs/heads/renovate/*' && github.event.pull_request == null
