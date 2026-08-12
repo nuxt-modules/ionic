@@ -85,7 +85,6 @@ describe('Nuxt Ionic useHead', async () => {
     await page.goto(url('/reactive-head'), { waitUntil: 'hydration' })
     await expectTitleToBe(page, 'Reactive Head - 0')
 
-    // an unresolved ref reaches `JSON.stringify` as a `ComputedRefImpl`
     await page.waitForFunction(() => document.getElementById('reactive-head-style')?.textContent?.includes('--count: 0'))
 
     await page.click('.reactive-head-increment')

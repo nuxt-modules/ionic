@@ -25,15 +25,10 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
 
   let innerObj = obj
 
-  /* `@unhead/vue` resolves reactive input before pushing it (see `clientUseHead`), but only in the
-     composable we are replacing here — the client head has no prop resolver of its own. Refs would
-     otherwise reach the DOM renderer unresolved, where `JSON.stringify` on a `style`/`script`
-     innerHTML throws `Converting circular structure to JSON` and every other prop renders the ref
-     instead of its value. */
+  // Reactive input has to be resolved before it reaches unhead, as `clientUseHead` does
   const resolveInput = (input: UseHeadInput<T>) => walkResolver(input, VueResolver) as UseHeadInput<T>
 
-  /* The map is keyed by the input object identity, so it always holds the raw input — only the
-     value handed to unhead is resolved */
+  // The map keeps the raw input as its key, only what we hand to unhead is resolved
   const findActiveEntry = () => headMap.get(currentPath)?.find(headVal => headVal[0] === innerObj)?.[1]
 
   const __returned: Omit<ActiveHeadEntry<UseHeadInput<T>>, '_poll'> = {
@@ -72,8 +67,8 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
     headMap.set(currentPath, [...metaArr, [obj, headObj]])
   }
 
-  /* Keep reactive input in sync, the same way `clientUseHead` does. The entry is looked up on each
-     run because `onIonViewDidEnter` disposes and re-pushes it */
+  /* Keep the entry in sync with the input, looking it up on each run
+     because `onIonViewDidEnter` disposes and re-pushes it */
   if (getCurrentScope()) {
     let isInitialRun = true
     watchEffect(() => {
