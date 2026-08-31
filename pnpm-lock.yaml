@@ -26,10 +26,10 @@ importers:
         version: 7.2.1(supports-color@10.2.2)
       '@ionic/vue':
         specifier: ^8.7.3
-        version: 8.8.19(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))
+        version: 8.8.19(vue@3.5.42(typescript@6.0.3))
       '@ionic/vue-router':
-        specifier: ^8.7.3
-        version: 8.8.19(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))
+        specifier: ^9.0.0
+        version: 9.0.1(vue@3.5.42(typescript@6.0.3))
       '@nuxt/kit':
         specifier: ^4.1.2
         version: 4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.133.0)(unplugin@3.3.0(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0)))
@@ -1338,6 +1338,10 @@ packages:
     resolution: {integrity: sha512-eAAKZi/qR0U44OxH3MXAyoyLxTl1AeQCoOWvGdzywKbpl/JTVlGnfZJCiJGTmXszQlRsNXsl7fMDOvpsOtf6sQ==}
     engines: {node: '>= 16'}
 
+  '@ionic/core@9.0.1':
+    resolution: {integrity: sha512-70fIYFxGuBFYOanWIl1PF3/emB+xVQjLQ9OZqgI+9ki8nEZH1y90YkTtAmleLl2jTx6TUpSaJpdUnzkBreIt7w==}
+    engines: {node: '>= 16'}
+
   '@ionic/utils-array@2.1.6':
     resolution: {integrity: sha512-0JZ1Zkp3wURnv8oq6Qt7fMPo5MpjbLoUoa9Bu2Q4PJuSDWM8H8gwF3dQO7VTeUj3/0o1IB1wGkFWZZYgUXZMUg==}
     engines: {node: '>=16.0.0'}
@@ -1370,11 +1374,14 @@ packages:
     resolution: {integrity: sha512-3cKScz9Jx2/Pr9ijj1OzGlBDfcmx7OMVBt4+P1uRR0SSW4cm1/y3Mo4OY3lfkuaYifMNBW8Wz6lQHbs1bihr7A==}
     engines: {node: '>=16.0.0'}
 
-  '@ionic/vue-router@8.8.19':
-    resolution: {integrity: sha512-cWwFHOyJ8/+ZjwArIiiko80CPN0/btCkJsNzwwZfR6LnnuiiJIVnJDWAvi7OcVwBDXgFc+V5+cCuzExwC1sNiA==}
+  '@ionic/vue-router@9.0.1':
+    resolution: {integrity: sha512-XbE++/Iepp4P3YbvMH3UX6yTJX/JLlGVOCCmcYWfQCIV7reHpwpbADxSQ/BkSyxu3oTAuaEqplhQAPPZDtFTGA==}
 
   '@ionic/vue@8.8.19':
     resolution: {integrity: sha512-/9ZsxUHgTWSU/1lGx1hx8oRV9XRlXRaaFTvwuJfJu4XmkpZmbmT2pCIjxRAf5eQunMMZUuXViOuT9wZBQOBchA==}
+
+  '@ionic/vue@9.0.1':
+    resolution: {integrity: sha512-CwgLj7HKBwv/xRIsXqqvHCH+QGQVMjSf3CIWbQ6x+NpnSqlj8Ve5biZwfGTL0zdd3OaclLiDkrbxMVCLHG1Ovw==}
 
   '@ioredis/commands@1.10.0':
     resolution: {integrity: sha512-UmeW7z4LfctwoQ5wkhVzgq8tXkreED2xZGpX+Bg+zA+WJFZCT6c062AfCK/Dfk81xZnnwdhJCUMkitihRaoC2Q==}
@@ -3070,8 +3077,8 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
-  '@stencil/core@4.44.0':
-    resolution: {integrity: sha512-A3kArg+80t9zJdul7FLUcxcjqvYrF76nDavfm2L8R7hGKWPbTTGM/tkOSf7MJqMd1ED0ztYoa9X90UlEXY3nLA==}
+  '@stencil/core@4.44.2':
+    resolution: {integrity: sha512-TNaYdlyHfy8UF7glvZwaY6pM0AhgCOXuW5Kx3+AO+ITeaipCHWXi5tkZ6P/3HCL+hUySc60lPKSnZ4xdYIFb4g==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
@@ -3081,6 +3088,18 @@ packages:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
       vue: ^3.4.38
       vue-router: ^4.5.0
+    peerDependenciesMeta:
+      '@stencil/core':
+        optional: true
+      vue-router:
+        optional: true
+
+  '@stencil/vue-output-target@0.14.2':
+    resolution: {integrity: sha512-KF09dlRXvieXYEW7MnvnUoAWnQKm3JLori9UiB4xoTdJQeI987nRx5N5zzci+L3j4Ta+932D6+pJuWvHZJb+jA==}
+    peerDependencies:
+      '@stencil/core': '>=2.0.0 || >=3 || >=4.0.0 || ^5.0.0 || >=5.0.0-alpha.17 <5.0.0-next.0'
+      vue: ^3.4.38
+      vue-router: ^4.5.0 || ^5.0.0
     peerDependenciesMeta:
       '@stencil/core':
         optional: true
@@ -10134,6 +10153,12 @@ snapshots:
       ionicons: 8.1.0
       tslib: 2.8.1
 
+  '@ionic/core@9.0.1':
+    dependencies:
+      '@stencil/core': 4.44.2
+      ionicons: 8.1.0
+      tslib: 2.8.1
+
   '@ionic/utils-array@2.1.6(supports-color@10.2.2)':
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
@@ -10209,18 +10234,28 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@8.8.19(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))':
+  '@ionic/vue-router@9.0.1(vue@3.5.42(typescript@6.0.3))':
     dependencies:
-      '@ionic/vue': 8.8.19(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))
+      '@ionic/vue': 9.0.1(vue@3.5.42(typescript@6.0.3))
     transitivePeerDependencies:
       - '@stencil/core'
       - vue
       - vue-router
 
-  '@ionic/vue@8.8.19(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))':
+  '@ionic/vue@8.8.19(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       '@ionic/core': 8.8.19
-      '@stencil/vue-output-target': 0.10.7(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))
+      '@stencil/vue-output-target': 0.10.7(vue@3.5.42(typescript@6.0.3))
+      ionicons: 8.1.0
+    transitivePeerDependencies:
+      - '@stencil/core'
+      - vue
+      - vue-router
+
+  '@ionic/vue@9.0.1(vue@3.5.42(typescript@6.0.3))':
+    dependencies:
+      '@ionic/core': 9.0.1
+      '@stencil/vue-output-target': 0.14.2(vue@3.5.42(typescript@6.0.3))
       ionicons: 8.1.0
     transitivePeerDependencies:
       - '@stencil/core'
@@ -12641,7 +12676,7 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.44.0
       '@rollup/rollup-win32-x64-msvc': 4.44.0
 
-  '@stencil/core@4.44.0':
+  '@stencil/core@4.44.2':
     optionalDependencies:
       '@rollup/rollup-darwin-arm64': 4.44.0
       '@rollup/rollup-darwin-x64': 4.44.0
@@ -12652,11 +12687,13 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.44.0
       '@rollup/rollup-win32-x64-msvc': 4.44.0
 
-  '@stencil/vue-output-target@0.10.7(@stencil/core@4.44.0)(vue@3.5.42(typescript@6.0.3))':
+  '@stencil/vue-output-target@0.10.7(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       vue: 3.5.42(typescript@6.0.3)
-    optionalDependencies:
-      '@stencil/core': 4.44.0
+
+  '@stencil/vue-output-target@0.14.2(vue@3.5.42(typescript@6.0.3))':
+    dependencies:
+      vue: 3.5.42(typescript@6.0.3)
 
   '@stylistic/eslint-plugin@5.10.0(eslint@10.9.0(jiti@2.7.0)(supports-color@10.2.2))':
     dependencies:
@@ -15761,7 +15798,7 @@ snapshots:
 
   ionicons@8.1.0:
     dependencies:
-      '@stencil/core': 4.44.0
+      '@stencil/core': 4.44.2
 
   ioredis@5.11.1(supports-color@10.2.2):
     dependencies:
