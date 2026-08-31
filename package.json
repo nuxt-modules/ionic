@@ -80,16 +80,16 @@
     "@nuxt/test-utils": "4.2.0",
     "@types/node": "24.13.3",
     "@vitest/coverage-v8": "4.1.11",
-    "@vue/test-utils": "2.4.11",
-    "bumpp": "12.2.1",
+    "@vue/test-utils": "2.5.0",
+    "bumpp": "12.2.2",
     "eslint": "10.9.0",
     "expect-type": "1.4.0",
     "happy-dom": "20.11.6",
     "husky": "9.1.7",
-    "lint-staged": "17.3.0",
+    "lint-staged": "17.4.1",
     "nuxt": "4.4.7",
     "playwright-core": "1.62.1",
-    "simple-git-hooks": "2.13.1",
+    "simple-git-hooks": "2.14.0",
     "typescript": "6.0.3",
     "unbuild": "3.6.1",
     "unhead": "2.1.17",
@@ -105,5 +105,5 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@11.24.0"
 }
