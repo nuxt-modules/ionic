@@ -73,7 +73,7 @@
     "unimport": "^6.0.0"
   },
   "devDependencies": {
-    "@ionic/core": "9.0.1",
+    "@ionic/core": "9.0.2",
     "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/schema": "4.5.2",
@@ -81,14 +81,14 @@
     "@types/node": "24.13.3",
     "@vitest/coverage-v8": "4.1.11",
     "@vue/test-utils": "2.5.0",
-    "bumpp": "12.2.2",
+    "bumpp": "12.3.0",
     "eslint": "10.9.1",
     "expect-type": "1.4.0",
     "happy-dom": "20.12.0",
     "husky": "9.1.7",
-    "lint-staged": "17.4.1",
+    "lint-staged": "17.5.0",
     "nuxt": "4.4.7",
-    "playwright-core": "1.62.1",
+    "playwright-core": "1.63.0",
     "simple-git-hooks": "2.14.0",
     "typescript": "6.0.3",
     "unbuild": "3.6.1",
@@ -105,5 +105,5 @@
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
-  "packageManager": "pnpm@11.24.0"
+  "packageManager": "pnpm@11.25.0"
 }
