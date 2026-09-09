@@ -224,11 +224,11 @@ importers:
         specifier: ^7.2.1
         version: 7.2.1(supports-color@10.2.2)
       '@ionic/vue':
-        specifier: ^8.7.3
-        version: 8.8.19(vue@3.5.42(typescript@6.0.3))
+        specifier: ^9.0.0
+        version: 9.0.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))
       '@ionic/vue-router':
         specifier: ^9.0.0
-        version: 9.0.2(vue@3.5.42(typescript@6.0.3))
+        version: 9.0.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))
       '@nuxt/kit':
         specifier: ^4.1.2
         version: 4.5.2(magic-string@1.2.3)(magicast@0.5.4)(oxc-parser@0.133.0)(unplugin@3.3.0(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0)))
@@ -301,7 +301,7 @@ importers:
         version: 17.5.0
       node:
         specifier: runtime:^24.0.0
-        version: runtime:24.20.0
+        version: runtime:24.21.0
       nuxt:
         specifier: 4.4.7
         version: 4.4.7(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7(supports-color@10.2.2)))(@capacitor/preferences@8.0.1(@capacitor/core@8.5.1))(@oxc-project/types@0.143.0)(@types/node@24.13.3)(@vue/compiler-sfc@3.5.42)(better-sqlite3@13.0.3)(cac@6.7.14)(commander@14.0.3)(db0@0.3.4(better-sqlite3@13.0.3))(esbuild@0.28.2)(eslint@10.10.0(jiti@2.7.0)(supports-color@10.2.2))(ioredis@5.11.1(supports-color@10.2.2))(lightningcss@1.33.0)(magicast@0.5.4)(optionator@0.9.4)(rollup-plugin-visualizer@7.1.1(rollup@4.62.4))(rollup@4.62.4)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.50.0)(typescript@6.0.3)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue-tsc@3.3.11(typescript@6.0.3))(xml2js@0.6.2)(yaml@2.9.0)
@@ -1542,10 +1542,6 @@ packages:
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@ionic/core@8.8.19':
-    resolution: {integrity: sha512-eAAKZi/qR0U44OxH3MXAyoyLxTl1AeQCoOWvGdzywKbpl/JTVlGnfZJCiJGTmXszQlRsNXsl7fMDOvpsOtf6sQ==}
-    engines: {node: '>= 16'}
-
   '@ionic/core@9.0.2':
     resolution: {integrity: sha512-UkesWrvYOVfBIGfBUiEhe7s4ahwymGUM6yC9Y0gSb7GvR6mCDpC0lBnE0FSMZsD01X+Tgd8IfyClHy8TilIsoA==}
     engines: {node: '>= 16'}
@@ -1584,9 +1580,6 @@ packages:
 
   '@ionic/vue-router@9.0.2':
     resolution: {integrity: sha512-R4imaovnEieWWDnp+g3OUlZ2+Nzndt+kk/JZwZbeuIZ/mwd/FE79HU95OSVKoSU5MLLLIRBmq56V/EfwG2MhYQ==}
-
-  '@ionic/vue@8.8.19':
-    resolution: {integrity: sha512-/9ZsxUHgTWSU/1lGx1hx8oRV9XRlXRaaFTvwuJfJu4XmkpZmbmT2pCIjxRAf5eQunMMZUuXViOuT9wZBQOBchA==}
 
   '@ionic/vue@9.0.2':
     resolution: {integrity: sha512-SyW4NYC2/YYCgRxFbBPfXjipGQtOrtp/vfJz7ONFXNWXMlVFwzvxoZ/tXzZSDyee0I7Mxc9+wm1UNKiBCzb5Ow==}
@@ -3289,27 +3282,10 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@stencil/core@4.43.5':
-    resolution: {integrity: sha512-cgWD+GeuvJpTe1WQn40p02+BJ2j0j1YJ17GdkF2qKIQ23s2e3Zivq5yISXS3dcuV6oUJFN93jprdk+nk/sq99Q==}
-    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
-    hasBin: true
-
   '@stencil/core@4.44.2':
     resolution: {integrity: sha512-TNaYdlyHfy8UF7glvZwaY6pM0AhgCOXuW5Kx3+AO+ITeaipCHWXi5tkZ6P/3HCL+hUySc60lPKSnZ4xdYIFb4g==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
-
-  '@stencil/vue-output-target@0.10.7':
-    resolution: {integrity: sha512-IYxDe+SLCkwhwsWRdynE31rTK1zN3hVwwojQ/V9lrN8Gnx4PTvrUQHiRno9jFo1dk+EaBZWX9gZSmXta0ZaZew==}
-    peerDependencies:
-      '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
-      vue: ^3.4.38
-      vue-router: ^4.5.0
-    peerDependenciesMeta:
-      '@stencil/core':
-        optional: true
-      vue-router:
-        optional: true
 
   '@stencil/vue-output-target@0.14.2':
     resolution: {integrity: sha512-KF09dlRXvieXYEW7MnvnUoAWnQKm3JLori9UiB4xoTdJQeI987nRx5N5zzci+L3j4Ta+932D6+pJuWvHZJb+jA==}
@@ -6955,7 +6931,7 @@ packages:
     resolution: {integrity: sha512-D9UOmYG3UH1V+ENW56t5QXBwJw1YEY18ruVeus89Rw+SyIgjPkCO84bRzO3uNIYosJbNwiabWVn48o3uJLjxFQ==}
     engines: {node: '>=18'}
 
-  node@runtime:24.20.0:
+  node@runtime:24.21.0:
     resolution:
       type: variations
       variants:
@@ -6963,9 +6939,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-FLW9etQKtfRxX7Ti+WSFjYINlCX+KR09ZfmJJua4nB4=
+            integrity: sha256-rseyRkr7mfB4wZywbSAdVDvTsxHLoHEoK84bF8l+WLs=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
@@ -6973,9 +6949,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-QOVgfl7LPbkZJyN3baLXXZZiYPx0p6nnMcG9Z92pa8g=
+            integrity: sha256-vtfupTJeEQjzLOUijd1qXw8IpJnuQqp0Qq6lg3AvYFc=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
@@ -6983,9 +6959,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-nlsmRM8Qe++2rvymdrltMpa8EBOAlvAi7TeNYjPtgfQ=
+            integrity: sha256-FGLLOzBGuBXPjqQ209pFDsGp8R2sflpGsK2lMF1+gJc=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
@@ -6993,9 +6969,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-NRVgPiSHh5o5vHVxbxoq/9AnUAxkulDoRc9yyzMhkBM=
+            integrity: sha256-ckKCw7Q67JmKqVJzgEZbRdIp4CG1gDX19PYwleq/5dU=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -7003,9 +6979,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-pzSzbI0dFs5FXA65wymwfdEhwshVQ1UGSphhvJbDrcw=
+            integrity: sha256-UcXVMGbukpILYXg7A7Buy5nzZhFg97Fcp36EdBFaZ7w=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
@@ -7013,9 +6989,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-2MIktG7wHweKUj2bfbeSgjBvrigemGoVotv/6UfFMB4=
+            integrity: sha256-Xy+jdCLgx13jXBaG/lHXgyTywqj+LMI5pB2cAAop2Tg=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
@@ -7023,9 +6999,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-1ubRu7mtSssW1YC4m+ipyafkkJJuk708MKINRuFSv4o=
+            integrity: sha256-PWNAX8ZaDS0pdsHwvC/Se7C9ByEkaecFqsPwOuWrTJw=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64-musl.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -7034,9 +7010,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-hV1YH4pOsagRfjQm3iX+AncFkv68+zE2mu4f+/7p6Ow=
+            integrity: sha256-bh24fvWLiBnl1UAu/xU2SRsY7djre+5e94l4duiNxf8=
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -7044,10 +7020,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-McZ5l0TeilRgFkMJgEDGjDaX5WyU5AfWHQ5fpfNBkdc=
-            prefix: node-v24.20.0-win-arm64
+            integrity: sha256-h3mxveHTn41CDjtXqmV7OYka9DTT3kSpGQRM7AZ4WSE=
+            prefix: node-v24.21.0-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-win-arm64.zip
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
@@ -7055,10 +7031,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-bKyf+8qPakcJHktcdy4GBgScOHHLZ9kAwM7d5jDlRbo=
-            prefix: node-v24.20.0-win-x64
+            integrity: sha256-FY92hbRN5R9sDfHRU1JsvNPhvHOajfxgdyHO913p5UE=
+            prefix: node-v24.21.0-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v24.20.0/node-v24.20.0-win-x64.zip
+            url: https://nodejs.org/download/release/v24.21.0/node-v24.21.0-win-x64.zip
           targets:
             - cpu: x64
               os: win32
@@ -7066,9 +7042,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-LIxQfMsPIIEtlSa6jKRUsWUqre9o/IutBvB/sRIt0e8=
+            integrity: sha256-MEiwgR4VjKDYZytZyDmGF2PhREkpgNjSmzad/uRXR+Q=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-arm64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-arm64-musl.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -7077,14 +7053,14 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-muE5n+9L2JkOFXc84TJ7M2oguel9jHVJ9PQspzxD9WI=
+            integrity: sha256-AacT402pjntNKjGR7nyj+T3QOE0aLvI8N5shYe5uEzo=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v24.20.0/node-v24.20.0-linux-x64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
               libc: musl
-    version: 24.20.0
+    version: 24.21.0
     hasBin: true
 
   nopt@10.0.1:
@@ -10506,12 +10482,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/core@8.8.19':
-    dependencies:
-      '@stencil/core': 4.43.5
-      ionicons: 8.1.0
-      tslib: 2.8.1
-
   '@ionic/core@9.0.2':
     dependencies:
       '@stencil/core': 4.44.2
@@ -10593,28 +10563,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@ionic/vue-router@9.0.2(vue@3.5.42(typescript@6.0.3))':
+  '@ionic/vue-router@9.0.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))':
     dependencies:
-      '@ionic/vue': 9.0.2(vue@3.5.42(typescript@6.0.3))
+      '@ionic/vue': 9.0.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))
     transitivePeerDependencies:
       - '@stencil/core'
       - vue
       - vue-router
 
-  '@ionic/vue@8.8.19(vue@3.5.42(typescript@6.0.3))':
-    dependencies:
-      '@ionic/core': 8.8.19
-      '@stencil/vue-output-target': 0.10.7(vue@3.5.42(typescript@6.0.3))
-      ionicons: 8.1.0
-    transitivePeerDependencies:
-      - '@stencil/core'
-      - vue
-      - vue-router
-
-  '@ionic/vue@9.0.2(vue@3.5.42(typescript@6.0.3))':
+  '@ionic/vue@9.0.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       '@ionic/core': 9.0.2
-      '@stencil/vue-output-target': 0.14.2(vue@3.5.42(typescript@6.0.3))
+      '@stencil/vue-output-target': 0.14.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))
       ionicons: 8.1.0
     transitivePeerDependencies:
       - '@stencil/core'
@@ -13032,17 +12992,6 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@stencil/core@4.43.5':
-    optionalDependencies:
-      '@rollup/rollup-darwin-arm64': 4.44.0
-      '@rollup/rollup-darwin-x64': 4.44.0
-      '@rollup/rollup-linux-arm64-gnu': 4.44.0
-      '@rollup/rollup-linux-arm64-musl': 4.44.0
-      '@rollup/rollup-linux-x64-gnu': 4.44.0
-      '@rollup/rollup-linux-x64-musl': 4.44.0
-      '@rollup/rollup-win32-arm64-msvc': 4.44.0
-      '@rollup/rollup-win32-x64-msvc': 4.44.0
-
   '@stencil/core@4.44.2':
     optionalDependencies:
       '@rollup/rollup-darwin-arm64': 4.44.0
@@ -13054,13 +13003,12 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.44.0
       '@rollup/rollup-win32-x64-msvc': 4.44.0
 
-  '@stencil/vue-output-target@0.10.7(vue@3.5.42(typescript@6.0.3))':
+  '@stencil/vue-output-target@0.14.2(@stencil/core@4.44.2)(vue-router@5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3)))(vue@3.5.42(typescript@6.0.3))':
     dependencies:
       vue: 3.5.42(typescript@6.0.3)
-
-  '@stencil/vue-output-target@0.14.2(vue@3.5.42(typescript@6.0.3))':
-    dependencies:
-      vue: 3.5.42(typescript@6.0.3)
+    optionalDependencies:
+      '@stencil/core': 4.44.2
+      vue-router: 5.2.0(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(rollup@4.62.4)(vite@7.3.6(@types/node@24.13.3)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.42(typescript@6.0.3))
 
   '@stylistic/eslint-plugin@5.10.0(eslint@10.10.0(jiti@2.7.0)(supports-color@10.2.2))':
     dependencies:
@@ -17553,7 +17501,7 @@ snapshots:
 
   node-releases@2.0.53: {}
 
-  node@runtime:24.20.0: {}
+  node@runtime:24.21.0: {}
 
   nopt@10.0.1:
     dependencies:
