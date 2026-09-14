@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import { setup, createPage, url } from '@nuxt/test-utils/e2e'
-import { describe, it } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import type { Page } from 'playwright-core'
 
 function expectTitleToBe(page: Page, title: string) {
@@ -73,6 +73,25 @@ describe('Nuxt Ionic useHead', async () => {
     // Navigate to tabs/tab1
     await page.click('#tab-button-tab1')
     await expectTitleToBe(page, 'Explore Container - Tab 1')
+
+    await page.close()
+  })
+
+  it('useHead should resolve reactive input on the client', { timeout: 120_000 }, async () => {
+    const page = await createPage()
+    const errors: string[] = []
+    page.on('pageerror', error => errors.push(error.message))
+
+    await page.goto(url('/reactive-head'), { waitUntil: 'hydration' })
+    await expectTitleToBe(page, 'Reactive Head - 0')
+
+    await page.waitForFunction(() => document.getElementById('reactive-head-style')?.textContent?.includes('--count: 0'))
+
+    await page.click('.reactive-head-increment')
+    await expectTitleToBe(page, 'Reactive Head - 1')
+    await page.waitForFunction(() => document.getElementById('reactive-head-style')?.textContent?.includes('--count: 1'))
+
+    expect(errors).toEqual([])
 
     await page.close()
   })
