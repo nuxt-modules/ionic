@@ -4,14 +4,13 @@ import {
   defineNuxtModule,
   addComponent,
   addPlugin,
-  addTemplate,
   addImportsSources,
 } from '@nuxt/kit'
 import { join, resolve } from 'pathe'
 import { readPackageJSON } from 'pkg-types'
 import { defineUnimportPreset } from 'unimport'
 
-import type { AnimationBuilder, SpinnerTypes, PlatformConfig } from '@ionic/vue'
+import type { IonicConfig } from './runtime/config'
 import { runtimeDir } from './utils'
 import { IonicBuiltInComponents, IonicHooks } from './imports'
 
@@ -21,6 +20,7 @@ import { setupIcons } from './parts/icons'
 import { setupMeta } from './parts/meta'
 import { setupRouter } from './parts/router'
 import { setupCapacitor } from './parts/capacitor'
+import { setupVueConfigTemplate } from './parts/config'
 
 export interface ModuleOptions {
   integrations?: {
@@ -33,51 +33,10 @@ export interface ModuleOptions {
     basic?: boolean
     utilities?: boolean
   }
-  config?: {
-    actionSheetEnter?: AnimationBuilder
-    actionSheetLeave?: AnimationBuilder
-    alertEnter?: AnimationBuilder
-    alertLeave?: AnimationBuilder
-    animated?: boolean
-    backButtonDefaultHref?: string
-    backButtonIcon?: string
-    backButtonText?: string
-    innerHTMLTemplatesEnabled?: boolean
-    hardwareBackButton?: boolean
-    infiniteLoadingSpinner?: SpinnerTypes
-    loadingEnter?: AnimationBuilder
-    loadingLeave?: AnimationBuilder
-    loadingSpinner?: SpinnerTypes
-    menuIcon?: string
-    menuType?: string
-    modalEnter?: AnimationBuilder
-    modalLeave?: AnimationBuilder
-    mode?: 'ios' | 'md'
-    navAnimation?: AnimationBuilder
-    pickerEnter?: AnimationBuilder
-    pickerLeave?: AnimationBuilder
-    platform?: PlatformConfig
-    popoverEnter?: AnimationBuilder
-    popoverLeave?: AnimationBuilder
-    refreshingIcon?: string
-    refreshingSpinner?: SpinnerTypes
-    sanitizerEnabled?: boolean
-    spinner?: SpinnerTypes
-    statusTap?: boolean
-    swipeBackEnabled?: boolean
-    tabButtonLayout?:
-      | 'icon-top'
-      | 'icon-start'
-      | 'icon-end'
-      | 'icon-bottom'
-      | 'icon-hide'
-      | 'label-hide'
-    toastDuration?: number
-    toastEnter?: AnimationBuilder
-    toastLeave?: AnimationBuilder
-    toggleOnOffLabels?: boolean
-  }
+  config?: IonicConfig
 }
+
+export type { IonicConfig } from './runtime/config'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -104,11 +63,8 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
-    // Inject options for the Ionic Vue plugin as a virtual module
-    addTemplate({
-      filename: 'ionic/vue-config.mjs',
-      getContents: () => `export default ${JSON.stringify(options.config)}`,
-    })
+    // Inject Ionic Vue plugin config
+    await setupVueConfigTemplate(options.config)
 
     // Create an Ionic config file if it doesn't exist yet
     const ionicConfigPath = join(nuxt.options.rootDir, 'ionic.config.json')
@@ -169,6 +125,10 @@ export default defineNuxtModule<ModuleOptions>({
         from: resolve(runtimeDir, 'composables/head'),
         imports: ['useHead'],
         priority: 2,
+      }),
+      defineUnimportPreset({
+        from: resolve(runtimeDir, 'config'),
+        imports: ['defineNuxtIonicConfig'],
       }),
     ])
 
