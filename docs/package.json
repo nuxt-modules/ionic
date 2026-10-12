@@ -2,6 +2,7 @@
   "name": "nuxt-ionic-docs",
   "description": "Batteries-included Ionic integration for Nuxt.",
   "homepage": "https://github.com/nuxt-modules/ionic/",
+  "type": "module",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -14,7 +15,7 @@
     "@nuxtjs/plausible": "4.0.0",
     "better-sqlite3": "13.0.3",
     "docus": "5.13.0",
-    "nuxt": "4.4.7",
+    "nuxt": "4.6.1",
     "tailwindcss": "4.3.3"
   }
 }

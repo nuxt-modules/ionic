@@ -1,6 +1,7 @@
 import { existsSync, promises as fsp } from 'node:fs'
 
 import {
+  extendRouteRules,
   defineNuxtModule,
   addComponent,
   addPlugin,
@@ -173,12 +174,12 @@ export default defineNuxtModule<ModuleOptions>({
     ])
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if (nuxt.options.nitro.static || (nuxt.options as any)._generate /* TODO: remove in future */) {
-      nuxt.hook('nitro:config', async (config) => {
-        config.prerender ||= {}
-        config.prerender.routes ||= []
-        config.prerender.routes.push('/200.html')
+    if ((nuxt.options as any).nitro?.static || (nuxt.options as any)._generate /* TODO: remove in future */) {
+      // Prerender the SPA fallback route (used by the Capacitor webDir)
+      extendRouteRules('/200.html', { prerender: true })
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      nuxt.hook('nitro:config', async (config: any) => {
         config.output ||= {}
         if (!config.output.publicDir) {
           const distDir = resolve(nuxt.options.rootDir, 'dist')
@@ -194,7 +195,8 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Ensure there is an index.html file present when doing static file generation
       let publicFolder: string
-      nuxt.hook('nitro:init', (nitro) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      nuxt.hook('nitro:init', (nitro: any) => {
         publicFolder = nitro.options.output.publicDir
       })
 
