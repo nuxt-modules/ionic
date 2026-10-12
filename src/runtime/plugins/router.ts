@@ -6,15 +6,13 @@ import {
 } from '@ionic/vue-router'
 
 import { isReadonly, reactive, shallowReactive, shallowRef } from 'vue'
-import type { Ref } from 'vue'
 import type { RouteLocationNormalizedLoaded, Router } from 'vue-router'
-import { createError } from 'h3'
 import { isEqual, withoutBase } from 'ufo'
 
-import type { PageMeta, Plugin, RouteMiddleware } from '#app'
+import type { Plugin, RouteMiddleware } from '#app'
 import { getRouteRules } from '#app/composables/manifest'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app/nuxt'
-import { clearError, showError, useError } from '#app/composables/error'
+import { clearError, createError, showError, useError } from '#app/composables/error'
 import { onNuxtReady } from '#app/composables/ready'
 import { navigateTo } from '#app/composables/router'
 
@@ -145,7 +143,7 @@ const plugin: Plugin<{ router: Router }> = defineNuxtPlugin({
       await nuxtApp.callHook('page:loading:start')
       to.meta = reactive(to.meta)
       if (nuxtApp.isHydrating && initialLayout && !isReadonly(to.meta.layout)) {
-        to.meta.layout = initialLayout as Exclude<PageMeta['layout'], Ref | false>
+        to.meta.layout = initialLayout as typeof to.meta.layout
       }
       nuxtApp._processingMiddleware = true
 

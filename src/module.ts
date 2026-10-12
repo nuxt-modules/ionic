@@ -104,6 +104,11 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
+    // `@ionic/vue` components use the Options API
+    nuxt.options.vue.optionsApi = true
+    nuxt.options.vite.define ||= {}
+    nuxt.options.vite.define.__VUE_OPTIONS_API__ = true
+
     // Inject options for the Ionic Vue plugin as a virtual module
     addTemplate({
       filename: 'ionic/vue-config.mjs',

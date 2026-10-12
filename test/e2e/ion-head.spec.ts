@@ -11,7 +11,7 @@ describe('Nuxt Ionic useHead', async () => {
   await setup({
     server: true,
     browser: true,
-    rootDir: fileURLToPath(new URL('../../playground', import.meta.url)),
+    rootDir: fileURLToPath(new URL(`../../${process.env.PLAYGROUND || 'playground'}`, import.meta.url)),
   })
 
   it('useHead should work with navigation', { timeout: 120_000 }, async () => {

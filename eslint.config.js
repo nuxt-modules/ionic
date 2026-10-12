@@ -9,6 +9,7 @@ export default createConfigForNuxt({
   dirs: {
     src: [
       './playground',
+      './playground-v5',
       './docs',
     ],
   },
@@ -26,7 +27,7 @@ export default createConfigForNuxt({
     },
   },
   {
-    files: ['playground/**'],
+    files: ['playground/**', 'playground-v5/**'],
     rules: {
       'vue/no-deprecated-slot-attribute': 'off',
     },

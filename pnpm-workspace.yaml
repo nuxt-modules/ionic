@@ -1,10 +1,11 @@
 packages:
   - playground
+  - playground-v5
   - docs
 
 overrides:
-  "@nuxt/kit": "^4.1.2"
-  "@nuxt/schema": "4.5.2"
+  "@nuxt/kit@<5": "^4.6.1"
+  "@nuxt/schema@<5": "4.6.1"
   "@nuxtjs/ionic": "workspace:*"
   consola: "^3.4.2"
   nuxt-component-meta: ">=0.14.0"
@@ -18,3 +19,12 @@ allowBuilds:
   simple-git-hooks: true
   unrs-resolver: true
   vue-demi: true
+
+minimumReleaseAgeExclude:
+  - '@nuxt/cli@4.0.1'
+  - '@nuxt/kit@4.6.1'
+  - '@nuxt/nitro-server@4.6.1'
+  - '@nuxt/schema@4.6.1'
+  - '@nuxt/vite-builder@4.6.1'
+  - '@nuxt/vite-server@4.6.1'
+  - nuxt@4.6.1

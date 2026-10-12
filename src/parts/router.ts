@@ -45,7 +45,7 @@ export const setupRouter = () => {
     if (
       !app.mainComponent
       || app.mainComponent.includes('@nuxt/ui-templates')
-      || app.mainComponent.match(/nuxt3?\/dist/)
+      || app.mainComponent.match(/nuxt(?:3|-nightly)?\/dist/)
     ) {
       app.mainComponent = join(runtimeDir, 'app.vue')
     }
