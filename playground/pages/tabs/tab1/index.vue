@@ -6,6 +6,10 @@ useHead({
   title: 'Tab 1',
 })
 const isExploreEnabled = ref(true)
+
+const route = useRoute()
+
+console.log(route.name)
 </script>
 
 <template>
