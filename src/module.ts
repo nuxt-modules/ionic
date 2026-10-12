@@ -102,6 +102,11 @@ export default defineNuxtModule<ModuleOptions>({
     config: {},
   },
   async setup(options, nuxt) {
+    nuxt.options.vite.define ??= {}
+    // Force-enable Vue's Options API.
+    // @ionic/vue components rely on it, but it is disabled by default in Nuxt 5.
+    nuxt.options.vite.define.__VUE_OPTIONS_API__ = true
+
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push(/@ionic/, /@stencil/)
 
