@@ -23,7 +23,7 @@ export function useHead<T extends Record<string, any>>(obj: UseHeadInput<T>, _?:
   const currentPath = (instance && useRoute().path) || ''
 
   let innerObj = obj
-  const __returned: Omit<ActiveHeadEntry<UseHeadInput<T>>, '_poll'> = {
+  const __returned: Pick<ActiveHeadEntry<UseHeadInput<T>>, 'dispose' | 'patch'> = {
     dispose() {
       // Can just easily mutate the array instead of wasting little CPU to slice/spread it :P
       const headArr = [...headMap.get(currentPath)!]

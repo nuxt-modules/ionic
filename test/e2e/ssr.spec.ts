@@ -7,7 +7,7 @@ describe('nuxt ionic', async () => {
   await setup({
     server: true,
     browser: true,
-    rootDir: fileURLToPath(new URL('../../playground', import.meta.url)),
+    rootDir: fileURLToPath(new URL(`../../${process.env.PLAYGROUND || 'playground'}`, import.meta.url)),
   })
 
   it('renders web components', async () => {

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "nuxt-ionic-playground-v5",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt generate"
+  },
+  "devDependencies": {
+    "@nuxtjs/ionic": "latest",
+    "nuxt": "npm:nuxt-nightly@5x"
+  }
+}
