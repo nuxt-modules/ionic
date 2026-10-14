@@ -74,12 +74,12 @@
     "unimport": "^7.0.0"
   },
   "devDependencies": {
-    "@ionic/core": "9.0.6",
+    "@ionic/core": "9.0.7",
     "@nuxt/eslint-config": "1.17.0",
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/schema": "4.6.1",
     "@nuxt/test-utils": "4.3.3",
-    "@types/node": "24.19.1",
+    "@types/node": "24.19.2",
     "@vitest/coverage-v8": "5.0.3",
     "@vue/test-utils": "2.5.1",
     "bumpp": "12.3.0",
@@ -89,14 +89,14 @@
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
     "nuxt": "4.6.1",
-    "playwright-core": "1.63.0",
+    "playwright-core": "1.64.0",
     "simple-git-hooks": "2.14.0",
     "typescript": "6.0.3",
     "unbuild": "3.6.1",
-    "unhead": "3.4.2",
+    "unhead": "3.4.3",
     "vitest": "5.0.3",
     "vue": "3.5.43",
-    "vue-tsc": "3.3.12"
+    "vue-tsc": "3.3.13"
   },
   "lint-staged": {
     "*.{md,js,ts,mjs,cjs,json,.*rc}": [
@@ -114,7 +114,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.9.1",
+      "version": "12.11.2",
       "onFail": "download"
     }
   }
