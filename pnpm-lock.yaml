@@ -229,8 +229,8 @@ importers:
         specifier: 4.6.2
         version: 4.6.2
       '@nuxt/test-utils':
-        specifier: 4.3.3
-        version: 4.3.3(bef3446c8fa2bbc4d401536a9bebd94c)
+        specifier: 4.3.4
+        version: 4.3.4(bef3446c8fa2bbc4d401536a9bebd94c)
       '@types/node':
         specifier: 24.19.2
         version: 24.19.2
@@ -1918,8 +1918,8 @@ packages:
     peerDependencies:
       '@nuxt/kit': ^4.6.1
 
-  '@nuxt/test-utils@4.3.3':
-    resolution: {integrity: sha512-0Nxp6e+VJROAMGuyurTX3+ON+l3y79TuNDsciy+7TfCPx4GcitTrYsxjomi65jLVi0H32aEb2sloh/qmiwj6aA==}
+  '@nuxt/test-utils@4.3.4':
+    resolution: {integrity: sha512-8x0w16DDUi1/6ZivL1zuOaDt9xtACZFHMQySBirUZNIU0H0qljjB5yyajXPtlb8YCQ5l6piFJqafK/zDpDcCnA==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
     peerDependencies:
       '@cucumber/cucumber': '>=11.0.0'
@@ -12075,7 +12075,7 @@ snapshots:
       rc9: 3.1.0
       std-env: 4.3.0
 
-  '@nuxt/test-utils@4.3.3(bef3446c8fa2bbc4d401536a9bebd94c)':
+  '@nuxt/test-utils@4.3.4(bef3446c8fa2bbc4d401536a9bebd94c)':
     dependencies:
       '@clack/prompts': 1.8.1
       '@nuxt/devtools-kit': 3.4.3(@nuxt/schema@4.6.2)(confbox@0.3.1)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.3)(mlly@1.8.2)(oxc-parser@0.151.0)(rolldown@1.2.14)(unplugin@3.4.0(esbuild@0.28.2)(rolldown@1.2.14)(rollup@4.62.4)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(yaml@2.9.1)))(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(yaml@2.9.1))
@@ -21078,7 +21078,7 @@ snapshots:
 
   vitest-environment-nuxt@2.0.0:
     dependencies:
-      '@nuxt/test-utils': 4.3.3(bef3446c8fa2bbc4d401536a9bebd94c)
+      '@nuxt/test-utils': 4.3.4(bef3446c8fa2bbc4d401536a9bebd94c)
 
   vitest@5.0.3(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(@vitest/coverage-v8@5.0.3)(happy-dom@20.14.6)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.50.0)(yaml@2.9.1)):
     dependencies:
