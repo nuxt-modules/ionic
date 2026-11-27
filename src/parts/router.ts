@@ -11,10 +11,13 @@ export const setupRouter = () => {
     resolve(layer.config?.srcDir || layer.cwd!, layer.config?.dir?.pages || 'pages'),
   )
 
+  const pages = nuxt.options.pages
+  const pagesEnabled = typeof pages === 'object' ? pages?.enabled : pages
+
   // Disable module (and use universal router) if pages dir do not exists or user has disabled it
   if (
-    nuxt.options.pages === false
-    || (nuxt.options.pages !== true && !pagesDirs.some(dir => existsSync(dir)))
+    pagesEnabled === false
+    || (pagesEnabled !== true && !pagesDirs.some(dir => existsSync(dir)))
   ) {
     logger.info('Disabling Ionic Router integration as pages dir does not exist.')
     return
